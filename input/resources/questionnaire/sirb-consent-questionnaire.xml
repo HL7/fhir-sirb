@@ -1,0 +1,3166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire
+    xmlns="http://hl7.org/fhir">
+    <id value="sirb-consent-questionnaire"/>
+    <meta>
+        <versionId value="22"/>
+        <lastUpdated value="2021-06-25T17:53:45.364+00:00"/>
+        <source value="#wmaFUwCDyqO4FCQa"/>
+        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <p/>
+        </div>
+    </text>
+    <extension url="http://hl7.org/fhir/StructureDefinition/variable">
+        <valueExpression>
+            <description value="response to get the data from"/>
+            <name value="lookupInitiateStudy"/>
+            <language value="application/x-fhir-query"/>
+            <expression value="https://docr-fhir.dev.cloud.duke.edu/hapi-fhir-jpaserver/fhir/QuestionnaireResponse/QRIDInitiateStudy"/>
+        </valueExpression>
+    </extension>
+    <url value="https://raw.githubusercontent.com/jdtopping/sIRB/master/input/resources/questionnaire/sirb-consent-questionnaire.json"/>
+    <version value="0.1"/>
+    <name value="Consent Questionnaire"/>
+    <title value="Consent Questionnaire"/>
+    <status value="draft"/>
+    <subjectType value="ResearchStudy"/>
+    <item>
+        <linkId value="c1"/>
+        <text value="Research Study"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="c1.1"/>
+            <text value="Study Title"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c1.1-help"/>
+                <text value="Short Title of the Research Study"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c1.2"/>
+            <text value="IRB Protocol Number"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="c2"/>
+        <text value="Site Principal Investigator"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="c2.2"/>
+            <text value="First Name"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c2.2-help"/>
+                <text value="First or given name associated with the site primary responsibility holder"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c2.1"/>
+            <text value="Last Name"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c2.1-help"/>
+                <text value="Surname or family name associated with the site primary responsibility holder"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c2.6"/>
+            <text value="Suffix"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c2.6-help"/>
+                <text value="Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc. associated with the site principal investigator's name"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c2.3"/>
+            <text value="Degree(s)"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c2.3-help"/>
+                <text value="Professional and Academic degrees associated with the site primary responsibility holder"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c2.4"/>
+            <text value="Associated Institution"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c2.4-help"/>
+                <text value="Academic or Profressional Institution associated with the site primary responsibility holder"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c2.5"/>
+            <text value="Contact Information"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c2.5-help"/>
+                <text value="Information on how to contact the Site PI.  Can include both email/phone number"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                        <display value="Help-Button"/>
+                    </coding>
+                    <text value="Help-Button"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c2-help"/>
+            <text value="PI at a site conducting the study, responsible for the conduct of the study at his/her relying institution"/>
+            <type value="display"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="c3"/>
+        <text value="Relying Institution"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="c3.1"/>
+            <text value="Name"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c3.1-help"/>
+                <text value="Public or private entity conducting the study- where the participant will go or call"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c3.2"/>
+            <text value="Address"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c3.2-help"/>
+                <text value="Physical address"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                        <display value="Help-Button"/>
+                    </coding>
+                    <text value="Help-Button"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c3-help"/>
+            <text value="Information about Lead or Site Institution where study will be conducted"/>
+            <type value="display"/>
+        </item>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="gtable"/>
+                    <display value="Group Table"/>
+                </coding>
+                <text value="Group Table"/>
+            </valueCodeableConcept>
+        </extension>
+        <linkId value="c4"/>
+        <text value="Sponsor or Funding Source"/>
+        <type value="group"/>
+        <required value="false"/>
+        <repeats value="true"/>
+        <item>
+            <linkId value="c4.1"/>
+            <text value="Sponsor Name"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c4.1-help"/>
+                <text value="Entity financially supporting the research"/>
+                <type value="display"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="c5"/>
+        <text value="Sponsor Detail"/>
+        <type value="text"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                        <display value="Help-Button"/>
+                    </coding>
+                    <text value="Help-Button"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c5-help"/>
+            <text value="Relevant information about the sponsor(s)"/>
+            <type value="display"/>
+        </item>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="drop-down"/>
+                    <display value="Drop down"/>
+                </coding>
+                <text value="Drop down"/>
+            </valueCodeableConcept>
+        </extension>
+        <linkId value="c6"/>
+        <text value="Is this consent an eConsent?"/>
+        <type value="choice"/>
+        <required value="false"/>
+        <answerOption>
+            <valueCoding>
+                <code value="1"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answerOption>
+        <answerOption>
+            <valueCoding>
+                <code value="2"/>
+                <display value="No"/>
+            </valueCoding>
+        </answerOption>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                        <display value="Help-Button"/>
+                    </coding>
+                    <text value="Help-Button"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c6-help"/>
+            <text value="Consent that is obtained electronically"/>
+            <type value="display"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="c7"/>
+        <text value="Summary Text"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="c7.1"/>
+            <text value="Summary Text Statement"/>
+            <type value="text"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c7.1-help"/>
+                <text value="Mandated paragraph that describes the basic purpose, procedures and reasons behind the research in easily understood prose"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                        <display value="Help-Button"/>
+                    </coding>
+                    <text value="Help-Button"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c7-help"/>
+            <text value="Section header for the mandated text describing the basic purpose, procedures and reasons for the study."/>
+            <type value="display"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="c8"/>
+        <text value="Introduction and Statement of Research"/>
+        <type value="group"/>
+        <required value="true"/>
+        <item>
+            <linkId value="c8.1"/>
+            <text value="About Consent Form"/>
+            <type value="text"/>
+            <required value="false"/>
+            <initial>
+                <valueString value="This consent form describes a research study, what you may expect if you decide to take part and important information to help you make your decision.  Please read this form carefully and ask questions about anything that is not clear before you agree to participate.  You may take this consent form home to think about and discuss with family or friends."/>
+            </initial>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                        <display value="Help-Button"/>
+                    </coding>
+                    <text value="Help-Button"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c8-help"/>
+            <text value="Introductory Paragraph to the participant.  Includes statement of research and explanation of the consent process:  This consent form describes a research study, what you may expect if you decide to take part and important information to help you make your decision.  Please read this form carefully and ask questions about anything that is not clear before you agree to participate.  You may take this consent form home to think about and discuss with family or friends"/>
+            <type value="display"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="c9"/>
+        <text value="Purpose"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="c9.1"/>
+            <text value="Reason for Research"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c9.1-help"/>
+                <text value="Explanation about why the study is being conducted"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c9.2"/>
+            <text value="Interactions with others"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c9.2-help"/>
+                <text value="Statement of who the participant can anticipate interacting with during their study participation"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c9.3"/>
+            <text value="Invited Participants"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c9.3-help"/>
+                <text value="High level information about what participating in the study will entail for the participantr"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c9.4"/>
+            <text value="Total expected study enrollment"/>
+            <type value="integer"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c9.4-help"/>
+                <text value="The number of people targeted for enrollment for the multi-site study"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c9.5"/>
+            <text value="Additional Enrollment Text"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c9.5-help"/>
+                <text value="Additional field for including miscellaneous enrollment information. May include information about total enrollment from the relying site"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c9.6"/>
+            <text value="What is involved in the study?"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c9.6-help"/>
+                <text value="High level information about what participating in the study will entail for the participant."/>
+                <type value="display"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="c10"/>
+        <text value="Assessments"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="gtable"/>
+                        <display value="Group Table"/>
+                    </coding>
+                    <text value="Group Table"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c10.1"/>
+            <text value="Assessment List"/>
+            <type value="group"/>
+            <required value="false"/>
+            <repeats value="true"/>
+            <item>
+                <linkId value="c10.1.1"/>
+                <text value="Name of the Assessment"/>
+                <type value="string"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="c10.1.1-help"/>
+                    <text value="Short name of the assessment"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="c10.1.2"/>
+                <text value="Description of Assessment"/>
+                <type value="text"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="c10.1.2-help"/>
+                    <text value="Short description of the assessment"/>
+                    <type value="display"/>
+                </item>
+            </item>
+        </item>
+        <item>
+            <linkId value="c10.2"/>
+            <text value="Assessment Supplemental Text"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c10.2-help"/>
+                <text value="Additional text if needed to provide additional context about the assessments collected"/>
+                <type value="display"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="c11"/>
+        <text value="Visits and Procedures"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="c11.1"/>
+            <text value="Visit Introductory Text"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c11.1-help"/>
+                <text value="Introductory Text to include prior to the visit table to introduce what the tables contain and explain any additional detail or information about the visit schedule."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="gtable"/>
+                        <display value="Group Table"/>
+                    </coding>
+                    <text value="Group Table"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c11.2"/>
+            <text value="Visit List"/>
+            <type value="group"/>
+            <required value="false"/>
+            <repeats value="true"/>
+            <item>
+                <linkId value="c11.2.1"/>
+                <text value="Visit Type"/>
+                <type value="string"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="c11.2.1-help"/>
+                    <text value="Unique visit type, defined by the procedures which are completed within that visit.  E.g. Screening, Baseline, Followup, Final"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="c11.2.2"/>
+                <text value="Visit Description"/>
+                <type value="text"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="c11.2.2-help"/>
+                    <text value="Description of Visit types, including what procedures it contains"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="c11.2.3"/>
+                <text value="Visit Duration"/>
+                <type value="text"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c11.2.4"/>
+                <text value="Visit Duration Units"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="1"/>
+                        <display value="Minutes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="2"/>
+                        <display value="Hours"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="3"/>
+                        <display value="Days"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <linkId value="c11.2.5"/>
+                <text value="Number of Visits"/>
+                <type value="integer"/>
+                <required value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="gtable"/>
+                        <display value="Group Table"/>
+                    </coding>
+                    <text value="Group Table"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c11.3"/>
+            <text value="Procedure List"/>
+            <type value="group"/>
+            <required value="false"/>
+            <repeats value="true"/>
+            <item>
+                <linkId value="c11.3.1"/>
+                <text value="Name of Procedure"/>
+                <type value="string"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="c11.3.2"/>
+                <text value="Common Term of Procedure"/>
+                <type value="string"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="c11.3.3"/>
+                <text value="Description of a Procedure"/>
+                <type value="text"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c11.3.4"/>
+                <text value="Experimental Procedure Indicator"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="1"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="2"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c11.3.5"/>
+                <text value="Research Indicator"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="1"/>
+                        <display value="Research"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="2"/>
+                        <display value="Standard of Care"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <linkId value="c11.3.6"/>
+                <text value="Frequency of Procedures"/>
+                <type value="decimal"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="c11.3.7"/>
+                <text value="Procedure Duration (minutes)"/>
+                <type value="decimal"/>
+                <required value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c11.4"/>
+            <text value="Procedure Supplemental Text"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c11.4-help"/>
+                <text value="Additional Text to include after the procedure table to provide the participant any additional information needed about procedure schedule"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c11.5"/>
+            <text value="Total Duration of Study Participation"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c11.5-help"/>
+                <text value="Time elapsed for a participant to be part of the study from initial enrollment to final discharge or completion"/>
+                <type value="display"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="c12"/>
+        <text value="Risks"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="gtable"/>
+                        <display value="Group Table"/>
+                    </coding>
+                    <text value="Group Table"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c12.1"/>
+            <text value="Risk List"/>
+            <type value="group"/>
+            <required value="false"/>
+            <repeats value="true"/>
+            <item>
+                <linkId value="c12.1.1"/>
+                <text value="Name of the risk"/>
+                <type value="string"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="c12.1.2"/>
+                <text value="Description of Risk"/>
+                <type value="text"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c12.1.3"/>
+                <text value="Risk Category"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="1"/>
+                        <display value="Physical"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="2"/>
+                        <display value="Non-Physical"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                        <code value="instructions"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c12.2"/>
+            <text value="Risk Supplemental Text"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <linkId value="c12.2_help"/>
+                <text value="Additional text for description of other costs not directly associated with a risk"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c12.3"/>
+            <definition value="9.4"/>
+            <text value="Fetal Risks"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c12.3-help"/>
+                <text value="Indicates whether risks to the fetus are possible"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c12.4"/>
+            <text value="Fetal Risk Details"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="c12.3"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c12.4-help"/>
+                <text value="Textual description of risks to the fetus"/>
+                <type value="display"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="c13"/>
+        <text value="Alternative Procedures"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="c13.1"/>
+            <text value="Alternative Procedure Text"/>
+            <type value="text"/>
+            <required value="false"/>
+        </item>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="gtable"/>
+                    <display value="Group Table"/>
+                </coding>
+                <text value="Group Table"/>
+            </valueCodeableConcept>
+        </extension>
+        <linkId value="c14"/>
+        <text value="Benefits"/>
+        <type value="group"/>
+        <required value="false"/>
+        <repeats value="true"/>
+        <item>
+            <linkId value="c14.1"/>
+            <text value="Name of Benefit"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <linkId value="c14.2"/>
+            <text value="Description of Benefit"/>
+            <type value="text"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c14.3"/>
+            <text value="Benefit to you"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c14.4"/>
+            <text value="Benefit to society"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+    </item>
+    <item>
+        <linkId value="c15"/>
+        <text value="Compensation"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c15.1"/>
+            <definition value="12.1"/>
+            <text value="Will there be compensation for participation?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c15.1-help"/>
+                <text value="Indicates whether compensation will be offered or not for the study"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c15.2"/>
+            <text value="Compensation Supplemental Text"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="c15.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <linkId value="c15.2_help"/>
+                <text value="Additional text about compensation not captured in the compensation table"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="gtable"/>
+                        <display value="Group Table"/>
+                    </coding>
+                    <text value="Group Table"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c15.3"/>
+            <text value="Compensation List"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="c15.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <repeats value="true"/>
+            <item>
+                <linkId value="c15.3.1"/>
+                <text value="What types of visits or milestones will I be compensated for?"/>
+                <type value="text"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="c15.3.2"/>
+                <text value="How many visits or milestones of this type will there be compensation for?"/>
+                <type value="integer"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="c15.3.3"/>
+                <text value="How much will be paid per that type of visit?"/>
+                <type value="text"/>
+                <required value="false"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="c16"/>
+        <text value="Costs"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="c16.1"/>
+            <text value="What are the costs of participation, if any?"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c16.1-help"/>
+                <text value="Explanation informing  participant if any additional costs will occur to the participant as a result of taking part in the study"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c16.2"/>
+            <text value="Will there be reimbursement for other study visit costs incurred?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c16.2-help"/>
+                <text value="Reimbursement to participant for other study visit costs not directly associated with a visit"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c16.3"/>
+            <text value="Who will pay for medical treatment if research related injury occurs?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Treatment not covered"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Research Related injury covered"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="3"/>
+                    <display value="Acute but not chronic injury covered"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c16.3-help"/>
+                <text value="Indicates if participant or the participant's insurance will be responsible for any injury which occurs or if the sponsor will cover any treatment costs for injury"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c16.4"/>
+            <text value="Additional description of treatment coverage"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c16.4-help"/>
+                <text value="Description of other costs not directly associated with a visit"/>
+                <type value="display"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="c17"/>
+        <text value="Participant Rights and whom to contact for answers"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="c17.1"/>
+            <text value="What are the rights of a participant?"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c17.1-help"/>
+                <text value="Statement of particpant rights "/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c17.2"/>
+            <text value="Site IRB Contact Information"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c17.2-help"/>
+                <text value="Contact information for the site IRB contact.  "/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c17.3"/>
+            <text value="Study Coordinator Contact Information"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c17.3-help"/>
+                <text value="Contact information for the site IRB contact.  "/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c17.4"/>
+            <text value="Site Principal Investigator Contact Information"/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c17.4-help"/>
+                <text value="Contact information for the PI.  May be replicated from above."/>
+                <type value="display"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="c18"/>
+        <text value="Participation"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="c18.1"/>
+            <text value="Voluntary Permission Statement"/>
+            <type value="text"/>
+            <required value="false"/>
+            <initial>
+                <valueString value="Participation is voluntary, refusal to participate will involve no penalty or loss of benefits to which the participant is otherwise entitled, and the participant may discontinue participation at any time without penalty or loss of benefits to which the participant is otherwise entitled."/>
+            </initial>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c18.1-help"/>
+                <text value="Standard prepopulated statement, can be edited."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c18.2"/>
+            <text value="What are the anticipated circumstances under which participant's participation may be terminated by the investigator without regard to the participant's or the legally authorized representative's consent."/>
+            <type value="text"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c18.2-help"/>
+                <text value="Anticipated circumstances under which subject's participation may be terminated by  investigator without regard to  subject's or  legally authorized representative's consent"/>
+                <type value="display"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="c19"/>
+        <text value="Early Withdrawal"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c19.1"/>
+            <definition value="18.1"/>
+            <text value="Are there consequences to participant for early withdrawal?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c19.2"/>
+            <text value="Are there Emotional Consequences of Withdrawal"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="c19.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c19.3"/>
+            <text value="Are there Physical Consequences of Withdrawal"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="c19.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <linkId value="c19.4"/>
+            <text value="What are the consequences of withdrawal?"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="c19.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c19.4-help"/>
+                <text value="Description of the withdrawal consequences, will depend and vary based on type of study."/>
+                <type value="display"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="c20"/>
+        <text value="Confidentiality of Records"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c20.1"/>
+            <definition value="19.2a"/>
+            <text value="Will HIPAA content be included within this document?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <linkId value="c20.2"/>
+            <text value="Medical information and billing statement"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="c20.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <initial>
+                <valueString value="Medical information and billing records are protected by the privacy regulations of the federal Health Insurance Portability and Accountability Act of 1996 (HIPAA).  This type of information is called protected health information (PHI). PHI about you may be obtained from any hospital, doctor, and other health care provider involved in your care."/>
+            </initial>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c20.3"/>
+            <definition value="19.2"/>
+            <text value="Will confidentiality be protected?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c20.3-help"/>
+                <text value="Indicates if records identifying a subject will be maintained."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c20.4"/>
+            <text value="How will confidentiality be protected?"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="c20.3"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c20.4-help"/>
+                <text value="Explanation about processes and procedures to support maintaining privacy and confidentiality"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c20.5"/>
+            <definition value="19.3"/>
+            <text value="Are there data security or policies that need to be included in the consent, particularly around device use (optional)"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c20.5-help"/>
+                <text value="Indicates if any data security policy applies to this consent, including device use."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c20.6"/>
+            <text value="Describe any data security policies and processes protecting the data"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="c20.5"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c20.6-help"/>
+                <text value="Optional field for capturing information on IT related data security policies.  Example, use of encryption when utilizing mobile data collection"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="gtable"/>
+                        <display value="Group Table"/>
+                    </coding>
+                    <text value="Group Table"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c20.7"/>
+            <text value="Who can use or see participant information?"/>
+            <type value="group"/>
+            <required value="false"/>
+            <repeats value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c20.7.1"/>
+                <text value="Role or group who will have access to data"/>
+                <type value="open-choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="1"/>
+                        <display value="Researchers at other institutions"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="2"/>
+                        <display value="Researchers outside the study team at this institution"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="3"/>
+                        <display value="External Regulatory Authorities"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <linkId value="c20.7.2"/>
+                <text value="Description of Information Disclosed"/>
+                <type value="text"/>
+                <required value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c20.8"/>
+            <definition value="19.5"/>
+            <text value="Will the data be released for future use?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c20.8-help"/>
+                <text value="Indicates whether these data will be used beyond the study window"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c20.9"/>
+            <definition value="19.5.1"/>
+            <text value="Will the future use data be deidentified?"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="c20.8"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c20.9-help"/>
+                <text value="Indicates if shared data will retain any identifiers."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c20.10"/>
+            <text value="Deidentification detail"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="c20.9"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c20.10-help"/>
+                <text value="Description of deidentification details for future use datasets. Two standardized statements, can be modified."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c20.11"/>
+            <text value="Required text disclosure surrounding future use."/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="c20.8"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Identifiers might be removed from private information or biospecimens, and this information could then be used for future research studies or distributed to another investigator for future research studies without additional informed consent."/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Information or biospecimens collected will not be used or distributed for future research studies, even if deidentified."/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c20.11-help"/>
+                <text value="Required Text disclosure surrounding future use of participant's data"/>
+                <type value="display"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="c21"/>
+        <text value="Specimen Management"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c21.1"/>
+            <definition value="20.1"/>
+            <text value="Were specimens collected as part of this study?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c21.2"/>
+            <text value="Is whole genome sequencing being conducted?"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="c21.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c21.2-help"/>
+                <text value="Indicator of if genome sequencing is being conducted in conjunction with study"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c21.3"/>
+            <definition value="20.1.4"/>
+            <text value="Sharing or no Sharing of samples."/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="c21.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c21.3-help"/>
+                <text value="Indicator of whether biospecimens will be shared outside of the immediate study team or institution."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c21.4"/>
+            <text value="Conditions of sharing"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="c21.3"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c21.4-help"/>
+                <text value="Textual description of sharing conditions including, type, when, etc."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c21.5"/>
+            <text value="Will participant share in profit with commerical use?"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="c21.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c21.5-help"/>
+                <text value="Indicator of any plans to profit share any funds received as a result of commercial use of those samples."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c21.6"/>
+            <text value="Description of Collection and Storage"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="c21.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c21.6-help"/>
+                <text value="Textual description of collection and storage procedures and policies for the study."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c21.7"/>
+            <text value="Can consent for sample use be revoked?"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="c21.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c21.7-help"/>
+                <text value="Indicator of revocation of sample consent is an option"/>
+                <type value="display"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="drop-down"/>
+                    <display value="Drop down"/>
+                </coding>
+                <text value="Drop down"/>
+            </valueCodeableConcept>
+        </extension>
+        <linkId value="c22"/>
+        <definition value="21"/>
+        <text value="Will there be Broad Consent for Storage, maintenance and secondary research use?"/>
+        <type value="choice"/>
+        <required value="false"/>
+        <answerOption>
+            <valueCoding>
+                <code value="1"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answerOption>
+        <answerOption>
+            <valueCoding>
+                <code value="2"/>
+                <display value="No"/>
+            </valueCoding>
+        </answerOption>
+        <item>
+            <linkId value="c22.1"/>
+            <text value="If selected, participant identifiable information and identifiable biospecimens will be stored, used and shared for the kinds of future research described in this broad consent form, without anyone asking your permission for each new study.  Identifying information may also be removed from your information and biospecimens, allowing them to be used for any future research or other purpose."/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="c22"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+        </item>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="drop-down"/>
+                    <display value="Drop down"/>
+                </coding>
+                <text value="Drop down"/>
+            </valueCodeableConcept>
+        </extension>
+        <linkId value="c23"/>
+        <definition value="22"/>
+        <text value="Can the study team contact you for future research?"/>
+        <type value="choice"/>
+        <required value="false"/>
+        <answerOption>
+            <valueCoding>
+                <code value="1"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answerOption>
+        <answerOption>
+            <valueCoding>
+                <code value="2"/>
+                <display value="No"/>
+            </valueCoding>
+        </answerOption>
+        <item>
+            <linkId value="c23.1"/>
+            <text value="Conditions about contact for additional sample use, information not currently described or future research"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="c23"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c23.1-help"/>
+                <text value="Description of the details for which the participant could be contacted"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                        <display value="Help-Button"/>
+                    </coding>
+                    <text value="Help-Button"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c23-help"/>
+            <text value="Indicator if the participant contact information can be used for future questions or recuitment for this or other studies"/>
+            <type value="display"/>
+        </item>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="drop-down"/>
+                    <display value="Drop down"/>
+                </coding>
+                <text value="Drop down"/>
+            </valueCodeableConcept>
+        </extension>
+        <linkId value="c24"/>
+        <definition value="23"/>
+        <text value="Will participants share in commercial profit?"/>
+        <type value="choice"/>
+        <required value="false"/>
+        <answerOption>
+            <valueCoding>
+                <code value="1"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answerOption>
+        <answerOption>
+            <valueCoding>
+                <code value="2"/>
+                <display value="No"/>
+            </valueCoding>
+        </answerOption>
+        <item>
+            <linkId value="c24.1"/>
+            <text value="Details about any profit sharing agreements or why profits will not be shared."/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="c24"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                        <display value="Help-Button"/>
+                    </coding>
+                    <text value="Help-Button"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c24-help"/>
+            <text value="Indicator of participants will receive any commercial profits resulting from their participation in study"/>
+            <type value="display"/>
+        </item>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="drop-down"/>
+                    <display value="Drop down"/>
+                </coding>
+                <text value="Drop down"/>
+            </valueCodeableConcept>
+        </extension>
+        <linkId value="c25"/>
+        <text value="Will the study team contact you with new information that may affect your willingness to remain in the study"/>
+        <type value="choice"/>
+        <required value="false"/>
+        <answerOption>
+            <valueCoding>
+                <code value="1"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answerOption>
+        <answerOption>
+            <valueCoding>
+                <code value="2"/>
+                <display value="No"/>
+            </valueCoding>
+        </answerOption>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                        <display value="Help-Button"/>
+                    </coding>
+                    <text value="Help-Button"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c25-help"/>
+            <text value="Indicator if  study team will provide updates that may affect  willingness to remain in study"/>
+            <type value="display"/>
+        </item>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="drop-down"/>
+                    <display value="Drop down"/>
+                </coding>
+                <text value="Drop down"/>
+            </valueCodeableConcept>
+        </extension>
+        <linkId value="c26"/>
+        <definition value="25"/>
+        <text value="Will the study team disclose clinically relevant study results to you?"/>
+        <type value="choice"/>
+        <required value="false"/>
+        <answerOption>
+            <valueCoding>
+                <code value="1"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answerOption>
+        <answerOption>
+            <valueCoding>
+                <code value="2"/>
+                <display value="No"/>
+            </valueCoding>
+        </answerOption>
+        <item>
+            <linkId value="c26.1"/>
+            <text value="Condtions under which the study results will be disclosed to you"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="c26"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c26.1-help"/>
+                <text value="Textual description of which results and when will be disclosed to you. "/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                        <display value="Help-Button"/>
+                    </coding>
+                    <text value="Help-Button"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c26-help"/>
+            <text value="Indicator of  study team will provide results of lab tests or other feedback of results to you at any time."/>
+            <type value="display"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="c27"/>
+        <text value="Clinical Trials.gov statement"/>
+        <type value="text"/>
+        <required value="false"/>
+        <readOnly value="true"/>
+        <initial>
+            <valueString value="A description of this clinical trial will be available on http://www.ClinicalTrials.gov, as required by U.S. Law. This Web site will not include information that can identify you. At most, the Web site will include a summary of the results. You can search this Web site at any time."/>
+        </initial>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="drop-down"/>
+                    <display value="Drop down"/>
+                </coding>
+                <text value="Drop down"/>
+            </valueCodeableConcept>
+        </extension>
+        <linkId value="c28"/>
+        <definition value="26"/>
+        <text value="Is this study covered under a Certificate of Confidentiality? (default Y in NIH)"/>
+        <type value="choice"/>
+        <required value="false"/>
+        <answerOption>
+            <valueCoding>
+                <code value="1"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answerOption>
+        <answerOption>
+            <valueCoding>
+                <code value="2"/>
+                <display value="No"/>
+            </valueCoding>
+        </answerOption>
+        <item>
+            <linkId value="c28.1"/>
+            <text value="Certificate of Confidentiality Statement"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="c28"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <readOnly value="true"/>
+            <initial>
+                <valueString value="The Department of Health and Human Services (HHS) has issued a Certificate of Confidentiality to further protect your privacy. With this Certificate, the investigators may not disclose research information that may identify you in any Federal, State, or local civil, criminal, administrative, legislative, or other proceedings, unless you have consented for this use.[trunc]"/>
+            </initial>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c28.1-help"/>
+                <text value="Indicator if study is covered under a certificate of confidentiality (automatially issued for NIH studies)"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c28.2"/>
+            <text value="Required Disclosures based on state law"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="c28"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="c29"/>
+        <text value="When will the PHI Authorization Expire based on date or time past an event"/>
+        <type value="text"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                        <display value="Help-Button"/>
+                    </coding>
+                    <text value="Help-Button"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c29-help"/>
+            <text value="PHI authorization expiration.  Might be never, a certain date, or a period after a study milestone, such as 6 months after study closure."/>
+            <type value="display"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="c30"/>
+        <text value="Statement of PHI Authorization Revocation"/>
+        <type value="text"/>
+        <required value="false"/>
+        <initial>
+            <valueString value="Participants have the ability to revoke their consent to share PHI at any time but that there are limitations on what restrictions can apply to data that has already been shared."/>
+        </initial>
+    </item>
+    <item>
+        <linkId value="c31"/>
+        <text value="Signature"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c31.1"/>
+            <text value="Indicator to include Participant Signature and Date/Time"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c31.2"/>
+            <text value="Indicator to include Assent Signature and Date/Time"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c31.3"/>
+            <text value="Indicator to include Legally Authorized Representative Signature and Date/Time"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c31.4"/>
+            <text value="Relationship of Legally Authorized Representative"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Parent"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Spouse"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="3"/>
+                    <display value="Child"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="4"/>
+                    <display value="Sibling"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="5"/>
+                    <display value="Legal Guardian"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="6"/>
+                    <display value="Other"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c31.5"/>
+            <text value="Indicator to include a Witness Signature and Date/Time"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c31.6"/>
+            <text value="Indicator to include Parent 1 Signature and Date/Time"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="c31.7"/>
+            <text value="Indicator to include Parent 2 Signature and Date/Time"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+    </item>
+    <item>
+        <linkId value="c32"/>
+        <text value="Protocol or Study Number"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="c32.1"/>
+            <text value="IRB Number"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <linkId value="c32.2"/>
+            <text value="sIRB Version Date of  Consent"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c32.2-help"/>
+                <text value="Date that changes whenever a change is made to the consent.  It is the versioning system of the sIRB institution, and is updated in accordance with the institution's policy.  "/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c32.3"/>
+            <text value="Relying Site Version Date of Consent"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="c32.3-help"/>
+                <text value="A number that changes whenever a change is made to the consent.  It is the versioning system of the relying institution, and is updated in accordance with the institution's policy.  "/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="c32.6"/>
+            <text value="Expiration Date of Consent"/>
+            <type value="dateTime"/>
+            <required value="false"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="ADMIN00"/>
+        <text value="Administrative Use Only"/>
+        <type value="display"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN01"/>
+            <text value="Link ID prefix"/>
+            <type value="string"/>
+            <required value="false"/>
+            <initial>
+                <valueString value="c"/>
+            </initial>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN02"/>
+            <text value="Questionnaire Response ID for the parent Questionnaire Response (such as the Initiate a Study Questionnaire Response), if any"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN03"/>
+            <text value="ID of the Research Study FHIR Resource associated with the study Questionnaire Responses, if any"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN04"/>
+            <text value="Questionnaire Response ID of the local considerations Questionnaire Response, if any"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+    </item>
+</Questionnaire>

@@ -1,0 +1,3430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire
+    xmlns="http://hl7.org/fhir">
+    <id value="sirb-nonmedicalevent-questionnaire"/>
+    <meta>
+        <versionId value="5"/>
+        <lastUpdated value="2021-06-25T19:09:26.945+00:00"/>
+        <source value="#4ToFBXq9D2XCC4y7"/>
+        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <p/>
+        </div>
+    </text>
+    <extension url="http://hl7.org/fhir/StructureDefinition/variable">
+        <valueExpression>
+            <description value="response to get the data from"/>
+            <name value="lookupInitiateStudy"/>
+            <language value="application/x-fhir-query"/>
+            <expression value="https://docr-fhir.dev.cloud.duke.edu/hapi-fhir-jpaserver/fhir/QuestionnaireResponse/QRIDInitiateStudy"/>
+        </valueExpression>
+    </extension>
+    <url value="https://github.com/jdtopping/sIRB/blob/master/input/resources/questionnaire/sirb-nonmedicalevents-questionnaire.json"/>
+    <version value="0.1.0"/>
+    <name value="NonMedical_events"/>
+    <title value="Adverse Non-Medical Event Questionnaire"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <subjectType value="ResearchStudy"/>
+    <item>
+        <linkId value="nme1"/>
+        <text value="Research Study"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="nme1.1"/>
+            <text value="Study Title:"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme1.1_help"/>
+                <text value="Study Title from the Informed Consent"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme1.3"/>
+            <text value="IRB Protocol Number:"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme1.3_help"/>
+                <text value="IRB Number from the Informed Consent"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="nme1.4"/>
+            <text value="Status:"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="nochange"/>
+                    <display value="No change in research activities"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="stopped"/>
+                    <display value="All research activities temporarily and voluntarily stopped for all participants"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="partial"/>
+                    <display value="Partial voluntary hold on some research activities for all participants (explain below)"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="hold"/>
+                    <display value="Voluntary hold on new participant enrollment only"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme1.4_help"/>
+                <text value="Status of study research activities"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme1.5"/>
+            <text value="If partial, please explain:"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="nme1.4"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="partial"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme1.5_help"/>
+                <text value="Explanation for voluntary hold on new participant enrollment."/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="nme2a"/>
+        <text value="Site/Organization"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                        <code value="instructions"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="nme2a_help"/>
+            <text value="Location of Adverse Non-Medical Event"/>
+            <type value="display"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+        <item>
+            <linkId value="nme2a.1"/>
+            <text value="Organization/site where the Adverse Non-Medical Event occurred"/>
+            <type value="group"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <item>
+                <linkId value="nme2a.1.1"/>
+                <text value="Name of organization/site where the Adverse Non-Medical Event occurred"/>
+                <type value="string"/>
+                <required value="false"/>
+                <repeats value="false"/>
+            </item>
+            <item>
+                <linkId value="nme2a.1.2"/>
+                <text value="City"/>
+                <type value="string"/>
+                <required value="false"/>
+                <repeats value="false"/>
+            </item>
+            <item>
+                <linkId value="nme2a.1.3"/>
+                <text value="State"/>
+                <type value="string"/>
+                <required value="false"/>
+                <repeats value="false"/>
+            </item>
+            <item>
+                <linkId value="nme2a.1.4"/>
+                <text value="Country"/>
+                <type value="string"/>
+                <required value="false"/>
+                <repeats value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme2a.2"/>
+            <text value="Organization/site which is recording the Adverse Non-Medical Event"/>
+            <type value="group"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <item>
+                <linkId value="nme2a.2.1"/>
+                <text value="Name of organization/site which is recording the Adverse Non-Medical Event"/>
+                <type value="string"/>
+                <required value="false"/>
+                <repeats value="false"/>
+            </item>
+            <item>
+                <linkId value="nme2a.2.2"/>
+                <text value="City"/>
+                <type value="string"/>
+                <required value="false"/>
+                <repeats value="false"/>
+            </item>
+            <item>
+                <linkId value="nme2a.2.3"/>
+                <text value="State"/>
+                <type value="string"/>
+                <required value="false"/>
+                <repeats value="false"/>
+            </item>
+            <item>
+                <linkId value="nme2a.2.4"/>
+                <text value="Country"/>
+                <type value="string"/>
+                <required value="false"/>
+                <repeats value="false"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="nme2b"/>
+        <text value="Site Principal Investigator for the site where Adverse Non-Medical Event occurred"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                        <code value="instructions"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="nme2b_help"/>
+            <text value="Site Principal Investigator responsible for the research study at the site where Adverse Non-Medical Event occurred"/>
+            <type value="display"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+        <item>
+            <linkId value="nme2b.1"/>
+            <text value="First Name"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme2b.1_help"/>
+                <text value="First or given name associated with the site PI"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme2b.4"/>
+            <text value="Last Name"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme2b.4_help"/>
+                <text value="Surname or family name associated with the  principal investigator"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme2b.5"/>
+            <text value="Suffix"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme2b.5_help"/>
+                <text value="Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc. associated with the principal investigator's name"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme2b.6"/>
+            <text value="Degree(s)"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme2b.6_help"/>
+                <text value="Professional and Academic degrees associated with the principal investigator"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme2b.2"/>
+            <text value="Phone:"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme2b.2_help"/>
+                <text value="Phone number for site PI"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme2b.3"/>
+            <text value="Email:"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme2b.3_help"/>
+                <text value="Email address for site PI"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="nme3"/>
+        <text value="Report"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                        <code value="instructions"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="nme3_help"/>
+            <text value="Non-medical adverse event report"/>
+            <type value="display"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+        <item>
+            <linkId value="nme3.1"/>
+            <text value="Report Date:"/>
+            <type value="date"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.1_help"/>
+                <text value="Date report is created"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.2"/>
+            <text value="Report Status"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="initial"/>
+                    <display value="Initial"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="followup"/>
+                    <display value="Follow-up"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.2_help"/>
+                <text value="Indicator if report is the Initial report or follow-up report"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.3"/>
+            <text value="Check at least one of the following criteria:"/>
+            <type value="group"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.3_help"/>
+                <text value="Reason for uanticipated problem reporting"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.4"/>
+            <text value="New information resulted in unexpected change in risks of the research."/>
+            <type value="boolean"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.4_help"/>
+                <text value="Indicator if new information resulted in unexpected change in risks of research"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.5"/>
+            <text value="New or increased risk"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="nme3.4"/>
+                <operator value="="/>
+                <answerBoolean value="true"/>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <linkId value="nme3.5.1"/>
+                <text value="Date:"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.5.1_help"/>
+                    <text value="Date new or increased risk first documented"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.5.2"/>
+                <text value="Date discovered:"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.5.2_help"/>
+                    <text value="Date new or increased risk discovered"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.5.3"/>
+                <text value="Description:"/>
+                <type value="text"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.5.3_help"/>
+                    <text value="Description of new or increased risk"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.6"/>
+            <text value="Unanticipated Problem Involving Risk to Participants or Others"/>
+            <type value="boolean"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.6_help"/>
+                <text value="Indicator if problem Involved risk to participants or others"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.7"/>
+            <text value="Unanticipated Problem"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="nme3.6"/>
+                <operator value="="/>
+                <answerBoolean value="true"/>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <linkId value="nme3.7.1"/>
+                <text value="Event date:"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.7.1_help"/>
+                    <text value="Date event occurred"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.7.2"/>
+                <text value="Date event became aware to study team:"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.7.2_help"/>
+                    <text value="Date site research team first became aware of unanticipated problem "/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.7.3"/>
+                <text value="Event Summary:"/>
+                <type value="text"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.7.3_help"/>
+                    <text value="Summary description of unanticipated problem"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.7.4"/>
+                <text value="Was this event Unexpected?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.7.4_help"/>
+                    <text value="Indicator if unanticipated problem was unexpected"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.7.5"/>
+                <text value="If yes, please explain:"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="nme3.7.4"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="yes"/>
+                    </answerCoding>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.7.5_help"/>
+                    <text value="Explanation for why unanticipated problem was unexpected"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.7.6"/>
+                <text value="Was this event Related or Possibly Related to participation in the research?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.7.6_help"/>
+                    <text value="Unanticipated problem associated with participation in the research study"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.7.7"/>
+                <text value="If yes, please explain:"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="nme3.7.6"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="yes"/>
+                    </answerCoding>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.7.7_help"/>
+                    <text value="Explanation for why unanticipated problem is associated with participation in this research"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.7.8"/>
+                <text value="Does this event suggest that the research places participant(s) or others at a greater Risk of harm than was previously known?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.7.8_help"/>
+                    <text value="Indicator if unanticipated problem increased risk of harm to  participants"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.7.9"/>
+                <text value="If yes, please explain:"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="nme3.7.8"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="yes"/>
+                    </answerCoding>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.7.9_help"/>
+                    <text value="Explanation for why unanticipated problem is associated with increased risk of harm for research participants"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.8"/>
+            <text value="Protocol Deviation (accidental or unintentional)"/>
+            <type value="boolean"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.8_help"/>
+                <text value="Indicator protocol  deviation was accidental or unintentional"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.9"/>
+            <text value="Protocol Deviation (Non-Compliance)"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="nme3.8"/>
+                <operator value="="/>
+                <answerBoolean value="true"/>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <linkId value="nme3.9.1"/>
+                <text value="Date:"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.9.1_help"/>
+                    <text value="Date non-compliance first identified"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.9.2"/>
+                <text value="Date discovered:"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.9.2_help"/>
+                    <text value="Date site research team first discovered non-compliance protocol deviation"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.9.3"/>
+                <text value="Description:"/>
+                <type value="text"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.9.3_help"/>
+                    <text value="Description of non-compliance protocol deviation"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.9.4"/>
+                <text value="Does the deviation involve any of the following? (Check all that apply)"/>
+                <type value="group"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.9.4_help"/>
+                    <text value="Reason for protocol deviation"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+                <item>
+                    <linkId value="nme3.9.4.1"/>
+                    <text value="Failure to obtain informed consent when IRB deemed required"/>
+                    <type value="boolean"/>
+                    <required value="false"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="nme3.9.4.1_help"/>
+                        <text value="Informed consent not obtained when required by IRB"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="nme3.9.4.2"/>
+                    <text value="Modifying the protocol without IRB approval, except to avoid hazard to participants"/>
+                    <type value="boolean"/>
+                    <required value="false"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="nme3.9.4.2_help"/>
+                        <text value="Protocol modified without IRB approval"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="nme3.9.4.3"/>
+                    <text value="Conducting research prior to IRB approval, during an IRB suspension or after IRB approval ends"/>
+                    <type value="choice"/>
+                    <required value="false"/>
+                    <answerOption>
+                        <valueCoding>
+                            <code value="yes"/>
+                            <display value="Yes"/>
+                        </valueCoding>
+                    </answerOption>
+                    <answerOption>
+                        <valueCoding>
+                            <code value="no"/>
+                            <display value="No"/>
+                        </valueCoding>
+                    </answerOption>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="nme3.9.4.3_help"/>
+                        <text value="Conducting research without IRB approval"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="nme3.9.4.4"/>
+                    <text value="Please explain any Checked items:"/>
+                    <type value="text"/>
+                    <enableWhen>
+                        <question value="nme3.9.4.1"/>
+                        <operator value="="/>
+                        <answerBoolean value="true"/>
+                    </enableWhen>
+                    <enableWhen>
+                        <question value="nme3.9.4.2"/>
+                        <operator value="="/>
+                        <answerBoolean value="true"/>
+                    </enableWhen>
+                    <enableWhen>
+                        <question value="nme3.9.4.3"/>
+                        <operator value="="/>
+                        <answerBoolean value="true"/>
+                    </enableWhen>
+                    <enableBehavior value="any"/>
+                    <required value="false"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="nme3.9.9.4_help"/>
+                        <text value="Explanation for why protocol deviation category checked"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.9.5"/>
+                <text value="Was the deviation a substantive change from the protocol adversely affecting any of the following? (Check all that apply)"/>
+                <type value="group"/>
+                <required value="false"/>
+                <item>
+                    <linkId value="nme3.9.5.1"/>
+                    <text value="The rights, welfare, or safety of the participants"/>
+                    <type value="boolean"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="nme3.9.5.2"/>
+                    <text value="The integrity of the research area"/>
+                    <type value="boolean"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="nme3.9.5.3"/>
+                    <text value="The participants' willingness to continue participation"/>
+                    <type value="boolean"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="nme3.9.5.4"/>
+                    <text value="Please explain any Checked items:"/>
+                    <type value="text"/>
+                    <enableWhen>
+                        <question value="nme3.9.5.1"/>
+                        <operator value="="/>
+                        <answerBoolean value="true"/>
+                    </enableWhen>
+                    <enableWhen>
+                        <question value="nme3.9.5.2"/>
+                        <operator value="="/>
+                        <answerBoolean value="true"/>
+                    </enableWhen>
+                    <enableWhen>
+                        <question value="nme3.9.5.3"/>
+                        <operator value="="/>
+                        <answerBoolean value="true"/>
+                    </enableWhen>
+                    <enableBehavior value="any"/>
+                    <required value="false"/>
+                </item>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.10"/>
+            <text value="A breach of Confidentiality"/>
+            <type value="boolean"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.10_help"/>
+                <text value="Indicator of breach of confidentiality"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.11"/>
+            <text value="Breach of Confidentiality"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="nme3.10"/>
+                <operator value="="/>
+                <answerBoolean value="true"/>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <linkId value="nme3.11.1"/>
+                <text value="Date breach occurred"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.11.1_help"/>
+                    <text value="Date breach of confidentiality first documented"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.11.2"/>
+                <text value="Date discovered:"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.11.2_help"/>
+                    <text value="Date site study team discovered breach of confidentiality "/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.11.3"/>
+                <text value="Description:"/>
+                <type value="text"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.11.3_help"/>
+                    <text value="Breach of confidentiality description"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.11_help"/>
+                <text value="Indicator of breach of confidentiality"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.12"/>
+            <text value="Incarceration of a participant in a protocol not approved to enroll prisoners"/>
+            <type value="boolean"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.12_help"/>
+                <text value="Indicator of a study participant incarcerated when the protocol is not approved for prisoner enrollment"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.13"/>
+            <text value="Incarceration"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="nme3.12"/>
+                <operator value="="/>
+                <answerBoolean value="true"/>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <linkId value="nme3.13.1"/>
+                <text value="Date:"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.13.1_help"/>
+                    <text value="Date site first documented participant incarceration."/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.13.2"/>
+                <text value="Date incarceration was discovered:"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.13.2_help"/>
+                    <text value="Data site study team discovered patient incarceration"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.13.3"/>
+                <text value="Description:"/>
+                <type value="text"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.13.3_help"/>
+                    <text value="Description of patient incarceration"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.14"/>
+            <text value="Complaint of a participant indicating unexpected risks or the compliant cannot be resolved by team."/>
+            <type value="boolean"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.14_help"/>
+                <text value="Indicator if participant complaint of unexpected risks was not resolved by study team. Complaint information is related to study site. "/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.15"/>
+            <text value="Participant Complaint"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="nme3.14"/>
+                <operator value="="/>
+                <answerBoolean value="true"/>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <linkId value="nme3.15.1"/>
+                <text value="Complaint Date:"/>
+                <type value="date"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.15.1_help"/>
+                    <text value="Date site first documented participant unexpected risk complaint"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.15.2"/>
+                <text value="Date received:"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.15.2_help"/>
+                    <text value="Date site personnel first received participant unexpected risk complaint"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.15.3"/>
+                <text value="Description:"/>
+                <type value="text"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.15.3_help"/>
+                    <text value="Description of participant unexpected risk complaint"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.16"/>
+            <text value="Other Type of Adverse Non-Medical Event"/>
+            <type value="boolean"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.16_help"/>
+                <text value="Indicator for other type of Adverse Non-Medical Event "/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme3.17"/>
+            <text value="Other Type"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="nme3.16"/>
+                <operator value="="/>
+                <answerBoolean value="true"/>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <linkId value="nme3.17.1"/>
+                <text value="Event date:"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.17.1_help"/>
+                    <text value="Date event occurred"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.17.2"/>
+                <text value="Date study team became aware of event:"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.17.2_help"/>
+                    <text value="Date site research team first became aware of the event "/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.17.3"/>
+                <text value="Event Summary:"/>
+                <type value="text"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.17.3_help"/>
+                    <text value="Summary description of the event"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.17.4"/>
+                <text value="Was this Adverse Non-Medical Event Unexpected?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.17.4_help"/>
+                    <text value="Indicator if event was unexpected"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.17.5"/>
+                <text value="If yes, please explain:"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="nme3.17.4"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="yes"/>
+                    </answerCoding>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.17.5_help"/>
+                    <text value="Explanation for why event was unexpected"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme3.17.6"/>
+                <text value="Was this event Related or Possibly Related to participation in the research?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.17.6_help"/>
+                    <text value="Adverse Non-Medical Event association with participation in the research study"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="nme3.17.7"/>
+                <text value="If yes, please explain:"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="nme3.17.6"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="yes"/>
+                    </answerCoding>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="nme3.17.7_help"/>
+                    <text value="Explanation for why the event is associated with participation in this research"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="nme4"/>
+        <text value="Reporting"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                        <code value="instructions"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="nme4_help"/>
+            <text value="Reporting information to Sponsor and both relying and reviewing IRBs"/>
+            <type value="display"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="nme4.1"/>
+            <text value="Was the Sponsor notified?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme4.1_help"/>
+                <text value="Indicator if Sponsor was notified of non-medical adverse event"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme4.2"/>
+            <text value="Notification date:"/>
+            <type value="date"/>
+            <enableWhen>
+                <question value="nme4.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme4.2_help"/>
+                <text value="Date sponsor notified of non-medical adverse event"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="nme4.3"/>
+            <text value="Was the IRB notified?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme4.3_help"/>
+                <text value="Indicator if study site IRB notified of non-medical adverse event"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme4.4"/>
+            <text value="Notification date:"/>
+            <type value="date"/>
+            <enableWhen>
+                <question value="nme4.3"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme4.4_help"/>
+                <text value="Date study site IRB notified of non-medical adverse event"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme4.5"/>
+            <text value="Were any Other Parties notified?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="0"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme4.5_help"/>
+                <text value="Other parties notified of non-medical adverse event (such as coordinating center, other study sites, FDA)"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme4.6"/>
+            <text value="Please list other notified parties"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="nme4.5"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="nme5"/>
+        <text value="Corrective and Preventative Action Plan"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                        <code value="instructions"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="nme5_help"/>
+            <text value="Description of corrective and preventative action plan"/>
+            <type value="display"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="nme5.1"/>
+            <text value="Was a Root Cause analysis performed?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme5.1_help"/>
+                <text value="Indicataor if analysis of underlying causes or problems that led to the non-medical adverse event was performed"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme5.2"/>
+            <text value="If yes, provide determination:"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="nme5.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme5.2_help"/>
+                <text value="Description of what the root cause analysis determined the adverse event was caused by"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="nme5.3"/>
+            <text value="Was Corrective Action implemented?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="pending"/>
+                    <display value="Pending - Currently under development"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme5.3_help"/>
+                <text value="Indicator if corrective action is implemented for non-medical adverse event"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme5.4"/>
+            <text value="If yes, provide a summary:"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="nme5.3"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme5.4_help"/>
+                <text value="Summary of corrective action implemented for non-medical adverse event"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="nme5.5"/>
+            <text value="Was Preventitive Action implemented?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="pending"/>
+                    <display value="Pending - Currently under development"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme5.5_help"/>
+                <text value="Indicator if preventative action for non-medical adverse event is implemented"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme5.6"/>
+            <text value="If yes, provide a summary:"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="nme5.5"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme5.6_help"/>
+                <text value="Summary of preventative action implemented for non-medical adverse event"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="nme6"/>
+        <text value="Study Protocol and Informed Consent"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                        <code value="instructions"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="nme6_help"/>
+            <text value="Description of protocol and informed consent changes"/>
+            <type value="display"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="nme6.1"/>
+            <text value="Are changes required to the Study Protocol as a result of this report?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme6.1_help"/>
+                <text value="Indicator if changes are required in study protocol resulting from the non-medical adverse event report"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme6.1.1"/>
+                <text value="If the study protocol does not require changes, is it because the Adverse Non-Medical Event consisted of a missed lab or assessment by a participant (which does not jeopardize the study or increase risks to other participants)? "/>
+                <type value="choice"/>
+                <enableWhen>
+                    <question value="nme6.1"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="no"/>
+                    </answerCoding>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes-Adverse Non-Medical Event was a missed lab or assessment"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme6.1.2"/>
+                <text value="If the study protocol does not require changes, is it because the Adverse Non-Medical Event consisted of a missed treatment or dose by a participant (which does not jeopardize the study or increase risks to other participants)?"/>
+                <type value="choice"/>
+                <enableWhen>
+                    <question value="nme6.1"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="no"/>
+                    </answerCoding>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes-Adverse Non-Medical Event was a missed dose or treatment"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme6.2"/>
+            <text value="Justify your decision to not change the study protocol:"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="nme6.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="no"/>
+                </answerCoding>
+            </enableWhen>
+            <enableWhen>
+                <question value="nme6.1.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="no"/>
+                </answerCoding>
+            </enableWhen>
+            <enableWhen>
+                <question value="nme6.1.2"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="no"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme6.2_help"/>
+                <text value="Justification for decision not to change study protocol based upon non-medical adverse event report"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="nme6.3"/>
+            <text value="Are changes required to the Informed Consent as a result of this report?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme6.3_help"/>
+                <text value="Indicator if changes are required to the informed consent as a result of the non-medical adverse event report"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme6.3.1"/>
+                <text value="If the Informed Consent does not require changes, is it because the Adverse Non-Medical Event consisted of a missed lab or assessment by a participant (which does not jeopardize the study or increase risks to other participants)? "/>
+                <type value="choice"/>
+                <enableWhen>
+                    <question value="nme6.3"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="no"/>
+                    </answerCoding>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes-Adverse Non-Medical Event was a missed lab or assessment"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme6.3.2"/>
+                <text value="If the Informed Consent does not require changes, is it because the Adverse Non-Medical Event consisted of a missed treatment or dose by a participant (which does not jeopardize the study or increase risks to other participants)?"/>
+                <type value="choice"/>
+                <enableWhen>
+                    <question value="nme6.3"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="no"/>
+                    </answerCoding>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes-Adverse Non-Medical Event was a missed dose or treatment"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme6.4"/>
+            <text value="Justify your decision to not change the informed consent:"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="nme6.3"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="no"/>
+                </answerCoding>
+            </enableWhen>
+            <enableWhen>
+                <question value="nme6.3.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="no"/>
+                </answerCoding>
+            </enableWhen>
+            <enableWhen>
+                <question value="nme6.3.2"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="no"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme6.4_help"/>
+                <text value="Justification for decision not to change informed consent based upon non-medical adverse event report"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="nme6.5"/>
+            <text value="Are notifications or re-consenting of participants required as a result of this change?"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="nme6.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableWhen>
+                <question value="nme6.3"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="any"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme6.5_help"/>
+                <text value="Indicator if notification or reconsenting of participants is required  due to adverse event"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme6.6"/>
+            <text value="If yes, detail how the notification and/or re-consent will occur:"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="nme6.5"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme6.6_help"/>
+                <text value="Description of how notification or re-consent will occur"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="nme6.7"/>
+            <text value="If no, justify your decision to not notify (re-consent) participants:"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="nme6.5"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="no"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="nme6.7_help"/>
+                <text value="Rationale for not notifying (re-consenting) study participants"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+            <valueBoolean value="true"/>
+        </extension>
+        <linkId value="ADMIN00"/>
+        <text value="Administrative Use Only"/>
+        <type value="display"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN01"/>
+            <text value="Link ID prefix"/>
+            <type value="string"/>
+            <required value="false"/>
+            <initial>
+                <valueString value="nme"/>
+            </initial>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN02"/>
+            <text value="Questionnaire Response ID for the parent Questionnaire Response (such as the Initiate a Study Questionnaire Response), if any"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN03"/>
+            <text value="ID of the Research Study FHIR Resource associated with the study Questionnaire Responses"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN04"/>
+            <text value="Questionnaire Response ID of the local considerations Questionnaire Response, if any"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+    </item>
+</Questionnaire>

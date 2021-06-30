@@ -1,0 +1,2699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire
+    xmlns="http://hl7.org/fhir">
+    <id value="sirb-recruitment-materials-questionnaire"/>
+    <meta>
+        <versionId value="10"/>
+        <lastUpdated value="2021-06-25T19:08:24.842+00:00"/>
+        <source value="#Vqj5zNSONvp9jl0b"/>
+        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <p/>
+        </div>
+    </text>
+    <extension url="http://hl7.org/fhir/StructureDefinition/variable">
+        <valueExpression>
+            <description value="response to get the data from"/>
+            <name value="lookupInitiateStudy"/>
+            <language value="application/x-fhir-query"/>
+            <expression value="https://docr-fhir.dev.cloud.duke.edu/hapi-fhir-jpaserver/fhir/QuestionnaireResponse/QRIDInitiateStudy"/>
+        </valueExpression>
+    </extension>
+    <url value="https://raw.githubusercontent.com/jdtopping/sIRB/master/input/resources/questionnaire/sirb-recruitment-questionnaire.json"/>
+    <version value="0.1.0"/>
+    <name value="Recruitment_materials"/>
+    <title value="Recruitment Materials"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <subjectType value="ResearchStudy"/>
+    <item>
+        <linkId value="rm1"/>
+        <text value="Research Study"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="rm1.1"/>
+            <text value="Study Title"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="rm1.1_help"/>
+                <text value="Short Title of the Research Study intended for the lay audience"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="rm1.2"/>
+            <text value="IRB Protocol Number"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="rm1.2_help"/>
+                <text value="IRB number assigned"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="rm2"/>
+        <text value="Study Institution for which Recruitment Materials are being provided"/>
+        <type value="group"/>
+        <required value="false"/>
+        <repeats value="false"/>
+        <readOnly value="false"/>
+        <item>
+            <linkId value="rm2.1"/>
+            <text value="Institution Name"/>
+            <type value="string"/>
+            <required value="true"/>
+        </item>
+        <item>
+            <linkId value="rm2.2"/>
+            <text value="City"/>
+            <type value="string"/>
+            <required value="true"/>
+        </item>
+        <item>
+            <linkId value="rm2.3"/>
+            <text value="State"/>
+            <type value="string"/>
+            <required value="true"/>
+        </item>
+        <item>
+            <linkId value="rm2.4"/>
+            <text value="Country"/>
+            <type value="string"/>
+            <required value="true"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="rm2.5"/>
+            <text value="Is this institution the sIRB (Reviewing Site) or a Relying Site?"/>
+            <type value="choice"/>
+            <required value="true"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="sIRB (Reviewing Site)"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Relying Site"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+    </item>
+    <item>
+        <linkId value="rm3"/>
+        <text value="Site Principal Investigator for the Site for which Recruitment Materials are being submitted"/>
+        <type value="group"/>
+        <required value="false"/>
+        <repeats value="false"/>
+        <readOnly value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                        <code value="instructions"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="rm3_help"/>
+            <text value="The primary site investigator to contact"/>
+            <type value="display"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+        <item>
+            <linkId value="rm3.1"/>
+            <text value="First Name"/>
+            <type value="string"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="rm3.1_help"/>
+                <text value="First or given name associated with the site principal investigator"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="rm3.3"/>
+            <text value="Last Name"/>
+            <type value="string"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="rm3.3_help"/>
+                <text value="Surname or family name associated with the site principal investigator"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="rm3.2"/>
+            <text value="Suffix"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="rm3.2_help"/>
+                <text value="Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc. associated with the site principal investigator's name"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="rm3.4"/>
+            <text value="Degree(s)"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="rm3.4_help"/>
+                <text value="Professional and Academic degrees associated with the site principal investigator"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="rm4"/>
+        <text value="Recruitment Materials"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                        <code value="instructions"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="rm4_help"/>
+            <text value="Media of any type used as part of a participant recruitment strategy."/>
+            <type value="display"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="rm4.1"/>
+            <text value="Will Recruitment Materials be Utilized?"/>
+            <type value="choice"/>
+            <required value="true"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="rm4.2"/>
+            <text value="Will Broadcast Materials be Utilized?"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="rm4.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="rm4.2_help"/>
+                <text value="The distribution of audio or video content to a dispersed audience via any electronic mass communications medium."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="rm4.3"/>
+            <text value="Broadcast Communication"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="rm4.2"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="rm4.3_help"/>
+                <text value="Audio or video content to a dispersed audience via any electronic mass communications medium"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+            <item>
+                <linkId value="rm4.3.1"/>
+                <text value="Audio"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.3.1_help"/>
+                    <text value="A contiguous sound recording used to relay audible information."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.3.2"/>
+                <text value="Audio Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.3.1"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.3.2_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.3.3"/>
+                <text value="Video"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.3.3_help"/>
+                    <text value="Video content to a dispersed audience via any electronic mass communications medium"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.3.4"/>
+                <text value="Video Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.3.3"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.3.4_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.3.5"/>
+                <text value="Radio Spot"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.3.5_help"/>
+                    <text value="A contiguous segment of audio broadcasting airtime."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.3.6"/>
+                <text value="Radio Spot Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.3.5"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.3.6_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.3.7"/>
+                <text value="TV Spot"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.3.7_help"/>
+                    <text value="A contiguous segment of video broadcasting airtime."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.3.8"/>
+                <text value="TV Spot Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.3.7"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.3.8_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="rm4.4"/>
+            <text value="Will Printed Materials be Utilized?"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="rm4.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="rm4.4_help"/>
+                <text value="Materials produced by printers or publishers, such as books, magazines, booklets, brochures, newspaper."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="rm4.5"/>
+            <text value="Printed Communication"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="rm4.4"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <linkId value="rm4.5.1"/>
+                <text value="Billboard/Bus Ad"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.1_help"/>
+                    <text value="A large outdoor advertising space designed to capture the attention of motorists and pedestrians."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.2"/>
+                <text value="Billboard/Bus Ad Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.5.1"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.2_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.3"/>
+                <text value="Brochure/Pamphlet"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.3_help"/>
+                    <text value="A small book or magazine that contains images and information about a company or organization's products and/or services."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.4"/>
+                <text value="Brochure/Pamphlet Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.5.3"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.4_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.5"/>
+                <text value="Flyer/Notice"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.5_help"/>
+                    <text value="A small piece of paper with information on it about a product or event"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.6"/>
+                <text value="Flyer/Notice Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.5.5"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.6_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.7"/>
+                <text value="Magazine"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.7_help"/>
+                    <text value="A periodical publication containing articles and illustrations."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.8"/>
+                <text value="Magazine Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.5.7"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.8_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.9"/>
+                <text value="Mail"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.9_help"/>
+                    <text value="Letters and packages conveyed by the postal system."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.10"/>
+                <text value="Mail Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.5.9"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.10_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.11"/>
+                <text value="Newspaper"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.11_help"/>
+                    <text value="A printed publication (usually issued daily or weekly) consisting of folded unstapled sheets and containing news, feature articles and advertisements."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.12"/>
+                <text value="Newspaper Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.5.11"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.12_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.13"/>
+                <text value="Postcard"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.13_help"/>
+                    <text value="A message by mail without an envelope."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.14"/>
+                <text value="Postcard Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.5.13"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.14_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.15"/>
+                <text value="Poster/Sign"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.15_help"/>
+                    <text value="A large printed picture, photograph, or notice that you stick or pin to a wall or board, usually for decoration or to advertise something."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.16"/>
+                <text value="Poster/Sign Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.5.15"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.16_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.17"/>
+                <text value="Table Tent"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.17_help"/>
+                    <text value="A self-standing promotional unit created from printed and folded card stock for table tops."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.5.18"/>
+                <text value="Table Tent Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.5.17"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.5.18_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="rm4.6"/>
+            <text value="Will Electronic Materials be Utilized?"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="rm4.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="rm4.6_help"/>
+                <text value="Computer-based technology that facilitates the sharing of ideas and information and the building of virtual networks and communities."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="rm4.7"/>
+            <text value="Electronic Communication"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="rm4.6"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <linkId value="rm4.7.1"/>
+                <text value="Email"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.1_help"/>
+                    <text value="Messages distributed by electronic means from one computer user to one or more recipients via a network."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.2"/>
+                <text value="Email Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.7.1"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.2_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.3"/>
+                <text value="Networking Site"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.3_help"/>
+                    <text value="An online platform that allows users to create a public profile and interact with other users on the website."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.4"/>
+                <text value="Networking Site Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.7.3"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.4_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.5"/>
+                <text value="Podcast"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.5_help"/>
+                    <text value="A digital audio file made available on the internet for download to a computer or mobile device. Typically available as a series."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.6"/>
+                <text value="Podcast Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.7.5"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.6_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.7"/>
+                <text value="Social Media"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.7_help"/>
+                    <text value="A computer-based technology that facilitates the sharing of ideas and information and the building of virtual networks and communities."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.8"/>
+                <text value="Social Media Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.7.7"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.8_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.11"/>
+                <text value="Web Page Advertising"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.11_help"/>
+                    <text value="A form of advertising on the Word Wide Web delivered by an ad server and/or embedded in a web page."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.12"/>
+                <text value="Web Page Ad Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.7.11"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.12_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.13"/>
+                <text value="Web/Internet Posting"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.13_help"/>
+                    <text value="Communication posted for public viewing or an electronic message sent to &amp; displayed on an online forum."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.14"/>
+                <text value="Web/Internet Posting Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.7.13"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.14_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.15"/>
+                <text value="Website"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.15_help"/>
+                    <text value="A page or collection of pages on the World Wide Web that contains specific information which was all provided by one person, group or an organization"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.16"/>
+                <text value="Website Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.7.15"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.16_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.17"/>
+                <text value="Text messaging"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.17_help"/>
+                    <text value="Text messaging, or texting, is the transmission of electronic communication between two or more users, often via mobile phones."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.18"/>
+                <text value="Texting Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.7.17"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.18_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.19"/>
+                <text value="eHealth Portal"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.19_help"/>
+                    <text value="Communication to user(s) via the eHealth Portal or similar electronic medical record system"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.20"/>
+                <text value="eHealthPortal Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.7.19"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.20_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.21"/>
+                <text value="Video Conferencing"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.21_help"/>
+                    <text value="Use of two-way video communications via a computer, tablet or mobile phone"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.7.22"/>
+                <text value="Video Conferencing Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.7.19"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.7.22_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="rm4.8"/>
+            <text value="Will Direct Communication Materials be Utilized?"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="rm4.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="rm4.8_help"/>
+                <text value="Communication addressed to a specific person."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="rm4.9"/>
+            <text value="Direct Communication"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="rm4.8"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <linkId value="rm4.9.1"/>
+                <text value="In-Person Discussion"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.9.1_help"/>
+                    <text value="Involves a person's physical presence rather than communication by phone, email, etc.,"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.9.2"/>
+                <text value="In-Person Discussion Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.9.1"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.9.2_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.9.3"/>
+                <text value="Letter/Invitation"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.9.3_help"/>
+                    <text value="A written, typed, or printed communication, especially one sent in an envelope by mail or messenger:"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.9.4"/>
+                <text value="Letter/Invitation Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.9.3"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.9.4_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.9.5"/>
+                <text value="Phone Call"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.9.5_help"/>
+                    <text value="A communication or conversation by phone."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.9.6"/>
+                <text value="Phone Call Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.9.5"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.9.6_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="rm4.10"/>
+            <text value="Will Group Communication Materials be Utilized?"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="rm4.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="rm4.10_help"/>
+                <text value="Communication addressed to a defined group of people."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="rm4.11"/>
+            <text value="Group Communication"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="rm4.10"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <linkId value="rm4.11.1"/>
+                <text value="Advertisement"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.11.1_help"/>
+                    <text value="An ad that may take many different forms. It could be a banner, a graphic image or an animated GIF of a designated pixel size and byte size."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.11.2"/>
+                <text value="Advertisement Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.11.1"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.11.2_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.11.3"/>
+                <text value="Bulletin Board"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.11.3_help"/>
+                    <text value="A website or web page where users can post comments about a particular issue or topic and reply to other users' postings."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.11.4"/>
+                <text value="Bulletin Board Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.11.3"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.11.4_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.11.5"/>
+                <text value="Newsletter"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.11.5_help"/>
+                    <text value="Communication issued periodically to the members of a society, business, or organization."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.11.6"/>
+                <text value="Newsletter Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.11.5"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.11.6_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.11.7"/>
+                <text value="Professional Journal"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.11.7_help"/>
+                    <text value="A scholarly journal addressed to a particular professional audience such as doctors, teachers or engineers and published by a professional organization."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.11.8"/>
+                <text value="Professional Journal Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.11.7"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.11.8_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.11.9"/>
+                <text value="Tip Sheet"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.11.9_help"/>
+                    <text value="A publication that containing the latest information/tips/predictions for a particular business or stock market information or horse racing results, etc."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.11.10"/>
+                <text value="Tip Sheet Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.11.9"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.11.10_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="rm4.12"/>
+            <text value="Will Public Communication Materials be Utilized?"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="rm4.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="rm4.12_help"/>
+                <text value="Communication addressed to the public."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="rm4.13"/>
+            <text value="Public Communication"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="rm4.12"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <linkId value="rm4.13.1"/>
+                <text value="Announcement"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.13.1_help"/>
+                    <text value="A public and typically formal statement about a fact, occurrence, or intention."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.13.2"/>
+                <text value="Announcement Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.13.1"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.13.2_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.13.3"/>
+                <text value="Press Release"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.13.3_help"/>
+                    <text value="A written statement about a matter of public interest which is given to the press by an organization concerned with the matter."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.13.4"/>
+                <text value="Press Release Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.13.3"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.13.4_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.13.5"/>
+                <text value="Public Solicitation"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.13.5_help"/>
+                    <text value="A method of communication involving asking for or trying to obtain something from someone in public."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.13.6"/>
+                <text value="Public Solicitation Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.13.5"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.13.6_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.13.7"/>
+                <text value="Snowball Sampling"/>
+                <type value="boolean"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.13.7_help"/>
+                    <text value="A technique among social scientists who wish to work with a population that is difficult to identify or locate."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="rm4.13.8"/>
+                <text value="Snowball Sampling Description"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="rm4.13.7"/>
+                    <operator value="="/>
+                    <answerBoolean value="true"/>
+                </enableWhen>
+                <enableBehavior value="all"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="rm4.13.8_help"/>
+                    <text value="Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent."/>
+                    <type value="display"/>
+                </item>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="rm6"/>
+        <text value="Distribution List and Audience Identification"/>
+        <type value="group"/>
+        <required value="false"/>
+        <repeats value="false"/>
+        <readOnly value="false"/>
+        <item>
+            <linkId value="rm6.1"/>
+            <text value="If recruitment material is being mailed, emailed, texted or otherwise distributed, describe where/how the distribution list will be obtained. "/>
+            <type value="text"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <linkId value="rm6.2"/>
+            <text value="Describe methods that will be used to identify audiences for advertising messages (eg. web advertising will be displayed on web sites popular with a particular demographic)"/>
+            <type value="text"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="rm6.3"/>
+            <text value="Any necessary permission will be obtained for posting/airing these (for example, permission to post a flyer on a bulletin board)."/>
+            <type value="choice"/>
+            <required value="true"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+    </item>
+    <item>
+        <linkId value="rm7"/>
+        <text value="Response to Recruitment Materials"/>
+        <type value="group"/>
+        <required value="false"/>
+        <repeats value="false"/>
+        <readOnly value="false"/>
+        <item>
+            <linkId value="rm7.1"/>
+            <text value="When potential participants respond to recruitment material, describe the information that will be provided to them about the study."/>
+            <type value="text"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <linkId value="rm7.2"/>
+            <text value="Describe the plan to respond to potential participants who respond to recruitment materials. Include how many times you will attempt to respond to call the participant back, leave a voice message, send a reply email or conduct other follow-up communication."/>
+            <type value="text"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="check-box"/>
+                        <display value="Check-box"/>
+                    </coding>
+                    <text value="Check box"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="rm7.3"/>
+            <text value="Types of communication methods that will be used to reply to potential participants who respond to recruitment materials"/>
+            <type value="open-choice"/>
+            <required value="true"/>
+            <repeats value="true"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Telephone and voice messages"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Video Conferencing"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="3"/>
+                    <display value="Email"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="4"/>
+                    <display value="Text messages/texting"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="5"/>
+                    <display value="eHealth Portal messaging"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/mimeType">
+                <valueCode value="image/jpeg"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/mimeType">
+                <valueCode value="application/pdf"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/maxSize">
+                <valueDecimal value="5"/>
+            </extension>
+            <linkId value="rm7.4"/>
+            <text value="Attach the telephone and/or computer video conferencing script for responding to potential participants "/>
+            <type value="attachment"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/mimeType">
+                <valueCode value="image/jpeg"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/mimeType">
+                <valueCode value="application/pdf"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/maxSize">
+                <valueDecimal value="5"/>
+            </extension>
+            <linkId value="rm7.5"/>
+            <text value="Attach the voice mail script for responding to potential participants "/>
+            <type value="attachment"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/mimeType">
+                <valueCode value="image/jpeg"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/mimeType">
+                <valueCode value="application/pdf"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/maxSize">
+                <valueDecimal value="5"/>
+            </extension>
+            <linkId value="rm7.6"/>
+            <text value="Attach the email script for responding to potential participants "/>
+            <type value="attachment"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/mimeType">
+                <valueCode value="image/jpeg"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/mimeType">
+                <valueCode value="application/pdf"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/maxSize">
+                <valueDecimal value="5"/>
+            </extension>
+            <linkId value="rm7.7"/>
+            <text value="Attach the text messaging script for responding to potential participants "/>
+            <type value="attachment"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/mimeType">
+                <valueCode value="image/jpeg"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/mimeType">
+                <valueCode value="application/pdf"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/maxSize">
+                <valueDecimal value="5"/>
+            </extension>
+            <linkId value="rm7.8"/>
+            <text value="Attach any other script for responding to potential participants "/>
+            <type value="attachment"/>
+        </item>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+            <valueBoolean value="true"/>
+        </extension>
+        <linkId value="ADMIN00"/>
+        <text value="Administrative Use Only"/>
+        <type value="display"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN01"/>
+            <text value="Link ID prefix"/>
+            <type value="string"/>
+            <required value="false"/>
+            <initial>
+                <valueString value="rm"/>
+            </initial>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN02"/>
+            <text value="Questionnaire Response ID for the parent Questionnaire Response (such as the Initiate a Study Questionnaire Response), if any"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN03"/>
+            <text value="ID of the Research Study FHIR Resource associated with the study Questionnaire Responses"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN04"/>
+            <text value="Questionnaire Response ID of the local considerations Questionnaire Response, if any"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+    </item>
+</Questionnaire>

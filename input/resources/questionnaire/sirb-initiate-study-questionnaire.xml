@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire
+    xmlns="http://hl7.org/fhir">
+    <id value="sirb-initiate-study-questionnaire"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-06-25T17:53:45.487+00:00"/>
+        <source value="#dp3PGNDpBtHjv3dr"/>
+        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <p/>
+        </div>
+    </text>
+    <url value="https://raw.githubusercontent.com/jdtopping/sIRB/master/input/resources/questionnaire/sirb-initiate-study-questionnaire.json"/>
+    <version value="0.1.0"/>
+    <name value="Initiate a Study Questionnaire"/>
+    <title value="Initiate a Study Questionnaire"/>
+    <status value="draft"/>
+    <subjectType value="ResearchStudy"/>
+    <description value="Initiate a Study Questionnaire"/>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="gtable"/>
+                    <display value="Group Table"/>
+                </coding>
+                <text value="Group Table"/>
+            </valueCodeableConcept>
+        </extension>
+        <linkId value="in1"/>
+        <text value="Research Study Details">
+            <extension url="http://hl7.org/fhir/StructureDefinition/rendering-style">
+                <valueString value="color:#274e90; font-size: 160%"/>
+            </extension>
+        </text>
+        <type value="group"/>
+        <required value="false"/>
+        <repeats value="false"/>
+        <item>
+            <linkId value="in1.1"/>
+            <text value="Study Title"/>
+            <type value="string"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in1.1-help"/>
+                <text value="The official title of a protocol used to identify a clinical study.Include phase (e.g. pilot proof of concept study, phase I, phase II, etc.), design (e.g. randomized, double blind, placebo controlled, etc.), if the study is multi-center, the investigational agent (drug, device, biologic, vaccine, procedural and/or behavioral etc., and target disease(s)"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in1.2"/>
+            <text value="Study Title (Short)"/>
+            <type value="string"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in1.2-help"/>
+                <text value="A short study title written in language intended for the lay public."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in1.3"/>
+            <text value="IRB Protocol Number"/>
+            <type value="string"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in1.3-help"/>
+                <text value="The Protocol Number assigned by the sIRB"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="in1.4"/>
+            <text value="Study Type"/>
+            <type value="choice"/>
+            <required value="true"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Interventional"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Observational"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in1.4-help"/>
+                <text value="Select the study type, either Interventional (Clinical Trial) or Observational (Non-Interventional)"/>
+                <type value="display"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="DIVIDER1"/>
+        <type value="display"/>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="gtable"/>
+                    <display value="Group Table"/>
+                </coding>
+                <text value="Group Table"/>
+            </valueCodeableConcept>
+        </extension>
+        <linkId value="in5"/>
+        <text value="Other Organization(s) Involved">
+            <extension url="http://hl7.org/fhir/StructureDefinition/rendering-style">
+                <valueString value="color:#274e90; font-size: 160%"/>
+            </extension>
+        </text>
+        <type value="group"/>
+        <required value="false"/>
+        <repeats value="true"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="in5.1"/>
+            <text value="Relationship Type"/>
+            <type value="choice"/>
+            <required value="true"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Sponsor or Funding Source"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Contract Research Organization (CRO)"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in5.1-help"/>
+                <text value="Select the organization's type of involvement in the study"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in5.2"/>
+            <text value="Organization Name"/>
+            <type value="string"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in5.2-help"/>
+                <text value="e.g. NIH or company name"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in5.3"/>
+            <text value="Phone"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in5.3-help"/>
+                <text value="Phone number, including area code"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in5.4"/>
+            <text value="Sponsor or Funding Source Protocol Number, if applicable"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in5.4-help"/>
+                <text value="Unique Protocol Identification Number used by the sponsor, if applicable"/>
+                <type value="display"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="DIVIDER2"/>
+        <type value="display"/>
+    </item>
+    <item>
+        <linkId value="in6"/>
+        <text value="sIRB (Reviewing Institution)">
+            <extension url="http://hl7.org/fhir/StructureDefinition/rendering-style">
+                <valueString value="color:#274e90; font-size: 160%"/>
+            </extension>
+        </text>
+        <type value="group"/>
+        <item>
+            <linkId value="in6.1"/>
+            <text value="sIRB (Reviewing Institution) Name"/>
+            <type value="string"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in6.1-help"/>
+                <text value="Name of the sIRB (Reviewing Institution)"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in6.3"/>
+            <text value="Institution Street Address"/>
+            <type value="string"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in6.3-help"/>
+                <text value="Physical address of the sIRB (Reviewing Institution)"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in6.4"/>
+            <text value="Institution City"/>
+            <type value="string"/>
+            <required value="true"/>
+        </item>
+        <item>
+            <linkId value="in6.5"/>
+            <text value="Institution State"/>
+            <type value="string"/>
+            <required value="true"/>
+        </item>
+        <item>
+            <linkId value="in6.6"/>
+            <text value="Institution Zip Code"/>
+            <type value="string"/>
+            <required value="true"/>
+        </item>
+        <item>
+            <linkId value="in6.7"/>
+            <text value="Institution Country"/>
+            <type value="string"/>
+            <required value="true"/>
+            <initial>
+                <valueString value="United States"/>
+            </initial>
+        </item>
+    </item>
+    <item>
+        <linkId value="DIVIDER3"/>
+        <type value="display"/>
+    </item>
+    <item>
+        <linkId value="in7"/>
+        <text value="Overall Principal Investigator for the Study">
+            <extension url="http://hl7.org/fhir/StructureDefinition/rendering-style">
+                <valueString value="color:#274e90; font-size: 160%"/>
+            </extension>
+        </text>
+        <type value="group"/>
+        <item>
+            <linkId value="in7.1"/>
+            <text value="Overall Principal Investigator First Name"/>
+            <type value="string"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in7.1-help"/>
+                <text value="The first or given name associated with the overall principal investigator"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in7.2"/>
+            <text value="Overall Principal Investigator Last Name"/>
+            <type value="string"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in7.2-help"/>
+                <text value="Last name, surname or family name associated with the overall principal investigator"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in7.3"/>
+            <text value="Overall Principal Investigator Suffix"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in7.3-help"/>
+                <text value="Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc. associated with the overall principal investigator's name"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in7.4"/>
+            <text value="Academic and Professional Degrees associated with the Overall Principal Investigator"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in7.4-help"/>
+                <text value="Academic and Professional degrees associated with the overall principal investigator"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in7.5"/>
+            <text value="Overall Principal Investigator Institution Name"/>
+            <type value="string"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in7.5-help"/>
+                <text value="The institution of the overall principal investigator"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in7.6"/>
+            <text value="Department Name or Division"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in7.6-help"/>
+                <text value="The department name or division for the overall principal investigator "/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in7.7"/>
+            <text value="Street Address"/>
+            <type value="string"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in7.7-help"/>
+                <text value="Physical address of the overall principal investigator"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in7.8"/>
+            <text value="City"/>
+            <type value="string"/>
+            <required value="true"/>
+        </item>
+        <item>
+            <linkId value="in7.9"/>
+            <text value="State"/>
+            <type value="string"/>
+            <required value="true"/>
+        </item>
+        <item>
+            <linkId value="in7.10"/>
+            <text value="Zip Code"/>
+            <type value="string"/>
+            <required value="true"/>
+        </item>
+        <item>
+            <linkId value="in7.11"/>
+            <text value="Country"/>
+            <type value="string"/>
+            <required value="true"/>
+            <initial>
+                <valueString value="United States"/>
+            </initial>
+        </item>
+        <item>
+            <linkId value="in7.12"/>
+            <text value="Overall Principal Investigator Phone"/>
+            <type value="string"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in7.12-help"/>
+                <text value="Phone number, including area code for the overall principal investigator"/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in7.13"/>
+            <text value="Overall Principal Investigator Email Address"/>
+            <type value="string"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in7.13-help"/>
+                <text value="Email address associated with overall principal investigator"/>
+                <type value="display"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="DIVIDER4"/>
+        <type value="display"/>
+    </item>
+    <item>
+        <linkId value="in8"/>
+        <text value="Confirmed or Potential Relying Site(s)">
+            <extension url="http://hl7.org/fhir/StructureDefinition/rendering-style">
+                <valueString value="color: #274e90; font-size: 160%"/>
+            </extension>
+        </text>
+        <type value="group"/>
+        <required value="false"/>
+        <repeats value="true"/>
+        <item>
+            <linkId value="in8.1"/>
+            <text value="Confirmed or Potential Relying Site Overview">
+                <extension url="http://hl7.org/fhir/StructureDefinition/rendering-style">
+                    <valueString value="color:#2a623d;  font-size: 130%"/>
+                </extension>
+            </text>
+            <type value="group"/>
+            <required value="false"/>
+            <item>
+                <linkId value="in8.1.1"/>
+                <text value="Relying Institution Name"/>
+                <type value="string"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="in8.1.1-help"/>
+                    <text value="Name of Institution for which their IRB agrees to rely on the decisions of the reviewing IRB at their own institutions."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="in8.1.3"/>
+                <text value="Relying Institution Phone"/>
+                <type value="string"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="in8.1.3-help"/>
+                    <text value="Phone number, including area code for the relying institution"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in8.1.4"/>
+                <text value="Is a Federal Wide Assurance (FWA) Number assigned?"/>
+                <type value="choice"/>
+                <required value="true"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="1"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="2"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="3"/>
+                        <display value="Unknown"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="4"/>
+                        <display value="Not Available at this time"/>
+                    </valueCoding>
+                </answerOption>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="in8.1.4-help"/>
+                    <text value="DHHS assigned number indicating Assurance of Compliance with the Office of Human Research Protections. The only type of assurance of compliance accepted and approved by OHRP for institutions engaged in non-exempt human subjects research conducted or supported by HHS. Under a FWA, an institution commits to HHS that it will comply with the requirements set forth in 45 CFR 46, as well as the terms of assurance."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="in8.1.5"/>
+                <text value="Federal Wide Assurance Number (if assigned)"/>
+                <type value="integer"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="in8.1.5-help"/>
+                    <text value="DHHS assigned number indicating Assurance of Compliance with the Office of Human Research Protections. Enter just the numeric value of the FWA."/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in8.1.6"/>
+                <text value="Reliance Status"/>
+                <type value="choice"/>
+                <required value="true"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="1"/>
+                        <display value="Approved"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="2"/>
+                        <display value="Declined"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="3"/>
+                        <display value="Potential/possible"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="4"/>
+                        <display value="Cancelled or not participating"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="5"/>
+                        <display value="On hold"/>
+                    </valueCoding>
+                </answerOption>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="in8.1.6-help"/>
+                    <text value="Status of the reliance agreement"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in8.1-help"/>
+                <text value="Institutions for which their IRB agrees to rely on the decisions of the reviewing IRB at their own institutions."/>
+                <type value="display"/>
+            </item>
+            <item>
+                <linkId value="in8.1.7"/>
+                <text value="Relying Site Address">
+                    <extension url="http://hl7.org/fhir/StructureDefinition/rendering-style">
+                        <valueString value="color:#2a623d; font-size: 130%"/>
+                    </extension>
+                </text>
+                <type value="group"/>
+                <required value="false"/>
+                <item>
+                    <linkId value="in8.1.7.1"/>
+                    <text value="Street Address"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                    <display value="Help-Button"/>
+                                </coding>
+                                <text value="Help-Button"/>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="in8.1.7.1-help"/>
+                        <text value="Physical address"/>
+                        <type value="display"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="in8.1.7.2"/>
+                    <text value="City"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="in8.1.7.3"/>
+                    <text value="State"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="in8.1.7.4"/>
+                    <text value="Zip Code"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="in8.1.7.5"/>
+                    <text value="Country"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                    <initial>
+                        <valueString value="United States"/>
+                    </initial>
+                </item>
+            </item>
+        </item>
+        <item>
+            <linkId value="in8.3"/>
+            <text value="Site Principal Investigator at Relying Site">
+                <extension url="http://hl7.org/fhir/StructureDefinition/rendering-style">
+                    <valueString value="color:#2a623d; font-size: 130%"/>
+                </extension>
+            </text>
+            <type value="group"/>
+            <required value="false"/>
+            <item>
+                <linkId value="in8.3.1"/>
+                <text value="Relying Site Principal Investigator First Name"/>
+                <type value="string"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="in8.3.1-help"/>
+                    <text value="First Name or Given Name of &#xD;&#xA;PI at a site conducting the study, responsible for the conduct of the study at his/her relying institution "/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="in8.3.2"/>
+                <text value="Relying Site Principal Investigator Last Name"/>
+                <type value="string"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="in8.3.2-help"/>
+                    <text value="Last name, surname or family name of PI at a site conducting the study, responsible for the conduct of the study at his/her relying institution"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="in8.3.3"/>
+                <text value="Relying Site Principal Investigator Suffix"/>
+                <type value="string"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="in8.3.3-help"/>
+                    <text value="Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc. associated with the relying site principal investigator"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="in8.3.4"/>
+                <text value="Academic and Professional Degrees associated with the Relying Site Principal Investigator"/>
+                <type value="string"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="in8.3.4-help"/>
+                    <text value="Academic and Professional degrees associated with the relying site principal investigator"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="in8.3.5"/>
+                <text value="Phone"/>
+                <type value="string"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="in8.3.5-help"/>
+                    <text value="Phone number, including area code for the relying site principal investigator"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="in8.3.6"/>
+                <text value="Email address"/>
+                <type value="string"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="in8.3.6-help"/>
+                    <text value="Email address associated with the relying site principal investigator"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="in8.3.7"/>
+                <text value="Address of Relying Site Principal Investigator">
+                    <extension url="http://hl7.org/fhir/StructureDefinition/rendering-style">
+                        <valueString value="color:#2a623d; font-size: 130%"/>
+                    </extension>
+                </text>
+                <type value="group"/>
+                <required value="false"/>
+                <item>
+                    <linkId value="in8.3.7.1"/>
+                    <text value="Street Address"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                    <display value="Help-Button"/>
+                                </coding>
+                                <text value="Help-Button"/>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="in8.3.7.1-help"/>
+                        <text value="Physical address"/>
+                        <type value="display"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="in8.3.7.2"/>
+                    <text value="City"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="in8.3.7.3"/>
+                    <text value="State"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="in8.3.7.4"/>
+                    <text value="Zip Code"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="in8.3.7.5"/>
+                    <text value="Country"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                    <initial>
+                        <valueString value="United States"/>
+                    </initial>
+                </item>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="DIVIDER5"/>
+        <type value="display"/>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+            <valueBoolean value="false"/>
+        </extension>
+        <linkId value="in9"/>
+        <text value="Questionnaire Version Details"/>
+        <type value="group"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="false"/>
+            </extension>
+            <linkId value="in9.1"/>
+            <text value="Questionnaire Version"/>
+            <type value="string"/>
+            <required value="true"/>
+            <readOnly value="true"/>
+            <initial>
+                <valueString value="1"/>
+            </initial>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="false"/>
+            </extension>
+            <linkId value="in9.2"/>
+            <text value="Questionnaire Version Date"/>
+            <type value="date"/>
+            <required value="true"/>
+            <readOnly value="true"/>
+            <initial>
+                <valueDate value="2021-06-01"/>
+            </initial>
+        </item>
+    </item>
+    <item>
+        <linkId value="DIVIDER6"/>
+        <type value="display"/>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+            <valueBoolean value="true"/>
+        </extension>
+        <linkId value="ADMIN00"/>
+        <text value="Administrative Use Only  (will be hidden in the future)"/>
+        <type value="group"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN01"/>
+            <text value="Link ID prefix"/>
+            <type value="string"/>
+            <required value="false"/>
+            <initial>
+                <valueString value="in"/>
+            </initial>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN02"/>
+            <text value="Questionnaire Response ID for the parent Questionnaire Response (such as the Initiate a Study Questionnaire Response), if any"/>
+            <type value="string"/>
+            <required value="false"/>
+            <initial>
+                <valueString value="temporarily unavailable"/>
+            </initial>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN03"/>
+            <text value="ID of the Research Study FHIR Resource associated with the study Questionnaire Responses"/>
+            <type value="string"/>
+            <required value="false"/>
+            <initial>
+                <valueString value="temporarily unavailable"/>
+            </initial>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN04"/>
+            <text value="Questionnaire Response ID of the local considerations Questionnaire Response, if any"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+    </item>
+</Questionnaire>

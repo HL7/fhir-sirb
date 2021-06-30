@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire
+    xmlns="http://hl7.org/fhir">
+    <id value="sirb-determination-letter-questionnaire"/>
+    <meta>
+        <versionId value="5"/>
+        <lastUpdated value="2021-06-25T19:09:26.925+00:00"/>
+        <source value="#IPD25fM4deHe6ZzP"/>
+        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <p/>
+        </div>
+    </text>
+    <extension url="http://hl7.org/fhir/StructureDefinition/variable">
+        <valueExpression>
+            <description value="response to get the data from"/>
+            <name value="lookupInitiateStudy"/>
+            <language value="application/x-fhir-query"/>
+            <expression value="https://docr-fhir.dev.cloud.duke.edu/hapi-fhir-jpaserver/fhir/QuestionnaireResponse/QRIDInitiateStudy"/>
+        </valueExpression>
+    </extension>
+    <url value="https://raw.githubusercontent.com/jdtopping/sIRB/master/input/resources/questionnaire/sirb-determination-questionnaire.json"/>
+    <version value="0.1.0"/>
+    <name value="sirb_determination_questionnaire"/>
+    <title value="sIRB Determination Questionnaire"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <subjectType value="ResearchStudy"/>
+    <item>
+        <linkId value="dl1"/>
+        <text value="Research Study"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="dl1.1"/>
+            <text value="Study Title"/>
+            <type value="string"/>
+            <required value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="dl1.1_help"/>
+                <text value="Short Title of the Research Study"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="dl1.2"/>
+            <text value="IRB Protocol Number"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="dl1.2_help"/>
+                <text value="IRB number assigned by the site institution"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="dl2"/>
+        <text value="Reliance Determination"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="dl2.1"/>
+            <text value="Reviewing IRB"/>
+            <type value="group"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="dl2.1_help"/>
+                <text value="IRB responsible for the overall approval of the study, and whose approval will then stand for the relying institutions in the network."/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+            <item>
+                <linkId value="dl2.1.1"/>
+                <text value="Institution"/>
+                <type value="group"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="dl2.1.1_help"/>
+                    <text value="Institution providing overall review of study for most sites enrolling participants in a researach study.  Its role is to protect the rights and welfare of human research participants in research activities conducted; it has the authority to approve, require modifications in, or disapprove all research activities that fall within its jurisdiction for all relying sites"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+                <item>
+                    <linkId value="dl2.1.1.1"/>
+                    <text value="Name"/>
+                    <type value="string"/>
+                    <required value="true"/>
+                </item>
+                <item>
+                    <linkId value="dl2.1.1.2"/>
+                    <text value="Federal Wide Assurance (FWA):"/>
+                    <type value="integer"/>
+                    <required value="false"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="dl2.1.1.2_help"/>
+                        <text value="DHHS assigned number indicating Assurance of Compliance with the Office of Human Research Protections.  The only type of assurance of compliance accepted and approved by OHRP for institutions engaged in non-exempt human subjects research conducted or supported by HHS. Under a FWA, an institution commits to HHS that it will comply with the requirements set forth in 45 CFR 46, as well as the terms of assurance. Enter just the numeric value of the FWA."/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+            </item>
+            <item>
+                <linkId value="dl2.1.2"/>
+                <text value="Point of Contact"/>
+                <type value="group"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="dl2.1.2_help"/>
+                    <text value="Main study personnel with which a study participant will interact.  This may be also be the Site PI or a study coordinator or other site personnel."/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+                <item>
+                    <linkId value="dl2.1.2.1"/>
+                    <text value="First Name"/>
+                    <type value="string"/>
+                    <required value="true"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="dl2.1.2.1_help"/>
+                        <text value="First or given name associated with the point of contact"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="dl2.1.2.2"/>
+                    <text value="Last Name"/>
+                    <type value="string"/>
+                    <required value="true"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="dl2.1.2.2_help"/>
+                        <text value="Surname or family name associated with the point of contact"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="dl2.1.2.4"/>
+                    <text value="Suffix"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="d2.1.2.4_help"/>
+                        <text value="Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc. associated with the point of contact"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="dl2.1.2.5"/>
+                    <text value="Professional Degree(s)"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="dl2.1.2.5_help"/>
+                        <text value="Professional and Academic degrees associated with the point of contact"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="dl2.1.2.3"/>
+                    <text value="Email"/>
+                    <type value="string"/>
+                    <required value="true"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="dl2.1.3"/>
+                <text value="Overall Principal Investigator"/>
+                <type value="group"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="dl2.1.3_help"/>
+                    <text value="Principal Investigator responsible for the conduct of the study overall; oversees all participating sites"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+                <item>
+                    <linkId value="dl2.1.3.1"/>
+                    <text value="First Name"/>
+                    <type value="string"/>
+                    <required value="true"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="dl2.1.3.1_help"/>
+                        <text value="First or Given name associated with the overall principal investigator"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="dl2.1.3.2"/>
+                    <text value="Last Name"/>
+                    <type value="string"/>
+                    <required value="true"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="dl2.1.3.2_help"/>
+                        <text value="Surname or family name associated with the overall principal investigator"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="dl2.1.3.4"/>
+                    <text value="Suffix"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="dl2.1.3.4_help"/>
+                        <text value="Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc. associated with the overall principal investigator's name"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="dl2.1.3.5"/>
+                    <text value="Degree(s)"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="dl2.1.3.5_help"/>
+                        <text value="Professional and Academic degrees associated with the overall principal investigator"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="dl2.1.3.3"/>
+                    <text value="Email"/>
+                    <type value="string"/>
+                    <required value="true"/>
+                </item>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="dl2.2"/>
+            <text value="Determination Decision"/>
+            <type value="choice"/>
+            <required value="true"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="acceptreview"/>
+                    <display value="Accepts Review"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="denyreview"/>
+                    <display value="Denies Review"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <linkId value="dl2.3"/>
+            <text value="Relying IRB"/>
+            <type value="group"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="dl2.3_help"/>
+                <text value="IRB relying on the decisions of the reviewing IRB"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+            <item>
+                <linkId value="dl2.3.1"/>
+                <text value="Institution"/>
+                <type value="group"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="dl2.3.1_help"/>
+                    <text value="Name of Institution for which their IRB agrees to rely on the decisions of the reviewing IRB at their own institutions."/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+                <item>
+                    <linkId value="dl2.3.1.1"/>
+                    <text value="Name"/>
+                    <type value="string"/>
+                    <required value="true"/>
+                </item>
+                <item>
+                    <linkId value="dl2.3.1.2"/>
+                    <text value="Federal Wide Assurance (FWA)"/>
+                    <type value="integer"/>
+                    <required value="false"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="dl2.3.1.2_help"/>
+                        <text value="DHHS assigned number indicating Assurance of Compliance with the Office of Human Research Protections. Enter just the numeric value of the FWA."/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+            </item>
+            <item>
+                <linkId value="dl2.3.2"/>
+                <text value="Site Principal Investigator"/>
+                <type value="group"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="dl2.3.2_help"/>
+                    <text value="Investigator responsible for the conduct of the study at a specific research location."/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+                <item>
+                    <linkId value="dl2.3.2.1"/>
+                    <text value="First Name"/>
+                    <type value="string"/>
+                    <required value="true"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="dl2.3.2.1_help"/>
+                        <text value="First or Given name associated with the site investigator"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="dl2.3.2.2"/>
+                    <text value="Last Name"/>
+                    <type value="string"/>
+                    <required value="true"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="dl2.3.2.2_help"/>
+                        <text value="Surname or family name associated with the site investigator"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="dl2.3.2.4"/>
+                    <text value="Suffix"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="dl2.3.2.4_help"/>
+                        <text value="Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc. associated with the site principal investigator's name"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="dl2.3.2.5"/>
+                    <text value="Professional Degree(s)"/>
+                    <type value="string"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                    <item>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                    <code value="help"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                    <code value="instructions"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                        <linkId value="dl2.3.2.5_help"/>
+                        <text value="Professional and Academic degrees associated with the site investigator"/>
+                        <type value="display"/>
+                        <required value="false"/>
+                        <repeats value="false"/>
+                        <readOnly value="false"/>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="dl2.3.2.3"/>
+                    <text value="Email"/>
+                    <type value="string"/>
+                    <required value="true"/>
+                </item>
+            </item>
+        </item>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+            <valueBoolean value="true"/>
+        </extension>
+        <linkId value="ADMIN00"/>
+        <text value="Administrative Use Only"/>
+        <type value="display"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN01"/>
+            <text value="Link ID prefix"/>
+            <type value="string"/>
+            <required value="false"/>
+            <initial>
+                <valueString value="dl"/>
+            </initial>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN02"/>
+            <text value="Questionnaire Response ID for the parent Questionnaire Response (such as the Initiate a Study Questionnaire Response), if any"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN03"/>
+            <text value="ID of the Research Study FHIR Resource associated with the study Questionnaire Responses, if any"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN04"/>
+            <text value="Questionnaire Response ID of the local considerations Questionnaire Response, if any"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+    </item>
+</Questionnaire>

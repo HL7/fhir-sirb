@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuestionnaireResponse
+    xmlns="http://hl7.org/fhir">
+    <id value="85927"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-06-29T16:58:03.454+00:00"/>
+        <source value="#4m9uFLkDaLIgxYcJ"/>
+        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"/>
+    </meta>
+    <status value="completed"/>
+    <authored value="2021-06-29T16:56:20.838Z"/>
+    <item>
+        <linkId value="dl1"/>
+        <text value="Research Study"/>
+        <item>
+            <linkId value="dl1.1"/>
+            <text value="Study Title"/>
+            <answer>
+                <valueString value="A study comparison of Treatment A and B"/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="dl1.2"/>
+            <text value="IRB Protocol Number"/>
+            <answer>
+                <valueString value="RCT1233"/>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="dl2"/>
+        <text value="Reliance Determination"/>
+        <item>
+            <linkId value="dl2.1"/>
+            <text value="Reviewing IRB"/>
+            <item>
+                <linkId value="dl2.1.1"/>
+                <text value="Institution"/>
+                <item>
+                    <linkId value="dl2.1.1.1"/>
+                    <text value="Name"/>
+                    <answer>
+                        <valueString value="sIRB Institution Name"/>
+                    </answer>
+                </item>
+            </item>
+            <item>
+                <linkId value="dl2.1.2"/>
+                <text value="Point of Contact"/>
+                <item>
+                    <linkId value="dl2.1.2.1"/>
+                    <text value="First Name"/>
+                    <answer>
+                        <valueString value="Jane"/>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="dl2.1.2.2"/>
+                    <text value="Last Name"/>
+                    <answer>
+                        <valueString value="Doe"/>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="dl2.1.2.5"/>
+                    <text value="Professional Degree(s)"/>
+                    <answer>
+                        <valueString value="MD"/>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="dl2.1.2.3"/>
+                    <text value="Email"/>
+                    <answer>
+                        <valueString value="xx@email.edu"/>
+                    </answer>
+                </item>
+            </item>
+            <item>
+                <linkId value="dl2.1.3"/>
+                <text value="Overall Principal Investigator"/>
+                <item>
+                    <linkId value="dl2.1.3.1"/>
+                    <text value="First Name"/>
+                    <answer>
+                        <valueString value="Jane"/>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="dl2.1.3.2"/>
+                    <text value="Last Name"/>
+                    <answer>
+                        <valueString value="Doe"/>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="dl2.1.3.5"/>
+                    <text value="Degree(s)"/>
+                    <answer>
+                        <valueString value="MD"/>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="dl2.1.3.3"/>
+                    <text value="Email"/>
+                    <answer>
+                        <valueString value="xx@email.edu"/>
+                    </answer>
+                </item>
+            </item>
+        </item>
+        <item>
+            <linkId value="dl2.2"/>
+            <text value="Determination Decision"/>
+            <answer>
+                <valueCoding>
+                    <code value="acceptreview"/>
+                    <display value="Accepts Review"/>
+                </valueCoding>
+            </answer>
+        </item>
+        <item>
+            <linkId value="dl2.3"/>
+            <text value="Relying IRB"/>
+            <item>
+                <linkId value="dl2.3.1"/>
+                <text value="Institution"/>
+                <item>
+                    <linkId value="dl2.3.1.1"/>
+                    <text value="Name"/>
+                    <answer>
+                        <valueString value="Relying Institution Name"/>
+                    </answer>
+                </item>
+            </item>
+            <item>
+                <linkId value="dl2.3.2"/>
+                <text value="Site Principal Investigator"/>
+                <item>
+                    <linkId value="dl2.3.2.1"/>
+                    <text value="First Name"/>
+                    <answer>
+                        <valueString value="Relying PI First Name"/>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="dl2.3.2.2"/>
+                    <text value="Last Name"/>
+                    <answer>
+                        <valueString value="Relying PI Last Name"/>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="dl2.3.2.5"/>
+                    <text value="Professional Degree(s)"/>
+                    <answer>
+                        <valueString value="MD"/>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="dl2.3.2.3"/>
+                    <text value="Email"/>
+                    <answer>
+                        <valueString value="email2@xx.edu"/>
+                    </answer>
+                </item>
+            </item>
+        </item>
+    </item>
+    <item>
+        <answer>
+            <item>
+                <linkId value="ADMIN01"/>
+                <text value="Link ID prefix"/>
+                <answer>
+                    <valueString value="dl"/>
+                </answer>
+            </item>
+        </answer>
+    </item>
+</QuestionnaireResponse>

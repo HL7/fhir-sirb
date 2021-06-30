@@ -1,0 +1,21 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Single IRB Forms<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="index.html">Single IRB Forms</a></li>
+      <li><a href="initiate_study.html">Initiate Study</a></li>
+      <li><a href="protocol.html">Protocol</a></li>
+      <li><a href="consent.html">Consent</a></li>
+      <li><a href="recruitment_materials.html">Recruitment Materials</a></li>
+      <li><a href="medical_adverse_event.html">Medical Adverse Event</a></li>
+      <li><a href="non-medical_adverse_event.html">Non-Medical Adverse Event</a></li>
+      <li><a href="determination_letter.html">Determination Letter</a></li>
+      <li><a href="continuing_review.html">Continuing Review</a></li>    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+</ul>

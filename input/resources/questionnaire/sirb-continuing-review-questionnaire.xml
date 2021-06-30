@@ -1,0 +1,1642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire
+    xmlns="http://hl7.org/fhir">
+    <id value="sirb-continuing-review-questionnaire"/>
+    <meta>
+        <versionId value="6"/>
+        <lastUpdated value="2021-06-25T19:09:26.935+00:00"/>
+        <source value="#MP5sp3tgmZ0tNwU8"/>
+        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <p/>
+        </div>
+    </text>
+    <extension url="http://hl7.org/fhir/StructureDefinition/variable">
+        <valueExpression>
+            <description value="response to get the data from"/>
+            <name value="lookupInitiateStudy"/>
+            <language value="application/x-fhir-query"/>
+            <expression value="https://docr-fhir.dev.cloud.duke.edu/hapi-fhir-jpaserver/fhir/QuestionnaireResponse/QRIDInitiateStudy"/>
+        </valueExpression>
+    </extension>
+    <url value="https://raw.githubusercontent.com/jdtopping/sIRB/master/input/resources/questionnaire/sirb-continuingreview-questionnaire.json"/>
+    <version value="0.1.0"/>
+    <name value="Continuing_review"/>
+    <title value="Continuing Review"/>
+    <status value="draft"/>
+    <subjectType value="ResearchStudy"/>
+    <item>
+        <linkId value="cr1"/>
+        <text value="Research Study"/>
+        <type value="group"/>
+        <required value="false"/>
+        <repeats value="false"/>
+        <readOnly value="false"/>
+        <item>
+            <linkId value="cr1.1"/>
+            <text value="Study Title"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr1.1_help"/>
+                <text value="Study Title from the Informed Consent"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="cr1.2"/>
+            <text value="IRB Protocol Number"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr1.2_help"/>
+                <text value="Number assigned to the protocol by IRB"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="cr1.3"/>
+            <text value="Enrollment Status:"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="not-open"/>
+                    <display value="Not yet open"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="open-no-participants"/>
+                    <display value="Open with no participant"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="open"/>
+                    <display value="Open for enrollment"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="closed"/>
+                    <display value="Closed to enrollment"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="cr1.4"/>
+            <text value="Intervention Status:"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="complete"/>
+                    <display value="All interventions complete"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="continue-meds"/>
+                    <display value="Continuing interventions"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="continue-min-risk"/>
+                    <display value="Continuing interventions - minimal risk"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr1.4_help"/>
+                <text value="Current intervention status.  This can be used by the IRB to determine that continuing review is no longer required."/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="cr1.5"/>
+            <text value="Study Status:"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="active"/>
+                    <display value="Active"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="active-followup"/>
+                    <display value="Active for long-term follow-up"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="active-analysis"/>
+                    <display value="Active for data analysis only"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="inactive"/>
+                    <display value="Inactive"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr1.5_help"/>
+                <text value="Study Status can also be used by the IRB to determine that continuing review is no longer required."/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="check-box"/>
+                        <display value="Check-box"/>
+                    </coding>
+                    <text value="Check-box"/>
+                </valueCodeableConcept>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation">
+                <valueCode value="vertical"/>
+            </extension>
+            <linkId value="cr1.6"/>
+            <text value="Funding Source(check all that are applicable):"/>
+            <type value="open-choice"/>
+            <required value="false"/>
+            <repeats value="true"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="federal"/>
+                    <display value="Federal"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="state"/>
+                    <display value="State"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="industry"/>
+                    <display value="Industry"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="foundation"/>
+                    <display value="Foundation"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="institutional"/>
+                    <display value="Institutional"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="departmental"/>
+                    <display value="Departmental"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr1.6_help"/>
+                <text value="The funding source for the study.  Note that a single study can have multiple funding sources and that the funding sources can change over time."/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="cr2"/>
+        <text value="Site Principal Investigator"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="cr2.1"/>
+            <text value="First Name"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr2.1_help"/>
+                <text value="First or given name associated with the site principal investigator"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="cr2.4"/>
+            <text value="Last Name"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr2.4_help"/>
+                <text value="Surname or family name associated with the site principal investigator"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="cr2.5"/>
+            <text value="Suffix"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr2.5_help"/>
+                <text value="Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc. associated with the site principal investigator's name"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="cr2.6"/>
+            <text value="Degree(s)"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr2.6_help"/>
+                <text value="Professional and Academic degrees associated with the site principal investigator"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="cr2.2"/>
+            <text value="Phone"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <linkId value="cr2.3"/>
+            <text value="Email:"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="cr3a"/>
+        <text value="Report Type"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="cr3a.1"/>
+            <text value="Is this an initial report?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr3a.1_help"/>
+                <text value="An initial report is the first time that the study is reviewed."/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="cr3"/>
+        <text value="Accrual of Participants"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                        <code value="instructions"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="cr3_help"/>
+            <text value="The number of participants who are enrolled, approved to enroll, consented, withdrawn, lost to contact, are screen failures, are active or in follow-up , or completed study"/>
+            <type value="display"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+        <item>
+            <linkId value="cr3.1"/>
+            <text value="Provide counts for the following:"/>
+            <type value="group"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr3.1_help"/>
+                <text value="How many participants there are in each category"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+            <item>
+                <linkId value="cr3.1.1"/>
+                <text value="Participants enrolled since activation:"/>
+                <type value="integer"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="cr3.1.2"/>
+                <text value="Participants enrolled since last approval (or since study inception if initial review):"/>
+                <type value="integer"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="cr3.1.3"/>
+                <text value="Participants approved to enroll:"/>
+                <type value="integer"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="cr3.1.4"/>
+                <text value="Participants consented:"/>
+                <type value="integer"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="cr3.1.5"/>
+                <text value="Participants withdrawn:"/>
+                <type value="integer"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="cr3.1.6"/>
+                <text value="Participants lost to contact:"/>
+                <type value="integer"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="cr3.1.7"/>
+                <text value="Participants with screen failures:"/>
+                <type value="integer"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="cr3.1.8"/>
+                <text value="Participants still active or follow-up:"/>
+                <type value="integer"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="cr3.1.9"/>
+                <text value="Participants completed study:"/>
+                <type value="integer"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="cr3.1.10"/>
+                <text value="By Sex:"/>
+                <type value="group"/>
+                <required value="false"/>
+                <item>
+                    <linkId value="cr3.1.10.1"/>
+                    <text value="Men:"/>
+                    <type value="integer"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.1.10.2"/>
+                    <text value="Women:"/>
+                    <type value="integer"/>
+                    <required value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="cr3.1.11"/>
+                <text value="By Race"/>
+                <type value="group"/>
+                <required value="false"/>
+                <item>
+                    <linkId value="cr3.1.11.1"/>
+                    <text value="White:"/>
+                    <type value="integer"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.1.11.2"/>
+                    <text value="Black or African American:"/>
+                    <type value="integer"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.1.11.3"/>
+                    <text value="Asian:"/>
+                    <type value="integer"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.1.11.4"/>
+                    <text value="American Indian or Alaska Native:"/>
+                    <type value="integer"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.1.11.5"/>
+                    <text value="Native Hawaiian or other Pacific Islander:"/>
+                    <type value="integer"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.1.11.6"/>
+                    <text value="More than One Race:"/>
+                    <type value="integer"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.1.11.7"/>
+                    <text value="Unknown/Not Reported:"/>
+                    <type value="integer"/>
+                    <required value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="cr3.1.12"/>
+                <text value="By Ethnicity"/>
+                <type value="group"/>
+                <required value="false"/>
+                <item>
+                    <linkId value="cr3.1.12.1"/>
+                    <text value="Hispanic or Latino:"/>
+                    <type value="integer"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.1.12.2"/>
+                    <text value="Not Hispanic or Latino:"/>
+                    <type value="integer"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.1.12.3"/>
+                    <text value="Unknown/Not Reported:"/>
+                    <type value="integer"/>
+                    <required value="false"/>
+                </item>
+            </item>
+        </item>
+        <item>
+            <linkId value="cr3.2"/>
+            <text value="Vulnerable Populations"/>
+            <type value="group"/>
+            <required value="false"/>
+            <item>
+                <linkId value="cr3.2.1"/>
+                <text value="Number of potentially vulnerable participants enrolled:"/>
+                <type value="integer"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <linkId value="cr3.2.2"/>
+                <text value="Check all that apply:"/>
+                <type value="group"/>
+                <required value="false"/>
+                <item>
+                    <linkId value="cr3.2.2.1"/>
+                    <text value="Children"/>
+                    <type value="boolean"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.2.2.2"/>
+                    <text value="Cognitively Impaired"/>
+                    <type value="boolean"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.2.2.3"/>
+                    <text value="Employees"/>
+                    <type value="boolean"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.2.2.4"/>
+                    <text value="Fetuses"/>
+                    <type value="boolean"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.2.2.5"/>
+                    <text value="Neonates (non-viable / uncertain viability)"/>
+                    <type value="boolean"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.2.2.6"/>
+                    <text value="Pregnant Women"/>
+                    <type value="boolean"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.2.2.7"/>
+                    <text value="Prisoners"/>
+                    <type value="boolean"/>
+                    <required value="false"/>
+                </item>
+                <item>
+                    <linkId value="cr3.2.2.8"/>
+                    <text value="Students"/>
+                    <type value="boolean"/>
+                    <required value="false"/>
+                </item>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr3.2_help"/>
+                <text value="Vulnerable persons are those who are relatively (or absolutely) incapable of protecting their own interests. More formally, they may have insufficient power, intelligence, education, resources, strength, or other needed attributes to protect their own interests. (CIOMS)"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="cr4"/>
+        <text value="Study Report"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="cr4.5"/>
+            <text value="Since your last report (or since the study inception for an initial report):"/>
+            <type value="group"/>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <linkId value="cr4.5.1"/>
+                <text value="Summarize the study progress:"/>
+                <type value="text"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="cr4.5.1_help"/>
+                    <text value="Summary of activities in the study (since the last report if this is not an initial review)"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr4.5.2"/>
+                <text value="Have participants experienced any benefits since the last review (or since the start of the study for an initial report)?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="cr4.5.2_help"/>
+                    <text value="Indicator of benefits to participants"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="cr4.5.3"/>
+                <text value="If yes, please summarize the benefits:"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="cr4.5.2"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="yes"/>
+                    </answerCoding>
+                </enableWhen>
+                <required value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr4.5.4"/>
+                <text value="Have participants been withdrawn from this study?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <linkId value="cr4.5.5"/>
+                <text value="If yes, please summarize the withdrawals:"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="cr4.5.4"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="yes"/>
+                    </answerCoding>
+                </enableWhen>
+                <required value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr4.5.6"/>
+                <text value="Have any participants or others complained about the research?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <linkId value="cr4.5.7"/>
+                <text value="If yes, please summarize the complaints:"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="cr4.5.6"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="yes"/>
+                    </answerCoding>
+                </enableWhen>
+                <required value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr4.5.8"/>
+                <text value="Has any new and relevant literature been published related to the risks or benefits associated with this research?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="cr4.5.8_help"/>
+                    <text value="literature  published related to the risks or benefits associated with this research"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="cr4.5.9"/>
+                <text value="If yes, please summarize relevance to study:"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="cr4.5.8"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="yes"/>
+                    </answerCoding>
+                </enableWhen>
+                <required value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr4.5.10"/>
+                <text value="Have there been any interim findings?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <linkId value="cr4.5.11"/>
+                <text value="If yes, please summarize findings:"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="cr4.5.10"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="yes"/>
+                    </answerCoding>
+                </enableWhen>
+                <required value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr4.5.12"/>
+                <text value="Have there been any multi-center trial reports?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <linkId value="cr4.5.13"/>
+                <text value="If yes, please summarize findings and recommendations"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="cr4.5.12"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="yes"/>
+                    </answerCoding>
+                </enableWhen>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr4.5.14"/>
+                <text value="Have there been any data safety monitoring board reports?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <linkId value="cr4.5.15"/>
+                <text value="If yes, please summarize findings and recommendations:"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="cr4.5.14"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="yes"/>
+                    </answerCoding>
+                </enableWhen>
+                <required value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr4.5.16"/>
+                <text value="In the opinion of the Principal Investigator, have the risks or potential benefits changed?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <linkId value="cr4.5.17"/>
+                <text value="If yes, please summarize the changes:"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="cr4.5.16"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="yes"/>
+                    </answerCoding>
+                </enableWhen>
+                <required value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr4.5.18"/>
+                <text value="Has an audit of the research been conducted by a federal agency or sponsor?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr4.5.19"/>
+                <text value="Have there been any presentations or publications (including abstracts) from this research?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr4.5.20"/>
+                <text value="Have there been any substantial changes to the study (protocol, consent forms, or other study documents) or to the risk-benefit assessment?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <linkId value="cr4.5.21"/>
+                <text value="If yes, please summarize the changes:"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="cr4.5.20"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="yes"/>
+                    </answerCoding>
+                </enableWhen>
+                <required value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr4.5.22"/>
+                <text value="Was informed consent obtained from all enrolled participants?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr4.5.23"/>
+                <text value="Has there been any other relevant information regarding this protocol?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="yes"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="no"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <linkId value="cr4.5.24"/>
+                <text value="If yes, please summarize:"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="cr4.5.23"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <code value="yes"/>
+                    </answerCoding>
+                </enableWhen>
+                <required value="false"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="cr5"/>
+        <text value="Adverse Events"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                        <code value="instructions"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="cr5_help"/>
+            <text value="Summary of adverse events during the previous continuing review period (or since the study inception for an initial report)"/>
+            <type value="display"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="cr5.1"/>
+            <text value="Have there been any internal or local adverse events in the research?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="cr5.2"/>
+            <text value="Did these adverse events occur at the frequency and level of severity expected?"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="cr5.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="cr5.3"/>
+            <text value="Have any protocol deviations or violations occurred in this study?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+    </item>
+    <item>
+        <linkId value="cr6"/>
+        <text value="Conflict of Interest"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="cr6.1"/>
+            <text value="Has there been a change in the financial disclosure status of the Principal Investigator or other members of the Research Staff that has not been reported to the IRB?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="yes"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="no"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <linkId value="cr6.2"/>
+            <text value="If yes, please explain:"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="cr6.1"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="yes"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+        </item>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+            <valueBoolean value="true"/>
+        </extension>
+        <linkId value="ADMIN00"/>
+        <text value="Administrative Use Only"/>
+        <type value="display"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN01"/>
+            <text value="Link ID prefix"/>
+            <type value="string"/>
+            <required value="false"/>
+            <initial>
+                <valueString value="cr"/>
+            </initial>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN02"/>
+            <text value="Questionnaire Response ID for the parent Questionnaire Response (such as the Initiate a Study Questionnaire Response), if any"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN03"/>
+            <text value="ID of the Research Study FHIR Resource associated with the study Questionnaire Responses, if any"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+                <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ADMIN04"/>
+            <text value="Questionnaire Response ID of the local considerations Questionnaire Response, if any"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+    </item>
+</Questionnaire>

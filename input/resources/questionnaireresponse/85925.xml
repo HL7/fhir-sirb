@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuestionnaireResponse
+    xmlns="http://hl7.org/fhir">
+    <id value="85925"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-06-29T16:45:52.864+00:00"/>
+        <source value="#1knv7LdXVJ3l0c6T"/>
+        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"/>
+    </meta>
+    <status value="completed"/>
+    <authored value="2021-06-29T16:44:21.173Z"/>
+    <item>
+        <linkId value="c1"/>
+        <text value="Research Study"/>
+        <item>
+            <linkId value="c1.1"/>
+            <text value="Study Title"/>
+            <answer>
+                <valueString value="A study comparison of Treatment A and B"/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c1.2"/>
+            <text value="IRB Protocol Number"/>
+            <answer>
+                <valueString value="RCT1233"/>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c2"/>
+        <text value="Site Principal Investigator"/>
+        <item>
+            <linkId value="c2.2"/>
+            <text value="First Name"/>
+            <answer>
+                <valueString value="Relying Site PI First Name"/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c2.1"/>
+            <text value="Last Name"/>
+            <answer>
+                <valueString value="Relying Site PI First Name"/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c2.3"/>
+            <text value="Degree(s)"/>
+            <answer>
+                <valueString value="MD MPH"/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c2.4"/>
+            <text value="Associated Institution"/>
+            <answer>
+                <valueString value="Relying Institution Name"/>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c3"/>
+        <text value="Relying Institution"/>
+        <item>
+            <linkId value="c3.1"/>
+            <text value="Name"/>
+            <answer>
+                <valueString value="Relying Institution Name"/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c3.2"/>
+            <text value="Address"/>
+            <answer>
+                <valueString value="321 Jones St"/>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c4"/>
+        <text value="Sponsor or Funding Source"/>
+        <item>
+            <linkId value="c4.1"/>
+            <text value="Sponsor Name"/>
+            <answer>
+                <valueString value="National Funder A"/>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c4"/>
+        <text value="Sponsor or Funding Source"/>
+        <item>
+            <linkId value="c4.1"/>
+            <text value="Sponsor Name"/>
+            <answer>
+                <valueString value="National Funder B"/>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c6"/>
+        <text value="Is this consent an eConsent?"/>
+        <answer>
+            <valueCoding>
+                <code value="2"/>
+                <display value="No"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="c7"/>
+        <text value="Summary Text"/>
+        <item>
+            <linkId value="c7.1"/>
+            <text value="Summary Text Statement"/>
+            <answer>
+                <valueString value="The purpose of this research study is to compare A and B. This will help determine which is best for patients with a condition. Participants who enter into the study will have their first study visit while in the hospital. Before participants start their pill, they will be randomly chosen to take A or B. All other study visits after the visit in the hospital will be done by phone. These calls are scheduled at about 30 days, for up to 6 months. During the phone calls, the participant will be asked how they are feeling, the quality of their life, what medications they are taking. &#xA;&#xA;Some risks of treatment include dizziness, lightheadedness, headache, or blurry vision."/>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c8"/>
+        <text value="Introduction and Statement of Research"/>
+        <item>
+            <linkId value="c8.1"/>
+            <text value="About Consent Form"/>
+            <answer>
+                <valueString value="This consent form describes a research study, what you may expect if you decide to take part and important information to help you make your decision.  Please read this form carefully and ask questions about anything that is not clear before you agree to participate.  You may take this consent form home to think about and discuss with family or friends."/>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c9"/>
+        <text value="Purpose"/>
+        <item>
+            <linkId value="c9.1"/>
+            <text value="Reason for Research"/>
+            <answer>
+                <valueString value="This study is being done to compare these two medicines and to determine which is best for patients like you who have a condition."/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c9.2"/>
+            <text value="Interactions with others"/>
+            <answer>
+                <valueString value="You can expect to interact with a staff member in the hospital and receive phone calls from a coordinator"/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c9.3"/>
+            <text value="Invited Participants"/>
+            <answer>
+                <valueString value="You are being asked to participate because you have been diagnosed with this condition."/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c9.4"/>
+            <text value="Total expected study enrollment"/>
+            <answer>
+                <valueInteger value="500"/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c9.6"/>
+            <text value="What is involved in the study?"/>
+            <answer>
+                <valueString value="This study will involve answering some questionnaires and providing some information about your treatment."/>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c10"/>
+        <text value="Assessments"/>
+        <item>
+            <linkId value="c10.1"/>
+            <text value="Assessment List"/>
+            <item>
+                <linkId value="c10.1.2"/>
+                <text value="Description of Assessment"/>
+                <answer>
+                    <valueString value="Questionnaire"/>
+                </answer>
+            </item>
+        </item>
+        <item>
+            <linkId value="c10.2"/>
+            <text value="Assessment Supplemental Text"/>
+            <answer>
+                <valueString value="This Questionnaire will collect information about your experience with treatment A and treatment B."/>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c11"/>
+        <text value="Visits and Procedures"/>
+        <item>
+            <linkId value="c11.2"/>
+            <text value="Visit List"/>
+            <item>
+                <linkId value="c11.2.1"/>
+                <text value="Visit Type"/>
+                <answer>
+                    <valueString value="Enrollment"/>
+                </answer>
+            </item>
+            <item>
+                <linkId value="c11.2.2"/>
+                <text value="Visit Description"/>
+                <answer>
+                    <valueString value="This visit will take place in the hospital"/>
+                </answer>
+            </item>
+            <item>
+                <linkId value="c11.2.3"/>
+                <text value="Visit Duration"/>
+                <answer>
+                    <valueString value="30"/>
+                </answer>
+            </item>
+            <item>
+                <linkId value="c11.2.4"/>
+                <text value="Visit Duration Units"/>
+                <answer>
+                    <valueCoding>
+                        <code value="1"/>
+                        <display value="Minutes"/>
+                    </valueCoding>
+                </answer>
+            </item>
+            <item>
+                <linkId value="c11.2.5"/>
+                <text value="Number of Visits"/>
+                <answer>
+                    <valueInteger value="1"/>
+                </answer>
+            </item>
+        </item>
+        <item>
+            <linkId value="c11.2"/>
+            <text value="Visit List"/>
+            <item>
+                <linkId value="c11.2.1"/>
+                <text value="Visit Type"/>
+                <answer>
+                    <valueString value="Follow up"/>
+                </answer>
+            </item>
+            <item>
+                <linkId value="c11.2.2"/>
+                <text value="Visit Description"/>
+                <answer>
+                    <valueString value="This visit will be a phone call"/>
+                </answer>
+            </item>
+            <item>
+                <linkId value="c11.2.3"/>
+                <text value="Visit Duration"/>
+                <answer>
+                    <valueString value="15"/>
+                </answer>
+            </item>
+            <item>
+                <linkId value="c11.2.4"/>
+                <text value="Visit Duration Units"/>
+                <answer>
+                    <valueCoding>
+                        <code value="1"/>
+                        <display value="Minutes"/>
+                    </valueCoding>
+                </answer>
+            </item>
+            <item>
+                <linkId value="c11.2.5"/>
+                <text value="Number of Visits"/>
+                <answer>
+                    <valueInteger value="5"/>
+                </answer>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="c12"/>
+        <text value="Risks"/>
+        <item>
+            <linkId value="c12.1"/>
+            <text value="Risk List"/>
+            <item>
+                <linkId value="c12.1.1"/>
+                <text value="Name of the risk"/>
+                <answer>
+                    <valueString value="Loss of confidentiality"/>
+                </answer>
+            </item>
+            <item>
+                <linkId value="c12.1.2"/>
+                <text value="Description of Risk"/>
+                <answer>
+                    <valueString value="Sharing your information could result in a loss of confidentiality.  However, data will be stored with an anonomized ID to reduce the chance of this occurring."/>
+                </answer>
+            </item>
+            <item>
+                <linkId value="c12.1.3"/>
+                <text value="Risk Category"/>
+                <answer>
+                    <valueCoding>
+                        <code value="2"/>
+                        <display value="Non-Physical"/>
+                    </valueCoding>
+                </answer>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="c13"/>
+        <text value="Alternative Procedures"/>
+        <item>
+            <linkId value="c13.1"/>
+            <text value="Alternative Procedure Text"/>
+            <answer>
+                <valueString value="You can receive your usual medical care which could include treatment A or B without enrollment."/>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c14"/>
+        <text value="Benefits"/>
+        <item>
+            <linkId value="c14.1"/>
+            <text value="Name of Benefit"/>
+            <answer>
+                <valueString value="Societal Benefit"/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c14.2"/>
+            <text value="Description of Benefit"/>
+            <answer>
+                <valueString value="Understanding the benefits of treatment A or B will help in future treatment, but will not benefit you as part of this study."/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c14.3"/>
+            <text value="Benefit to you"/>
+            <answer>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c14.4"/>
+            <text value="Benefit to society"/>
+            <answer>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c15"/>
+        <text value="Compensation"/>
+        <item>
+            <linkId value="c15.1"/>
+            <text value="Will there be compensation for participation?"/>
+            <answer>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c16"/>
+        <text value="Costs"/>
+        <item>
+            <linkId value="c16.1"/>
+            <text value="What are the costs of participation, if any?"/>
+            <answer>
+                <valueString value="There are no costs to the participant for participation."/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c16.2"/>
+            <text value="Will there be reimbursement for other study visit costs incurred?"/>
+            <answer>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c16.3"/>
+            <text value="Who will pay for medical treatment if research related injury occurs?"/>
+            <answer>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Treatment not covered"/>
+                </valueCoding>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c17"/>
+        <text value="Participant Rights and whom to contact for answers"/>
+        <item>
+            <linkId value="c17.1"/>
+            <text value="What are the rights of a participant?"/>
+            <answer>
+                <valueString value="It is important for you to know that you will continue to receive care and treatment from your own doctor. Decisions regarding your medical care will remain in the hands of your primary health care team, as usual."/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c17.2"/>
+            <text value="Site IRB Contact Information"/>
+            <answer>
+                <valueString value="Site IRB contact name and title"/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c17.3"/>
+            <text value="Study Coordinator Contact Information"/>
+            <answer>
+                <valueString value="Study Coordinator Phone number  and email"/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c17.4"/>
+            <text value="Site Principal Investigator Contact Information"/>
+            <answer>
+                <valueString value="Site PI email"/>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c18"/>
+        <text value="Participation"/>
+        <item>
+            <linkId value="c18.1"/>
+            <text value="Voluntary Permission Statement"/>
+            <answer>
+                <valueString value="Participation is voluntary, refusal to participate will involve no penalty or loss of benefits to which the participant is otherwise entitled, and the participant may discontinue participation at any time without penalty or loss of benefits to which the participant is otherwise entitled."/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c18.2"/>
+            <text value="What are the anticipated circumstances under which participant's participation may be terminated by the investigator without regard to the participant's or the legally authorized representative's consent."/>
+            <answer>
+                <valueString value="Treatment can be changed if the provider feels it would be in the participant's best interest to do so."/>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c19"/>
+        <text value="Early Withdrawal"/>
+        <item>
+            <linkId value="c19.1"/>
+            <text value="Are there consequences to participant for early withdrawal?"/>
+            <answer>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c20"/>
+        <text value="Confidentiality of Records"/>
+        <item>
+            <linkId value="c20.1"/>
+            <text value="Will HIPAA content be included within this document?"/>
+            <answer>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c20.2"/>
+            <text value="Medical information and billing statement"/>
+            <answer>
+                <valueString value="Medical information and billing records are protected by the privacy regulations of the federal Health Insurance Portability and Accountability Act of 1996 (HIPAA).  This type of information is called protected health information (PHI). PHI about you may be obtained from any hospital, doctor, and other health care provider involved in your care."/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c20.3"/>
+            <text value="Will confidentiality be protected?"/>
+            <answer>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c20.4"/>
+            <text value="How will confidentiality be protected?"/>
+            <answer>
+                <valueString value="All data will be stored with a study number separately from particicpant contact information."/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c20.5"/>
+            <text value="Are there data security or policies that need to be included in the consent, particularly around device use (optional)"/>
+            <answer>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c21"/>
+        <text value="Specimen Management"/>
+        <item>
+            <linkId value="c21.1"/>
+            <text value="Were specimens collected as part of this study?"/>
+            <answer>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c22"/>
+        <text value="Will there be Broad Consent for Storage, maintenance and secondary research use?"/>
+        <answer>
+            <valueCoding>
+                <code value="2"/>
+                <display value="No"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="c23"/>
+        <text value="Can the study team contact you for future research?"/>
+        <answer>
+            <valueCoding>
+                <code value="2"/>
+                <display value="No"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="c24"/>
+        <text value="Will participants share in commercial profit?"/>
+        <answer>
+            <valueCoding>
+                <code value="2"/>
+                <display value="No"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="c25"/>
+        <text value="Will the study team contact you with new information that may affect your willingness to remain in the study"/>
+        <answer>
+            <valueCoding>
+                <code value="1"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="c26"/>
+        <text value="Will the study team disclose clinically relevant study results to you?"/>
+        <answer>
+            <valueCoding>
+                <code value="2"/>
+                <display value="No"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="c27"/>
+        <text value="Clinical Trials.gov statement"/>
+        <answer>
+            <valueString value="A description of this clinical trial will be available on http://www.ClinicalTrials.gov, as required by U.S. Law. This Web site will not include information that can identify you. At most, the Web site will include a summary of the results. You can search this Web site at any time."/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="c28"/>
+        <text value="Is this study covered under a Certificate of Confidentiality? (default Y in NIH)"/>
+        <answer>
+            <valueCoding>
+                <code value="1"/>
+                <display value="Yes"/>
+            </valueCoding>
+            <item>
+                <linkId value="c28.1"/>
+                <text value="Certificate of Confidentiality Statement"/>
+                <answer>
+                    <valueString value="The Department of Health and Human Services (HHS) has issued a Certificate of Confidentiality to further protect your privacy. With this Certificate, the investigators may not disclose research information that may identify you in any Federal, State, or local civil, criminal, administrative, legislative, or other proceedings, unless you have consented for this use.[trunc]"/>
+                </answer>
+            </item>
+        </answer>
+    </item>
+    <item>
+        <linkId value="c29"/>
+        <text value="When will the PHI Authorization Expire based on date or time past an event"/>
+        <answer>
+            <valueString value="6 Months past last phone visit."/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="c30"/>
+        <text value="Statement of PHI Authorization Revocation"/>
+        <answer>
+            <valueString value="Participants have the ability to revoke their consent to share PHI at any time but that there are limitations on what restrictions can apply to data that has already been shared."/>
+        </answer>
+    </item>
+    <item>
+        <linkId value="c31"/>
+        <text value="Signature"/>
+        <item>
+            <linkId value="c31.1"/>
+            <text value="Indicator to include Participant Signature and Date/Time"/>
+            <answer>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c31.2"/>
+            <text value="Indicator to include Assent Signature and Date/Time"/>
+            <answer>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c31.3"/>
+            <text value="Indicator to include Legally Authorized Representative Signature and Date/Time"/>
+            <answer>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <linkId value="c32"/>
+        <text value="Protocol or Study Number"/>
+        <item>
+            <linkId value="c32.1"/>
+            <text value="IRB Number"/>
+            <answer>
+                <valueString value="RCT123"/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c32.2"/>
+            <text value="sIRB Version Date of  Consent"/>
+            <answer>
+                <valueString value="1.0"/>
+            </answer>
+        </item>
+        <item>
+            <linkId value="c32.6"/>
+            <text value="Expiration Date of Consent"/>
+            <answer>
+                <valueDateTime value="2022-03-01T05:00:00.000Z"/>
+            </answer>
+        </item>
+    </item>
+    <item>
+        <answer>
+            <item>
+                <linkId value="ADMIN01"/>
+                <text value="Link ID prefix"/>
+                <answer>
+                    <valueString value="c"/>
+                </answer>
+            </item>
+        </answer>
+    </item>
+</QuestionnaireResponse>

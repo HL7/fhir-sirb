@@ -1,0 +1,2870 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire
+    xmlns="http://hl7.org/fhir">
+    <id value="sirb-medical-adverse-event-questionnaire"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2021-06-25T18:56:37.435+00:00"/>
+        <source value="#3Lw6irxEcPluRUV5"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <p/>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/sirb/Questionnaire/sirb-medical-adverse-event-questionnaire"/>
+    <name value="AE_Questionnaire"/>
+    <title value="Adverse Medical Event Questionnaire"/>
+    <status value="draft"/>
+    <item>
+        <linkId value="mae1"/>
+        <definition value="2"/>
+        <text value="RESEARCH STUDY"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="mae1.1"/>
+            <definition value="3"/>
+            <text value="Study Title"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae1.1_help"/>
+                <text value="Study Title from the Informed Consent"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae1.2"/>
+            <definition value="4"/>
+            <text value="IRB Protocol Number"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae1.2_help"/>
+                <text value="Number assigned to the protocol by IRB"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae1.3"/>
+            <definition value="5"/>
+            <text value="Study Type"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Interventional"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Not Interventional"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae1.3_help"/>
+                <text value="Type of study"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae1.4"/>
+            <definition value="6"/>
+            <text value="Does this protocol require an FDA exemption?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="0"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae1.4_help"/>
+                <text value="Indicator for use of FDA regulated product"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae1.5"/>
+            <definition value="7"/>
+            <text value="Type of Exemption"/>
+            <type value="open-choice"/>
+            <enableWhen>
+                <question value="mae1.4"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="IND"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="IDE"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <linkId value="mae1.5_help"/>
+                <text value="Indicator if an IND or IDE is being used in the study"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae1.6"/>
+            <definition value="8"/>
+            <text value="IND/IDE Number"/>
+            <type value="string"/>
+            <enableWhen>
+                <question value="mae1.4"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="mae2"/>
+        <definition value="9"/>
+        <text value="Site Principal Investigator"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="mae2.1"/>
+            <definition value="10"/>
+            <text value="Given Name"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae2.1_help"/>
+                <text value="Given name associated with the site principal investigator"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae2.2"/>
+            <definition value="11"/>
+            <text value="Last Name"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae2.2_help"/>
+                <text value="Surname or family name associated with the site principal investigator"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae2.5"/>
+            <text value="Suffix"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae2.5_help"/>
+                <text value="Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc. associated with the site principal investigator's name"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae2.6"/>
+            <text value="Degree(s)"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae2.6_help"/>
+                <text value="Professional and Academic degrees associated with the site investigator"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae2.3"/>
+            <definition value="12"/>
+            <text value="Phone"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <linkId value="mae2.4"/>
+            <definition value="13"/>
+            <text value="Email"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="mae3"/>
+        <definition value="14"/>
+        <text value="Primary Contact"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                        <code value="instructions"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae3_help"/>
+            <text value="Personnel completing the adverse event documentation at the relying site"/>
+            <type value="display"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+        <item>
+            <linkId value="mae3.1"/>
+            <definition value="15"/>
+            <text value="Given Name"/>
+            <type value="string"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+        <item>
+            <linkId value="mae3.2"/>
+            <definition value="16"/>
+            <text value="Last Name"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <linkId value="mae3.3"/>
+            <definition value="17"/>
+            <text value="Phone"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <linkId value="mae3.4"/>
+            <definition value="18"/>
+            <text value="Email"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="mae4"/>
+        <definition value="19"/>
+        <text value="Site/Organization"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                        <code value="instructions"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae4_help"/>
+            <text value="Location where adverse event is recorded"/>
+            <type value="display"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+        <item>
+            <linkId value="mae4.1"/>
+            <definition value="20"/>
+            <text value="Name of organization/site where the event occurred"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <linkId value="mae4.2"/>
+            <definition value="21"/>
+            <text value="Name of organization/site which is recording the Adverse Medical event"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="mae5"/>
+        <definition value="22"/>
+        <text value="Participant Information"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="mae5.1"/>
+            <definition value="23"/>
+            <text value="Patient ID"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae5.1_help"/>
+                <text value="Participant dentifier from study case report form"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae5.2"/>
+            <definition value="24"/>
+            <text value="Age"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae5.3"/>
+            <definition value="25"/>
+            <text value="Gender"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Female"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Male"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="3"/>
+                    <display value="Intersex"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="4"/>
+                    <display value="Transgender"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="5"/>
+                    <display value="Prefer not to answer"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption">
+                <valueCoding>
+                    <display value="[lb]"/>
+                </valueCoding>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption">
+                <valueCoding>
+                    <display value="[kg]"/>
+                </valueCoding>
+            </extension>
+            <linkId value="mae5.4"/>
+            <definition value="26"/>
+            <text value="Weight"/>
+            <type value="quantity"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption">
+                <valueCoding>
+                    <display value="[in]"/>
+                </valueCoding>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption">
+                <valueCoding>
+                    <display value="[ft]"/>
+                </valueCoding>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption">
+                <valueCoding>
+                    <display value="[cm]"/>
+                </valueCoding>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption">
+                <valueCoding>
+                    <display value="[m]"/>
+                </valueCoding>
+            </extension>
+            <linkId value="mae5.5"/>
+            <definition value="27"/>
+            <text value="Height"/>
+            <type value="quantity"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae5.6"/>
+            <definition value="28"/>
+            <text value="Ethnicity"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Hispanic/Latino"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Not Hispanic/Latino"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae5.7"/>
+            <definition value="29"/>
+            <text value="Race"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Asian"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="American Indian or Alaskan Native"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="3"/>
+                    <display value="Black or African American"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="4"/>
+                    <display value="Native Hawaiian or Other Pacific Islander"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="5"/>
+                    <display value="White"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <linkId value="mae5.8"/>
+            <definition value="30"/>
+            <text value="Which Arm/Cohort/treatment group was the participant assigned to?"/>
+            <type value="string"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae5.8_help"/>
+                <text value="Patient’s treatment strategy assignment"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae5.9"/>
+            <definition value="31"/>
+            <text value="Participant dosed"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="0"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Information Not Available"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="3"/>
+                    <display value="Not Applicable"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae5.9_help"/>
+                <text value="Patient receive assigned study drug"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae5.10"/>
+            <definition value="32"/>
+            <text value="What study agent was received:"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="mae5.9"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="IND Agent"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Placebo"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="3"/>
+                    <display value="Blinded Study Agent"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae5.10_help"/>
+                <text value="IND agent or placebo or blinded study"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae5.11"/>
+            <definition value="33"/>
+            <text value="Were there any Protocol Deviations/Violations/Exceptions for this participant?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="0"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae5.11_help"/>
+                <text value="Indicator if adverse medical event occurred with protocol deviation, violation, exception"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae5.12"/>
+            <definition value="34"/>
+            <text value="Describe the Protocol Deviations/Violations/Exceptions"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="mae5.11"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="flyover"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae5.12_help"/>
+                <text value="Description of protocol deviations, violations, or exceptions that occurred for this participant"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+    </item>
+    <item>
+        <linkId value="mae6"/>
+        <definition value="35"/>
+        <text value="Adverse Medical Event Information"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae6.1"/>
+            <definition value="36"/>
+            <text value="Submission Type"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Initial"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Update"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.1_help"/>
+                <text value="Type of adverse event report being submitted"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae6.2"/>
+            <definition value="37"/>
+            <text value="Adverse Event Description"/>
+            <type value="text"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.2_help"/>
+                <text value="Diagnosis associated with adverse event.  Any untoward medical occurrence associated with the use of a drug in humans, whether or not considered drug related."/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae6.3"/>
+            <definition value="40"/>
+            <text value="Start Date"/>
+            <type value="date"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.3_help"/>
+                <text value="Date adverse event started"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae6.4"/>
+            <definition value="41"/>
+            <text value="Reported Date"/>
+            <type value="date"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.4_help"/>
+                <text value="Date of this report"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae6.5"/>
+            <definition value="42"/>
+            <text value="Recorded Date"/>
+            <type value="date"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.5_help"/>
+                <text value="Date this adverse event was first recorded"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae6.6"/>
+            <definition value="43"/>
+            <text value="Is the Adverse Medical event still ongoing?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="0"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.6_help"/>
+                <text value="Indicator if adverse event is still continuing"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae6.7"/>
+            <definition value="44"/>
+            <text value="Stop Date"/>
+            <type value="date"/>
+            <enableWhen>
+                <question value="mae6.6"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="0"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.7_help"/>
+                <text value="Date that the event resolved"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae6.8"/>
+            <definition value="item76"/>
+            <text value="Expectedness"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Expected"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Unexpected"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.8_help"/>
+                <text value="Adverse event was expected or not"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae6.9"/>
+            <definition value="45"/>
+            <text value="Severity"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Mild"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Moderate"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="3"/>
+                    <display value="Severe"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.9_help"/>
+                <text value="Physician assessment using sponsor defined categories"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae6.10"/>
+            <definition value="46"/>
+            <text value="Is the Adverse Medical Event Serious?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="0"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.10_help"/>
+                <text value="Indicator if an undesirable experience is associated with use of a medical product"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae6.11"/>
+            <definition value="47"/>
+            <text value="Seriousness"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="mae6.10"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Death"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Life-threatening"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="3"/>
+                    <display value="Initial or prolonged hospitalization"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="4"/>
+                    <display value="Required intervention to prevent permanent impairment/damage"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="5"/>
+                    <display value="Other medically important condition"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="6"/>
+                    <display value="Congenital anomaly or birth defect"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="7"/>
+                    <display value="Disability/incapacity"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.11_help"/>
+                <text value="Serious criteria are defined in the protocol"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae6.12"/>
+            <definition value="48"/>
+            <text value="What is the date Adverse Medical Event became serious?"/>
+            <type value="date"/>
+            <enableWhen>
+                <question value="mae6.10"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.12_help"/>
+                <text value="Date adverse event qualified as serious"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae6.13"/>
+            <definition value="48"/>
+            <text value="Outcome of Adverse Medical Event"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Recovered/Resolved"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Recovering/Resolving"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="3"/>
+                    <display value="Not recovered/Not resolved"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="4"/>
+                    <display value="Recovered/Resolved with sequelae"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="5"/>
+                    <display value="Fatal"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="6"/>
+                    <display value="Unknown"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.13_help"/>
+                <text value="Participant’s status after the adverse event"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae6.14"/>
+            <definition value="i75"/>
+            <text value="Was autopsy performed?"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="mae6.13"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="5"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="0"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="3"/>
+                    <display value="Unknown"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.14_help"/>
+                <text value="Indicator if participant was autopsied"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae6.15"/>
+            <definition value="49"/>
+            <text value="Relationship of Adverse Medical Event to Study Intervention"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="0"/>
+                    <display value="Not related"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Unlikely related"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Possibly related"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="3"/>
+                    <display value="Probably related"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="4"/>
+                    <display value="Definitely related"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <linkId value="mae6.16"/>
+            <definition value="49_1"/>
+            <text value="Rationale for relationship with study intervention"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="mae6.15"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="2"/>
+                </answerCoding>
+            </enableWhen>
+            <enableWhen>
+                <question value="mae6.15"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="3"/>
+                </answerCoding>
+            </enableWhen>
+            <enableWhen>
+                <question value="mae6.15"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="4"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="any"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.16_help"/>
+                <text value="Explanation for relationship between study intervention and adverse event"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae6.17"/>
+            <definition value="53"/>
+            <text value="What are possible alternate causes of the SAE?"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="mae6.15"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="0"/>
+                </answerCoding>
+            </enableWhen>
+            <enableWhen>
+                <question value="mae6.15"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="any"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="3"/>
+                    <display value="Primary disease"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="5"/>
+                    <display value="Study Procedure"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="7"/>
+                    <display value="Pre-existing condition"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="4"/>
+                    <display value="Underlying disease"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Concomitant medication"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="6"/>
+                    <display value="Other known or suspected cause"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.17_help"/>
+                <text value="Reason for possible alternative serious adverse event causes "/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae6.18"/>
+            <definition value="item78"/>
+            <text value="Study Procedure- Specify"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="mae6.17"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="5"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.18_help"/>
+                <text value="Study procedure  associated with SAE"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae6.19"/>
+            <definition value="item79"/>
+            <text value="Pre-existing condition-specify"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="mae6.17"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="7"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.19_help"/>
+                <text value="Pre-existing condition associated with SAE"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae6.20"/>
+            <definition value="item80"/>
+            <text value="Underlying disease-specify"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="mae6.17"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="4"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.20_help"/>
+                <text value="Underlying disease associated with SAE"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae6.21"/>
+            <definition value="item81"/>
+            <text value="Concomittant medication- specify"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="mae6.17"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.21_help"/>
+                <text value="Concomitant medication associated with  SAE"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae6.22"/>
+            <definition value="item82"/>
+            <text value="Other known or suspected cause- specify"/>
+            <type value="text"/>
+            <enableWhen>
+                <question value="mae6.17"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="6"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.22_help"/>
+                <text value="Other causal reason was associated with SAE"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae6.23"/>
+            <definition value="50"/>
+            <text value="Action Taken Regarding Study Intervention"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="0"/>
+                    <display value="None"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Treatment Stopped"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Treatment interrupted"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="3"/>
+                    <display value="Reduced Dose"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="4"/>
+                    <display value="Increased Dose"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="5"/>
+                    <display value="Delayed Dose"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.23_help"/>
+                <text value="Changes to  study intervention made after adverse event was detected"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae6.24"/>
+            <definition value="50_1"/>
+            <text value="If study intervention was discontinued, interrupted, or dose reduced (dechallenged), did AE diminish/abate?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="0"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="2"/>
+                    <display value="Not Applicable"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.24_help"/>
+                <text value="Adverse event diminished/abated after study intervention was discontinued, interrupted, or dose reduced (dechallenged)"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="mae6.25"/>
+            <definition value="50_2"/>
+            <text value="If study intervention was restarted (rechallenge) did AE recur?"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="0"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="3"/>
+                    <display value="Not Applicable"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.25_help"/>
+                <text value="Adverse event recurred when the study intervention was restarted"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae6.26"/>
+            <definition value="52"/>
+            <text value="Did the participant receive any relevant concomitant medications in response to the SAE?"/>
+            <type value="choice"/>
+            <enableWhen>
+                <question value="mae6.10"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="0"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="gtable"/>
+                        <display value="Group Table"/>
+                    </coding>
+                    <text value="Group Table"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae6.27"/>
+            <definition value="55"/>
+            <text value="SAE Concomitant Medications"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="mae6.26"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <repeats value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.27_help"/>
+                <text value="Concomitant medication associated with  SAE"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+            <item>
+                <linkId value="mae6.28.1"/>
+                <definition value="56"/>
+                <text value="Medication Name"/>
+                <type value="string"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="mae6.28.1_help"/>
+                    <text value="Name of concomitant medication given to participant in response to SAE"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="mae6.28.2"/>
+                <definition value="57"/>
+                <text value="Indication"/>
+                <type value="string"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="mae6.28.2_help"/>
+                    <text value="Indication for giving the concomitant medication to participant"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="mae6.28.3"/>
+                <definition value="58"/>
+                <text value="Start Date"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="mae6.28.3_help"/>
+                    <text value="Start date for the concomitant medication given to participant"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="mae6.28.4"/>
+                <definition value="59"/>
+                <text value="Stop Date"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="mae6.28.4_help"/>
+                    <text value="Stop date for the concomitant medication given to the participant"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="mae6.28.5"/>
+                <definition value="60"/>
+                <text value="Ongoing"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="1"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="0"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="mae6.28.5_help"/>
+                    <text value="Is concomitant medication administration for participant ongoing?"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae6.29"/>
+            <definition value="61"/>
+            <text value="Did the participant receive any treatments/procedures in response to the SAE?"/>
+            <type value="open-choice"/>
+            <enableWhen>
+                <question value="mae6.10"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <answerOption>
+                <valueCoding>
+                    <code value="1"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <code value="0"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.29_help"/>
+                <text value="Treatments/procedures administered in response to  SAE"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="gtable"/>
+                        <display value="Group Table"/>
+                    </coding>
+                    <text value="Group Table"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae6.30"/>
+            <definition value="62"/>
+            <text value="SAE Treatments/Procedures"/>
+            <type value="group"/>
+            <enableWhen>
+                <question value="mae6.29"/>
+                <operator value="="/>
+                <answerCoding>
+                    <code value="1"/>
+                </answerCoding>
+            </enableWhen>
+            <required value="false"/>
+            <repeats value="true"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                            <code value="instructions"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="mae6.30_help"/>
+                <text value="Name of SAE treatment/procedure participant received"/>
+                <type value="display"/>
+                <required value="false"/>
+                <repeats value="false"/>
+                <readOnly value="false"/>
+            </item>
+            <item>
+                <linkId value="mae6.30.1"/>
+                <definition value="63"/>
+                <text value="Treatment/Procedure"/>
+                <type value="string"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="mae6.30.1_help"/>
+                    <text value="Name of SAE treatment/procedure participant received"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="mae6.30.2"/>
+                <definition value="64"/>
+                <text value="Start Date"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="mae6.30.2_help"/>
+                    <text value="Start date for SAE treatment/procedure participant received"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="mae6.30.3"/>
+                <definition value="65"/>
+                <text value="Stop Date"/>
+                <type value="date"/>
+                <required value="false"/>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="mae6.30.3_help"/>
+                    <text value="Stop date for SAE treatment/procedure participant received"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+            <item>
+                <linkId value="mae6.30.4"/>
+                <definition value="66"/>
+                <text value="Ongoing"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <code value="1"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <code value="0"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                                <code value="instructions"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="mae6.30.4_help"/>
+                    <text value="Is the SAE treatment/procedure for the participant ongoing"/>
+                    <type value="display"/>
+                    <required value="false"/>
+                    <repeats value="false"/>
+                    <readOnly value="false"/>
+                </item>
+            </item>
+        </item>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="drop-down"/>
+                    <display value="Drop down"/>
+                </coding>
+                <text value="Drop down"/>
+            </valueCodeableConcept>
+        </extension>
+        <linkId value="mae7"/>
+        <definition value="67"/>
+        <text value="Did the participant receive relevant laboratory or diagnostic tests in response to the SAE?"/>
+        <type value="open-choice"/>
+        <enableWhen>
+            <question value="mae6.10"/>
+            <operator value="="/>
+            <answerCoding>
+                <code value="1"/>
+            </answerCoding>
+        </enableWhen>
+        <required value="false"/>
+        <answerOption>
+            <valueCoding>
+                <code value="1"/>
+                <display value="Yes"/>
+            </valueCoding>
+        </answerOption>
+        <answerOption>
+            <valueCoding>
+                <code value="0"/>
+                <display value="No"/>
+            </valueCoding>
+        </answerOption>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                        <code value="instructions"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae7_help"/>
+            <text value="Were any laboratory or diagnostic tests administered to the participant in response to the SAE?"/>
+            <type value="display"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="gtable"/>
+                    <display value="Group Table"/>
+                </coding>
+                <text value="Group Table"/>
+            </valueCodeableConcept>
+        </extension>
+        <linkId value="mae8"/>
+        <definition value="68"/>
+        <text value="SAE Laboratory or Diagnostic Tests"/>
+        <type value="group"/>
+        <enableWhen>
+            <question value="mae7"/>
+            <operator value="="/>
+            <answerCoding>
+                <code value="1"/>
+            </answerCoding>
+        </enableWhen>
+        <required value="false"/>
+        <repeats value="true"/>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
+                        <code value="instructions"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="mae8_help"/>
+            <text value="Laboratory or diagnostic tests obtained in response to AE"/>
+            <type value="display"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <readOnly value="false"/>
+        </item>
+        <item>
+            <linkId value="mae8.1"/>
+            <definition value="69"/>
+            <text value="Lab/Diagnostic Test"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <linkId value="mae8.2"/>
+            <definition value="70"/>
+            <text value="Date"/>
+            <type value="date"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <linkId value="mae8.3"/>
+            <definition value="71"/>
+            <text value="Result"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <linkId value="mae8.4"/>
+            <definition value="72"/>
+            <text value="Low Range"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <linkId value="mae8.5"/>
+            <definition value="73"/>
+            <text value="High Range"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <linkId value="mae8.6"/>
+            <definition value="74"/>
+            <text value="Comments"/>
+            <type value="string"/>
+            <required value="false"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="mae9"/>
+        <definition value="38"/>
+        <text value="Narrative/Comments (provide a description of the SAE including chronological clinical presentation and evolution of the SAE and associated signs/symptoms):"/>
+        <type value="text"/>
+        <enableWhen>
+            <question value="mae6.10"/>
+            <operator value="="/>
+            <answerCoding>
+                <code value="1"/>
+            </answerCoding>
+        </enableWhen>
+        <required value="false"/>
+    </item>
+</Questionnaire>
