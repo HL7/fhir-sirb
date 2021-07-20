@@ -1,0 +1,27 @@
+{
+	"list": [
+		{
+			"version": "current",
+			"path": "http://build.fhir.org/ig/HL7/fhir-sirb",
+			"desc": "Current continuous integration build",
+			"fhirversion": "4.0.1",
+			"date": "",
+			"sequence": "",
+			"status": "ci-build",
+			"current": true
+		},
+		{
+			"version": "0.1.0",
+			"current": false,
+			"desc": "Initial STU Ballot",
+			"path": "https://hl7.org/fhir/us/sirb/2021Sep",
+			"fhirversion": "4.0.1",
+			"sequence": "1",
+			"status": "ballot"
+		}
+	],
+	"package-id": "hl7.fhir.us.sirb",
+	"title": "Single Institutional Review Board (sIRB) Implementation Guide",
+	"canonical": "https://hl7.org/fhir/us/sirb",
+	"category": "Research"
+}
