@@ -3,21 +3,20 @@
     xmlns="http://hl7.org/fhir">
     <id value="sirb-initiate-study-questionnaire"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-06-25T17:53:45.487+00:00"/>
-        <source value="#dp3PGNDpBtHjv3dr"/>
-        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"/>
+        <versionId value="2"/>
+        <lastUpdated value="2021-07-20T16:23:41.947+00:00"/>
+        <source value="#QuTcgG3QRUbgK67g"/>
     </meta>
     <text>
         <status value="generated"/>
         <div
             xmlns="http://www.w3.org/1999/xhtml">
-            <p/>
+            <p>Initiate a Study Questionnaire</p>
         </div>
     </text>
     <url value="https://raw.githubusercontent.com/jdtopping/sIRB/master/input/resources/questionnaire/sirb-initiate-study-questionnaire.json"/>
     <version value="0.1.0"/>
-    <name value="Initiate a Study Questionnaire"/>
+    <name value="SIRBInitiateAStudyQuestionnaire"/>
     <title value="Initiate a Study Questionnaire"/>
     <status value="draft"/>
     <subjectType value="ResearchStudy"/>
@@ -122,13 +121,15 @@
             <required value="true"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="http://www.systemgoeshere.com"/>
+                    <code value="INT"/>
                     <display value="Interventional"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="http://www.systemgoeshere.com"/>
+                    <code value="OBS"/>
                     <display value="Observational"/>
                 </valueCoding>
             </answerOption>
@@ -190,13 +191,15 @@
             <required value="true"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="http://www.systemgoeshere.com"/>
+                    <code value="SFS"/>
                     <display value="Sponsor or Funding Source"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="http://www.systemgoeshere.com"/>
+                    <code value="CRO"/>
                     <display value="Contract Research Organization (CRO)"/>
                 </valueCoding>
             </answerOption>
@@ -361,6 +364,95 @@
                 <valueString value="United States"/>
             </initial>
         </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="drop-down"/>
+                        <display value="Drop down"/>
+                    </coding>
+                    <text value="Drop down"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="in6.8"/>
+            <text value="Is a Federal Wide Assurance (FWA) Number assigned?"/>
+            <type value="choice"/>
+            <required value="true"/>
+            <answerOption>
+                <valueCoding>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
+                    <display value="Yes"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
+                    <display value="No"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="NI"/>
+                    <display value="No Information"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="NAV"/>
+                    <display value="temporarily unavailable"/>
+                </valueCoding>
+            </answerOption>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="in6.8-help"/>
+                <text value="DHHS assigned number indicating Assurance of Compliance with the Office of Human Research Protections. The only type of assurance of compliance accepted and approved by OHRP for institutions engaged in non-exempt human subjects research conducted or supported by HHS. Under a FWA, an institution commits to HHS that it will comply with the requirements set forth in 45 CFR 46, as well as the terms of assurance.  If the user believes that there is a FWA number assigned but needs to confirm this, select &quot;temporarily unavailable&quot;. If the user does not know if there is a FWA number assigned, select &quot;No Information&quot;."/>
+                <type value="display"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="in6.9"/>
+            <text value="Federal Wide Assurance Number (if assigned)"/>
+            <type value="integer"/>
+            <enableWhen>
+                <question value="in6.8"/>
+                <operator value="="/>
+                <answerCoding>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
+                </answerCoding>
+            </enableWhen>
+            <enableBehavior value="all"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="help"/>
+                            <display value="Help-Button"/>
+                        </coding>
+                        <text value="Help-Button"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="inin6.9-help"/>
+                <text value="DHHS assigned number indicating Assurance of Compliance with the Office of Human Research Protections. Enter just the numeric value of the FWA."/>
+                <type value="display"/>
+            </item>
+        </item>
     </item>
     <item>
         <linkId value="DIVIDER3"/>
@@ -496,7 +588,7 @@
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="in7.6-help"/>
-                <text value="The department name or division for the overall principal investigator "/>
+                <text value="The department name or division for the overall principal investigator"/>
                 <type value="display"/>
             </item>
         </item>
@@ -673,26 +765,30 @@
                 <required value="true"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="1"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                         <display value="Yes"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="2"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="N"/>
                         <display value="No"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="3"/>
-                        <display value="Unknown"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="NI"/>
+                        <display value="No Information"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="4"/>
-                        <display value="Not Available at this time"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="NAV"/>
+                        <display value="temporarily unavailable"/>
                     </valueCoding>
                 </answerOption>
                 <item>
@@ -707,7 +803,7 @@
                         </valueCodeableConcept>
                     </extension>
                     <linkId value="in8.1.4-help"/>
-                    <text value="DHHS assigned number indicating Assurance of Compliance with the Office of Human Research Protections. The only type of assurance of compliance accepted and approved by OHRP for institutions engaged in non-exempt human subjects research conducted or supported by HHS. Under a FWA, an institution commits to HHS that it will comply with the requirements set forth in 45 CFR 46, as well as the terms of assurance."/>
+                    <text value="DHHS assigned number indicating Assurance of Compliance with the Office of Human Research Protections. The only type of assurance of compliance accepted and approved by OHRP for institutions engaged in non-exempt human subjects research conducted or supported by HHS. Under a FWA, an institution commits to HHS that it will comply with the requirements set forth in 45 CFR 46, as well as the terms of assurance.  If the user believes that there is a FWA number assigned but needs to confirm this, select &quot;temporarily unavailable&quot;. If the user does not know if there is a FWA number assigned, select &quot;No Information&quot;."/>
                     <type value="display"/>
                 </item>
             </item>
@@ -715,6 +811,15 @@
                 <linkId value="in8.1.5"/>
                 <text value="Federal Wide Assurance Number (if assigned)"/>
                 <type value="integer"/>
+                <enableWhen>
+                    <question value="in8.1.4"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
+                    </answerCoding>
+                </enableWhen>
+                <enableBehavior value="all"/>
                 <required value="false"/>
                 <item>
                     <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
@@ -749,32 +854,37 @@
                 <required value="true"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="1"/>
-                        <display value="Approved"/>
+                        <system value="http://www.systemgoeshere.com"/>
+                        <code value="APPROVED"/>
+                        <display value="Approved for reliance"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="2"/>
-                        <display value="Declined"/>
+                        <system value="http://www.systemgoeshere.com"/>
+                        <code value="DENIED"/>
+                        <display value="Denied reliance"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="3"/>
+                        <system value="http://www.systemgoeshere.com"/>
+                        <code value="POSSIBLE"/>
                         <display value="Potential/possible"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="4"/>
+                        <system value="http://www.systemgoeshere.com"/>
+                        <code value="CANCELLED"/>
                         <display value="Cancelled or not participating"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="5"/>
-                        <display value="On hold"/>
+                        <system value="http://www.systemgoeshere.com"/>
+                        <code value="ONHOLD"/>
+                        <display value="Temporarily on hold"/>
                     </valueCoding>
                 </answerOption>
                 <item>
@@ -893,7 +1003,7 @@
                         </valueCodeableConcept>
                     </extension>
                     <linkId value="in8.3.1-help"/>
-                    <text value="First Name or Given Name of &#xD;&#xA;PI at a site conducting the study, responsible for the conduct of the study at his/her relying institution "/>
+                    <text value="First Name or Given Name of &#xD;&#xA;PI at a site conducting the study, responsible for the conduct of the study at his/her relying institution"/>
                     <type value="display"/>
                 </item>
             </item>

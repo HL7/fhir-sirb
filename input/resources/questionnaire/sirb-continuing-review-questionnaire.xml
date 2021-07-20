@@ -3,16 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="sirb-continuing-review-questionnaire"/>
     <meta>
-        <versionId value="6"/>
-        <lastUpdated value="2021-06-25T19:09:26.935+00:00"/>
-        <source value="#MP5sp3tgmZ0tNwU8"/>
-        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"/>
+        <versionId value="7"/>
+        <lastUpdated value="2021-07-20T13:12:34.121+00:00"/>
+        <source value="#Lzp6NlgbinArVjRi"/>
     </meta>
     <text>
         <status value="generated"/>
         <div
             xmlns="http://www.w3.org/1999/xhtml">
-            <p/>
+            <p> Continuing Review   </p>
         </div>
     </text>
     <extension url="http://hl7.org/fhir/StructureDefinition/variable">
@@ -49,23 +48,14 @@
                         <coding>
                             <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                             <code value="help"/>
+                            <display value="Help-Button"/>
                         </coding>
-                    </valueCodeableConcept>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                            <code value="instructions"/>
-                        </coding>
+                        <text value="Help-Button"/>
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="cr1.1_help"/>
                 <text value="Study Title from the Informed Consent"/>
                 <type value="display"/>
-                <required value="false"/>
-                <repeats value="false"/>
-                <readOnly value="false"/>
             </item>
         </item>
         <item>
@@ -79,23 +69,14 @@
                         <coding>
                             <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                             <code value="help"/>
+                            <display value="Help-Button"/>
                         </coding>
-                    </valueCodeableConcept>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                            <code value="instructions"/>
-                        </coding>
+                        <text value="Help-Button"/>
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="cr1.2_help"/>
                 <text value="Number assigned to the protocol by IRB"/>
                 <type value="display"/>
-                <required value="false"/>
-                <repeats value="false"/>
-                <readOnly value="false"/>
             </item>
         </item>
         <item>
@@ -115,24 +96,28 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
+                    <system value="http://www.systemgoeshere.com"/>
                     <code value="not-open"/>
                     <display value="Not yet open"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
+                    <system value="http://www.systemgoeshere.com"/>
                     <code value="open-no-participants"/>
-                    <display value="Open with no participant"/>
+                    <display value="Open with no participants"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
+                    <system value="http://www.systemgoeshere.com"/>
                     <code value="open"/>
                     <display value="Open for enrollment"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
+                    <system value="http://www.systemgoeshere.com"/>
                     <code value="closed"/>
                     <display value="Closed to enrollment"/>
                 </valueCoding>
@@ -155,18 +140,21 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
+                    <system value="http://www.systemgoeshere.com"/>
                     <code value="complete"/>
                     <display value="All interventions complete"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
+                    <system value="http://www.systemgoeshere.com"/>
                     <code value="continue-meds"/>
                     <display value="Continuing interventions"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
+                    <system value="http://www.systemgoeshere.com"/>
                     <code value="continue-min-risk"/>
                     <display value="Continuing interventions - minimal risk"/>
                 </valueCoding>
@@ -177,23 +165,14 @@
                         <coding>
                             <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                             <code value="help"/>
+                            <display value="Help-Button"/>
                         </coding>
-                    </valueCodeableConcept>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                            <code value="instructions"/>
-                        </coding>
+                        <text value="Help-Button"/>
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="cr1.4_help"/>
                 <text value="Current intervention status.  This can be used by the IRB to determine that continuing review is no longer required."/>
                 <type value="display"/>
-                <required value="false"/>
-                <repeats value="false"/>
-                <readOnly value="false"/>
             </item>
         </item>
         <item>
@@ -213,26 +192,65 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
+                    <system value="http://hl7.org/fhir/research-study-status"/>
                     <code value="active"/>
                     <display value="Active"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="active-followup"/>
-                    <display value="Active for long-term follow-up"/>
+                    <system value="http://hl7.org/fhir/research-study-status"/>
+                    <code value="disapproved"/>
+                    <display value="Disapproved"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="active-analysis"/>
-                    <display value="Active for data analysis only"/>
+                    <system value="http://hl7.org/fhir/research-study-status"/>
+                    <code value="closed-to-accrual"/>
+                    <display value="Closed to Accrual"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="inactive"/>
-                    <display value="Inactive"/>
+                    <system value="http://hl7.org/fhir/research-study-status"/>
+                    <code value="closed-to-accrual-and-intervention"/>
+                    <display value="Closed to Accrual and Intervention"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://hl7.org/fhir/research-study-status"/>
+                    <code value="completed"/>
+                    <display value="Completed"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://hl7.org/fhir/research-study-status"/>
+                    <code value="administratively-completed"/>
+                    <display value="Administratively Completed"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://hl7.org/fhir/research-study-status"/>
+                    <code value="temporarily-closed-to-accrual"/>
+                    <display value="Temporarily Closed to Accrual"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://hl7.org/fhir/research-study-status"/>
+                    <code value="temporarily-closed-to-accrual-and-intervention"/>
+                    <display value="Temporarily Closed to Accrual and Intervention"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://hl7.org/fhir/research-study-status"/>
+                    <code value="withdrawn"/>
+                    <display value="Withdrawn"/>
                 </valueCoding>
             </answerOption>
             <item>
@@ -241,23 +259,14 @@
                         <coding>
                             <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                             <code value="help"/>
+                            <display value="Help-Button"/>
                         </coding>
-                    </valueCodeableConcept>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                            <code value="instructions"/>
-                        </coding>
+                        <text value="Help-Button"/>
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="cr1.5_help"/>
-                <text value="Study Status can also be used by the IRB to determine that continuing review is no longer required."/>
+                <text value="Status of the study overall. Study Status can also be used by the IRB to determine that continuing review is no longer required."/>
                 <type value="display"/>
-                <required value="false"/>
-                <repeats value="false"/>
-                <readOnly value="false"/>
             </item>
         </item>
         <item>
@@ -281,38 +290,51 @@
             <repeats value="true"/>
             <answerOption>
                 <valueCoding>
+                    <system value="http://www.systemgoeshere.com"/>
                     <code value="federal"/>
                     <display value="Federal"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
+                    <system value="http://www.systemgoeshere.com"/>
                     <code value="state"/>
                     <display value="State"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
+                    <system value="http://www.systemgoeshere.com"/>
                     <code value="industry"/>
                     <display value="Industry"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
+                    <system value="http://www.systemgoeshere.com"/>
                     <code value="foundation"/>
                     <display value="Foundation"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
+                    <system value="http://www.systemgoeshere.com"/>
                     <code value="institutional"/>
                     <display value="Institutional"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
+                    <system value="http://www.systemgoeshere.com"/>
                     <code value="departmental"/>
                     <display value="Departmental"/>
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://www.systemgoeshere.com"/>
+                    <code value="other"/>
+                    <display value="Other"/>
                 </valueCoding>
             </answerOption>
             <item>
@@ -321,23 +343,38 @@
                         <coding>
                             <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                             <code value="help"/>
+                            <display value="Help-Button"/>
                         </coding>
-                    </valueCodeableConcept>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                            <code value="instructions"/>
-                        </coding>
+                        <text value="Help-Button"/>
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="cr1.6_help"/>
                 <text value="The funding source for the study.  Note that a single study can have multiple funding sources and that the funding sources can change over time."/>
                 <type value="display"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="cr1.6.1"/>
+                <text value="Other-Please specify:"/>
+                <type value="text"/>
+                <enableWhen>
+                    <question value="cr1.6"/>
+                    <operator value="="/>
+                    <answerCoding>
+                        <system value="http://www.systemgoeshere.com"/>
+                        <code value="other"/>
+                    </answerCoding>
+                </enableWhen>
                 <required value="false"/>
-                <repeats value="false"/>
-                <readOnly value="false"/>
             </item>
         </item>
     </item>
@@ -357,23 +394,14 @@
                         <coding>
                             <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                             <code value="help"/>
+                            <display value="Help-Button"/>
                         </coding>
-                    </valueCodeableConcept>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                            <code value="instructions"/>
-                        </coding>
+                        <text value="Help-Button"/>
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="cr2.1_help"/>
                 <text value="First or given name associated with the site principal investigator"/>
                 <type value="display"/>
-                <required value="false"/>
-                <repeats value="false"/>
-                <readOnly value="false"/>
             </item>
         </item>
         <item>
@@ -389,23 +417,14 @@
                         <coding>
                             <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                             <code value="help"/>
+                            <display value="Help-Button"/>
                         </coding>
-                    </valueCodeableConcept>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                            <code value="instructions"/>
-                        </coding>
+                        <text value="Help-Button"/>
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="cr2.4_help"/>
                 <text value="Surname or family name associated with the site principal investigator"/>
                 <type value="display"/>
-                <required value="false"/>
-                <repeats value="false"/>
-                <readOnly value="false"/>
             </item>
         </item>
         <item>
@@ -421,23 +440,14 @@
                         <coding>
                             <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                             <code value="help"/>
+                            <display value="Help-Button"/>
                         </coding>
-                    </valueCodeableConcept>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                            <code value="instructions"/>
-                        </coding>
+                        <text value="Help-Button"/>
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="cr2.5_help"/>
                 <text value="Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc. associated with the site principal investigator's name"/>
                 <type value="display"/>
-                <required value="false"/>
-                <repeats value="false"/>
-                <readOnly value="false"/>
             </item>
         </item>
         <item>
@@ -453,23 +463,14 @@
                         <coding>
                             <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                             <code value="help"/>
+                            <display value="Help-Button"/>
                         </coding>
-                    </valueCodeableConcept>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                            <code value="instructions"/>
-                        </coding>
+                        <text value="Help-Button"/>
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="cr2.6_help"/>
                 <text value="Professional and Academic degrees associated with the site principal investigator"/>
                 <type value="display"/>
-                <required value="false"/>
-                <repeats value="false"/>
-                <readOnly value="false"/>
             </item>
         </item>
         <item>
@@ -490,6 +491,7 @@
         <text value="Report Type"/>
         <type value="group"/>
         <required value="false"/>
+        <repeats value="false"/>
         <item>
             <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
                 <valueCodeableConcept>
@@ -507,13 +509,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -523,23 +527,14 @@
                         <coding>
                             <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                             <code value="help"/>
+                            <display value="Help-Button"/>
                         </coding>
-                    </valueCodeableConcept>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                            <code value="instructions"/>
-                        </coding>
+                        <text value="Help-Button"/>
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="cr3a.1_help"/>
                 <text value="An initial report is the first time that the study is reviewed."/>
                 <type value="display"/>
-                <required value="false"/>
-                <repeats value="false"/>
-                <readOnly value="false"/>
             </item>
         </item>
     </item>
@@ -554,23 +549,14 @@
                     <coding>
                         <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                         <code value="help"/>
+                        <display value="Help-Button"/>
                     </coding>
-                </valueCodeableConcept>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                        <code value="instructions"/>
-                    </coding>
+                    <text value="Help-Button"/>
                 </valueCodeableConcept>
             </extension>
             <linkId value="cr3_help"/>
             <text value="The number of participants who are enrolled, approved to enroll, consented, withdrawn, lost to contact, are screen failures, are active or in follow-up , or completed study"/>
             <type value="display"/>
-            <required value="false"/>
-            <repeats value="false"/>
-            <readOnly value="false"/>
         </item>
         <item>
             <linkId value="cr3.1"/>
@@ -583,23 +569,14 @@
                         <coding>
                             <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                             <code value="help"/>
+                            <display value="Help-Button"/>
                         </coding>
-                    </valueCodeableConcept>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                            <code value="instructions"/>
-                        </coding>
+                        <text value="Help-Button"/>
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="cr3.1_help"/>
                 <text value="How many participants there are in each category"/>
                 <type value="display"/>
-                <required value="false"/>
-                <repeats value="false"/>
-                <readOnly value="false"/>
             </item>
             <item>
                 <linkId value="cr3.1.1"/>
@@ -817,23 +794,14 @@
                         <coding>
                             <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                             <code value="help"/>
+                            <display value="Help-Button"/>
                         </coding>
-                    </valueCodeableConcept>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                            <code value="instructions"/>
-                        </coding>
+                        <text value="Help-Button"/>
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="cr3.2_help"/>
                 <text value="Vulnerable persons are those who are relatively (or absolutely) incapable of protecting their own interests. More formally, they may have insufficient power, intelligence, education, resources, strength, or other needed attributes to protect their own interests. (CIOMS)"/>
                 <type value="display"/>
-                <required value="false"/>
-                <repeats value="false"/>
-                <readOnly value="false"/>
             </item>
         </item>
     </item>
@@ -859,23 +827,14 @@
                             <coding>
                                 <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                                 <code value="help"/>
+                                <display value="Help-Button"/>
                             </coding>
-                        </valueCodeableConcept>
-                    </extension>
-                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                        <valueCodeableConcept>
-                            <coding>
-                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                                <code value="instructions"/>
-                            </coding>
+                            <text value="Help-Button"/>
                         </valueCodeableConcept>
                     </extension>
                     <linkId value="cr4.5.1_help"/>
                     <text value="Summary of activities in the study (since the last report if this is not an initial review)"/>
                     <type value="display"/>
-                    <required value="false"/>
-                    <repeats value="false"/>
-                    <readOnly value="false"/>
                 </item>
             </item>
             <item>
@@ -890,18 +849,20 @@
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="cr4.5.2"/>
-                <text value="Have participants experienced any benefits since the last review (or since the start of the study for an initial report)?"/>
+                <text value="Have participants experienced any benefits?"/>
                 <type value="choice"/>
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                         <display value="Yes"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="no"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="N"/>
                         <display value="No"/>
                     </valueCoding>
                 </answerOption>
@@ -911,23 +872,14 @@
                             <coding>
                                 <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                                 <code value="help"/>
+                                <display value="Help-Button"/>
                             </coding>
-                        </valueCodeableConcept>
-                    </extension>
-                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                        <valueCodeableConcept>
-                            <coding>
-                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                                <code value="instructions"/>
-                            </coding>
+                            <text value="Help-Button"/>
                         </valueCodeableConcept>
                     </extension>
                     <linkId value="cr4.5.2_help"/>
                     <text value="Indicator of benefits to participants"/>
                     <type value="display"/>
-                    <required value="false"/>
-                    <repeats value="false"/>
-                    <readOnly value="false"/>
                 </item>
             </item>
             <item>
@@ -938,7 +890,8 @@
                     <question value="cr4.5.2"/>
                     <operator value="="/>
                     <answerCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                     </answerCoding>
                 </enableWhen>
                 <required value="false"/>
@@ -960,13 +913,15 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                         <display value="Yes"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="no"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="N"/>
                         <display value="No"/>
                     </valueCoding>
                 </answerOption>
@@ -979,7 +934,8 @@
                     <question value="cr4.5.4"/>
                     <operator value="="/>
                     <answerCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                     </answerCoding>
                 </enableWhen>
                 <required value="false"/>
@@ -1001,13 +957,15 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                         <display value="Yes"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="no"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="N"/>
                         <display value="No"/>
                     </valueCoding>
                 </answerOption>
@@ -1020,7 +978,8 @@
                     <question value="cr4.5.6"/>
                     <operator value="="/>
                     <answerCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                     </answerCoding>
                 </enableWhen>
                 <required value="false"/>
@@ -1042,13 +1001,15 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                         <display value="Yes"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="no"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="N"/>
                         <display value="No"/>
                     </valueCoding>
                 </answerOption>
@@ -1058,23 +1019,14 @@
                             <coding>
                                 <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                                 <code value="help"/>
+                                <display value="Help-Button"/>
                             </coding>
-                        </valueCodeableConcept>
-                    </extension>
-                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                        <valueCodeableConcept>
-                            <coding>
-                                <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                                <code value="instructions"/>
-                            </coding>
+                            <text value="Help-Button"/>
                         </valueCodeableConcept>
                     </extension>
                     <linkId value="cr4.5.8_help"/>
                     <text value="literature  published related to the risks or benefits associated with this research"/>
                     <type value="display"/>
-                    <required value="false"/>
-                    <repeats value="false"/>
-                    <readOnly value="false"/>
                 </item>
             </item>
             <item>
@@ -1085,7 +1037,8 @@
                     <question value="cr4.5.8"/>
                     <operator value="="/>
                     <answerCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                     </answerCoding>
                 </enableWhen>
                 <required value="false"/>
@@ -1107,13 +1060,15 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                         <display value="Yes"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="no"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="N"/>
                         <display value="No"/>
                     </valueCoding>
                 </answerOption>
@@ -1126,7 +1081,8 @@
                     <question value="cr4.5.10"/>
                     <operator value="="/>
                     <answerCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                     </answerCoding>
                 </enableWhen>
                 <required value="false"/>
@@ -1148,13 +1104,15 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                         <display value="Yes"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="no"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="N"/>
                         <display value="No"/>
                     </valueCoding>
                 </answerOption>
@@ -1167,7 +1125,8 @@
                     <question value="cr4.5.12"/>
                     <operator value="="/>
                     <answerCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                     </answerCoding>
                 </enableWhen>
                 <required value="false"/>
@@ -1191,13 +1150,15 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                         <display value="Yes"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="no"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="N"/>
                         <display value="No"/>
                     </valueCoding>
                 </answerOption>
@@ -1210,7 +1171,8 @@
                     <question value="cr4.5.14"/>
                     <operator value="="/>
                     <answerCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                     </answerCoding>
                 </enableWhen>
                 <required value="false"/>
@@ -1232,13 +1194,15 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                         <display value="Yes"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="no"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="N"/>
                         <display value="No"/>
                     </valueCoding>
                 </answerOption>
@@ -1251,7 +1215,8 @@
                     <question value="cr4.5.16"/>
                     <operator value="="/>
                     <answerCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                     </answerCoding>
                 </enableWhen>
                 <required value="false"/>
@@ -1273,13 +1238,15 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                         <display value="Yes"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="no"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="N"/>
                         <display value="No"/>
                     </valueCoding>
                 </answerOption>
@@ -1301,13 +1268,15 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                         <display value="Yes"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="no"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="N"/>
                         <display value="No"/>
                     </valueCoding>
                 </answerOption>
@@ -1329,13 +1298,15 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                         <display value="Yes"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="no"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="N"/>
                         <display value="No"/>
                     </valueCoding>
                 </answerOption>
@@ -1348,7 +1319,8 @@
                     <question value="cr4.5.20"/>
                     <operator value="="/>
                     <answerCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                     </answerCoding>
                 </enableWhen>
                 <required value="false"/>
@@ -1370,13 +1342,15 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                         <display value="Yes"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="no"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="N"/>
                         <display value="No"/>
                     </valueCoding>
                 </answerOption>
@@ -1398,13 +1372,15 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                         <display value="Yes"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="no"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="N"/>
                         <display value="No"/>
                     </valueCoding>
                 </answerOption>
@@ -1417,7 +1393,8 @@
                     <question value="cr4.5.23"/>
                     <operator value="="/>
                     <answerCoding>
-                        <code value="yes"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                     </answerCoding>
                 </enableWhen>
                 <required value="false"/>
@@ -1435,23 +1412,14 @@
                     <coding>
                         <system value="http://hl7.org/fhir/questionnaire-item-control"/>
                         <code value="help"/>
+                        <display value="Help-Button"/>
                     </coding>
-                </valueCodeableConcept>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory">
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://hl7.org/fhir/questionnaire-display-category"/>
-                        <code value="instructions"/>
-                    </coding>
+                    <text value="Help-Button"/>
                 </valueCodeableConcept>
             </extension>
             <linkId value="cr5_help"/>
             <text value="Summary of adverse events during the previous continuing review period (or since the study inception for an initial report)"/>
             <type value="display"/>
-            <required value="false"/>
-            <repeats value="false"/>
-            <readOnly value="false"/>
         </item>
         <item>
             <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
@@ -1470,13 +1438,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="yes"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="no"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -1499,19 +1469,22 @@
                 <question value="cr5.1"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="yes"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="yes"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="no"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -1533,13 +1506,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="yes"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="no"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -1567,13 +1542,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="yes"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="no"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -1586,7 +1563,8 @@
                 <question value="cr6.1"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="yes"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -1598,7 +1576,7 @@
         </extension>
         <linkId value="ADMIN00"/>
         <text value="Administrative Use Only"/>
-        <type value="display"/>
+        <type value="group"/>
         <item>
             <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
                 <valueBoolean value="true"/>

@@ -3,16 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="sirb-consent-questionnaire"/>
     <meta>
-        <versionId value="22"/>
-        <lastUpdated value="2021-06-25T17:53:45.364+00:00"/>
-        <source value="#wmaFUwCDyqO4FCQa"/>
-        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"/>
+        <versionId value="23"/>
+        <lastUpdated value="2021-07-20T13:04:01.712+00:00"/>
+        <source value="#gT0P65rP37ubP5ny"/>
     </meta>
     <text>
         <status value="generated"/>
         <div
             xmlns="http://www.w3.org/1999/xhtml">
-            <p/>
+            <p>Consent Questionnaire</p>
         </div>
     </text>
     <extension url="http://hl7.org/fhir/StructureDefinition/variable">
@@ -25,7 +24,7 @@
     </extension>
     <url value="https://raw.githubusercontent.com/jdtopping/sIRB/master/input/resources/questionnaire/sirb-consent-questionnaire.json"/>
     <version value="0.1"/>
-    <name value="Consent Questionnaire"/>
+    <name value="Consent_Questionnaire"/>
     <title value="Consent Questionnaire"/>
     <status value="draft"/>
     <subjectType value="ResearchStudy"/>
@@ -348,13 +347,15 @@
         <required value="false"/>
         <answerOption>
             <valueCoding>
-                <code value="1"/>
+                <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                <code value="Y"/>
                 <display value="Yes"/>
             </valueCoding>
         </answerOption>
         <answerOption>
             <valueCoding>
-                <code value="2"/>
+                <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                <code value="N"/>
                 <display value="No"/>
             </valueCoding>
         </answerOption>
@@ -771,20 +772,23 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="1"/>
-                        <display value="Minutes"/>
+                        <system value="https://terminology.hl7.org/ValueSet-v3-UnitsOfMeasureCaseSensitive.html"/>
+                        <code value="min"/>
+                        <display value="minute"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="2"/>
-                        <display value="Hours"/>
+                        <system value="https://terminology.hl7.org/ValueSet-v3-UnitsOfMeasureCaseSensitive.html"/>
+                        <code value="h"/>
+                        <display value="hour"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="3"/>
-                        <display value="Days"/>
+                        <system value="https://terminology.hl7.org/ValueSet-v3-UnitsOfMeasureCaseSensitive.html"/>
+                        <code value="d"/>
+                        <display value="day"/>
                     </valueCoding>
                 </answerOption>
             </item>
@@ -846,13 +850,15 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="1"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="Y"/>
                         <display value="Yes"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="2"/>
+                        <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                        <code value="N"/>
                         <display value="No"/>
                     </valueCoding>
                 </answerOption>
@@ -874,13 +880,15 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="1"/>
+                        <system value="http://www.systemgoeshere.com"/>
+                        <code value="RES"/>
                         <display value="Research"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="2"/>
+                        <system value="http://www.systemgoeshere.com"/>
+                        <code value="STDCR"/>
                         <display value="Standard of Care"/>
                     </valueCoding>
                 </answerOption>
@@ -991,13 +999,15 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="1"/>
+                        <system value="http://www.systemgoeshere.com"/>
+                        <code value="PHYS"/>
                         <display value="Physical"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="2"/>
+                        <system value="http://www.systemgoeshere.com"/>
+                        <code value="NONPHYS"/>
                         <display value="Non-Physical"/>
                     </valueCoding>
                 </answerOption>
@@ -1040,13 +1050,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -1074,7 +1086,8 @@
                 <question value="c12.3"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -1152,13 +1165,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -1180,13 +1195,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -1215,13 +1232,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -1249,7 +1268,8 @@
                 <question value="c15.1"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -1277,7 +1297,8 @@
                 <question value="c15.1"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -1345,13 +1366,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -1388,19 +1411,22 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="http://www.systemgoeshere.com"/>
+                    <code value="TRTNOTCOV"/>
                     <display value="Treatment not covered"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="http://www.systemgoeshere.com"/>
+                    <code value="RRICOV"/>
                     <display value="Research Related injury covered"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="3"/>
+                    <system value="http://www.systemgoeshere.com"/>
+                    <code value="ACNOTCICOV"/>
                     <display value="Acute but not chronic injury covered"/>
                 </valueCoding>
             </answerOption>
@@ -1464,7 +1490,7 @@
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="c17.1-help"/>
-                <text value="Statement of particpant rights "/>
+                <text value="Statement of particpant rights"/>
                 <type value="display"/>
             </item>
         </item>
@@ -1485,7 +1511,7 @@
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="c17.2-help"/>
-                <text value="Contact information for the site IRB contact.  "/>
+                <text value="Contact information for the site IRB contact."/>
                 <type value="display"/>
             </item>
         </item>
@@ -1506,7 +1532,7 @@
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="c17.3-help"/>
-                <text value="Contact information for the site IRB contact.  "/>
+                <text value="Contact information for the site IRB contact."/>
                 <type value="display"/>
             </item>
         </item>
@@ -1606,13 +1632,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -1635,19 +1663,22 @@
                 <question value="c19.1"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -1670,19 +1701,22 @@
                 <question value="c19.1"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -1695,7 +1729,8 @@
                 <question value="c19.1"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -1739,13 +1774,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -1758,7 +1795,8 @@
                 <question value="c20.1"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -1784,13 +1822,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -1818,7 +1858,8 @@
                 <question value="c20.3"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -1856,13 +1897,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -1890,7 +1933,8 @@
                 <question value="c20.5"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -1943,19 +1987,22 @@
                 <required value="false"/>
                 <answerOption>
                     <valueCoding>
-                        <code value="1"/>
+                        <system value="http://www.systemgoeshere.com"/>
+                        <code value="OTHINSTRES"/>
                         <display value="Researchers at other institutions"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="2"/>
+                        <system value="http://www.systemgoeshere.com"/>
+                        <code value="THISINSTRES"/>
                         <display value="Researchers outside the study team at this institution"/>
                     </valueCoding>
                 </answerOption>
                 <answerOption>
                     <valueCoding>
-                        <code value="3"/>
+                        <system value="http://www.systemgoeshere.com"/>
+                        <code value="EXTREGAUTH"/>
                         <display value="External Regulatory Authorities"/>
                     </valueCoding>
                 </answerOption>
@@ -1985,13 +2032,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -2030,19 +2079,22 @@
                 <question value="c20.8"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -2070,7 +2122,8 @@
                 <question value="c20.9"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -2108,19 +2161,22 @@
                 <question value="c20.8"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="http://www.systemgoeshere.com"/>
+                    <code value="DEIDUSED"/>
                     <display value="Identifiers might be removed from private information or biospecimens, and this information could then be used for future research studies or distributed to another investigator for future research studies without additional informed consent."/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="http://www.systemgoeshere.com"/>
+                    <code value="DEIDNOTUSED"/>
                     <display value="Information or biospecimens collected will not be used or distributed for future research studies, even if deidentified."/>
                 </valueCoding>
             </answerOption>
@@ -2164,13 +2220,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -2193,19 +2251,22 @@
                 <question value="c21.1"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -2244,19 +2305,22 @@
                 <question value="c21.1"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -2284,7 +2348,8 @@
                 <question value="c21.3"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -2322,19 +2387,22 @@
                 <question value="c21.1"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -2362,7 +2430,8 @@
                 <question value="c21.1"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -2400,19 +2469,22 @@
                 <question value="c21.1"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -2451,28 +2523,30 @@
         <required value="false"/>
         <answerOption>
             <valueCoding>
-                <code value="1"/>
+                <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                <code value="Y"/>
                 <display value="Yes"/>
             </valueCoding>
         </answerOption>
         <answerOption>
             <valueCoding>
-                <code value="2"/>
+                <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                <code value="N"/>
                 <display value="No"/>
             </valueCoding>
         </answerOption>
         <item>
             <linkId value="c22.1"/>
             <text value="If selected, participant identifiable information and identifiable biospecimens will be stored, used and shared for the kinds of future research described in this broad consent form, without anyone asking your permission for each new study.  Identifying information may also be removed from your information and biospecimens, allowing them to be used for any future research or other purpose."/>
-            <type value="group"/>
+            <type value="display"/>
             <enableWhen>
                 <question value="c22"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
-            <required value="false"/>
         </item>
     </item>
     <item>
@@ -2493,13 +2567,15 @@
         <required value="false"/>
         <answerOption>
             <valueCoding>
-                <code value="1"/>
+                <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                <code value="Y"/>
                 <display value="Yes"/>
             </valueCoding>
         </answerOption>
         <answerOption>
             <valueCoding>
-                <code value="2"/>
+                <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                <code value="N"/>
                 <display value="No"/>
             </valueCoding>
         </answerOption>
@@ -2511,7 +2587,8 @@
                 <question value="c23"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -2565,13 +2642,15 @@
         <required value="false"/>
         <answerOption>
             <valueCoding>
-                <code value="1"/>
+                <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                <code value="Y"/>
                 <display value="Yes"/>
             </valueCoding>
         </answerOption>
         <answerOption>
             <valueCoding>
-                <code value="2"/>
+                <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                <code value="N"/>
                 <display value="No"/>
             </valueCoding>
         </answerOption>
@@ -2583,7 +2662,8 @@
                 <question value="c24"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -2621,13 +2701,15 @@
         <required value="false"/>
         <answerOption>
             <valueCoding>
-                <code value="1"/>
+                <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                <code value="Y"/>
                 <display value="Yes"/>
             </valueCoding>
         </answerOption>
         <answerOption>
             <valueCoding>
-                <code value="2"/>
+                <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                <code value="N"/>
                 <display value="No"/>
             </valueCoding>
         </answerOption>
@@ -2665,13 +2747,15 @@
         <required value="false"/>
         <answerOption>
             <valueCoding>
-                <code value="1"/>
+                <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                <code value="Y"/>
                 <display value="Yes"/>
             </valueCoding>
         </answerOption>
         <answerOption>
             <valueCoding>
-                <code value="2"/>
+                <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                <code value="N"/>
                 <display value="No"/>
             </valueCoding>
         </answerOption>
@@ -2683,7 +2767,8 @@
                 <question value="c26"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -2699,7 +2784,7 @@
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="c26.1-help"/>
-                <text value="Textual description of which results and when will be disclosed to you. "/>
+                <text value="Textual description of which results and when will be disclosed to you."/>
                 <type value="display"/>
             </item>
         </item>
@@ -2747,13 +2832,15 @@
         <required value="false"/>
         <answerOption>
             <valueCoding>
-                <code value="1"/>
+                <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                <code value="Y"/>
                 <display value="Yes"/>
             </valueCoding>
         </answerOption>
         <answerOption>
             <valueCoding>
-                <code value="2"/>
+                <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                <code value="N"/>
                 <display value="No"/>
             </valueCoding>
         </answerOption>
@@ -2765,7 +2852,8 @@
                 <question value="c28"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -2797,7 +2885,8 @@
                 <question value="c28"/>
                 <operator value="="/>
                 <answerCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                 </answerCoding>
             </enableWhen>
             <required value="false"/>
@@ -2855,13 +2944,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -2883,13 +2974,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -2911,13 +3004,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -2939,37 +3034,43 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0063.html"/>
+                    <code value="PAR"/>
                     <display value="Parent"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0063.html"/>
+                    <code value="SPO"/>
                     <display value="Spouse"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="3"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0063.html"/>
+                    <code value="CHD"/>
                     <display value="Child"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="4"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0063.html"/>
+                    <code value="SIB"/>
                     <display value="Sibling"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="5"/>
-                    <display value="Legal Guardian"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0063.html"/>
+                    <code value="GRD"/>
+                    <display value="Guardian"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="6"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0063.html"/>
+                    <code value="OTH"/>
                     <display value="Other"/>
                 </valueCoding>
             </answerOption>
@@ -2991,13 +3092,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -3019,13 +3122,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -3047,13 +3152,15 @@
             <required value="false"/>
             <answerOption>
                 <valueCoding>
-                    <code value="1"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="Y"/>
                     <display value="Yes"/>
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
-                    <code value="2"/>
+                    <system value="https://terminology.hl7.org/CodeSystem-v2-0532.html"/>
+                    <code value="N"/>
                     <display value="No"/>
                 </valueCoding>
             </answerOption>
@@ -3087,7 +3194,7 @@
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="c32.2-help"/>
-                <text value="Date that changes whenever a change is made to the consent.  It is the versioning system of the sIRB institution, and is updated in accordance with the institution's policy.  "/>
+                <text value="Date that changes whenever a change is made to the consent.  It is the versioning system of the sIRB institution, and is updated in accordance with the institution's policy."/>
                 <type value="display"/>
             </item>
         </item>
@@ -3108,7 +3215,7 @@
                     </valueCodeableConcept>
                 </extension>
                 <linkId value="c32.3-help"/>
-                <text value="A number that changes whenever a change is made to the consent.  It is the versioning system of the relying institution, and is updated in accordance with the institution's policy.  "/>
+                <text value="A number that changes whenever a change is made to the consent.  It is the versioning system of the relying institution, and is updated in accordance with the institution's policy."/>
                 <type value="display"/>
             </item>
         </item>
@@ -3122,7 +3229,7 @@
     <item>
         <linkId value="ADMIN00"/>
         <text value="Administrative Use Only"/>
-        <type value="display"/>
+        <type value="group"/>
         <item>
             <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
                 <valueBoolean value="true"/>

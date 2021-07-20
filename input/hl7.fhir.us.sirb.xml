@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="hl7.fhir.us.sirb"/>
     <meta>
-        <versionId value="226"/>
-        <lastUpdated value="2021-06-30T16:53:14.199+00:00"/>
-        <source value="#AwSDgr51aVt2O6lN"/>
+        <versionId value="231"/>
+        <lastUpdated value="2021-07-20T16:23:42.602+00:00"/>
+        <source value="#cnZ8MoRHdba2x5cu"/>
     </meta>
     <url value="http://hl7.org/fhir/us/ImplementationGuide/hl7.fhir.us.sirb"/>
     <version value="0.1"/>
@@ -73,7 +73,7 @@
             </reference>
             <name value="Recruitment Materials Questionnaire"/>
             <description value="Reporting form for Recruitment Materials."/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="new-group1"/>
         </resource>
         <resource>
@@ -145,6 +145,14 @@
             <reference>
                 <reference value="QuestionnaireResponse/85931"/></reference>
             <name value="Protocol Questionnaire Response"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Questionnaire/sirb-adverse-event-questionnaire"/>
+                <display value="Adverse Medical Event Questionnaire"/>
+            </reference>
+            <name value="Adverse Medical Event Questionnaire"/>
             <exampleBoolean value="true"/>
         </resource>
         <page>
