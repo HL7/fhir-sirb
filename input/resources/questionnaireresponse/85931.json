@@ -1,0 +1,422 @@
+{
+	"resourceType": "QuestionnaireResponse",
+	"id": "85931",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2021-06-29T17:09:32.543+00:00",
+		"source": "#e820V7y9PbCr6LbH",
+		"profile": [
+			"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
+		]
+	},
+	"status": "completed",
+	"authored": "2021-06-29T17:07:49.446Z",
+	"item": [
+		{
+			"linkId": "nme1",
+			"text": "Research Study",
+			"item": [
+				{
+					"linkId": "nme1.1",
+					"text": "Study Title:",
+					"answer": [
+						{
+							"valueString": "A study comparison of Treatment A and B"
+						}
+					]
+				},
+				{
+					"linkId": "nme1.3",
+					"text": "IRB Protocol Number:",
+					"answer": [
+						{
+							"valueString": "RCT1233"
+						}
+					]
+				},
+				{
+					"linkId": "nme1.4",
+					"text": "Status:",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "nochange",
+								"display": "No change in research activities"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "nme2a",
+			"text": "Site/Organization",
+			"item": [
+				{
+					"linkId": "nme2a.1",
+					"text": "Organization/site where the Adverse Non-Medical Event occurred",
+					"item": [
+						{
+							"linkId": "nme2a.1.1",
+							"text": "Name of organization/site where the Adverse Non-Medical Event occurred",
+							"answer": [
+								{
+									"valueString": "Reviewing Institution Name"
+								}
+							]
+						},
+						{
+							"linkId": "nme2a.1.2",
+							"text": "City",
+							"answer": [
+								{
+									"valueString": "sIRB  Name"
+								}
+							]
+						},
+						{
+							"linkId": "nme2a.1.3",
+							"text": "State",
+							"answer": [
+								{
+									"valueString": "sIRB City"
+								}
+							]
+						},
+						{
+							"linkId": "nme2a.1.4",
+							"text": "Country",
+							"answer": [
+								{
+									"valueString": "USA"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "nme2b",
+			"text": "Site Principal Investigator for the site where Adverse Non-Medical Event occurred",
+			"item": [
+				{
+					"linkId": "nme2b.1",
+					"text": "First Name",
+					"answer": [
+						{
+							"valueString": "Relying PI First Name"
+						}
+					]
+				},
+				{
+					"linkId": "nme2b.4",
+					"text": "Last Name",
+					"answer": [
+						{
+							"valueString": "Relying PI Last Name"
+						}
+					]
+				},
+				{
+					"linkId": "nme2b.6",
+					"text": "Degree(s)",
+					"answer": [
+						{
+							"valueString": "MD"
+						}
+					]
+				},
+				{
+					"linkId": "nme2b.2",
+					"text": "Phone:",
+					"answer": [
+						{
+							"valueString": "111-555-1212"
+						}
+					]
+				},
+				{
+					"linkId": "nme2b.3",
+					"text": "Email:",
+					"answer": [
+						{
+							"valueString": "email2@xx.edu"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "nme3",
+			"text": "Report",
+			"item": [
+				{
+					"linkId": "nme3.1",
+					"text": "Report Date:",
+					"answer": [
+						{
+							"valueDate": "2021-06-10"
+						}
+					]
+				},
+				{
+					"linkId": "nme3.2",
+					"text": "Report Status",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "initial",
+								"display": "Initial"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme3.4",
+					"text": "New information resulted in unexpected change in risks of the research.",
+					"answer": [
+						{
+							"valueBoolean": true
+						}
+					]
+				},
+				{
+					"linkId": "nme3.5",
+					"text": "New or increased risk",
+					"item": [
+						{
+							"linkId": "nme3.5.1",
+							"text": "Date:",
+							"answer": [
+								{
+									"valueDate": "2021-06-08"
+								}
+							]
+						},
+						{
+							"linkId": "nme3.5.2",
+							"text": "Date discovered:",
+							"answer": [
+								{
+									"valueDate": "2021-06-10"
+								}
+							]
+						},
+						{
+							"linkId": "nme3.5.3",
+							"text": "Description:",
+							"answer": [
+								{
+									"valueString": "There were noted changes to underlying IT infrastructure- these will need to be validated to show there is no risk to loss of confidentiality."
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId": "nme3.6",
+					"text": "Unanticipated Problem Involving Risk to Participants or Others",
+					"answer": [
+						{
+							"valueBoolean": false
+						}
+					]
+				},
+				{
+					"linkId": "nme3.8",
+					"text": "Protocol Deviation (accidental or unintentional)",
+					"answer": [
+						{
+							"valueBoolean": false
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "nme4",
+			"text": "Reporting",
+			"item": [
+				{
+					"linkId": "nme4.1",
+					"text": "Was the Sponsor notified?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "yes",
+								"display": "Yes"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme4.2",
+					"text": "Notification date:",
+					"answer": [
+						{
+							"valueDate": "2021-06-10"
+						}
+					]
+				},
+				{
+					"linkId": "nme4.3",
+					"text": "Was the IRB notified?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "yes",
+								"display": "Yes"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme4.4",
+					"text": "Notification date:",
+					"answer": [
+						{
+							"valueDate": "2021-06-10"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "nme5",
+			"text": "Corrective and Preventative Action Plan",
+			"item": [
+				{
+					"linkId": "nme5.1",
+					"text": "Was a Root Cause analysis performed?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "no",
+								"display": "No"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme5.3",
+					"text": "Was Corrective Action implemented?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "no",
+								"display": "No"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme5.5",
+					"text": "Was Preventitive Action implemented?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "pending",
+								"display": "Pending - Currently under development"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "nme6",
+			"text": "Study Protocol and Informed Consent",
+			"item": [
+				{
+					"linkId": "nme6.1",
+					"text": "Are changes required to the Study Protocol as a result of this report?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "no",
+								"display": "No"
+							},
+							"item": [
+								{
+									"linkId": "nme6.1.1",
+									"text": "If the study protocol does not require changes, is it because the Adverse Non-Medical Event consisted of a missed lab or assessment by a participant (which does not jeopardize the study or increase risks to other participants)? ",
+									"answer": [
+										{
+											"valueCoding": {
+												"code": "no",
+												"display": "No"
+											}
+										}
+									]
+								},
+								{
+									"linkId": "nme6.1.2",
+									"text": "If the study protocol does not require changes, is it because the Adverse Non-Medical Event consisted of a missed treatment or dose by a participant (which does not jeopardize the study or increase risks to other participants)?",
+									"answer": [
+										{
+											"valueCoding": {
+												"code": "no",
+												"display": "No"
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId": "nme6.2",
+					"text": "Justify your decision to not change the study protocol:",
+					"answer": [
+						{
+							"valueString": "Change did not affect study procedures directly."
+						}
+					]
+				},
+				{
+					"linkId": "nme6.3",
+					"text": "Are changes required to the Informed Consent as a result of this report?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "yes",
+								"display": "Yes"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme6.5",
+					"text": "Are notifications or re-consenting of participants required as a result of this change?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "yes",
+								"display": "Yes"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"answer": [
+				{
+					"item": [
+						{
+							"linkId": "ADMIN01",
+							"text": "Link ID prefix",
+							"answer": [
+								{
+									"valueString": "nme"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

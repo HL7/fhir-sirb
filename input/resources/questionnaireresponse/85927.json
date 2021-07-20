@@ -1,0 +1,243 @@
+{
+	"resourceType": "QuestionnaireResponse",
+	"id": "85927",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2021-06-29T16:58:03.454+00:00",
+		"source": "#4m9uFLkDaLIgxYcJ",
+		"profile": [
+			"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
+		]
+	},
+	"status": "completed",
+	"authored": "2021-06-29T16:56:20.838Z",
+	"item": [
+		{
+			"linkId": "dl1",
+			"text": "Research Study",
+			"item": [
+				{
+					"linkId": "dl1.1",
+					"text": "Study Title",
+					"answer": [
+						{
+							"valueString": "A study comparison of Treatment A and B"
+						}
+					]
+				},
+				{
+					"linkId": "dl1.2",
+					"text": "IRB Protocol Number",
+					"answer": [
+						{
+							"valueString": "RCT1233"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "dl2",
+			"text": "Reliance Determination",
+			"item": [
+				{
+					"linkId": "dl2.1",
+					"text": "Reviewing IRB",
+					"item": [
+						{
+							"linkId": "dl2.1.1",
+							"text": "Institution",
+							"item": [
+								{
+									"linkId": "dl2.1.1.1",
+									"text": "Name",
+									"answer": [
+										{
+											"valueString": "sIRB Institution Name"
+										}
+									]
+								}
+							]
+						},
+						{
+							"linkId": "dl2.1.2",
+							"text": "Point of Contact",
+							"item": [
+								{
+									"linkId": "dl2.1.2.1",
+									"text": "First Name",
+									"answer": [
+										{
+											"valueString": "Jane"
+										}
+									]
+								},
+								{
+									"linkId": "dl2.1.2.2",
+									"text": "Last Name",
+									"answer": [
+										{
+											"valueString": "Doe"
+										}
+									]
+								},
+								{
+									"linkId": "dl2.1.2.5",
+									"text": "Professional Degree(s)",
+									"answer": [
+										{
+											"valueString": "MD"
+										}
+									]
+								},
+								{
+									"linkId": "dl2.1.2.3",
+									"text": "Email",
+									"answer": [
+										{
+											"valueString": "xx@email.edu"
+										}
+									]
+								}
+							]
+						},
+						{
+							"linkId": "dl2.1.3",
+							"text": "Overall Principal Investigator",
+							"item": [
+								{
+									"linkId": "dl2.1.3.1",
+									"text": "First Name",
+									"answer": [
+										{
+											"valueString": "Jane"
+										}
+									]
+								},
+								{
+									"linkId": "dl2.1.3.2",
+									"text": "Last Name",
+									"answer": [
+										{
+											"valueString": "Doe"
+										}
+									]
+								},
+								{
+									"linkId": "dl2.1.3.5",
+									"text": "Degree(s)",
+									"answer": [
+										{
+											"valueString": "MD"
+										}
+									]
+								},
+								{
+									"linkId": "dl2.1.3.3",
+									"text": "Email",
+									"answer": [
+										{
+											"valueString": "xx@email.edu"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId": "dl2.2",
+					"text": "Determination Decision",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "acceptreview",
+								"display": "Accepts Review"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "dl2.3",
+					"text": "Relying IRB",
+					"item": [
+						{
+							"linkId": "dl2.3.1",
+							"text": "Institution",
+							"item": [
+								{
+									"linkId": "dl2.3.1.1",
+									"text": "Name",
+									"answer": [
+										{
+											"valueString": "Relying Institution Name"
+										}
+									]
+								}
+							]
+						},
+						{
+							"linkId": "dl2.3.2",
+							"text": "Site Principal Investigator",
+							"item": [
+								{
+									"linkId": "dl2.3.2.1",
+									"text": "First Name",
+									"answer": [
+										{
+											"valueString": "Relying PI First Name"
+										}
+									]
+								},
+								{
+									"linkId": "dl2.3.2.2",
+									"text": "Last Name",
+									"answer": [
+										{
+											"valueString": "Relying PI Last Name"
+										}
+									]
+								},
+								{
+									"linkId": "dl2.3.2.5",
+									"text": "Professional Degree(s)",
+									"answer": [
+										{
+											"valueString": "MD"
+										}
+									]
+								},
+								{
+									"linkId": "dl2.3.2.3",
+									"text": "Email",
+									"answer": [
+										{
+											"valueString": "email2@xx.edu"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"answer": [
+				{
+					"item": [
+						{
+							"linkId": "ADMIN01",
+							"text": "Link ID prefix",
+							"answer": [
+								{
+									"valueString": "dl"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

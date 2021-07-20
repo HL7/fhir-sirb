@@ -1,0 +1,507 @@
+{
+	"resourceType": "QuestionnaireResponse",
+	"id": "85907",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2021-06-29T15:46:24.024+00:00",
+		"source": "#JnNtQLxh383uJpXK",
+		"profile": [
+			"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
+		]
+	},
+	"status": "completed",
+	"authored": "2021-06-29T15:44:23.795Z",
+	"item": [
+		{
+			"linkId": "mae1",
+			"text": "RESEARCH STUDY",
+			"item": [
+				{
+					"linkId": "mae1.1",
+					"text": "Study Title",
+					"answer": [
+						{
+							"valueString": "A study comparison of Treatment A and B"
+						}
+					]
+				},
+				{
+					"linkId": "mae1.2",
+					"text": "IRB Protocol Number",
+					"answer": [
+						{
+							"valueString": "RCT1233"
+						}
+					]
+				},
+				{
+					"linkId": "mae1.3",
+					"text": "Study Type",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "1",
+								"display": "Interventional"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae1.4",
+					"text": "Does this protocol require an FDA exemption?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "0",
+								"display": "No"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae1.5",
+					"text": "Is an IND or IDE being used in this study?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "0",
+								"display": "No"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "mae2",
+			"text": "Site Principal Investigator",
+			"item": [
+				{
+					"linkId": "mae2.1",
+					"text": "First Name",
+					"answer": [
+						{
+							"valueString": "Relying PI First Name"
+						}
+					]
+				},
+				{
+					"linkId": "mae2.2",
+					"text": "Last Name",
+					"answer": [
+						{
+							"valueString": "Relying PI Last Name"
+						}
+					]
+				},
+				{
+					"linkId": "mae2.6",
+					"text": "Degree(s)",
+					"answer": [
+						{
+							"valueString": "MD MPH"
+						}
+					]
+				},
+				{
+					"linkId": "mae2.3",
+					"text": "Phone",
+					"answer": [
+						{
+							"valueString": "111-555-1212"
+						}
+					]
+				},
+				{
+					"linkId": "mae2.4",
+					"text": "Email",
+					"answer": [
+						{
+							"valueString": "xx@email2.edu"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "mae3",
+			"text": "Primary Contact",
+			"item": [
+				{
+					"linkId": "mae3.1",
+					"text": "First Name",
+					"answer": [
+						{
+							"valueString": "Ben"
+						}
+					]
+				},
+				{
+					"linkId": "mae3.2",
+					"text": "Last Name",
+					"answer": [
+						{
+							"valueString": "Coordinator"
+						}
+					]
+				},
+				{
+					"linkId": "mae3.3",
+					"text": "Phone",
+					"answer": [
+						{
+							"valueString": "111-555-1212"
+						}
+					]
+				},
+				{
+					"linkId": "mae3.4",
+					"text": "Email",
+					"answer": [
+						{
+							"valueString": "111-555-1212"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "mae4",
+			"text": "Site/Organization",
+			"item": [
+				{
+					"linkId": "mae4.1",
+					"text": "Name of organization/site where the event occurred",
+					"answer": [
+						{
+							"valueString": "Relying Institution Name"
+						}
+					]
+				},
+				{
+					"linkId": "mae4.2",
+					"text": "Name of organization/site which is recording the Adverse Medical event",
+					"answer": [
+						{
+							"valueString": "Relying Institution Name"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "mae5",
+			"text": "Participant Information",
+			"item": [
+				{
+					"linkId": "mae5.1",
+					"text": "Patient ID",
+					"answer": [
+						{
+							"valueString": "P123"
+						}
+					]
+				},
+				{
+					"linkId": "mae5.2",
+					"text": "Age",
+					"answer": [
+						{
+							"valueString": "35"
+						}
+					]
+				},
+				{
+					"linkId": "mae5.3",
+					"text": "Gender",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "2",
+								"display": "Male"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae5.4",
+					"text": "Weight",
+					"answer": [
+						{
+							"valueQuantity": {
+								"value": 180,
+								"unit": "[lb]"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae5.5",
+					"text": "Height",
+					"answer": [
+						{
+							"valueQuantity": {
+								"value": 65,
+								"unit": "[in]"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae5.6",
+					"text": "Ethnicity",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "2",
+								"display": "Not Hispanic/Latino"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae5.8",
+					"text": "Which Arm/Cohort/treatment group was the participant assigned to (if known)?",
+					"answer": [
+						{
+							"valueString": "control"
+						}
+					]
+				},
+				{
+					"linkId": "mae5.9",
+					"text": "Participant dosed",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "0",
+								"display": "No"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae5.11",
+					"text": "Were there any Protocol Deviations/Violations/Exceptions for this participant?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "0",
+								"display": "No"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "mae6",
+			"text": "Adverse Medical Event Information",
+			"item": [
+				{
+					"linkId": "mae6.1",
+					"text": "Submission Type",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "1",
+								"display": "Initial"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.2",
+					"text": "Start Date",
+					"answer": [
+						{
+							"valueDate": "2021-06-15"
+						}
+					]
+				},
+				{
+					"linkId": "mae6.3",
+					"text": "Reported Date",
+					"answer": [
+						{
+							"valueDate": "2021-06-16"
+						}
+					]
+				},
+				{
+					"linkId": "mae6.4",
+					"text": "Recorded Date",
+					"answer": [
+						{
+							"valueDate": "2021-06-16"
+						}
+					]
+				},
+				{
+					"linkId": "mae6.5a",
+					"text": "Narrative of the Adverse Event:",
+					"answer": [
+						{
+							"valueString": "Headache"
+						}
+					]
+				},
+				{
+					"linkId": "mae6.6",
+					"text": "Is the Adverse Medical event still ongoing?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "0",
+								"display": "No"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.7",
+					"text": "Stop Date",
+					"answer": [
+						{
+							"valueDate": "2021-06-18"
+						}
+					]
+				},
+				{
+					"linkId": "mae6.8",
+					"text": "Expectedness",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "2",
+								"display": "Unexpected"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.9",
+					"text": "Severity",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "1",
+								"display": "Mild"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.10",
+					"text": "Is the Adverse Medical Event Serious?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "0",
+								"display": "No"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.13",
+					"text": "Outcome of Adverse Medical Event",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "1",
+								"display": "Recovered/Resolved"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.15",
+					"text": "Relationship of Adverse Medical Event to Study Intervention",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "0",
+								"display": "Not related"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.17",
+					"text": "What are possible alternate causes of the SAE?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "1",
+								"display": "Concomitant medication"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.21",
+					"text": "Concomittant medication- specify",
+					"answer": [
+						{
+							"valueString": "Alternate med"
+						}
+					]
+				},
+				{
+					"linkId": "mae6.23",
+					"text": "Action Taken Regarding Study Intervention",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "0",
+								"display": "None"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.24",
+					"text": "If study intervention was discontinued, interrupted, or dose reduced (dechallenged), did AE diminish/abate?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "0",
+								"display": "No"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.25",
+					"text": "If study intervention was restarted (rechallenge) did AE recur?",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "0",
+								"display": "No"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"answer": [
+				{
+					"item": [
+						{
+							"linkId": "ADMIN01",
+							"text": "Link ID prefix",
+							"answer": [
+								{
+									"valueString": "mae"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

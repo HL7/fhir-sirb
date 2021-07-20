@@ -1,0 +1,571 @@
+{
+	"resourceType": "QuestionnaireResponse",
+	"id": "85719",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2021-06-28T21:43:45.560+00:00",
+		"source": "#m9K93nYffl9zPPDw",
+		"profile": [
+			"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
+		]
+	},
+	"status": "completed",
+	"authored": "2021-06-28T20:58:42.807Z",
+	"item": [
+		{
+			"linkId": "in1",
+			"text": "Research Study Details",
+			"item": [
+				{
+					"linkId": "in1.1",
+					"text": "Study Title",
+					"answer": [
+						{
+							"valueString": "A study comparison of Treatment A and B"
+						}
+					]
+				},
+				{
+					"linkId": "in1.2",
+					"text": "Study Title (Short)",
+					"answer": [
+						{
+							"valueString": "AB Study"
+						}
+					]
+				},
+				{
+					"linkId": "in1.3",
+					"text": "IRB Protocol Number",
+					"answer": [
+						{
+							"valueString": "RCT1233"
+						}
+					]
+				},
+				{
+					"linkId": "in1.4",
+					"text": "Study Type",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "1",
+								"display": "Interventional"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "in5",
+			"text": "Other Organization(s) Involved",
+			"item": [
+				{
+					"linkId": "in5.1",
+					"text": "Relationship Type",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "1",
+								"display": "Sponsor or Funding Source"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "in5.2",
+					"text": "Organization Name",
+					"answer": [
+						{
+							"valueString": "National Funder A"
+						}
+					]
+				},
+				{
+					"linkId": "in5.3",
+					"text": "Phone",
+					"answer": [
+						{
+							"valueString": "111-555-1212"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "in5",
+			"text": "Other Organization(s) Involved",
+			"item": [
+				{
+					"linkId": "in5.1",
+					"text": "Relationship Type",
+					"answer": [
+						{
+							"valueCoding": {
+								"code": "2",
+								"display": "Contract Research Organization (CRO)"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "in5.2",
+					"text": "Organization Name",
+					"answer": [
+						{
+							"valueString": "National Funder B"
+						}
+					]
+				},
+				{
+					"linkId": "in5.3",
+					"text": "Phone",
+					"answer": [
+						{
+							"valueString": "111-555-2121"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "in6",
+			"text": "sIRB (Reviewing Institution)",
+			"item": [
+				{
+					"linkId": "in6.1",
+					"text": "sIRB (Reviewing Institution) Name",
+					"answer": [
+						{
+							"valueString": "sIRB Institution Name"
+						}
+					]
+				},
+				{
+					"linkId": "in6.3",
+					"text": "Institution Street Address",
+					"answer": [
+						{
+							"valueString": "sIRB Street Address"
+						}
+					]
+				},
+				{
+					"linkId": "in6.4",
+					"text": "Institution City",
+					"answer": [
+						{
+							"valueString": "sIRB City"
+						}
+					]
+				},
+				{
+					"linkId": "in6.5",
+					"text": "Institution State",
+					"answer": [
+						{
+							"valueString": "NC"
+						}
+					]
+				},
+				{
+					"linkId": "in6.6",
+					"text": "Institution Zip Code",
+					"answer": [
+						{
+							"valueString": "00001"
+						}
+					]
+				},
+				{
+					"linkId": "in6.7",
+					"text": "Institution Country",
+					"answer": [
+						{
+							"valueString": "United States"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "in7",
+			"text": "Overall Principal Investigator for the Study",
+			"item": [
+				{
+					"linkId": "in7.1",
+					"text": "Overall Principal Investigator First Name",
+					"answer": [
+						{
+							"valueString": "Jane"
+						}
+					]
+				},
+				{
+					"linkId": "in7.2",
+					"text": "Overall Principal Investigator Last Name",
+					"answer": [
+						{
+							"valueString": "Doe"
+						}
+					]
+				},
+				{
+					"linkId": "in7.4",
+					"text": "Academic and Professional Degrees associated with the Overall Principal Investigator",
+					"answer": [
+						{
+							"valueString": "MD"
+						}
+					]
+				},
+				{
+					"linkId": "in7.5",
+					"text": "Overall Principal Investigator Institution Name",
+					"answer": [
+						{
+							"valueString": "State Institution"
+						}
+					]
+				},
+				{
+					"linkId": "in7.6",
+					"text": "Department Name or Division",
+					"answer": [
+						{
+							"valueString": "Dept"
+						}
+					]
+				},
+				{
+					"linkId": "in7.7",
+					"text": "Street Address",
+					"answer": [
+						{
+							"valueString": "123 Main St"
+						}
+					]
+				},
+				{
+					"linkId": "in7.8",
+					"text": "City",
+					"answer": [
+						{
+							"valueString": "Anywhere"
+						}
+					]
+				},
+				{
+					"linkId": "in7.9",
+					"text": "State",
+					"answer": [
+						{
+							"valueString": "NC"
+						}
+					]
+				},
+				{
+					"linkId": "in7.10",
+					"text": "Zip Code",
+					"answer": [
+						{
+							"valueString": "00001"
+						}
+					]
+				},
+				{
+					"linkId": "in7.11",
+					"text": "Country",
+					"answer": [
+						{
+							"valueString": "United States"
+						}
+					]
+				},
+				{
+					"linkId": "in7.12",
+					"text": "Overall Principal Investigator Phone",
+					"answer": [
+						{
+							"valueString": "555-1212"
+						}
+					]
+				},
+				{
+					"linkId": "in7.13",
+					"text": "Overall Principal Investigator Email Address",
+					"answer": [
+						{
+							"valueString": "xx@email.edu"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "in8",
+			"text": "Confirmed or Potential Relying Site(s)",
+			"item": [
+				{
+					"linkId": "in8.1",
+					"text": "Confirmed or Potential Relying Site Overview",
+					"item": [
+						{
+							"linkId": "in8.1.1",
+							"text": "Relying Institution Name",
+							"answer": [
+								{
+									"valueString": "Relying Institution Name"
+								}
+							]
+						},
+						{
+							"linkId": "in8.1.3",
+							"text": "Relying Institution Phone",
+							"answer": [
+								{
+									"valueString": "111-555-1212"
+								}
+							]
+						},
+						{
+							"linkId": "in8.1.4",
+							"text": "Is a Federal Wide Assurance (FWA) Number assigned?",
+							"answer": [
+								{
+									"valueCoding": {
+										"code": "2",
+										"display": "No"
+									}
+								}
+							]
+						},
+						{
+							"linkId": "in8.1.6",
+							"text": "Reliance Status",
+							"answer": [
+								{
+									"valueCoding": {
+										"code": "1",
+										"display": "Approved"
+									}
+								}
+							]
+						},
+						{
+							"linkId": "in8.1.7",
+							"text": "Relying Site Address",
+							"item": [
+								{
+									"linkId": "in8.1.7.1",
+									"text": "Street Address",
+									"answer": [
+										{
+											"valueString": "321 Jones St"
+										}
+									]
+								},
+								{
+									"linkId": "in8.1.7.2",
+									"text": "City",
+									"answer": [
+										{
+											"valueString": "Otherwhere"
+										}
+									]
+								},
+								{
+									"linkId": "in8.1.7.3",
+									"text": "State",
+									"answer": [
+										{
+											"valueString": "NC"
+										}
+									]
+								},
+								{
+									"linkId": "in8.1.7.4",
+									"text": "Zip Code",
+									"answer": [
+										{
+											"valueString": "00001"
+										}
+									]
+								},
+								{
+									"linkId": "in8.1.7.5",
+									"text": "Country",
+									"answer": [
+										{
+											"valueString": "United States"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId": "in8.3",
+					"text": "Site Principal Investigator at Relying Site",
+					"item": [
+						{
+							"linkId": "in8.3.1",
+							"text": "Relying Site Principal Investigator First Name",
+							"answer": [
+								{
+									"valueString": "Relying PI First Name"
+								}
+							]
+						},
+						{
+							"linkId": "in8.3.2",
+							"text": "Relying Site Principal Investigator Last Name",
+							"answer": [
+								{
+									"valueString": "Relying PI Last Name"
+								}
+							]
+						},
+						{
+							"linkId": "in8.3.4",
+							"text": "Academic and Professional Degrees associated with the Relying Site Principal Investigator",
+							"answer": [
+								{
+									"valueString": "MD MPH"
+								}
+							]
+						},
+						{
+							"linkId": "in8.3.5",
+							"text": "Phone",
+							"answer": [
+								{
+									"valueString": "111-555-1212"
+								}
+							]
+						},
+						{
+							"linkId": "in8.3.6",
+							"text": "Email address",
+							"answer": [
+								{
+									"valueString": "xx@email2.edu"
+								}
+							]
+						},
+						{
+							"linkId": "in8.3.7",
+							"text": "Address of Relying Site Principal Investigator",
+							"item": [
+								{
+									"linkId": "in8.3.7.1",
+									"text": "Street Address",
+									"answer": [
+										{
+											"valueString": "123 Brown St"
+										}
+									]
+								},
+								{
+									"linkId": "in8.3.7.2",
+									"text": "City",
+									"answer": [
+										{
+											"valueString": "Placetown"
+										}
+									]
+								},
+								{
+									"linkId": "in8.3.7.3",
+									"text": "State",
+									"answer": [
+										{
+											"valueString": "NC"
+										}
+									]
+								},
+								{
+									"linkId": "in8.3.7.4",
+									"text": "Zip Code",
+									"answer": [
+										{
+											"valueString": "00001"
+										}
+									]
+								},
+								{
+									"linkId": "in8.3.7.5",
+									"text": "Country",
+									"answer": [
+										{
+											"valueString": "United States"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "in9",
+			"text": "Questionnaire Version Details",
+			"item": [
+				{
+					"linkId": "in9.1",
+					"text": "Questionnaire Version",
+					"answer": [
+						{
+							"valueString": "1"
+						}
+					]
+				},
+				{
+					"linkId": "in9.2",
+					"text": "Questionnaire Version Date",
+					"answer": [
+						{
+							"valueDate": "2021-06-01"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "ADMIN00",
+			"text": "Administrative Use Only  (will be hidden in the future)",
+			"item": [
+				{
+					"linkId": "ADMIN01",
+					"text": "Link ID prefix",
+					"answer": [
+						{
+							"valueString": "in"
+						}
+					]
+				},
+				{
+					"linkId": "ADMIN02",
+					"text": "Questionnaire Response ID for the parent Questionnaire Response (such as the Initiate a Study Questionnaire Response), if any",
+					"answer": [
+						{
+							"valueString": "temporarily unavailable"
+						}
+					]
+				},
+				{
+					"linkId": "ADMIN03",
+					"text": "ID of the Research Study FHIR Resource associated with the study Questionnaire Responses",
+					"answer": [
+						{
+							"valueString": "temporarily unavailable"
+						}
+					]
+				}
+			]
+		}
+	]
+}

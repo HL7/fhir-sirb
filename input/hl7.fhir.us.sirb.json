@@ -1,0 +1,240 @@
+{
+	"id": "hl7.fhir.us.sirb",
+	"meta": {
+		"versionId": "232",
+		"lastUpdated": "2021-07-20T17:22:19.341+00:00",
+		"source": "#IM0kc8Krw4E7u0TM"
+	},
+	"resourceType": "ImplementationGuide",
+	"status": "draft",
+	"fhirVersion": [
+		"4.0.1"
+	],
+	"url": "http://hl7.org/fhir/us/ImplementationGuide/hl7.fhir.us.sirb",
+	"version": "0.1",
+	"name": "SingleInstitutionalReviewBoard",
+	"title": "Single Institutional Review Board (sIRB) Implementation Guide",
+	"date": "2021-06-30",
+	"publisher": "Duke University",
+	"contact": [
+		{
+			"name": "HL7 International - Biomedical Research and Regulation",
+			"telecom": [
+				{
+					"system": "url",
+					"value": "http://www.hl7.org/Special/committees/rcrim"
+				}
+			]
+		}
+	],
+	"description": "Data standards to move data and documents from clinical research sites to a single ethics review board in support of the \"NIH Policy on the Use of a Single Institutional Review Board for Multi-Site Research\n\n### Background\nLaunching a multi-site clinical research study is frequently a long and involved process that can delay the development of potentially effective clinical treatment. Ethics review and approval processes conducted by IRBs have been cited as a major contributor to delays in initiating multi-site studies. In response, the set of protections for research subjects in the code of federal regulations for human-subjects research (Common Rule, 45 CFR Part 46.114) was revised with a requirement that a single IRB be named when multiple sites are using the same protocol. Rather than each site waiting for approval of a study by its local IRB before enrolling subjects, a single IRB review will expedite approval and improve the timeline for study initiation and completion. Researchers commented about the redundancy of effort, additional costs, and administrative burdens that often lead to delays and imbalances in enrollment of research participants in multi-site clinical studies. The burden of tasks related to IRB approval, which most frequently must be completed manually at multiple clinical investigational sites, can also adversely impact site data quality and sustainability.\n\n### Significance\nIn lieu of ad hoc transfers of PDFs and other document formats via email or online submission, this project utilizes FHIR based standards to facilitate document exchange. A standards enabled process leveraged by software has the potential to significantly decrease the extensive manual tasks that have become associated with using a single IRB system. This use of FHIR standards to meet the need for an efficient exchange of data and documents will improve the operational efficiency. \n\n### Coverage\nThis Implementation guide covers the IRB Determination Letter, Study Protocol, and Consent templates. It will be expanded with the completion of other templates associated with the sIRB approval process when completed.\n\n### Scope\nThe sIRB implementation guide deals with creation and exchange of standardized sIRB forms and form responses using FHIR questionnaire and questionnaire response resources. The questionnaires may have nested structures and embed skip/branching logics to display appropriate questions based on previous answers. Pre population of questionnaire forms and extraction of data elements/resources from questionnaire responses is out of scope for the current version of sIRB implementation guide; these functionalities can be incorporated into your specific implementation by referring to Structure Data Capture (SDC) implementation guide.\n\n### Assumptions\nThe implementation guide assumes that the implementer has or will have a capability to send, receive, render and display FHIR questionnaires and questionnaire responses. Implementers may consider using free software such as NLM's FHIR Questionnaire rendering tool or design their own. Exchange of resources can be achieved by any of the FHIR messaging mechanisms. Please refer to FHIR standard documentation, open source implementations of FHIR specifications, and FHIR Messaging for additional information. \n\n### Actors\n1. Form Author/Editor: A system or organization who is responsible for creating, updating and deprecating the standardized sIRB forms such as Determination Letter, Protocol, Consent, Adverse Event, Recruitment Materials, and Continuous Review\n2. sIRB Form Repository: A form repository that stores standardized sIRB forms. IRB systems will request form templates from this repository.\n4. Central IRB Application: An IRB software system that a PI access to complete and submit the standardized forms.\n5. Relying IRB Application: An IRB software that receives and renders completed and approved forms by the central IRB.\n6. Principal Investigator/Practitioner: A person who is authorized to initiate a research study by completing sIRB forms.\n\n\n### Workflow Overview\n\nIn the workflow outlined below, a Central IRB system requests one of the standardized sIRB questionnaires forms from the repository as a form of a questionnaire resource. The central IRB system receives the questionnaire response resource and renders/displays it to the Principal Investigator-PI (user). The PI enters and submits responses applicable to the selected standardized sIRB form. The submitted responses will be saved as questionnaire response resources on the Central IRB's FHIR server. The Central IRB will serve as a single source of truth for IRB Documents. The relying IRB system will send a RESTful request or implement a subscription resource to get most recent forms from the central IRB's FHIR server.\n\n<table><tr><td><img src=\"sirb-dataflow.jpg\" /></td></tr></table>\n\n\n\n\n### Dependencies\nThese standards were developed based upon the [R4](http://hl7.org/fhir/R4/) FHIR version.\n\n[Profiles](file:///C:/SIRB/GitHubLinked/output/artifacts.html)\n",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "US",
+					"display": "United States of America"
+				}
+			],
+			"text": "United States of America"
+		}
+	],
+	"packageId": "hl7.fhir.us.sirb",
+	"definition": {
+		"grouping": [
+			{
+				"id": "new-group1",
+				"name": "Questionnaires"
+			}
+		],
+		"resource": [
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Questionnaire/sirb-initiate-study-questionnaire",
+					"display": "Initiate a Study Questionnaire"
+				},
+				"name": "Initiate a Study Questionnaire",
+				"description": "Form for collecting initial common fields used across IRB forms",
+				"groupingId": "new-group1"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Questionnaire/sirb-protocol-questionnaire",
+					"display": "Protocol Questionnaire"
+				},
+				"name": "Protocol Questionnaire",
+				"description": "Questionnaire for collecting Protocol information",
+				"groupingId": "new-group1"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Questionnaire/sirb-consent-questionnaire",
+					"display": "Consent Questionnaire"
+				},
+				"name": "Consent Questionnaire",
+				"description": "Form for collecting information for creation of a consent document.",
+				"groupingId": "new-group1"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Questionnaire/sirb-recruitment-materials-questionnaire",
+					"display": "Recruitment Materials Questionnaire"
+				},
+				"name": "Recruitment Materials Questionnaire",
+				"description": "Reporting form for Recruitment Materials.",
+				"groupingId": "new-group1"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Questionnaire/sirb-determination-letter-questionnaire",
+					"display": "Determination Letter Questionnaire"
+				},
+				"name": "Determination Letter Questionnaire",
+				"description": "Reporting form for a Determination Letter",
+				"groupingId": "new-group1"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Questionnaire/sirb-continuing-review-questionnaire",
+					"display": "Continuing Review Questionnaire"
+				},
+				"name": "Continuing Review Questionnaire",
+				"description": "Reporting form for Continuing Review.",
+				"groupingId": "new-group1"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Questionnaire/sirb-medical-adverse-event-questionnaire",
+					"display": "Adverse Medical Event Questionnaire"
+				},
+				"name": "Adverse Medical Event Questionnaire",
+				"description": "Reporting form for reportable Adverse Events",
+				"groupingId": "new-group1"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Questionnaire/sirb-nonmedicalevent-questionnaire",
+					"display": "NonMedical Events"
+				},
+				"name": "NonMedical Events",
+				"description": "Reporting form for reportable Non-Medical Adverse Events",
+				"groupingId": "new-group1"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "QuestionnaireResponse/85719"
+				},
+				"name": "Intiate a Study Questionnaire response",
+				"description": "Example of Intial Questionnaire Response."
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "QuestionnaireResponse/85907"
+				},
+				"name": "Adverse Event Questionnaire Response"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "QuestionnaireResponse/85925"
+				},
+				"name": "Consent Questionnaire Question Response"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "QuestionnaireResponse/85927"
+				},
+				"name": "Determination Letter Questionnaire Response"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "QuestionnaireResponse/85931"
+				},
+				"name": "Protocol Questionnaire Response"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Questionnaire/sirb-adverse-event-questionnaire",
+					"display": "Adverse Medical Event Questionnaire"
+				},
+				"name": "Adverse Medical Event Questionnaire"
+			}
+		],
+		"page": {
+			"nameUrl": "index.html",
+			"title": "Single IRB Forms",
+			"generation": "markdown",
+			"page": [
+				{
+					"nameUrl": "initiate_study.html",
+					"title": "Initiate Study",
+					"generation": "markdown"
+				},
+				{
+					"nameUrl": "protocol.html",
+					"title": "Protocol",
+					"generation": "markdown"
+				},
+				{
+					"nameUrl": "consent.html",
+					"title": "Consent",
+					"generation": "markdown"
+				},
+				{
+					"nameUrl": "recruitment_materials.html",
+					"title": "Recruitment Materials",
+					"generation": "markdown"
+				},
+				{
+					"nameUrl": "medical_adverse_event.html",
+					"title": "Medical Adverse Event",
+					"generation": "markdown"
+				},
+				{
+					"nameUrl": "non-medical_adverse_event.html",
+					"title": "Non-Medical Adverse Event",
+					"generation": "markdown"
+				},
+				{
+					"nameUrl": "determination_letter.html",
+					"title": "Determination Letter",
+					"generation": "markdown"
+				},
+				{
+					"nameUrl": "continuing_review.html",
+					"title": "Continuing Review",
+					"generation": "markdown"
+				},
+				{
+					"nameUrl": "downloads.html",
+					"title": "Downloads",
+					"generation": "markdown"
+				}
+			]
+		},
+		"parameter": [
+			{
+				"code": "copyrightyear",
+				"value": "2020+"
+			},
+			{
+				"code": "releaselabel",
+				"value": "CI Build"
+			}
+		]
+	}
+}
