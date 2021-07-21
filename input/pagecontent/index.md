@@ -18,11 +18,10 @@ The sIRB implementation guide deals with creation and exchange of standardized s
 The implementation guide assumes that the implementer has or will have a capability to send, receive, render and display FHIR questionnaires and questionnaire responses. Implementers may consider using free software such as NLM's FHIR Questionnaire rendering tool or design their own. Exchange of resources can be achieved by any of the FHIR messaging mechanisms. Please refer to FHIR standard documentation, open source implementations of FHIR specifications, and FHIR Messaging for additional information. 
 
 ### Actors
-1. Form Author/Editor: A system or organization who is responsible for creating, updating and deprecating the standardized sIRB forms such as Determination Letter, Protocol, Consent, Adverse Event, Recruitment Materials, and Continuous Review
-2. sIRB Form Repository: A form repository that stores standardized sIRB forms. IRB systems will request form templates from this repository.
-4. Central IRB Application: An IRB software system that a PI access to complete and submit the standardized forms.
-5. Relying IRB Application: An IRB software that receives and renders completed and approved forms by the central IRB.
-6. Principal Investigator/Practitioner: A person who is authorized to initiate a research study by completing sIRB forms.
+1. sIRB Form Repository: A form repository that stores standardized sIRB forms. IRB systems will request form templates from this repository.
+2. Central IRB Application: An IRB software system that a PI will access to retrieve forms to complete and submit.
+3. Relying IRB Application: An IRB software that receives and renders completed and approved forms by the central IRB.
+
 
 
 ### Workflow Overview
@@ -37,7 +36,7 @@ In the workflow outlined below, a Central IRB system requests one of the standar
 ### Dependencies
 These standards were developed based upon the [R4](http://hl7.org/fhir/R4/) FHIR version.
 
-[Profiles](file:///C:/SIRB/GitHubLinked/output/artifacts.html)
+
 
 
 
