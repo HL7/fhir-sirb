@@ -6,10 +6,7 @@
 		"lastUpdated": "2021-07-20T13:12:34.121+00:00",
 		"source": "#Lzp6NlgbinArVjRi"
 	},
-	"text": {
-		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n <p> Continuing Review   </p>\n    </div>"
-	},
+	
 	"extension": [
 		{
 			"url": "http://hl7.org/fhir/StructureDefinition/variable",
@@ -621,14 +618,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -1019,14 +1016,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -1064,7 +1061,7 @@
 									"question": "cr4.5.2",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y"
 									}
 								}
@@ -1094,14 +1091,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -1117,7 +1114,7 @@
 									"question": "cr4.5.4",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y"
 									}
 								}
@@ -1147,14 +1144,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -1170,7 +1167,7 @@
 									"question": "cr4.5.6",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y"
 									}
 								}
@@ -1200,14 +1197,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -1245,7 +1242,7 @@
 									"question": "cr4.5.8",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y"
 									}
 								}
@@ -1275,14 +1272,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -1298,7 +1295,7 @@
 									"question": "cr4.5.10",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y"
 									}
 								}
@@ -1328,14 +1325,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -1351,7 +1348,7 @@
 									"question": "cr4.5.12",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y"
 									}
 								}
@@ -1383,14 +1380,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -1406,7 +1403,7 @@
 									"question": "cr4.5.14",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y"
 									}
 								}
@@ -1436,14 +1433,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -1459,7 +1456,7 @@
 									"question": "cr4.5.16",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y"
 									}
 								}
@@ -1489,14 +1486,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -1526,14 +1523,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -1563,14 +1560,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -1586,7 +1583,7 @@
 									"question": "cr4.5.20",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y"
 									}
 								}
@@ -1616,14 +1613,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -1653,14 +1650,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -1676,7 +1673,7 @@
 									"question": "cr4.5.23",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 										"code": "Y"
 									}
 								}
@@ -1736,14 +1733,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -1774,7 +1771,7 @@
 							"question": "cr5.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -1783,14 +1780,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -1820,14 +1817,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -1865,14 +1862,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -1888,7 +1885,7 @@
 							"question": "cr6.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/ValueSet/v2-0532",
 								"code": "Y"
 							}
 						}
