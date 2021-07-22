@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://terminology.hl7.org/CodeSystem-v2-0532",
+  "code" : "Y"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@5bddcaef\r\n"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://terminology.hl7.org/CodeSystem-v2-0532",
+  "code" : "NI"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@71fcff54\r\n"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://terminology.hl7.org/CodeSystem-v2-0532",
+  "code" : "N"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@3b95678b\r\n"
+}
+-------------------------------------------------------------------------------------

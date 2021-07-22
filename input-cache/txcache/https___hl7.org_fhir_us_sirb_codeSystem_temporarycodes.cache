@@ -1,0 +1,51 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+  "code" : "STDYPRO"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@64c9a84b\r\n"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+  "code" : "PRE"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@33a800bf\r\n"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+  "code" : "UNDERLYINGDIS"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@69d906c3\r\n"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+  "code" : "CONCMITMED"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@58420a75\r\n"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+  "code" : "OTHERCAUSE"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@7497c5d9\r\n"
+}
+-------------------------------------------------------------------------------------
