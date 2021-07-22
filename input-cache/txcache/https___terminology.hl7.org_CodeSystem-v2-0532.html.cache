@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+  "code" : "Y"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@309c39dc\r\n"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+  "code" : "N"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@1bf0208c\r\n"
+}
+-------------------------------------------------------------------------------------

@@ -1,0 +1,71 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://systemgoeshere.com",
+  "code" : "INT"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@68db2d5c\r\n"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://systemgoeshere.com",
+  "code" : "DBV"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@7dc95d5f\r\n"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://systemgoeshere.com",
+  "code" : "DEV"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@7d1e75f7\r\n"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://systemgoeshere.com",
+  "code" : "OBS"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@2883edf6\r\n"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://systemgoeshere.com",
+  "code" : "IND"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@5e562067\r\n"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://systemgoeshere.com",
+  "code" : "IDE"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@63ca10f7\r\n"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://systemgoeshere.com",
+  "code" : "N"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Error from server: Error:org.hl7.fhir.r5.model.CodeableConcept@78e4c48b\r\n"
+}
+-------------------------------------------------------------------------------------
