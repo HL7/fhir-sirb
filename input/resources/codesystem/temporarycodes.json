@@ -1,0 +1,94 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "temporarycodes",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2021-07-22T15:45:06.969+00:00",
+		"source": "#fCCh94sKnQYrRHPP",
+		"profile": [
+			"http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+		]
+	},
+	"url": "http://hl7.org/fhir/CodeSystem/example",
+	"identifier": [
+		{
+			"system": "http://acme.com/identifiers/temporarycodes",
+			"value": "temporary-codes"
+		}
+	],
+	"version": "20160128",
+	"name": "temporarycodes",
+	"title": "Temporary Codes",
+	"status": "draft",
+	"experimental": true,
+	"date": "2016-01-28",
+	"publisher": "Filler",
+	"contact": [
+		{
+			"name": "FHIR project team",
+			"telecom": [
+				{
+					"system": "url",
+					"value": "http://hl7.org/fhir"
+				}
+			]
+		}
+	],
+	"description": "This is an example code system that includes all the ACME codes for serum/plasma cholesterol from v2.36.",
+	"caseSensitive": true,
+	"content": "complete",
+	"filter": [
+		{
+			"code": "acme-plasma",
+			"description": "An internal filter used to select codes that are only used with plasma",
+			"operator": [
+				"="
+			],
+			"value": "the value of this filter is either 'true' or 'false'"
+		}
+	],
+	"concept": [
+		{
+			"code": "INITIAL",
+			"display": "Initial",
+			"definition": "Initial",
+			"designation": [
+				{
+					"use": {
+						"system": "http://acme.com/config/fhir/codesystems/tempoarycodes",
+						"code": "internal-label"
+					},
+					"value": "From ACME POC Testing"
+				}
+			]
+		},
+		{
+			"code": "Update",
+			"display": "UPDATE",
+			"definition": "UPDATE",
+			"designation": [
+				{
+					"use": {
+						"system": "http://acme.com/config/fhir/codesystems/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "chol",
+			"display": "SChol",
+			"definition": "Serum Cholesterol",
+			"designation": [
+				{
+					"use": {
+						"system": "http://acme.com/config/fhir/codesystems/internal",
+						"code": "internal-label"
+					},
+					"value": "Obdurate Labs uses this with both kinds of units..."
+				}
+			]
+		}
+	]
+}

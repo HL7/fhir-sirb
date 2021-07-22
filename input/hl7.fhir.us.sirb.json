@@ -1,9 +1,9 @@
 {
 	"id": "hl7.fhir.us.sirb",
 	"meta": {
-		"versionId": "243",
-		"lastUpdated": "2021-07-21T20:26:50.283+00:00",
-		"source": "#P4yi64QHvpvzvN89"
+		"versionId": "244",
+		"lastUpdated": "2021-07-22T15:45:07.194+00:00",
+		"source": "#7MzsUYpSEG455CZe"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -171,6 +171,15 @@
 					"reference": "QuestionnaireResponse/85931"
 				},
 				"name": "Protocol Questionnaire Response"
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "CodeSystem/temporarycodes",
+					"display": "Temporary Codes"
+				},
+				"name": "Temporary Codes",
+				"description": "This is an example code system that includes all the ACME codes for serum/plasma cholesterol from v2.36."
 			}
 		],
 		"page": {
