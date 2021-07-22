@@ -2,13 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-determination-letter-questionnaire",
 	"meta": {
-		"versionId": "6",
-		"lastUpdated": "2021-07-20T16:23:42.027+00:00",
-		"source": "#jomR6sVVIByhSJAs"
-	},
-	"text": {
-		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n <p> sIRB Determination Questionnaire </p>\n    </div>"
+		"versionId": "7",
+		"lastUpdated": "2021-07-22T05:48:35.079+00:00",
+		"source": "#DVF2N1ziXJW00EYV"
 	},
 	"extension": [
 		{
@@ -21,7 +17,7 @@
 			}
 		}
 	],
-	"url": "https://raw.githubusercontent.com/jdtopping/sIRB/master/input/resources/questionnaire/sirb-determination-questionnaire.json",
+	"url": "https://hl7.org/fhir/us/sirb/Questionnaire/sirb-determination-letter-questionnaire.json",
 	"version": "0.1.0",
 	"name": "SIRBDeterminationQuestionnaire",
 	"title": "sIRB Determination Questionnaire",
@@ -501,14 +497,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "AR",
 								"display": "Accepts Review"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "DR",
 								"display": "Denies Review"
 							}

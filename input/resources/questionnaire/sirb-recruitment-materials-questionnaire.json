@@ -2,13 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-recruitment-materials-questionnaire",
 	"meta": {
-		"versionId": "11",
-		"lastUpdated": "2021-07-20T16:23:42.040+00:00",
-		"source": "#DiNQQ9FUaGzlFJgG"
-	},
-	"text": {
-		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n <p>Recruitment Materials</p>\n    </div>"
+		"versionId": "12",
+		"lastUpdated": "2021-07-22T05:48:35.102+00:00",
+		"source": "#JsZtdCxbI6Hl9kLv"
 	},
 	"extension": [
 		{
@@ -21,7 +17,7 @@
 			}
 		}
 	],
-	"url": "https://raw.githubusercontent.com/jdtopping/sIRB/master/input/resources/questionnaire/sirb-recruitment-questionnaire.json",
+	"url": "https://hl7.org/fhir/us/sirb/Questionnaire/sirb-recruitment-materials-questionnaire",
 	"version": "0.1.0",
 	"name": "RecruitmentMaterials",
 	"title": "Recruitment Materials",
@@ -146,14 +142,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "sIRB",
 								"display": "sIRB (Reviewing Site)"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "Relying",
 								"display": "Relying Site"
 							}
@@ -347,14 +343,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -385,7 +381,7 @@
 							"question": "rm4.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -395,14 +391,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -440,7 +436,7 @@
 							"question": "rm4.2",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -750,7 +746,7 @@
 							"question": "rm4.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -760,14 +756,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -805,7 +801,7 @@
 							"question": "rm4.4",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -1415,7 +1411,7 @@
 							"question": "rm4.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -1425,14 +1421,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -1470,7 +1466,7 @@
 							"question": "rm4.6",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -2144,7 +2140,7 @@
 							"question": "rm4.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -2154,14 +2150,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -2199,7 +2195,7 @@
 							"question": "rm4.8",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -2425,7 +2421,7 @@
 							"question": "rm4.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -2435,14 +2431,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -2480,7 +2476,7 @@
 							"question": "rm4.10",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -2834,7 +2830,7 @@
 							"question": "rm4.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -2844,14 +2840,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -2889,7 +2885,7 @@
 							"question": "rm4.12",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -3200,14 +3196,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -3260,35 +3256,35 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "VM",
 								"display": "Telephone and voice messages"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "VC",
 								"display": "Video Conferencing"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "EMAIL",
 								"display": "Email"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "TXT",
 								"display": "Text messages/texting"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "EHPRTL",
 								"display": "eHealth Portal messaging"
 							}

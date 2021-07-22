@@ -2,15 +2,11 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-initiate-study-questionnaire",
 	"meta": {
-		"versionId": "2",
-		"lastUpdated": "2021-07-20T16:23:41.947+00:00",
-		"source": "#QuTcgG3QRUbgK67g"
+		"versionId": "3",
+		"lastUpdated": "2021-07-22T05:48:35.078+00:00",
+		"source": "#taI2H9cRcymNyqLf"
 	},
-	"text": {
-		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n <p>Initiate a Study Questionnaire</p>\n    </div>"
-	},
-	"url": "https://raw.githubusercontent.com/jdtopping/sIRB/master/input/resources/questionnaire/sirb-initiate-study-questionnaire.json",
+	"url": "https://hl7.org/fhir/us/sirb/Questionnaire/sirb-initiate-study-questionnaire",
 	"version": "0.1.0",
 	"name": "SIRBInitiateAStudyQuestionnaire",
 	"title": "Initiate a Study Questionnaire",
@@ -157,7 +153,7 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "INT",
 								"display": "Interventional"
 							}
@@ -252,14 +248,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "SFS",
 								"display": "Sponsor or Funding Source"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "CRO",
 								"display": "Contract Research Organization (CRO)"
 							}
@@ -499,28 +495,28 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "NI",
 								"display": "No Information"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "NAV",
 								"display": "temporarily unavailable"
 							}
@@ -558,7 +554,7 @@
 							"question": "in6.8",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -1002,28 +998,28 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "NI",
 										"display": "No Information"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "NAV",
 										"display": "temporarily unavailable"
 									}
@@ -1061,7 +1057,7 @@
 									"question": "in8.1.4",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "Y"
 									}
 								}
@@ -1114,35 +1110,35 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "http://www.systemgoeshere.com",
+										"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 										"code": "APPROVED",
 										"display": "Approved for reliance"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "http://www.systemgoeshere.com",
+										"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 										"code": "DENIED",
 										"display": "Denied reliance"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "http://www.systemgoeshere.com",
+										"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 										"code": "POSSIBLE",
 										"display": "Potential/possible"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "http://www.systemgoeshere.com",
+										"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 										"code": "CANCELLED",
 										"display": "Cancelled or not participating"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "http://www.systemgoeshere.com",
+										"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 										"code": "ONHOLD",
 										"display": "Temporarily on hold"
 									}

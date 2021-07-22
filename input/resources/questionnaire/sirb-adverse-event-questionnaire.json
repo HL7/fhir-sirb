@@ -2,13 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-adverse-event-questionnaire",
 	"meta": {
-		"versionId": "27",
-		"lastUpdated": "2021-07-21T16:00:10.608+00:00",
-		"source": "#nVLKlOxwbUAF8SYp"
-	},
-	"text": {
-		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n <p>Adverse Event Questionnaire</p>    </div>"
+		"versionId": "28",
+		"lastUpdated": "2021-07-22T05:48:35.067+00:00",
+		"source": "#KMiI5OfldXp5y0qE"
 	},
 	"extension": [
 		{
@@ -21,7 +17,7 @@
 			}
 		}
 	],
-	"url": "https://raw.githubusercontent.com/jdtopping/sIRB/master/input/resources/questionnaire/sirb-adverse-event-questionnaire.json",
+	"url": "https://hl7.org/fhir/us/sirb/Questionnaire/sirb-adverse-event-questionnaire",
 	"name": "AE_Questionnaire",
 	"title": "Adverse Medical Event Questionnaire",
 	"status": "draft",
@@ -114,14 +110,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "INT",
 								"display": "Interventional"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "OBS",
 								"display": "Observational"
 							}
@@ -160,14 +156,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -206,14 +202,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -251,7 +247,7 @@
 							"question": "mae1.5",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "Y"
 							}
 						}
@@ -553,29 +549,29 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v3-AdministrativeGender.html",
-								"code": "female",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0001",
+								"code": "F",
 								"display": "Female"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v3-AdministrativeGender.html",
-								"code": "male",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0001",
+								"code": "M",
 								"display": "Male"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v3-AdministrativeGender.html",
-								"code": "other",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0001",
+								"code": "O",
 								"display": "Other"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v3-AdministrativeGender.html",
-								"code": "unknown",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0001",
+								"code": "U",
 								"display": "Unknown"
 							}
 						}
@@ -657,14 +653,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v3-Ethnicity.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v3-Ethnicity",
 								"code": "2135-2",
 								"display": "Hispanic or Latino"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v3-Ethnicity.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v3-Ethnicity",
 								"code": "2186-5",
 								"display": "Not Hispanic or Latino"
 							}
@@ -699,35 +695,35 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v3-Race.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v3-Race",
 								"code": "2028-9",
 								"display": "Asian"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v3-Race.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v3-Race",
 								"code": "1002-5",
 								"display": "American Indian or Alaska Native"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v3-Race.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v3-Race",
 								"code": "2054-5",
 								"display": "Black or African American"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v3-Race.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v3-Race",
 								"code": "2076-8",
 								"display": "Native Hawaiian or Other Pacific Islander"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v3-Race.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v3-Race",
 								"code": "2106-3",
 								"display": "White"
 							}
@@ -772,28 +768,28 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "N",
 								"display": "No"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "NI",
 								"display": "No Information"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "NA",
 								"display": "not applicable"
 							}
@@ -846,7 +842,7 @@
 							"question": "mae5.9",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "Y"
 							}
 						},
@@ -854,7 +850,7 @@
 							"question": "mae5.9",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "NI"
 							}
 						}
@@ -864,21 +860,21 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "SA",
 								"display": "Study Agent"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "PLACEBO",
 								"display": "Placebo"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "BSA",
 								"display": "Blinded Study Agent"
 							}
@@ -930,14 +926,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -975,7 +971,7 @@
 							"question": "mae5.11",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "Y"
 							}
 						}
@@ -1033,14 +1029,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "INITIAL",
 								"display": "Initial"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "UPDATE",
 								"display": "Update"
 							}
@@ -1234,14 +1230,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -1279,7 +1275,7 @@
 							"question": "mae6.6",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "N"
 							}
 						}
@@ -1331,14 +1327,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0239.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0239",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0239.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0239",
 								"code": "N",
 								"display": "No"
 							}
@@ -1390,21 +1386,21 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-adverse-event-severity.html",
+								"system": "http://terminology.hl7.org/CodeSystem/adverse-event-severity",
 								"code": "mild",
 								"display": "Mild"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-adverse-event-severity.html",
+								"system": "http://terminology.hl7.org/CodeSystem/adverse-event-severity",
 								"code": "moderate",
 								"display": "Moderate"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-adverse-event-severity.html",
+								"system": "http://terminology.hl7.org/CodeSystem/adverse-event-severity",
 								"code": "severe",
 								"display": "Severe"
 							}
@@ -1456,14 +1452,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-adverse-event-seriousness.html",
+								"system": "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness",
 								"code": "serious",
 								"display": "Serious"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-adverse-event-seriousness.html",
+								"system": "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness",
 								"code": "non-serious",
 								"display": "Non-serious"
 							}
@@ -1516,7 +1512,7 @@
 							"question": "mae6.10",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-adverse-event-seriousness.html",
+								"system": "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness",
 								"code": "serious"
 							}
 						}
@@ -1525,63 +1521,63 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0240.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0240",
 								"code": "D",
 								"display": "Death"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0240.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0240",
 								"code": "L",
 								"display": "Life-threatening"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0240.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0240",
 								"code": "H",
 								"display": "Caused hospitalized"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0240.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0240",
 								"code": "P",
 								"display": "Prolonged hospitalization"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0240.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0240",
 								"code": "O",
 								"display": "Other"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0240.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0240",
 								"code": "C",
 								"display": "Congenital anomaly/birth defect"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0240.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0240",
 								"code": "I",
 								"display": "Incapacity which is significant, persistent or permanent"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0240.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0240",
 								"code": "J",
 								"display": "Disability which is significant, persistent or permanent"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0240.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0240",
 								"code": "R",
 								"display": "Required intervention to prevent permanent impairment/damage"
 							}
@@ -1634,7 +1630,7 @@
 							"question": "mae6.11",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0240.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0240",
 								"code": "O"
 							}
 						}
@@ -1672,7 +1668,7 @@
 							"question": "mae6.10",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-adverse-event-seriousness.html",
+								"system": "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness",
 								"code": "serious"
 							}
 						}
@@ -1724,49 +1720,49 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0241.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0241",
 								"code": "F",
 								"display": "Fully recovered"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0241.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0241",
 								"code": "R",
 								"display": "Recovering"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0241.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0241",
 								"code": "N",
 								"display": "Not recovering/unchanged"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0241.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0241",
 								"code": "S",
 								"display": "Sequelae"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0241.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0241",
 								"code": "D",
 								"display": "Died"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0241.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0241",
 								"code": "W",
 								"display": "Worsening"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0241.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0241",
 								"code": "U",
 								"display": "Unknown"
 							}
@@ -1819,7 +1815,7 @@
 							"question": "mae6.13",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0241.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0241",
 								"code": "D"
 							}
 						}
@@ -1828,21 +1824,21 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "N",
 								"display": "No"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "UNK",
 								"display": "Unknown"
 							}
@@ -1894,35 +1890,35 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0250.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0250",
 								"code": "N",
 								"display": "Not related"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0250.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0250",
 								"code": "I",
 								"display": "Improbable"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0250.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0250",
 								"code": "S",
 								"display": "Somewhat probable"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0250.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0250",
 								"code": "M",
 								"display": "Moderately probable"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0250.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0250",
 								"code": "H",
 								"display": "Highly probable"
 							}
@@ -1938,7 +1934,7 @@
 							"question": "mae6.15",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0250.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0250",
 								"code": "S"
 							}
 						},
@@ -1946,7 +1942,7 @@
 							"question": "mae6.15",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0250.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0250",
 								"code": "M"
 							}
 						},
@@ -1954,7 +1950,7 @@
 							"question": "mae6.15",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0250.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0250",
 								"code": "H"
 							}
 						}
@@ -2010,7 +2006,7 @@
 							"question": "mae6.15",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0250.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0250",
 								"code": "N"
 							}
 						},
@@ -2018,7 +2014,7 @@
 							"question": "mae6.15",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0250.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0250",
 								"code": "I"
 							}
 						}
@@ -2028,42 +2024,42 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "PRMYDIS",
 								"display": "Primary disease"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "STDYPRO",
 								"display": "Study Procedure"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "PRE",
 								"display": "Pre-existing condition"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "UNDERLYINGDIS",
 								"display": "Underlying disease"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "CONCMITMED",
 								"display": "Concomitant medication"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "OTHERCAUSE",
 								"display": "Other known or suspected cause"
 							}
@@ -2101,7 +2097,7 @@
 							"question": "mae6.17",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "STDYPRO"
 							}
 						}
@@ -2139,7 +2135,7 @@
 							"question": "mae6.17",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "PRE"
 							}
 						}
@@ -2177,7 +2173,7 @@
 							"question": "mae6.17",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "UNDERLYINGDIS"
 							}
 						}
@@ -2215,7 +2211,7 @@
 							"question": "mae6.17",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "CONCMITMED"
 							}
 						}
@@ -2253,7 +2249,7 @@
 							"question": "mae6.17",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
 								"code": "OTHERCAUSE"
 							}
 						}
@@ -2305,42 +2301,42 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0251.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0251",
 								"code": "N",
 								"display": "None"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0251.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0251",
 								"code": "WP",
 								"display": "Product withdrawn permanently"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0251.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0251",
 								"code": "WT",
 								"display": "Product withdrawn temporarily"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0251.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0251",
 								"code": "DR",
 								"display": "Product dose or frequency of use reduced"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0251.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0251",
 								"code": "DI",
 								"display": "Product dose or frequency of use increased"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0251.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0251",
 								"code": "OT",
 								"display": "Other"
 							}
@@ -2393,7 +2389,7 @@
 							"question": "mae6.23",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0251.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0251",
 								"code": "OT"
 							}
 						}
@@ -2433,21 +2429,21 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "N",
 								"display": "No"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "NA",
 								"display": "not applicable"
 							}
@@ -2486,21 +2482,21 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "N",
 								"display": "No"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "NA",
 								"display": "not applicable"
 							}
@@ -2553,7 +2549,7 @@
 							"question": "mae6.10",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-adverse-event-seriousness.html",
+								"system": "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness",
 								"code": "serious"
 							}
 						}
@@ -2562,14 +2558,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -2600,7 +2596,7 @@
 							"question": "mae6.26",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "Y"
 							}
 						}
@@ -2748,14 +2744,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -2810,7 +2806,7 @@
 							"question": "mae6.10",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-adverse-event-seriousness.html",
+								"system": "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness",
 								"code": "serious"
 							}
 						}
@@ -2819,14 +2815,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -2879,7 +2875,7 @@
 							"question": "mae6.29",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 								"code": "Y"
 							}
 						}
@@ -2999,14 +2995,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -3063,7 +3059,7 @@
 					"question": "mae6.10",
 					"operator": "=",
 					"answerCoding": {
-						"system": "https://terminology.hl7.org/CodeSystem-adverse-event-seriousness.html",
+						"system": "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness",
 						"code": "serious"
 					}
 				}
@@ -3072,14 +3068,14 @@
 			"answerOption": [
 				{
 					"valueCoding": {
-						"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+						"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 						"code": "Y",
 						"display": "Yes"
 					}
 				},
 				{
 					"valueCoding": {
-						"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+						"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 						"code": "N",
 						"display": "No"
 					}
@@ -3132,7 +3128,7 @@
 					"question": "mae7",
 					"operator": "=",
 					"answerCoding": {
-						"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+						"system": "https://terminology.hl7.org/CodeSystem-v2-0532",
 						"code": "Y"
 					}
 				}
