@@ -34,19 +34,10 @@
 			]
 		}
 	],
-	"description": "This is an example code system that includes all the ACME codes for serum/plasma cholesterol from v2.36.",
+	"description": "This is a temporary codesystem capturing the custom codelists used across the forms.",
 	"caseSensitive": true,
 	"content": "complete",
-	"filter": [
-		{
-			"code": "acme-plasma",
-			"description": "An internal filter used to select codes that are only used with plasma",
-			"operator": [
-				"="
-			],
-			"value": "the value of this filter is either 'true' or 'false'"
-		}
-	],
+	
 	"concept": [
 		{
 			"code": "INITIAL",
@@ -55,7 +46,7 @@
 			"designation": [
 				{
 					"use": {
-						"system": "http://acme.com/config/fhir/codesystems/tempoarycodes",
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 						"code": "internal-label"
 					},
 					"value": "From ACME POC Testing"
@@ -63,13 +54,167 @@
 			]
 		},
 		{
-			"code": "Update",
-			"display": "UPDATE",
+			"code": "UPDATE",
+			"display": "Update",
+			"definition": "Update",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "INT",
+			"display": "Interventional",
+			"definition": "Interventional",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "OBS",
+			"display": "Observational",
 			"definition": "UPDATE",
 			"designation": [
 				{
 					"use": {
-						"system": "http://acme.com/config/fhir/codesystems/temporarycodes",
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "APPROVED",
+			"display": "Approved for reliance",
+			"definition": "Approved for reliance",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "POSSIBLE",
+			"display": "Potential/possible",
+			"definition": "Potential/possible",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "CANCELLED",
+			"display": "Cancelled or not participating",
+			"definition": "Cancelled or not participating",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "ONHOLD",
+			"display": "Temporarily on hold",
+			"definition": "Temporarily on hold",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "DENIED",
+			"display": "Denied reliance",
+			"definition": "Denied reliance",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "SFS",
+			"display": "Sponsor or Funding Source",
+			"definition": "Sponsor or Funding Source",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "CRO",
+			"display": "Contract Research Organization (CRO)",
+			"definition": "Contract Research Organization (CRO)",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "AR",
+			"display": "Accepts Review",
+			"definition": "Accepts Review",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "sIRB",
+			"display": "sIRB (Reviewing Site)",
+			"definition": "Site is the sIRB",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 						"code": "internal-label"
 					},
 					"value": "From Paragon Labs"
@@ -77,16 +222,479 @@
 			]
 		},
 		{
-			"code": "chol",
-			"display": "SChol",
-			"definition": "Serum Cholesterol",
+			"code": "Relying",
+			"display": "Reviewing Site",
+			"definition": "Site is the Reviewing Site",
 			"designation": [
 				{
 					"use": {
-						"system": "http://acme.com/config/fhir/codesystems/internal",
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 						"code": "internal-label"
 					},
-					"value": "Obdurate Labs uses this with both kinds of units..."
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "VM",
+			"display": "Telephone and voice messages",
+			"definition": "Telephone and voice messages",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "VC",
+			"display": "Video Conferencing",
+			"definition": "Video Conferencing",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "EMAIL",
+			"display": "Email",
+			"definition": "Email",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "TXT",
+			"display": "Texting",
+			"definition": "Texting",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "EHPRTL",
+			"display": "eHealth Portal messaging",
+			"definition": "eHealth Portal messaging",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "SA",
+			"display": "Study Agent",
+			"definition": "Study Agent",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "PLACEBO",
+			"display": "Placebo",
+			"definition": "Placebo",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "BSA",
+			"display": "Blinded Study Agent",
+			"definition": "Blinded Study Agent",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "PRMYDIS",
+			"display": "Primary disease",
+			"definition": "Primary disease",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "STDYPRO",
+			"display": "Study Procedure",
+			"definition": "Study Procedure",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "PRE",
+			"display": "Pre-existing condition",
+			"definition": "Pre-existing condition",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "UNDERLYINGDIS",
+			"display": "Underlying disease",
+			"definition": "Underlying disease",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "CONCMITMED",
+			"display": "Concomitant medication",
+			"definition": "Concomitant medication",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "OTHERCAUSE",
+			"display": "Other known or suspected cause",
+			"definition": "Other known or suspected cause",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "nochange",
+			"display": "No change in research activities",
+			"definition": "No change in research activities",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "stopped",
+			"display": "All research activities temporarily and voluntarily stopped for all participants",
+			"definition": "All research activities temporarily and voluntarily stopped for all participants",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "partial",
+			"display": "Partial voluntary hold on some research activities for all participants (explain below)",
+			"definition": "Partial voluntary hold on some research activities for all participants (explain below)",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "hold",
+			"display": "Voluntary hold on new participant enrollment only",
+			"definition": "Voluntary hold on new participant enrollment only",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "init",
+			"display": "Initial",
+			"definition": "Initial",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "followup",
+			"display": "Follow-up",
+			"definition": "Follow-up",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "completed",
+			"display": "Done, performed or completed",
+			"definition": "The action was done, performed or completed",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "pending",
+			"display": "Pending - Currently under development",
+			"definition": "The action is in progress or status is pending",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "notundertaken",
+			"display": "Not done or undertaken",
+			"definition": "The action was not started and is not in progress",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "mla",
+			"display": "Adverse Non-Medical Event consisted of a missed lab or assessment by a participant (which does not jeopardize the study or increase risks to other participants)",
+			"definition": "Adverse Non-Medical Event was a missed lab or assessment by a participant (which does not jeopardize the study or increase risks to other participants)",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "mtd",
+			"display": "Adverse Non-Medical Event consisted of a missed treatment or dose by a participant (which does not jeopardize the study or increase risks to other participants",
+			"definition": "Adverse Non-Medical Event consisted of a missed treatment or dose by a participant (which does not jeopardize the study or increase risks to other participants",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "otherreason",
+			"display": "Other reason",
+			"definition": "Other reason",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "Update",
+			"display": "UPDATE",
+			"definition": "UPDATE",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "open",
+			"display": "Open for enrollment",
+			"definition": "Open for enrollment",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "closed",
+			"display": "Closed to enrollment",
+			"definition": "Closed to enrollment",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "not-open",
+			"display": "Not yet open",
+			"definition": "Not yet open",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "open-no-participants",
+			"display": "Open with no participants",
+			"definition": "Open with no participants",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+			{
+			"code": "complete",
+			"display": "All interventions complete",
+			"definition": "All interventions complete",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		
+		{
+			"code": "continue-intvnt",
+			"display": "Continuing interventions",
+			"definition": "Continuing interventions",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
 				}
 			]
 		}
