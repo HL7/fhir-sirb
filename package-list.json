@@ -14,7 +14,7 @@
 			"version": "0.1.0",
 			"current": false,
 			"desc": "Initial STU Ballot",
-			"path": "https://hl7.org/fhir/us/sirb/2021Sep",
+			"path": "http://hl7.org/fhir/us/sirb/2021Sep",
 			"fhirversion": "4.0.1",
 			"sequence": "1",
 			"status": "ballot"
@@ -22,6 +22,6 @@
 	],
 	"package-id": "hl7.fhir.us.sirb",
 	"title": "Single Institutional Review Board (sIRB) Implementation Guide",
-	"canonical": "https://hl7.org/fhir/us/sirb",
+	"canonical": "http://hl7.org/fhir/us/sirb",
 	"category": "Research"
 }
