@@ -1,9 +1,9 @@
 {
 	"id": "hl7.fhir.us.sirb",
 	"meta": {
-		"versionId": "259",
-		"lastUpdated": "2021-07-23T19:45:02.597+00:00",
-		"source": "#GcAiwQyZAso8VrwN"
+		"versionId": "260",
+		"lastUpdated": "2021-07-23T20:52:42.355+00:00",
+		"source": "#jLZa4zChgOhaus07"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -136,46 +136,6 @@
 				"name": "NonMedical Events",
 				"description": "Reporting form for reportable Non-Medical Adverse Events",
 				"groupingId": "new-group1"
-			},
-			{
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "QuestionnaireResponse/85719"
-				},
-				"name": "Intiate a Study Questionnaire response",
-				"description": "Example of Intial Questionnaire Response."
-			},
-			{
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "QuestionnaireResponse/85907"
-				},
-				"name": "Adverse Event Questionnaire Response",
-				"description": "Example of Adverse Event Response"
-			},
-			{
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "QuestionnaireResponse/85925"
-				},
-				"name": "Consent Questionnaire Question Response",
-				"description": "Example of Consent Questionnaire Response"
-			},
-			{
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "QuestionnaireResponse/85927"
-				},
-				"name": "Determination Letter Questionnaire Response",
-				"description": "Example of Determination Letter Questionnaire Response"
-			},
-			{
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "QuestionnaireResponse/85931"
-				},
-				"name": "Protocol Questionnaire Response",
-				"description": "Example of Protocol Questionnaire Response"
 			},
 			{
 				"exampleBoolean": false,
