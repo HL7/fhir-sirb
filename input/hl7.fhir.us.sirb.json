@@ -1,16 +1,16 @@
 {
 	"id": "hl7.fhir.us.sirb",
 	"meta": {
-		"versionId": "254",
-		"lastUpdated": "2021-07-23T17:41:47.734+00:00",
-		"source": "#T4lhfynRInheTtI2"
+		"versionId": "259",
+		"lastUpdated": "2021-07-23T19:45:02.597+00:00",
+		"source": "#GcAiwQyZAso8VrwN"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
 	"fhirVersion": [
 		"4.0.1"
 	],
-	"url": "http://hl7.org/fhir/us/ImplementationGuide/hl7.fhir.us.sirb",
+	"url": "http://hl7.org/fhir/us/sirb/ImplementationGuide/hl7.fhir.us.sirb",
 	"version": "0.1.0",
 	"name": "SingleInstitutionalReviewBoard",
 	"title": "Single Institutional Review Board (sIRB) Implementation Guide",

@@ -5,7 +5,6 @@
 			"path": "http://build.fhir.org/ig/HL7/fhir-sirb",
 			"desc": "Current continuous integration build",
 			"fhirversion": "4.0.1",
-			"date": "",
 			"sequence": "",
 			"status": "ci-build",
 			"current": true
@@ -17,7 +16,8 @@
 			"path": "https://hl7.org/fhir/us/sirb/2021Sep",
 			"fhirversion": "4.0.1",
 			"sequence": "1",
-			"status": "ballot"
+			"status": "ballot",
+			"date": "2021-08-13"
 		}
 	],
 	"package-id": "hl7.fhir.us.sirb",
