@@ -2,9 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-recruitment-materials-questionnaire",
 	"meta": {
-		"versionId": "12",
-		"lastUpdated": "2021-07-22T05:48:35.102+00:00",
-		"source": "#JsZtdCxbI6Hl9kLv"
+		"versionId": "13",
+		"lastUpdated": "2021-07-23T13:33:27.367+00:00",
+		"source": "#vKRqqZMiXfZYkL33"
 	},
 	"extension": [
 		{
@@ -17,7 +17,7 @@
 			}
 		}
 	],
-	"url": "https://hl7.org/fhir/us/sirb/Questionnaire/sirb-recruitment-materials-questionnaire",
+	"url": "http://hl7.org/fhir/us/sirb/Questionnaire/sirb-recruitment-materials-questionnaire",
 	"version": "0.1.0",
 	"name": "RecruitmentMaterials",
 	"title": "Recruitment Materials",
@@ -142,14 +142,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "sIRB",
 								"display": "sIRB (Reviewing Site)"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "Relying",
 								"display": "Relying Site"
 							}
@@ -3256,35 +3256,35 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "VM",
 								"display": "Telephone and voice messages"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "VC",
 								"display": "Video Conferencing"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "EMAIL",
 								"display": "Email"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "TXT",
 								"display": "Text messages/texting"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "EHPRTL",
 								"display": "eHealth Portal messaging"
 							}

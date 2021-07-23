@@ -2,9 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-determination-letter-questionnaire",
 	"meta": {
-		"versionId": "7",
-		"lastUpdated": "2021-07-22T05:48:35.079+00:00",
-		"source": "#DVF2N1ziXJW00EYV"
+		"versionId": "8",
+		"lastUpdated": "2021-07-23T13:33:27.353+00:00",
+		"source": "#FXb6SRdQy33a30ex"
 	},
 	"extension": [
 		{
@@ -17,7 +17,7 @@
 			}
 		}
 	],
-	"url": "https://hl7.org/fhir/us/sirb/Questionnaire/sirb-determination-letter-questionnaire.json",
+	"url": "http://hl7.org/fhir/us/sirb/Questionnaire/sirb-determination-letter-questionnaire.json",
 	"version": "0.1.0",
 	"name": "SIRBDeterminationQuestionnaire",
 	"title": "sIRB Determination Questionnaire",
@@ -497,14 +497,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "AR",
 								"display": "Accepts Review"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "DR",
 								"display": "Denies Review"
 							}

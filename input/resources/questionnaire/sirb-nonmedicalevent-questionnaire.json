@@ -2,13 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-nonmedicalevent-questionnaire",
 	"meta": {
-		"versionId": "6",
-		"lastUpdated": "2021-07-20T16:23:41.960+00:00",
-		"source": "#BsyEYCznA7q83xPJ"
-	},
-	"text": {
-		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p>  Adverse Non-Medical Event Questionnaire    </p>\n    </div>"
+		"versionId": "7",
+		"lastUpdated": "2021-07-23T13:26:36.475+00:00",
+		"source": "#EOo8mzjHYgI1P2ny"
 	},
 	"extension": [
 		{
@@ -21,7 +17,7 @@
 			}
 		}
 	],
-	"url": "https://github.com/jdtopping/sIRB/blob/master/input/resources/questionnaire/sirb-nonmedicalevents-questionnaire.json",
+	"url": "https://hl7.org/fhir/us/sirb/Questionnaire/sirb-nonmedicalevents-questionnaire",
 	"version": "0.1.0",
 	"name": "NonMedical_events",
 	"title": "Adverse Non-Medical Event Questionnaire",
@@ -116,28 +112,28 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "nochange",
 								"display": "No change in research activities"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "stopped",
 								"display": "All research activities temporarily and voluntarily stopped for all participants"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "partial",
 								"display": "Partial voluntary hold on some research activities for all participants (explain below)"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "hold",
 								"display": "Voluntary hold on new participant enrollment only"
 							}
@@ -175,7 +171,7 @@
 							"question": "nme1.4",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "partial"
 							}
 						}
@@ -575,14 +571,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "init",
 								"display": "Initial"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "followup",
 								"display": "Follow-up"
 							}
@@ -916,14 +912,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0239.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0136",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0239.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0136",
 										"code": "N",
 										"display": "No"
 									}
@@ -961,7 +957,7 @@
 									"question": "nme3.7.4",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0239.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0136",
 										"code": "Y"
 									}
 								}
@@ -1014,14 +1010,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -1059,7 +1055,7 @@
 									"question": "nme3.7.6",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "Y"
 									}
 								}
@@ -1112,14 +1108,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -1157,7 +1153,7 @@
 									"question": "nme3.7.8",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "Y"
 									}
 								}
@@ -2081,14 +2077,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0239.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0136",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0239.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0136",
 										"code": "N",
 										"display": "No"
 									}
@@ -2126,7 +2122,7 @@
 									"question": "nme3.17.4",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0239.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0136",
 										"code": "Y"
 									}
 								}
@@ -2179,14 +2175,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -2224,7 +2220,7 @@
 									"question": "nme3.17.6",
 									"operator": "=",
 									"answerCoding": {
-										"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "Y"
 									}
 								}
@@ -2307,14 +2303,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -2352,7 +2348,7 @@
 							"question": "nme4.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -2405,14 +2401,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -2450,7 +2446,7 @@
 							"question": "nme4.3",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -2490,14 +2486,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -2535,7 +2531,7 @@
 							"question": "nme4.5",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -2596,21 +2592,21 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "completed",
 								"display": "Done, performed or completed"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "pending",
 								"display": "Pending - Currently under development"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "notundertaken",
 								"display": "Not done or undertaken"
 							}
@@ -2648,7 +2644,7 @@
 							"question": "nme5.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "completed"
 							}
 						}
@@ -2687,7 +2683,7 @@
 							"question": "nme5.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "pending"
 							}
 						}
@@ -2740,21 +2736,21 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "completed",
 								"display": "Done, performed or completed"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "pending",
 								"display": "Pending - Currently under development"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "notundertaken",
 								"display": "Not done or undertaken"
 							}
@@ -2792,7 +2788,7 @@
 							"question": "nme5.3",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "completed"
 							}
 						},
@@ -2800,7 +2796,7 @@
 							"question": "nme5.3",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "pending"
 							}
 						}
@@ -2853,21 +2849,21 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "completed",
 								"display": "Done, performed or completed"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "notundertaken",
 								"display": "Not done or undertaken"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "pending",
 								"display": "Pending - Currently under development"
 							}
@@ -2905,7 +2901,7 @@
 							"question": "nme5.5",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "completed"
 							}
 						},
@@ -2913,7 +2909,7 @@
 							"question": "nme5.5",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "pending"
 							}
 						}
@@ -2994,14 +2990,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -3054,7 +3050,7 @@
 							"question": "nme6.1a",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N"
 							}
 						}
@@ -3064,21 +3060,21 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "mla",
 								"display": "Adverse Non-Medical Event consisted of a missed lab or assessment by a participant (which does not jeopardize the study or increase risks to other participants)"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "mtd",
 								"display": "Adverse Non-Medical Event consisted of a missed treatment or dose by a participant (which does not jeopardize the study or increase risks to other participants"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "otherreason",
 								"display": "Other reason"
 							}
@@ -3094,7 +3090,7 @@
 							"question": "nme6.1a",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N"
 							}
 						},
@@ -3102,7 +3098,7 @@
 							"question": "nme6.1b",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "otherreason"
 							}
 						}
@@ -3155,14 +3151,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -3215,7 +3211,7 @@
 							"question": "nme6.3a",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N"
 							}
 						}
@@ -3225,21 +3221,21 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "mla",
 								"display": "Adverse Non-Medical Event consisted of a missed lab or assessment by a participant (which does not jeopardize the study or increase risks to other participants)"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "mtd",
 								"display": "Adverse Non-Medical Event consisted of a missed treatment or dose by a participant (which does not jeopardize the study or increase risks to other participants"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "otherreason",
 								"display": "Other reason"
 							}
@@ -3255,7 +3251,7 @@
 							"question": "nme6.3a",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N"
 							}
 						},
@@ -3263,7 +3259,7 @@
 							"question": "nme6.3b",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "otherreason"
 							}
 						}
@@ -3317,7 +3313,7 @@
 							"question": "nme6.1a",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						},
@@ -3325,7 +3321,7 @@
 							"question": "nme6.3a",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -3335,14 +3331,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y",
 								"display": "Yes"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N",
 								"display": "No"
 							}
@@ -3380,7 +3376,7 @@
 							"question": "nme6.5",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "Y"
 							}
 						}
@@ -3419,7 +3415,7 @@
 							"question": "nme6.5",
 							"operator": "=",
 							"answerCoding": {
-								"system": "https://terminology.hl7.org/CodeSystem-v2-0532.html",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 								"code": "N"
 							}
 						}

@@ -2,13 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-protocol-questionnaire",
 	"meta": {
-		"versionId": "29",
-		"lastUpdated": "2021-07-20T15:25:16.638+00:00",
-		"source": "#GSopwCSCSwIz345J"
-	},
-	"text": {
-		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Protocol</p></div>"
+		"versionId": "30",
+		"lastUpdated": "2021-07-23T13:26:36.520+00:00",
+		"source": "#KyO56Mkhe15hfQ9t"
 	},
 	"extension": [
 		{
@@ -21,7 +17,7 @@
 			}
 		}
 	],
-	"url": "https://raw.githubusercontent.com/jdtopping/sIRB/master/input/resources/questionnaire/sirb-protocol-questionnaire.json",
+	"url": "https://hl7.org/fhir/us/sirb/Questionnaire/sirb-protocol-questionnaire",
 	"version": "0.1.0",
 	"name": "Protocol_questionnaire",
 	"title": "Protocol Questionnaire",
@@ -60,14 +56,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "INT",
 								"display": "Interventional"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "OBS",
 								"display": "Observational"
 							}
@@ -106,7 +102,7 @@
 							"question": "p1.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "INT"
 							}
 						}
@@ -117,28 +113,28 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "DBV",
 								"display": "Drug/Biologic/Vaccine"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "DEV",
 								"display": "Device"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "SBE",
 								"display": "Social/Behavioral/educational (SBE)"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "PRO",
 								"display": "Procedural"
 							}
@@ -177,7 +173,7 @@
 							"question": "p1.2",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "DBV"
 							}
 						},
@@ -185,7 +181,7 @@
 							"question": "p1.2",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "DEV"
 							}
 						}
@@ -232,14 +228,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "IND",
 								"display": "IND"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "IDE",
 								"display": "IDE"
 							}
@@ -580,21 +576,21 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "http://systemgoeshere.com",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "COPI",
 										"display": "Co-Principal Investigator"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "http://systemgoeshere.com",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "COI",
 										"display": "Co-Investigator"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "http://systemgoeshere.com",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "PD",
 										"display": "Program Director"
 									}
@@ -842,7 +838,7 @@
 							"question": "p1.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "INT"
 							}
 						}
@@ -880,7 +876,7 @@
 							"question": "p1.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "OBS"
 							}
 						}
@@ -896,7 +892,7 @@
 							"question": "p1.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "OBS"
 							}
 						}
@@ -912,7 +908,7 @@
 							"question": "p1.4",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "IND"
 							}
 						}
@@ -928,7 +924,7 @@
 							"question": "p1.4",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "IDE"
 							}
 						}
@@ -944,7 +940,7 @@
 							"question": "p1.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "INT"
 							}
 						}
@@ -982,7 +978,7 @@
 							"question": "p1.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "INT"
 							}
 						}
@@ -1052,7 +1048,7 @@
 									"question": "p1.1",
 									"operator": "=",
 									"answerCoding": {
-										"system": "http://systemgoeshere.com",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "INT"
 									}
 								}
@@ -1106,7 +1102,7 @@
 							"question": "p1.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "INT"
 							}
 						}
@@ -1428,7 +1424,7 @@
 							"question": "p1.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "INT"
 							}
 						}
@@ -1921,7 +1917,7 @@
 									"question": "p1.1",
 									"operator": "=",
 									"answerCoding": {
-										"system": "http://www.systemgoeshere.com",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "INT"
 									}
 								}
@@ -2015,7 +2011,7 @@
 									"question": "p1.1",
 									"operator": "=",
 									"answerCoding": {
-										"system": "http://www.systemgoeshere.com",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "INT"
 									}
 								}
@@ -2299,7 +2295,7 @@
 									"question": "p1.1",
 									"operator": "=",
 									"answerCoding": {
-										"system": "http://systemgoeshere.com",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "INT"
 									}
 								}
@@ -2505,7 +2501,7 @@
 											"question": "p4.1.8.3",
 											"operator": "=",
 											"answerCoding": {
-												"system": "http://systemgoeshere.com",
+												"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 												"code": "N"
 											}
 										}
@@ -3110,7 +3106,7 @@
 							"question": "p1.2",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "DBV"
 							}
 						}
@@ -3126,7 +3122,7 @@
 							"question": "p1.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "INT"
 							}
 						}
@@ -4917,7 +4913,7 @@
 					"question": "p1.1",
 					"operator": "=",
 					"answerCoding": {
-						"system": "http://systemgoeshere.com",
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 						"code": "INT"
 					}
 				}
@@ -5253,7 +5249,7 @@
 							"question": "p1.1",
 							"operator": "=",
 							"answerCoding": {
-								"system": "http://systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "OBS"
 							}
 						}

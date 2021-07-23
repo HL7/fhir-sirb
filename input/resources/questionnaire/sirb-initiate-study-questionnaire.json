@@ -2,11 +2,11 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-initiate-study-questionnaire",
 	"meta": {
-		"versionId": "3",
-		"lastUpdated": "2021-07-22T05:48:35.078+00:00",
-		"source": "#taI2H9cRcymNyqLf"
+		"versionId": "4",
+		"lastUpdated": "2021-07-23T13:33:27.364+00:00",
+		"source": "#UCsqmiKzlA01Qk4h"
 	},
-	"url": "https://hl7.org/fhir/us/sirb/Questionnaire/sirb-initiate-study-questionnaire",
+	"url": "http://hl7.org/fhir/us/sirb/Questionnaire/sirb-initiate-study-questionnaire",
 	"version": "0.1.0",
 	"name": "SIRBInitiateAStudyQuestionnaire",
 	"title": "Initiate a Study Questionnaire",
@@ -153,7 +153,7 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "INT",
 								"display": "Interventional"
 							}
@@ -248,14 +248,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "SFS",
 								"display": "Sponsor or Funding Source"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "CRO",
 								"display": "Contract Research Organization (CRO)"
 							}
@@ -1110,35 +1110,35 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "APPROVED",
 										"display": "Approved for reliance"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "DENIED",
 										"display": "Denied reliance"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "POSSIBLE",
 										"display": "Potential/possible"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "CANCELLED",
 										"display": "Cancelled or not participating"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "https://hl7.org/fhir/us/sirb/codeSystem/temporarycodes",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "ONHOLD",
 										"display": "Temporarily on hold"
 									}
