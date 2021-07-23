@@ -9,7 +9,7 @@
 			"http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 		]
 	},
-	"url": "http://hl7.org/fhir/CodeSystem/example",
+	"url": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 	"identifier": [
 		{
 			"system": "http://acme.com/identifiers/temporarycodes",
