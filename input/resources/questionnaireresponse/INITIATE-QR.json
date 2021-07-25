@@ -2,11 +2,11 @@
 	"resourceType": "QuestionnaireResponse",
 	"id": "INITIATE-QR",
 	"meta": {
-		"versionId": "1",
-		"lastUpdated": "2021-07-23T21:09:31.122+00:00",
-		"source": "#nb9TloFg5U5nnAIR"
+		"versionId": "2",
+		"lastUpdated": "2021-07-25T19:47:30.979+00:00",
+		"source": "#jPrXQW4xZAW3qV7B"
 	},
-	"questionnaire": "\"http://hl7.org/fhir/us/sirb/Questionnaire/sirb-initiate-study-questionnaire\"",
+	"questionnaire": "http://hl7.org/fhir/us/sirb/Questionnaire/sirb-initiate-study-questionnaire",
 	"status": "completed",
 	"authored": "2021-07-23T05:52:41.328Z",
 	"item": [

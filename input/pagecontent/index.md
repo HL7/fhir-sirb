@@ -9,7 +9,7 @@ Launching a multi-site clinical research study is frequently a long and involved
 In lieu of ad hoc transfers of PDFs and other document formats via email or online submission, this project utilizes FHIR based standards to facilitate document exchange. A standards enabled process leveraged by software has the potential to significantly decrease the extensive manual tasks that have become associated with using a single IRB system. This use of FHIR standards to meet the need for an efficient exchange of data and documents will improve the operational efficiency. 
 
 ### Coverage
-This Implementation guide covers the IRB Determination Letter, Study Protocol, and Consent templates. It will be expanded with the completion of other templates associated with the sIRB approval process when completed.
+This Implementation guide covers the suite of seven research study questionnaires for sIRB studies: Determination Letter Questionnaire, Protocol Questionnaire, Consent Form Questionnaire, Recruitment Materials Questionnaire, Adverse Medical Events Questionnaire, Non-Medical Events Questionnaire and Continuing Review Questionnaire. It also includes an Initiate a Study Questionnaire for an optional, but suggested implementation that takes advantage of the SDC Populate functionality. The Initiate a Study Questionnaire is intended to collect data for fields common to many of the forms, such as the Study Title, Study Protocol Number, Principal Investigator (PI) Name, PI Address, PI email, PI phone, sIRB site name, sIRB site address and the name and address for each relying site. The SDC Populate functionality can then use the data captured in the Initiate a Study Questionnaire to populate the corresponding fields in the suite of seven research study questionnaires.
 
 ### Scope
 The sIRB implementation guide deals with creation and exchange of standardized sIRB forms and form responses using FHIR questionnaire and questionnaire response resources. The questionnaires may have nested structures and embed skip/branching logics to display appropriate questions based on previous answers. Pre population of questionnaire forms and extraction of data elements/resources from questionnaire responses is out of scope for the current version of sIRB implementation guide; these functionalities can be incorporated into your specific implementation by referring to Structure Data Capture (SDC) implementation guide.
@@ -40,7 +40,7 @@ Form (Link to Page) | Description |Link to External Questionnaire Viewer
 
 
 ### Credits
-These standards were developed in conjunction with...
+These standards were developed by Duke University with assistance from University of Arkanasas Medical Sciences and Vanderbilt University.
 
 ### Dependencies
 These standards were developed based upon the [R4](http://hl7.org/fhir/R4/) FHIR version.
