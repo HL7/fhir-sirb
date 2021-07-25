@@ -2,9 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-initiate-study-questionnaire",
 	"meta": {
-		"versionId": "4",
-		"lastUpdated": "2021-07-23T13:33:27.364+00:00",
-		"source": "#UCsqmiKzlA01Qk4h"
+		"versionId": "5",
+		"lastUpdated": "2021-07-25T19:43:52.253+00:00",
+		"source": "#5wyvVyNxvYAqEcet"
 	},
 	"url": "http://hl7.org/fhir/us/sirb/Questionnaire/sirb-initiate-study-questionnaire",
 	"version": "0.1.0",
@@ -160,7 +160,7 @@
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "OBS",
 								"display": "Observational"
 							}
