@@ -1,9 +1,9 @@
 {
 	"id": "hl7.fhir.us.sirb",
 	"meta": {
-		"versionId": "260",
-		"lastUpdated": "2021-07-23T20:52:42.355+00:00",
-		"source": "#jLZa4zChgOhaus07"
+		"versionId": "264",
+		"lastUpdated": "2021-07-23T21:10:39.533+00:00",
+		"source": "#REetJ4suBASAq6tD"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -54,6 +54,10 @@
 			{
 				"id": "new-group1",
 				"name": "Questionnaires"
+			},
+			{
+				"id": "new-group2",
+				"name": "Questionnaire Responses"
 			}
 		],
 		"resource": [
@@ -145,6 +149,48 @@
 				},
 				"name": "Temporary Codes",
 				"description": "This is an example code system that includes all the ACME codes for serum/plasma cholesterol from v2.36."
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "QuestionnaireResponse/NME-QR"
+				},
+				"groupingId": "new-group2"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "QuestionnaireResponse/PROTOCOL-QR"
+				},
+				"groupingId": "new-group2"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "QuestionnaireResponse/MEDICAL-AE-QR"
+				},
+				"groupingId": "new-group2"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "QuestionnaireResponse/INITIATE-QR"
+				},
+				"groupingId": "new-group2"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "QuestionnaireResponse/DETERMINATION-QR"
+				},
+				"groupingId": "new-group2"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "QuestionnaireResponse/RECRUITMENT-QR"
+				},
+				"groupingId": "new-group2"
 			}
 		],
 		"page": {
