@@ -2,9 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-determination-letter-questionnaire",
 	"meta": {
-		"versionId": "9",
-		"lastUpdated": "2021-07-25T19:43:52.252+00:00",
-		"source": "#gXhA0RECUaWujnyZ"
+		"versionId": "10",
+		"lastUpdated": "2021-07-26T00:20:02.565+00:00",
+		"source": "#yulN71k3afmzkiAq"
 	},
 	"extension": [
 		{
@@ -122,7 +122,7 @@
 						},
 						{
 							"linkId": "dl2.1.1",
-							"text": "sIRB (Reviewing Institution) Name",
+							"text": "Institution",
 							"type": "group",
 							"required": false,
 							"item": [
@@ -147,7 +147,7 @@
 								},
 								{
 									"linkId": "dl2.1.1.1",
-									"text": "Name",
+									"text": "sIRB (Reviewing Institution) Name",
 									"type": "string",
 									"required": true
 								},
