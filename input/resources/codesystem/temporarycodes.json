@@ -45,7 +45,7 @@
 			"designation": [
 				{
 					"use": {
-						"system": "http://acme.com/config/fhir/codesystems/temporarycodes",
+						"system": "http://acme.com/config/fhir/codesystems/tempoarycodes",
 						"code": "internal-label"
 					},
 					"value": "From ACME POC Testing"

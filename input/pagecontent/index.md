@@ -40,7 +40,7 @@ Form (Link to Page) | Description |Link to External Questionnaire Viewer
 
 
 ### Credits
-These standards were developed by Duke University with assistance from University of Arkanasas Medical Sciences and Vanderbilt University.
+These standards were developed by Duke University with assistance from University of Arkanasas of Medical Sciences and Vanderbilt University.
 
 ### Dependencies
 These standards were developed based upon the [R4](http://hl7.org/fhir/R4/) FHIR version.
