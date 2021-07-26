@@ -4171,7 +4171,13 @@
 					"linkId": "ADMIN02",
 					"text": "Questionnaire Response ID for the parent Questionnaire Response (such as the Initiate a Study Questionnaire Response), if any",
 					"type": "string",
-					"required": false
+					"required": false,
+					"initial" : [
+          {
+               "valueString" : "temporarily unavailable"
+          }
+    ]
+
 				},
 				{
 					"extension": [
@@ -4183,7 +4189,13 @@
 					"linkId": "ADMIN03",
 					"text": "ID of the Research Study FHIR Resource associated with the study Questionnaire Responses, if any",
 					"type": "string",
-					"required": false
+					"required": false,
+					"initial" : [
+          {
+               "valueString" : "temporarily unavailable"
+          }
+    ]
+
 				},
 				{
 					"extension": [
