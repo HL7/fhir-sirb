@@ -66,16 +66,8 @@ The use of the ResearchStudy resource is completely optional.  The official reco
 2. Central IRB Application: An IRB software system that a PI will access to retrieve forms to complete and submit.
 3. Relying IRB Application: An IRB software that receives and renders completed and approved forms by the central IRB.
 
-
-
-### Workflow Overview
-
-In the workflow outlined below, a Central IRB system requests one of the standardized sIRB questionnaires forms from the repository as a form of a questionnaire resource. The central IRB system receives the questionnaire response resource and renders/displays it to the Principal Investigator-PI (user). The PI enters and submits responses applicable to the selected standardized sIRB form. The submitted responses will be saved as questionnaire response resources on the Central IRB's FHIR server. The Central IRB will serve as a single source of truth for IRB Documents. The relying IRB system will send a RESTful request or implement a subscription resource to get most recent forms from the central IRB's FHIR server.
-
-![image of sirb dataflow](sirb-dataflow.jpg)
-
 ### Forms
-
+<img src="sirb FHIR forms.jpg" width="600"/>  
 
 Form (Link to Page) | Link to External Questionnaire Viewer
 [Intiate Study](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-initiate-study-questionnaire.html)| [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-initiate-study-questionnaire-questionnaire.json)
@@ -86,6 +78,15 @@ Form (Link to Page) | Link to External Questionnaire Viewer
 [Medical Adverse Events](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-adverse-event-questionnaire.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-recruitment-materials-questionnaire.json)
 [Non Medical Adverse Events](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-nonmedicalevent-questionnaire.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-nonmedicalevent-questionnaire.json)
 [Continuing Review](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-continuing-review-questionnaire.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-continuing-review-questionnaire.json)
+
+### Workflow Overview
+
+In the workflow outlined below, a Central IRB system requests one of the standardized sIRB questionnaires forms from the repository as a form of a questionnaire resource. The central IRB system receives the questionnaire response resource and renders/displays it to the Principal Investigator-PI (user). The PI enters and submits responses applicable to the selected standardized sIRB form. The submitted responses will be saved as questionnaire response resources on the Central IRB's FHIR server. The Central IRB will serve as a single source of truth for IRB Documents. The relying IRB system will send a RESTful request or implement a subscription resource to get most recent forms from the central IRB's FHIR server.
+
+
+<img src="sirb-dataflow.jpg" width="600"/> 
+
+
 
 ### Considerations for the Future
 During this trial, the Questionnaires are intended to be self-contained without the need to use any other resources such as Practitioner, ResearchSubject, AdverseEvent or Organization.
@@ -106,9 +107,6 @@ Also, appropriate FHIR resources for storage of the content of each complete for
 As this is a trial of the Questionnaires, decisions regarding how to populate some of the form data from existing standard FHIR resources implemented by potential study sites will need to be made in future work in order to achieve interoperability and integration with other systems for a more streamlined implementation.
 
 Capturing the provenance of the requests for approvals, approval decisions and reports would make for a more robust implementation if the forms are incorporated into a study management software system that has FHIR capabilities.
-
-
-
 
 
 
