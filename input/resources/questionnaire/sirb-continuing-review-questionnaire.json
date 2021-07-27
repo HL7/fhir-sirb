@@ -2,9 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-continuing-review-questionnaire",
 	"meta": {
-		"versionId": "10",
-		"lastUpdated": "2021-07-26T20:19:35.561+00:00",
-		"source": "#Yhy45FCRuCV4951F"
+		"versionId": "11",
+		"lastUpdated": "2021-07-27T01:17:16.909+00:00",
+		"source": "#PDN4TqjxfFHucRsF"
 	},
 	"extension": [
 		{
@@ -115,28 +115,28 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "not-open",
 								"display": "Not yet open"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "open-no-participants",
 								"display": "Open with no participants"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "open",
 								"display": "Open for enrollment"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "closed",
 								"display": "Closed to enrollment"
 							}
@@ -166,21 +166,21 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "complete",
 								"display": "All interventions complete"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "continue-meds",
 								"display": "Continuing interventions"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "continue-min-risk",
 								"display": "Continuing interventions - minimal risk"
 							}
@@ -345,49 +345,49 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "federal",
 								"display": "Federal"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "state",
 								"display": "State"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "industry",
 								"display": "Industry"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "foundation",
 								"display": "Foundation"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "institutional",
 								"display": "Institutional"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "departmental",
 								"display": "Departmental"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "other",
 								"display": "Other"
 							}
@@ -438,7 +438,7 @@
 									"question": "cr1.6",
 									"operator": "=",
 									"answerCoding": {
-										"system": "http://www.systemgoeshere.com",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "other"
 									}
 								}

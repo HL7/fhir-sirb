@@ -2,9 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-consent-questionnaire",
 	"meta": {
-		"versionId": "30",
-		"lastUpdated": "2021-07-26T20:19:35.618+00:00",
-		"source": "#IWTEuYBaNQASHmK9"
+		"versionId": "31",
+		"lastUpdated": "2021-07-27T01:17:16.914+00:00",
+		"source": "#HcBFvyiqP2O1Hi4i"
 	},
 	"extension": [
 		{
@@ -1144,14 +1144,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "http://www.systemgoeshere.com",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "RES",
 										"display": "Research"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "http://www.systemgoeshere.com",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "STDCR",
 										"display": "Standard of Care"
 									}
@@ -1293,14 +1293,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "http://www.systemgoeshere.com",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "PHYS",
 										"display": "Physical"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "http://www.systemgoeshere.com",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "NONPHYS",
 										"display": "Non-Physical"
 									}
@@ -1818,21 +1818,21 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "TRTNOTCOV",
 								"display": "Treatment not covered"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "RRICOV",
 								"display": "Research Related injury covered"
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "ACNOTCICOV",
 								"display": "Acute but not chronic injury covered"
 							}
@@ -2564,21 +2564,21 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "http://www.systemgoeshere.com",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "OTHINSTRES",
 										"display": "Researchers at other institutions"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "http://www.systemgoeshere.com",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "THISINSTRES",
 										"display": "Researchers outside the study team at this institution"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "http://www.systemgoeshere.com",
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 										"code": "EXTREGAUTH",
 										"display": "External Regulatory Authorities"
 									}
@@ -2794,14 +2794,14 @@
 					"answerOption": [
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "DEIDUSED",
 								"display": "Identifiers might be removed from private information or biospecimens, and this information could then be used for future research studies or distributed to another investigator for future research studies without additional informed consent."
 							}
 						},
 						{
 							"valueCoding": {
-								"system": "http://www.systemgoeshere.com",
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 								"code": "DEIDNOTUSED",
 								"display": "Information or biospecimens collected will not be used or distributed for future research studies, even if deidentified."
 							}
