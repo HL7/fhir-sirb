@@ -1,9 +1,9 @@
 {
 	"id": "hl7.fhir.us.sirb",
 	"meta": {
-		"versionId": "280",
-		"lastUpdated": "2021-07-27T06:44:19.008+00:00",
-		"source": "#Fjpq5sgivu8hcAwe"
+		"versionId": "281",
+		"lastUpdated": "2021-07-27T16:22:19.379+00:00",
+		"source": "#c65ngmJpKrU7RIR6"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -218,36 +218,6 @@
 			"title": "Single IRB Forms",
 			"generation": "markdown",
 			"page": [
-				{
-					"nameUrl": "consent.html",
-					"title": "Consent",
-					"generation": "markdown"
-				},
-				{
-					"nameUrl": "recruitment_materials.html",
-					"title": "Recruitment Materials",
-					"generation": "markdown"
-				},
-				{
-					"nameUrl": "medical_adverse_event.html",
-					"title": "Medical Adverse Event",
-					"generation": "markdown"
-				},
-				{
-					"nameUrl": "non-medical_adverse_event.html",
-					"title": "Non-Medical Adverse Event",
-					"generation": "markdown"
-				},
-				{
-					"nameUrl": "determination_letter.html",
-					"title": "Determination Letter",
-					"generation": "markdown"
-				},
-				{
-					"nameUrl": "continuing_review.html",
-					"title": "Continuing Review",
-					"generation": "markdown"
-				},
 				{
 					"nameUrl": "downloads.html",
 					"title": "Downloads",
