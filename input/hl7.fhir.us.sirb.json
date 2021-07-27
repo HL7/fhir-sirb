@@ -1,9 +1,9 @@
 {
 	"id": "hl7.fhir.us.sirb",
 	"meta": {
-		"versionId": "272",
-		"lastUpdated": "2021-07-26T20:42:06.721+00:00",
-		"source": "#3HBposbf9K2aHCLS"
+		"versionId": "273",
+		"lastUpdated": "2021-07-27T02:51:05.457+00:00",
+		"source": "#lkxFvxJFPgm9mwom"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -137,7 +137,7 @@
 					"reference": "Questionnaire/sirb-nonmedicalevent-questionnaire",
 					"display": "NonMedical Events"
 				},
-				"name": "NonMedical Events",
+				"name": "Adverse Non-Medical Event Questionnaire",
 				"description": "Reporting form for reportable Non-Medical Adverse Events",
 				"groupingId": "new-group1"
 			},
@@ -155,6 +155,7 @@
 				"reference": {
 					"reference": "QuestionnaireResponse/NME-QR"
 				},
+				"name": "Adverse Non-Medical Event Questionnaire Response",
 				"groupingId": "new-group2"
 			},
 			{
@@ -171,6 +172,7 @@
 				"reference": {
 					"reference": "QuestionnaireResponse/MEDICAL-AE-QR"
 				},
+				"name": "Adverse Medical Event Questionnaire Response",
 				"groupingId": "new-group2"
 			},
 			{
@@ -178,6 +180,7 @@
 				"reference": {
 					"reference": "QuestionnaireResponse/INITIATE-QR"
 				},
+				"name": "Initiate a Study Questionnaire Response",
 				"groupingId": "new-group2"
 			},
 			{
@@ -185,6 +188,7 @@
 				"reference": {
 					"reference": "QuestionnaireResponse/DETERMINATION-QR"
 				},
+				"name": "Determination Letter Questionnaire Response",
 				"groupingId": "new-group2"
 			},
 			{
@@ -192,6 +196,7 @@
 				"reference": {
 					"reference": "QuestionnaireResponse/RECRUITMENT-QR"
 				},
+				"name": "Recruitment Materials Questionnaire Response",
 				"groupingId": "new-group2"
 			},
 			{
@@ -199,6 +204,7 @@
 				"reference": {
 					"reference": "QuestionnaireResponse/RECRUIT-QR"
 				},
+				"name": "Recruit Questionnaire Response",
 				"groupingId": "new-group2"
 			}
 		],

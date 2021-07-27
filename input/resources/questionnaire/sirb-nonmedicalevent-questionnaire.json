@@ -2,9 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-nonmedicalevent-questionnaire",
 	"meta": {
-		"versionId": "8",
-		"lastUpdated": "2021-07-26T02:31:48.909+00:00",
-		"source": "#TiulkiLp65cxUt4C"
+		"versionId": "9",
+		"lastUpdated": "2021-07-27T02:22:44.671+00:00",
+		"source": "#GxnTt2MWvknGBINg"
 	},
 	"extension": [
 		{
@@ -912,14 +912,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "http://terminology.hl7.org/CodeSystem/v2-0136",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "http://terminology.hl7.org/CodeSystem/v2-0136",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -957,7 +957,7 @@
 									"question": "nme3.7.4",
 									"operator": "=",
 									"answerCoding": {
-										"system": "http://terminology.hl7.org/CodeSystem/v2-0136",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "Y"
 									}
 								}
@@ -2077,14 +2077,14 @@
 							"answerOption": [
 								{
 									"valueCoding": {
-										"system": "http://terminology.hl7.org/CodeSystem/v2-0136",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
 								},
 								{
 									"valueCoding": {
-										"system": "http://terminology.hl7.org/CodeSystem/v2-0136",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "N",
 										"display": "No"
 									}
@@ -2122,7 +2122,7 @@
 									"question": "nme3.17.4",
 									"operator": "=",
 									"answerCoding": {
-										"system": "http://terminology.hl7.org/CodeSystem/v2-0136",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "Y"
 									}
 								}

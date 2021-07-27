@@ -2,9 +2,9 @@
 	"resourceType": "CodeSystem",
 	"id": "temporarycodes",
 	"meta": {
-		"versionId": "4",
-		"lastUpdated": "2021-07-27T01:25:11.368+00:00",
-		"source": "#IuEUdVowJxQPTSbs",
+		"versionId": "7",
+		"lastUpdated": "2021-07-27T02:23:26.766+00:00",
+		"source": "#YHiN5v8wrlCclaHw",
 		"profile": [
 			"http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 		]
@@ -17,7 +17,7 @@
 		}
 	],
 	"version": "20160128",
-	"name": "temporarycodes",
+	"name": "TemporaryCodes",
 	"title": "Temporary Codes",
 	"status": "draft",
 	"experimental": true,
@@ -686,6 +686,244 @@
 			"code": "continue-intvnt",
 			"display": "Continuing interventions",
 			"definition": "Continuing interventions",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "continue-min-risk",
+			"display": "Continuing interventions - minimal risk",
+			"definition": "Continuing interventions - minimal risk",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "federal",
+			"display": "Federal",
+			"definition": "Federal",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "state",
+			"display": "State",
+			"definition": "State",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "industry",
+			"display": "Industry",
+			"definition": "Industry",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "foundation",
+			"display": "Foundation",
+			"definition": "Foundation",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "institutional",
+			"display": "Institutional",
+			"definition": "Institutional",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "departmental",
+			"display": "Departmental",
+			"definition": "Departmental",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "Other",
+			"display": "Other",
+			"definition": "Other",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "DBV",
+			"display": "Drug/Biologic/Vaccine",
+			"definition": "Drug/Biologic/Vaccine",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "DEV",
+			"display": "Device",
+			"definition": "Device",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "SBE",
+			"display": "Social/Behavioral/educational (SBE)",
+			"definition": "Social/Behavioral/educational (SBE)",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "PRO",
+			"display": "Procedural",
+			"definition": "Procedural",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "IND",
+			"display": "IND",
+			"definition": "IND",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "IDE",
+			"display": "IDE",
+			"definition": "IDE",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "COPI",
+			"display": "Co-Principal Investigator",
+			"definition": "Co-Principal Investigator",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "COI",
+			"display": "Co-Investigator",
+			"definition": "Co-Investigator",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "PD",
+			"display": "Program Director",
+			"definition": "Program Director",
 			"designation": [
 				{
 					"use": {

@@ -2,9 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-protocol-questionnaire",
 	"meta": {
-		"versionId": "31",
-		"lastUpdated": "2021-07-26T02:30:12.650+00:00",
-		"source": "#qDrJNT6BQRZW3Idz"
+		"versionId": "32",
+		"lastUpdated": "2021-07-27T02:32:59.301+00:00",
+		"source": "#vD3PoEipUd8YAGNU"
 	},
 	"extension": [
 		{
@@ -2501,7 +2501,7 @@
 											"question": "p4.1.8.3",
 											"operator": "=",
 											"answerCoding": {
-												"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+												"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 												"code": "N"
 											}
 										}

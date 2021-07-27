@@ -2,9 +2,9 @@
 	"resourceType": "QuestionnaireResponse",
 	"id": "NME-QR",
 	"meta": {
-		"versionId": "2",
-		"lastUpdated": "2021-07-26T02:32:42.951+00:00",
-		"source": "#ha9JFTKtIW1n0ChI"
+		"versionId": "3",
+		"lastUpdated": "2021-07-27T02:23:03.257+00:00",
+		"source": "#Eo51qLbujzofNeCw"
 	},
 	"questionnaire": "https://hl7.org/fhir/us/sirb/Questionnaire/sirb-nonmedicalevents-questionnaire",
 	"status": "completed",
@@ -311,7 +311,7 @@
 							"answer": [
 								{
 									"valueCoding": {
-										"system": "http://terminology.hl7.org/CodeSystem/v2-0239",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
@@ -644,7 +644,7 @@
 							"answer": [
 								{
 									"valueCoding": {
-										"system": "http://terminology.hl7.org/CodeSystem/v2-0239",
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
 										"code": "Y",
 										"display": "Yes"
 									}
