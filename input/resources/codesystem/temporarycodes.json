@@ -2,9 +2,9 @@
 	"resourceType": "CodeSystem",
 	"id": "temporarycodes",
 	"meta": {
-		"versionId": "3",
-		"lastUpdated": "2021-07-23T21:18:36.252+00:00",
-		"source": "#pFsrUxhFNBcCjC3W",
+		"versionId": "4",
+		"lastUpdated": "2021-07-27T01:25:11.368+00:00",
+		"source": "#IuEUdVowJxQPTSbs",
 		"profile": [
 			"http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 		]
@@ -12,7 +12,7 @@
 	"url": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 	"identifier": [
 		{
-			"system": "http://acme.com/identifiers/temporarycodes",
+			"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 			"value": "temporary-codes"
 		}
 	],
@@ -45,7 +45,7 @@
 			"designation": [
 				{
 					"use": {
-						"system": "http://acme.com/config/fhir/codesystems/tempoarycodes",
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
 						"code": "internal-label"
 					},
 					"value": "From ACME POC Testing"
