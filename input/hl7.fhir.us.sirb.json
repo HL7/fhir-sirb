@@ -1,9 +1,9 @@
 {
 	"id": "hl7.fhir.us.sirb",
 	"meta": {
-		"versionId": "289",
-		"lastUpdated": "2021-07-27T17:43:11.663+00:00",
-		"source": "#lgC21Mjrmugj7bRV"
+		"versionId": "290",
+		"lastUpdated": "2021-07-27T19:52:17.142+00:00",
+		"source": "#nL9C4UNojTxH2H0X"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -212,6 +212,14 @@
 				},
 				"name": "Temporary Codes",
 				"description": "This is a temporary codesystem capturing the custom codelists used across the forms."
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "ResearchStudy/ResearchStudy2858",
+					"display": "Double blind, placebo-controlled trial of a new class of arthritis medication"
+				},
+				"name": "Double blind, placebo-controlled trial of a new class of arthritis medication"
 			}
 		],
 		"page": {

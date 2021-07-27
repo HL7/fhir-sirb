@@ -1,0 +1,74 @@
+{
+	"resourceType": "ResearchStudy",
+	"id": "ResearchStudy2858",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2021-07-27T19:52:16.969+00:00",
+		"source": "#tXPaGcdH4FU5ZaYY"
+	},
+	"contained": [
+		{
+			"resourceType": "PlanDefinition",
+			"id": "plan_definition-2857",
+			"status": "draft"
+		},
+		{
+			"resourceType": "Practitioner",
+			"id": "practitioner-2857",
+			"name": [
+				{
+					"use": "official",
+					"text": "John Doe, IV, MD",
+					"family": "Doe",
+					"given": [
+						"John"
+					],
+					"suffix": [
+						"IV",
+						"MD"
+					]
+				}
+			]
+		}
+	],
+	"identifier": [
+		{
+			"use": "usual",
+			"type": {
+				"text": "The Questionnaire Response ID for the associated Initiate a Study FHIR Questionnaire Response"
+			},
+			"system": "https://www.example-fhir-server.com/hapi-fhir-jpaserver/fhir/QuestionnaireResponse",
+			"value": "QRID-2857"
+		},
+		{
+			"use": "usual",
+			"type": {
+				"text": "IRB Study Protocol Number assigned by the sIRB's IRB study database"
+			},
+			"value": "SUMC-1234567",
+			"assigner": {
+				"display": "Sample University Medical Center(SUMC)"
+			}
+		}
+	],
+	"title": "Double blind, placebo-controlled trial of a new class of arthritis medication",
+	"protocol": [
+		{
+			"reference": "#plan_definition-2857"
+		}
+	],
+	"status": "in-review",
+	"category": [
+		{
+			"text": "Interventional"
+		}
+	],
+	"keyword": [
+		{
+			"text": "NIH-2021-123456"
+		}
+	],
+	"principalInvestigator": {
+		"reference": "#practitioner-2857"
+	}
+}
