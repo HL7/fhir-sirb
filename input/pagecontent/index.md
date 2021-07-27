@@ -3,7 +3,20 @@
 Data standards to move data and documents from clinical research sites to a single ethics review board in support of the "NIH Policy on the Use of a Single Institutional Review Board for Multi-Site Research
 
 ### Background
-Launching a multi-site clinical research study is frequently a long and involved process that can delay the development of potentially effective clinical treatment. Ethics review and approval processes conducted by IRBs have been cited as a major contributor to delays in initiating multi-site studies. In response, the set of protections for research subjects in the code of federal regulations for human-subjects research (Common Rule, 45 CFR Part 46.114) was revised with a requirement that a single IRB be named when multiple sites are using the same protocol. Rather than each site waiting for approval of a study by its local IRB before enrolling subjects, a single IRB review will expedite approval and improve the timeline for study initiation and completion. Researchers commented about the redundancy of effort, additional costs, and administrative burdens that often lead to delays and imbalances in enrollment of research participants in multi-site clinical studies. The burden of tasks related to IRB approval, which most frequently must be completed manually at multiple clinical investigational sites, can also adversely impact site data quality and sustainability.
+Launching a multi-site clinical research study is frequently a long and involved process that can delay the development of potentially effective clinical treatment. Ethics review and approval processes conducted by IRBs have been cited as a major contributor to delays in initiating multi-site studies. In response, the set of protections for research subjects in the code of federal regulations for human-subjects research (Common Rule, 45 CFR Part 46.114) was revised with a requirement that a single IRB be named when multiple sites are using the same protocol. Rather than each site waiting for approval of a study by its local IRB before enrolling subjects, a single IRB review will expedite approval and improve the timeline for study initiation and completion. Researchers commented about the redundancy of effort, additional costs, and administrative burdens that often lead to delays and imbalances in enrollment of research participants in multi-site clinical studies. The burden of tasks related to IRB approval, which most frequently must be completed manually at multiple clinical investigational sites, can also adversely impact site data quality and sustainability.  Before creating the questionnaires, considerable effort was made to examine and compare the existing forms from a sample set of institutions. In arriving at the versions of the questionnaires in the IG, the content of the forms from the sample set were harmonized and rationalized in conjunction with the Common Rule provisions, where applicable.
+
+### Project Goals
+The project is a proof of concept in hopes of moving toward a national standard for the content of the research study forms in widespread use.  As institutions trial these forms, it is expected that the authors will receive considerable feedback on the content of the forms.  
+
+The intent of this project is to use the SDC features of the Questionnaire resource so that the research study forms are standardized for exchange between the sIRB and the relying institutions, with a national standard being established so that all sIRB studies will use the same content with the same level of granularity in their forms.
+
+Right now, research study forms in common use have large text boxes which are not easily integrated with the research study management software, as each text box contains too many different fields of data.  Our design of the forms is novel in that it separates concepts into separate questions, as individual questionnaire items.
+
+The end product of the project consists of the QuestionnaireResponses to be exchanged.  The forms are complete documents with a separate existence from any of the current FHIR resources. The form data elements should be considered in their entirety in the context of the complete document.  The data should be maintained in FHIR format for editing and transmission.
+
+The sIRB questionnaires, if adopted, would be replacing paper forms, word processing documents (eg. MS Word or Google Docs) or off-board study forms software that is not integrated with the institution’s existing research study management software.  The forms would also be independent of any particular form management software, allowing different sites to use the software of their choice so long as that software complies with the FHIR standard.
+
+
 
 ### Significance
 In lieu of ad hoc transfers of PDFs and other document formats via email or online submission, this project utilizes FHIR based standards to facilitate document exchange. A standards enabled process leveraged by software has the potential to significantly decrease the extensive manual tasks that have become associated with using a single IRB system. This use of FHIR standards to meet the need for an efficient exchange of data and documents will improve the operational efficiency. 
@@ -17,6 +30,37 @@ The sIRB implementation guide deals with creation and exchange of standardized s
 ### Assumptions
 The implementation guide assumes that the implementer has or will have a capability to send, receive, render and display FHIR questionnaires and questionnaire responses. Implementers may consider using free software such as NLM's FHIR Questionnaire rendering tool or design their own. Exchange of resources can be achieved by any of the FHIR messaging mechanisms. Please refer to FHIR standard documentation, open source implementations of FHIR specifications, and FHIR Messaging for additional information. 
 
+### Design Decisions
+Some of the relying sites may be small clinics or rural providers that do not have their own FHIR server.  They may be using paper forms at this time for any research study activities. To allow for easier adoption of the FHIR forms and make it more likely for the smaller sites to transition away from paper forms, it was decided to keep the technical and implementation burden very low.  
+
+In order to keep the implementation burden very low, the project was designed with the intent that the institutions would not be integrating the questionnaires with any of their existing research study management software.  Lists of the research studies, names of principal investigators, names of study participants and all study details would be stored, maintained and searched from within the existing research study management software that already exists at the institutions.  
+
+Some of the institutions may participate in a sIRB study only once every few years. Therefore, they may not want to devote time and money to implementing a large set of FHIR resources if they are not using a FHIR server already and if they can get the forms created and transmitted using only Questionnaire and QuestionnaireResponse resources. 
+
+Some of the sites may never implement a FHIR server, instead accessing the forms via web browser using the form viewers and FHIR servers maintained by the lead (sIRB) site. 
+
+
+A simple JavaScript-based website (sIRB on FHIR) was built as part of the project to demonstrate the ease of implementation.  The code is available at https://github.com/kirubel22/sIRB_Site_New and the website can be viewed at https://sirb-on-fhir.dev.cloud.duke.edu/.
+
+The Questionnaires were built with the free and open source NLM Form Builder available from https://lhcformbuilder.nlm.nih.gov/
+
+The Questionnaires and Questionnaire Responses are rendered with the free and open source LHC Forms software available from http://lhncbc.github.io/lforms/.  The sIRB on FHIR software uses the JavaScript version of the LHC Forms widget.
+
+
+All code sets are defined within the questionnaire form definitions.  No external valuesets are used. Where concepts in the forms aligned to concepts in existing Code Systems, the existing Code Systems were used to allow for interoperability with resources.  As the forms stabilize, the temporary codes defined in this implementation guide will be submitted to and migrate into other ‘official’ terminologies, such as SNOMED or HL7’s shared terminologies.
+
+
+
+
+MUST PROVIDE LINK TO OUR RESOURCE HERE
+
+As part of the proof of concept, the sIRB on FHIR software creates a ResearchStudy resource in the FHIR server for each research study.  A sample of a ResearchStudy resource created by the sIRB on FHIR software is included.  In the future, information from this resource can also be used to report study details to ClinicalTrials.gov.
+
+References to other resources (PlanDefinition and Practitioner) used by the ResearchStudy resource are ‘[contained](https://www.hl7.org/fhir/references.html#contained)’ references.  If an institution implements the sIRB questionnaires after a trial use, the best practice recommended is to use references to the full PlanDefinition and Practitioner resources.
+
+The use of the ResearchStudy resource is completely optional.  The official record at this time is the QuestionnaireResponse.  There is no expectation in the implementation that the software will use the ResearchStudy resource.
+
+
 ### Actors
 1. sIRB Form Repository: A form repository that stores standardized sIRB forms. IRB systems will request form templates from this repository.
 2. Central IRB Application: An IRB software system that a PI will access to retrieve forms to complete and submit.
@@ -28,7 +72,7 @@ The implementation guide assumes that the implementer has or will have a capabil
 
 In the workflow outlined below, a Central IRB system requests one of the standardized sIRB questionnaires forms from the repository as a form of a questionnaire resource. The central IRB system receives the questionnaire response resource and renders/displays it to the Principal Investigator-PI (user). The PI enters and submits responses applicable to the selected standardized sIRB form. The submitted responses will be saved as questionnaire response resources on the Central IRB's FHIR server. The Central IRB will serve as a single source of truth for IRB Documents. The relying IRB system will send a RESTful request or implement a subscription resource to get most recent forms from the central IRB's FHIR server.
 
-<table><tr><td><img src="sirb-dataflow.jpg" /></td></tr></table>
+![image of sirb dataflow](sirb-dataflow.jpg)
 
 ### Forms
 
@@ -43,6 +87,25 @@ Form (Link to Page) | Link to External Questionnaire Viewer
 [Non Medical Adverse Events](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-nonmedicalevent-questionnaire.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-nonmedicalevent-questionnaire.json)
 [Continuing Review](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-continuing-review-questionnaire.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-continuing-review-questionnaire.json)
 
+### Considerations for the Future
+During this trial, the Questionnaires are intended to be self-contained without the need to use any other resources such as Practitioner, ResearchSubject, AdverseEvent or Organization.
+
+After this implementation guide matures further - and because the data in the FHIR questionnaires is being captured in a standardized, structured way - it is expected that the larger institutions will want some or complete integration with their existing research study management software, which may or may not be FHIR-based. 
+
+One challenge is that although the forms utilize some data that can be found in other resources, much of the data contained in the forms does not currently have corresponding data elements in current FHIR resources. 
+
+Another challenge is that the primary purpose and scope of the sIRB forms is different from questionnaires that would be designed to capture data to capture study records using FHIR resources.
+
+Also, many of the existing resources serve different purposes and contexts than the sIRB forms.  The sIRB forms are essentially detailed requests for different types of approval and reports of study activities. 
+
+Nevertheless, the structured nature of the data capture lends itself well to extraction and storage of some of the form data into individual FHIR resources, should the institutions or their software vendors opt for this implementation.  
+
+Also, appropriate FHIR resources for storage of the content of each complete form as a unique document will need to be evaluated or developed in the next phases.
+
+
+As this is a trial of the Questionnaires, decisions regarding how to populate some of the form data from existing standard FHIR resources implemented by potential study sites will need to be made in future work in order to achieve interoperability and integration with other systems for a more streamlined implementation.
+
+Capturing the provenance of the requests for approvals, approval decisions and reports would make for a more robust implementation if the forms are incorporated into a study management software system that has FHIR capabilities.
 
 
 
