@@ -13,7 +13,7 @@
 			"version": "0.1.0",
 			"current": false,
 			"desc": "Initial STU Ballot",
-			"path": "https://hl7.org/fhir/us/sirb/2021Sep",
+			"path": "http://hl7.org/fhir/us/sirb/2021Sep",
 			"fhirversion": "4.0.1",
 			"sequence": "1",
 			"status": "ballot",

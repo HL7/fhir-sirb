@@ -4,10 +4,7 @@
 	"meta": {
 		"versionId": "2",
 		"lastUpdated": "2021-07-28T19:30:37.108+00:00",
-		"source": "#Sq2VNRdBGuGpbfk1",
-		"profile": [
-			"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
-		]
+		"source": "#Sq2VNRdBGuGpbfk1"
 	},
 	"questionnaire": "http://hl7.org/fhir/us/sirb/Questionnaire/sirb-consent-questionnaire",
 	"status": "completed",

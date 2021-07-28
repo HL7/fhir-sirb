@@ -4,10 +4,7 @@
 	"meta": {
 		"versionId": "2",
 		"lastUpdated": "2021-07-28T19:30:37.109+00:00",
-		"source": "#p17nsc0DW6GRC5C3",
-		"profile": [
-			"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
-		]
+		"source": "#p17nsc0DW6GRC5C3"
 	},
 	"questionnaire": "http://hl7.org/fhir/us/sirb/Questionnaire/sirb-continuing-review-questionnaire",
 	"status": "completed",

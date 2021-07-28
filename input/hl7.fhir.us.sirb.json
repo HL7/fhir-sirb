@@ -1,9 +1,9 @@
 {
 	"id": "hl7.fhir.us.sirb",
 	"meta": {
-		"versionId": "315",
-		"lastUpdated": "2021-07-28T21:24:46.420+00:00",
-		"source": "#U7xRqySvQX4c3OTh"
+		"versionId": "318",
+		"lastUpdated": "2021-07-28T23:32:08.145+00:00",
+		"source": "#FFPfg3alLFcWBuJB"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -160,7 +160,7 @@
 					"reference": "QuestionnaireResponse/PROTOCOL-QR"
 				},
 				"name": "Protocol Questionnaire Response",
-				"description": "Example of a submitted Protocol Questionnaire Response ",
+				"description": "Example of a submitted Protocol Questionnaire Response",
 				"groupingId": "new-group2"
 			},
 			{
@@ -232,7 +232,7 @@
 				"reference": {
 					"reference": "QuestionnaireResponse/CONSENT-QR"
 				},
-				"name": "Consent QR ",
+				"name": "Consent QR",
 				"description": "Description of Consent QR",
 				"groupingId": "new-group2"
 			},

@@ -2,9 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-continuing-review-questionnaire",
 	"meta": {
-		"versionId": "12",
-		"lastUpdated": "2021-07-28T19:57:43.761+00:00",
-		"source": "#tKoJfvkpOtJ41I6M"
+		"versionId": "13",
+		"lastUpdated": "2021-07-28T23:23:05.259+00:00",
+		"source": "#UTdKEx7U5IVXU7vh"
 	},
 	"extension": [
 		{
@@ -17,7 +17,7 @@
 			}
 		}
 	],
-	"url": "https://raw.githubusercontent.com/jdtopping/sIRB/master/input/resources/questionnaire/sirb-continuingreview-questionnaire.json",
+	"url": "http://hl7.org/fhir/us/sirb/Questionnaire/sirb-continuing-review-questionnaire",
 	"version": "0.1.0",
 	"name": "Continuing_review",
 	"title": "Continuing Review",
