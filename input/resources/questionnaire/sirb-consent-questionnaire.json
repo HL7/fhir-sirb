@@ -2,9 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-consent-questionnaire",
 	"meta": {
-		"versionId": "32",
-		"lastUpdated": "2021-07-28T19:30:37.115+00:00",
-		"source": "#JMGjwaUZdt9F13CX"
+		"versionId": "33",
+		"lastUpdated": "2021-07-28T19:44:09.072+00:00",
+		"source": "#gAsSIY93IlkUqw33"
 	},
 	"extension": [
 		{
@@ -1310,19 +1310,6 @@
 					]
 				},
 				{
-					"extension": [
-						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
-							"valueCodeableConcept": {
-								"coding": [
-									{
-										"system": "http://hl7.org/fhir/questionnaire-display-category",
-										"code": "instructions"
-									}
-								]
-							}
-						}
-					],
 					"linkId": "c12.2",
 					"text": "Risk Supplemental Text",
 					"type": "text",
