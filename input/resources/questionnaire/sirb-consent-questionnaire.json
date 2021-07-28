@@ -2,9 +2,9 @@
 	"resourceType": "Questionnaire",
 	"id": "sirb-consent-questionnaire",
 	"meta": {
-		"versionId": "31",
-		"lastUpdated": "2021-07-27T01:17:16.914+00:00",
-		"source": "#HcBFvyiqP2O1Hi4i"
+		"versionId": "32",
+		"lastUpdated": "2021-07-28T19:30:37.115+00:00",
+		"source": "#JMGjwaUZdt9F13CX"
 	},
 	"extension": [
 		{
@@ -547,7 +547,7 @@
 			"linkId": "c8",
 			"text": "Introduction and Statement of Research",
 			"type": "group",
-			"required": true,
+			"required": false,
 			"item": [
 				{
 					"linkId": "c8.1",

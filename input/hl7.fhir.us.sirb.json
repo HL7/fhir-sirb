@@ -1,9 +1,9 @@
 {
 	"id": "hl7.fhir.us.sirb",
 	"meta": {
-		"versionId": "308",
-		"lastUpdated": "2021-07-28T19:09:36.024+00:00",
-		"source": "#qkz5IRLIClTcutya"
+		"versionId": "310",
+		"lastUpdated": "2021-07-28T19:30:37.392+00:00",
+		"source": "#ZKpZBesqpYARVyi9"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -222,6 +222,8 @@
 				"reference": {
 					"reference": "QuestionnaireResponse/CONTINUING-REVIEW-QR"
 				},
+				"name": "Continuing Review Questionnaire Response",
+				"description": "Description of CR QR",
 				"groupingId": "new-group2"
 			},
 			{
@@ -229,7 +231,17 @@
 				"reference": {
 					"reference": "QuestionnaireResponse/CONSENT-QR"
 				},
+				"name": "Consent QR ",
+				"description": "Description of Consent QR",
 				"groupingId": "new-group2"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Questionnaire/POPULATE-sirb-determination-letter-questionnaire",
+					"display": "sIRB Determination Questionnaire"
+				},
+				"name": "sIRB Determination Questionnaire"
 			}
 		],
 		"page": {
