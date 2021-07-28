@@ -2,14 +2,22 @@
 	"resourceType": "ResearchStudy",
 	"id": "ResearchStudy2858",
 	"meta": {
-		"versionId": "1",
-		"lastUpdated": "2021-07-27T19:52:16.969+00:00",
-		"source": "#tXPaGcdH4FU5ZaYY"
+		"versionId": "2",
+		"lastUpdated": "2021-07-28T19:08:33.805+00:00",
+		"source": "#zj1czTsuUAVvoEBr"
 	},
 	"contained": [
 		{
 			"resourceType": "PlanDefinition",
 			"id": "plan_definition-2857",
+			"identifier": [
+				{
+					"use": "usual",
+					"system": "https://www.examplestudymanagementdb.org",
+					"value": "SUMC-1234567"
+				}
+			],
+			"name": "PlanDef2857",
 			"status": "draft"
 		},
 		{
@@ -43,7 +51,7 @@
 		{
 			"use": "usual",
 			"type": {
-				"text": "IRB Study Protocol Number assigned by the sIRB's IRB study database"
+				"text": "IRB Study Protocol Number assigned by the sIRB's external research study database"
 			},
 			"value": "SUMC-1234567",
 			"assigner": {
@@ -60,11 +68,23 @@
 	"status": "in-review",
 	"category": [
 		{
-			"text": "Interventional"
+			"coding": [
+				{
+					"system": "http://ncimeta.nci.nih.gov",
+					"code": "C98388",
+					"display": "Interventional Study"
+				}
+			]
 		}
 	],
 	"keyword": [
 		{
+			"coding": [
+				{
+					"system": "https://www.examplestudymanagementdb.org",
+					"code": "NIH-2021-123456"
+				}
+			],
 			"text": "NIH-2021-123456"
 		}
 	],

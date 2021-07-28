@@ -1,9 +1,9 @@
 {
 	"id": "hl7.fhir.us.sirb",
 	"meta": {
-		"versionId": "304",
-		"lastUpdated": "2021-07-27T22:28:44.478+00:00",
-		"source": "#LLT4JA5WcACBSDGh"
+		"versionId": "308",
+		"lastUpdated": "2021-07-28T19:09:36.024+00:00",
+		"source": "#qkz5IRLIClTcutya"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -58,6 +58,10 @@
 			{
 				"id": "new-group2",
 				"name": "Questionnaire Responses"
+			},
+			{
+				"id": "new-group3",
+				"name": "Research Study"
 			}
 		],
 		"resource": [
@@ -210,7 +214,22 @@
 					"reference": "ResearchStudy/ResearchStudy2858",
 					"display": "Double blind, placebo-controlled trial of a new class of arthritis medication"
 				},
-				"name": "Double blind, placebo-controlled trial of a new class of arthritis medication"
+				"name": "Double blind, placebo-controlled trial of a new class of arthritis medication",
+				"groupingId": "new-group3"
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "QuestionnaireResponse/CONTINUING-REVIEW-QR"
+				},
+				"groupingId": "new-group2"
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "QuestionnaireResponse/CONSENT-QR"
+				},
+				"groupingId": "new-group2"
 			}
 		],
 		"page": {
