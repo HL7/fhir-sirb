@@ -1,7 +1,6 @@
 ### Overview
 
 Data standards to move data and documents from clinical research sites to a single ethics review board in support of the "NIH Policy on the Use of a Single Institutional Review Board for Multi-Site Research
-
 ### Background
 Launching a multi-site clinical research study is frequently a long and involved process that can delay the development of potentially effective clinical treatment. Ethics review and approval processes conducted by IRBs have been cited as a major contributor to delays in initiating multi-site studies. In response, the set of protections for research subjects in the code of federal regulations for human-subjects research (Common Rule, 45 CFR Part 46.114) was revised with a requirement that a single IRB be named when multiple sites are using the same protocol. Rather than each site waiting for approval of a study by its local IRB before enrolling subjects, a single IRB review will expedite approval and improve the timeline for study initiation and completion. Researchers commented about the redundancy of effort, additional costs, and administrative burdens that often lead to delays and imbalances in enrollment of research participants in multi-site clinical studies. The burden of tasks related to IRB approval, which most frequently must be completed manually at multiple clinical investigational sites, can also adversely impact site data quality and sustainability.  Before creating the questionnaires, considerable effort was made to examine and compare the existing forms from a sample set of institutions. In arriving at the versions of the questionnaires in the IG, the content of the forms from the sample set were harmonized and rationalized in conjunction with the Common Rule provisions, where applicable.
 
@@ -115,9 +114,6 @@ These standards were developed by Duke University with assistance from Universit
 
 ### Dependencies
 These standards were developed based upon the [R4](http://hl7.org/fhir/R4/) FHIR version.
-
-
-
 
 
 
