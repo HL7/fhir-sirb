@@ -47,15 +47,20 @@ The Questionnaires and Questionnaire Responses are rendered with the free and op
 All code sets are defined within the questionnaire form definitions.  No external valuesets are used. Where concepts in the forms aligned to concepts in existing Code Systems, the existing Code Systems were used to allow for interoperability with resources.  As the forms stabilize, the temporary codes defined in this implementation guide will be submitted to and migrate into other ‘official’ terminologies, such as SNOMED or HL7’s shared terminologies.
 
 
-
-
-MUST PROVIDE LINK TO OUR RESOURCE HERE
-
-As part of the proof of concept, the sIRB on FHIR software creates a ResearchStudy resource in the FHIR server for each research study.  A sample of a ResearchStudy resource created by the sIRB on FHIR software is included.  In the future, information from this resource can also be used to report study details to ClinicalTrials.gov.
+As part of the proof of concept, the sIRB on FHIR software creates a ResearchStudy resource in the FHIR server for each research study.  A sample of a ResearchStudy resource created by the sIRB on FHIR software is [included](https://build.fhir.org/ig/HL7/fhir-sirb/ResearchStudy-ResearchStudy2858.html).  In the future, information from this resource can also be used to report study details to ClinicalTrials.gov.
 
 References to other resources (PlanDefinition and Practitioner) used by the ResearchStudy resource are ‘[contained](https://www.hl7.org/fhir/references.html#contained)’ references.  If an institution implements the sIRB questionnaires after a trial use, the best practice recommended is to use references to the full PlanDefinition and Practitioner resources.
 
 The use of the ResearchStudy resource is completely optional.  The official record at this time is the QuestionnaireResponse.  There is no expectation in the implementation that the software will use the ResearchStudy resource.
+
+###Populate
+The intention is that the 7 core forms will all be populatable using the data collected in the Initiate a Study Questionnaire.  The populate functionality will save time in data entry, improve data consistency and reduce typing errors.
+
+At this time, we have the preliminary metadata in the example [Determination Questionnaire with pre-population](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-POPULATE-sirb-determination-letter-questionnaire.html).  After it is more fully tested for SDC conformance to ensure it works properly, we will include the populate metadata in the remaining 6 questionnaires.
+
+If an institution is not using the populate functionality, then the Initiate a Study Questionnaire can be used to gather data to make a record of the research study in the ResearchStudy resource, to gather data to register the study with ClinicalTrials.gov  or it can be left out of the implementation altogether. 
+
+We rely on SDC for population purposes. We are using extensions from the SDC IG [CI build](https://build.fhir.org/ig/HL7/sdc ).
 
 
 ### Actors
@@ -64,10 +69,11 @@ The use of the ResearchStudy resource is completely optional.  The official reco
 3. Relying IRB Application: An IRB software that receives and renders completed and approved forms by the central IRB.
 
 ### Forms
-<img src="sirb FHIR forms.jpg" width="600"/>  
+[sIRB FHIR forms](sirb FHIR forms.jpg)
+
 
 Form (Link to Page) | Link to External Questionnaire Viewer
-[Intiate Study](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-initiate-study-questionnaire.html)| [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-initiate-study-questionnaire-questionnaire.json)
+[Intiate Study](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-initiate-study-questionnaire.html)| [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-initiate-study-questionnaire.html)
 [Protocol](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-protocol-questionnaire.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-protocol-questionnaire.json)
 [Consent](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-consent-questionnaire.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-consent-questionnaire.json)
 [Determination Letter](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-determination-letter-questionnaire.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-determination-letter-questionnaire.json)
@@ -80,8 +86,8 @@ Form (Link to Page) | Link to External Questionnaire Viewer
 
 In the workflow outlined below, a Central IRB system requests one of the standardized sIRB questionnaires forms from the repository as a form of a questionnaire resource. The central IRB system receives the questionnaire response resource and renders/displays it to the Principal Investigator-PI (user). The PI enters and submits responses applicable to the selected standardized sIRB form. The submitted responses will be saved as questionnaire response resources on the Central IRB's FHIR server. The Central IRB will serve as a single source of truth for IRB Documents. The relying IRB system will send a RESTful request or implement a subscription resource to get most recent forms from the central IRB's FHIR server.
 
+[sIRB dataflow](sirb-dataflow.jpg)
 
-<img src="sirb-dataflow.jpg" width="600"/> 
 
 
 
