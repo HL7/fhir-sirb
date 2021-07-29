@@ -21,7 +21,7 @@
 	"title": "Temporary Codes",
 	"status": "draft",
 	"experimental": true,
-	"date": "2016-01-28",
+	"date": "2021-07-23",
 	"publisher": "Filler",
 	"contact": [
 		{
@@ -34,7 +34,7 @@
 			]
 		}
 	],
-	"description": "This is a temporary codesystem capturing the custom codelists used across the forms.",
+	"description": "This is a temporary codesystem capturing the custom codelists used across the sIRB forms.",
 	"caseSensitive": true,
 	"content": "complete",
 	"concept": [
