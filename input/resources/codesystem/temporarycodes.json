@@ -2,9 +2,9 @@
 	"resourceType": "CodeSystem",
 	"id": "temporarycodes",
 	"meta": {
-		"versionId": "14",
-		"lastUpdated": "2021-07-28T19:57:43.738+00:00",
-		"source": "#zromzYz4qd2dRhUi",
+		"versionId": "15",
+		"lastUpdated": "2021-07-28T23:54:21.713+00:00",
+		"source": "#inxppP6S3hnSc9Nz",
 		"profile": [
 			"http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 		]
@@ -41,392 +41,1108 @@
 		{
 			"code": "INITIAL",
 			"display": "Initial",
-			"definition": "TBD"
+			"definition": "Initial",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From ACME POC Testing"
+				}
+			]
 		},
 		{
 			"code": "UPDATE",
 			"display": "Update",
-			"definition": "TBD"
+			"definition": "Update",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "INT",
 			"display": "Interventional",
-			"definition": "TBD"
+			"definition": "Interventional",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "OBS",
 			"display": "Observational",
-			"definition": "TBD"
+			"definition": "Observational",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "APPROVED",
 			"display": "Approved for reliance",
-			"definition": "TBD"
+			"definition": "Approved for reliance",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "POSSIBLE",
 			"display": "Potential/possible",
-			"definition": "TBD"
+			"definition": "Potential/possible",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "CANCELLED",
 			"display": "Cancelled or not participating",
-			"definition": "TBD"
+			"definition": "Cancelled or not participating",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "ONHOLD",
 			"display": "Temporarily on hold",
-			"definition": "TBD"
+			"definition": "Temporarily on hold",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "DENIED",
 			"display": "Denied reliance",
-			"definition": "TBD"
+			"definition": "Denied reliance",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "SFS",
 			"display": "Sponsor or Funding Source",
-			"definition": "TBD"
+			"definition": "Sponsor or Funding Source",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "CRO",
 			"display": "Contract Research Organization (CRO)",
-			"definition": "TBD"
+			"definition": "Contract Research Organization (CRO)",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "AR",
 			"display": "Accepts Review",
-			"definition": "TBD"
+			"definition": "Accepts Review",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "DR",
 			"display": "Denies Review",
-			"definition": "TBD"
+			"definition": "Denies Review",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "sIRB",
 			"display": "sIRB (Reviewing Site)",
-			"definition": "Site is the sIRB"
+			"definition": "Site is the sIRB",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "Relying",
 			"display": "Relying Site",
-			"definition": "Site is the Relying Site"
+			"definition": "Site is the Relying Site",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "VM",
 			"display": "Telephone and voice messages",
-			"definition": "TBD"
+			"definition": "Telephone and voice messages",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "VC",
 			"display": "Video Conferencing",
-			"definition": "TBD"
+			"definition": "Video Conferencing",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "EMAIL",
 			"display": "Email",
-			"definition": "TBD"
+			"definition": "Email",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "TXT",
 			"display": "Text messages/texting",
-			"definition": "TBD"
+			"definition": "Text messages/texting",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CoderSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "EHPRTL",
 			"display": "eHealth Portal messaging",
-			"definition": "TBD"
+			"definition": "eHealth Portal messaging",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "SA",
 			"display": "Study Agent",
-			"definition": "TBD"
+			"definition": "Study Agent",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "PLACEBO",
 			"display": "Placebo",
-			"definition": "TBD"
+			"definition": "Placebo",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "BSA",
 			"display": "Blinded Study Agent",
-			"definition": "TBD"
+			"definition": "Blinded Study Agent",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "PRMYDIS",
 			"display": "Primary disease",
-			"definition": "TBD"
+			"definition": "Primary disease",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "STDYPRO",
 			"display": "Study Procedure",
-			"definition": "TBD"
+			"definition": "Study Procedure",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "PRE",
 			"display": "Pre-existing condition",
-			"definition": "TBD"
+			"definition": "Pre-existing condition",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "UNDERLYINGDIS",
 			"display": "Underlying disease",
-			"definition": "TBD"
+			"definition": "Underlying disease",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "CONCMITMED",
 			"display": "Concomitant medication",
-			"definition": "TBD"
+			"definition": "Concomitant medication",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "OTHERCAUSE",
 			"display": "Other known or suspected cause",
-			"definition": "TBD"
+			"definition": "Other known or suspected cause",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "nochange",
 			"display": "No change in research activities",
-			"definition": "TBD"
+			"definition": "No change in research activities",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "stopped",
 			"display": "All research activities temporarily and voluntarily stopped for all participants",
-			"definition": "TBD"
+			"definition": "All research activities temporarily and voluntarily stopped for all participants",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "partial",
 			"display": "Partial voluntary hold on some research activities for all participants (explain below)",
-			"definition": "TBD"
+			"definition": "Partial voluntary hold on some research activities for all participants (explain below)",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "hold",
 			"display": "Voluntary hold on new participant enrollment only",
-			"definition": "TBD"
+			"definition": "Voluntary hold on new participant enrollment only",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "init",
 			"display": "Initial",
-			"definition": "TBD"
+			"definition": "Initial",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "followup",
 			"display": "Follow-up",
-			"definition": "TBD"
+			"definition": "Follow-up",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "completed",
 			"display": "Done, performed or completed",
-			"definition": "The action was done, performed or completed"
+			"definition": "The action was done, performed or completed",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "pending",
 			"display": "Pending - Currently under development",
-			"definition": "The action is in progress or status is pending"
+			"definition": "The action is in progress or status is pending",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "notundertaken",
 			"display": "Not done or undertaken",
-			"definition": "The action was not started and is not in progress"
+			"definition": "The action was not started and is not in progress",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "mla",
 			"display": "Adverse Non-Medical Event consisted of a missed lab or assessment by a participant (which does not jeopardize the study or increase risks to other participants)",
-			"definition": "TBD"
+			"definition": "Adverse Non-Medical Event was a missed lab or assessment by a participant (which does not jeopardize the study or increase risks to other participants)",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "mtd",
 			"display": "Adverse Non-Medical Event consisted of a missed treatment or dose by a participant (which does not jeopardize the study or increase risks to other participants",
-			"definition": "TBD"
+			"definition": "Adverse Non-Medical Event consisted of a missed treatment or dose by a participant (which does not jeopardize the study or increase risks to other participants",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "otherreason",
 			"display": "Other reason",
-			"definition": "TBD"
+			"definition": "Other reason",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "Update",
+			"display": "UPDATE",
+			"definition": "UPDATE",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "open",
 			"display": "Open for enrollment",
-			"definition": "TBD"
+			"definition": "Open for enrollment",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "closed",
 			"display": "Closed to enrollment",
-			"definition": "TBD"
+			"definition": "Closed to enrollment",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "not-open",
 			"display": "Not yet open",
-			"definition": "TBD"
+			"definition": "Not yet open",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "open-no-participants",
 			"display": "Open with no participants",
-			"definition": "TBD"
+			"definition": "Open with no participants",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "complete",
 			"display": "All interventions complete",
-			"definition": "TBD"
+			"definition": "All interventions complete",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "continue-intvnt",
 			"display": "Continuing interventions",
-			"definition": "TBD"
+			"definition": "Continuing interventions",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "continue-min-risk",
 			"display": "Continuing interventions - minimal risk",
-			"definition": "TBD"
+			"definition": "Continuing interventions - minimal risk",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "federal",
 			"display": "Federal",
-			"definition": "TBD"
+			"definition": "Federal",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "state",
 			"display": "State",
-			"definition": "TBD"
+			"definition": "State",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "industry",
 			"display": "Industry",
-			"definition": "TBD"
+			"definition": "Industry",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "foundation",
 			"display": "Foundation",
-			"definition": "TBD"
+			"definition": "Foundation",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "institutional",
 			"display": "Institutional",
-			"definition": "TBD"
+			"definition": "Institutional",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "departmental",
 			"display": "Departmental",
-			"definition": "TBD"
-		},
-		{
-			"code": "otherfund",
-			"display": "Other Funding Source",
-			"definition": "TBD"
+			"definition": "Departmental",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "Other",
 			"display": "Other",
-			"definition": "TBD"
+			"definition": "Other",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "DBV",
 			"display": "Drug/Biologic/Vaccine",
-			"definition": "TBD"
+			"definition": "Drug/Biologic/Vaccine",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "DEV",
 			"display": "Device",
-			"definition": "TBD"
+			"definition": "Device",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "SBE",
 			"display": "Social/Behavioral/educational (SBE)",
-			"definition": "TBD"
+			"definition": "Social/Behavioral/educational (SBE)",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "PRO",
 			"display": "Procedural",
-			"definition": "TBD"
+			"definition": "Procedural",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "IND",
 			"display": "IND",
-			"definition": "TBD"
+			"definition": "IND",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "IDE",
 			"display": "IDE",
-			"definition": "TBD"
+			"definition": "IDE",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "COPI",
 			"display": "Co-Principal Investigator",
-			"definition": "TBD"
+			"definition": "Co-Principal Investigator",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "COI",
 			"display": "Co-Investigator",
-			"definition": "TBD"
+			"definition": "Co-Investigator",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "PD",
 			"display": "Program Director",
-			"definition": "TBD"
+			"definition": "Program Director",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "RES",
 			"display": "Research",
-			"definition": "TBD"
+			"definition": "Research",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "STDCR",
 			"display": "Standard of Care",
-			"definition": "TBD"
+			"definition": "Standard of Care",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "PHYS",
 			"display": "Physical",
-			"definition": "TBD"
+			"definition": "Physical",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "NONPHYS",
 			"display": "Non-Physical",
-			"definition": "TBD"
+			"definition": "Non-Physical",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "TRTNOTCOV",
 			"display": "Treatment not covered",
-			"definition": "TBD"
+			"definition": "Treatment not covered",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "RRICOV",
 			"display": "Research Related injury covered",
-			"definition": "TBD"
+			"definition": "Research Related injury covered",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "ACNOTCICOV",
 			"display": "Acute but not chronic injury covered",
-			"definition": "TBD"
+			"definition": "Acute but not chronic injury covered",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "OTHINSTRES",
 			"display": "Researchers at other institutions",
-			"definition": "TBD"
+			"definition": "Researchers at other institutions",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "THISINSTRES",
 			"display": "Researchers outside the study team at this institution",
-			"definition": "TBD"
+			"definition": "Researchers outside the study team at this institution",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "EXTREGAUTH",
 			"display": "External Regulatory Authorities",
-			"definition": "TBD"
+			"definition": "External Regulatory Authorities",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "DEIDUSED",
 			"display": "Identifiers might be removed from private information or biospecimens, and this information could then be used for future research studies or distributed to another investigator for future research studies without additional informed consent.",
-			"definition": "TBD"
+			"definition": "Identifiers might be removed from private information or biospecimens, and this information could then be used for future research studies or distributed to another investigator for future research studies without additional informed consent.",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "DEIDNOTUSED",
 			"display": "Information or biospecimens collected will not be used or distributed for future research studies, even if deidentified.",
-			"definition": "TBD"
+			"definition": "Information or biospecimens collected will not be used or distributed for future research studies, even if deidentified.",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		},
 		{
 			"code": "continue-meds",
 			"display": "Continuing interventions",
-			"definition": "TBD"
+			"definition": "Continuing interventions",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
+		},
+		{
+			"code": "other",
+			"display": "Other",
+			"definition": "Other",
+			"designation": [
+				{
+					"use": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "internal-label"
+					},
+					"value": "From Paragon Labs"
+				}
+			]
 		}
 	]
 }
