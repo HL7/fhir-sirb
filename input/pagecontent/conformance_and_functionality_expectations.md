@@ -4,9 +4,18 @@ The exchange framework used is the "[RESTful FHIR](https://www.hl7.org/fhir/http
 
 **Host of the FHIR server (generally the sIRB)**
 FHIR server compliant with FHIR 4.0 and SDC
-Questionnaire: SHALL support **[search](https://www.hl7.org/fhir/http.html#search)** by url, version and/or status.  MAY also support search by _lastUpdated
-QuestionnaireResponse: SHALL support **[create](https://www.hl7.org/fhir/http.html#create)** and **[update](https://www.hl7.org/fhir/http.html#update)** with version-checking.  SHALL also support **[search](https://www.hl7.org/fhir/http.html#search)** by questionnaire, author and _lastUpdated.  MAY support **[patch](https://www.hl7.org/fhir/http.html#patch)**
-ResearchStudy: MAY support **[create](https://www.hl7.org/fhir/http.html#create)** and **[update](https://www.hl7.org/fhir/http.html#update)** with version-checking.  MAY also support **[search](https://www.hl7.org/fhir/http.html#search)** by identifier
+Questionnaire: 
+SHALL support **[search](https://www.hl7.org/fhir/http.html#search)** by url, version and/or status.  
+MAY also support search by _lastUpdated
+
+QuestionnaireResponse: 
+SHALL support **[create](https://www.hl7.org/fhir/http.html#create)** and **[update](https://www.hl7.org/fhir/http.html#update)** with version-checking.  
+SHALL also support **[search](https://www.hl7.org/fhir/http.html#search)** by questionnaire, author and _lastUpdated.  
+MAY support **[patch](https://www.hl7.org/fhir/http.html#patch)**
+
+ResearchStudy: 
+MAY support **[create](https://www.hl7.org/fhir/http.html#create)** and **[update](https://www.hl7.org/fhir/http.html#update)** with version-checking.  
+MAY also support **[search](https://www.hl7.org/fhir/http.html#search)** by identifier
 
 
 
