@@ -1,3 +1,1 @@
-This questionnaire collects information about any adverse events requiring reporting to the sIRB.
-
-[Medical Adverse Event (click to view)](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/jdtopping/sIRB/master/input/resources/questionnaire/sirb-medical-adverse-event-questionnaire.json)
+The Adverse Events Questionnaire is intended to create a Medical Adverse Event Report to the sIRB to notify them of the Medical Adverse Event, the medical description of the event, the resolution of the event, whether there were associated protocol violations and the relationship of the medical event to the study agent.
