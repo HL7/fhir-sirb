@@ -1,9 +1,9 @@
 {
 	"id": "hl7.fhir.us.sirb",
 	"meta": {
-		"versionId": "326",
-		"lastUpdated": "2021-07-29T01:56:29.202+00:00",
-		"source": "#yAnZwnMp2pbfgGZN"
+		"versionId": "327",
+		"lastUpdated": "2021-07-29T02:12:52.835+00:00",
+		"source": "#OJG6vnoAnYKVquJk"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
