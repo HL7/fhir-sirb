@@ -1,3 +1,1 @@
-This questionnaire collects information required in the production of a determination letter. 
-
-[Determination Letter (click to view)](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/jdtopping/sIRB/master/input/resources/questionnaire/sirb-determination-questionnaire.json)
+This questionnaire collects information required in the production of a determination letter. These data are used to send a Determination Letter Report to each site when a decision is made regarding the institution’s approval to serve as a relying site.
