@@ -1,0 +1,1 @@
+The Consent Form Questionnaire creates the exact Consent Form content word-for-word that will be shown to the sIRB’s Institutional Review Board to be approved to use during the study.  The rendering and pdf format created by the software are also provided to the sIRB to be approved. 
