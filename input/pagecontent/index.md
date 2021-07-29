@@ -54,7 +54,7 @@ References to other resources (PlanDefinition and Practitioner) used by the Rese
 
 The use of the ResearchStudy resource is completely optional.  The official record at this time is the QuestionnaireResponse.  There is no expectation in the implementation that the software will use the ResearchStudy resource.
 
-###Populate
+### Populate
 The intention is that the 7 core forms will all be populatable using the data collected in the Initiate a Study Questionnaire.  The populate functionality will save time in data entry, improve data consistency and reduce typing errors.
 
 At this time, we have the preliminary metadata in the example [Determination Questionnaire with pre-population](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-POPULATE-sirb-determination-letter-questionnaire.html).  After it is more fully tested for SDC conformance to ensure it works properly, we will include the populate metadata in the remaining 6 questionnaires.
