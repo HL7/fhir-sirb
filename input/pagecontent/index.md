@@ -1,12 +1,12 @@
 Data standards to move data and documents from clinical research sites to a single ethics review board in support of the "NIH Policy on the Use of a Single Institutional Review Board for Multi-Site Research
 ### Background
-Launching a multi-site clinical research study is frequently a long and involved process that can delay the development of potentially effective clinical treatment. Ethics review and approval processes conducted by IRBs have been cited as a major contributor to delays in initiating multi-site studies. In response, the set of protections for research subjects in the code of federal regulations for human-subjects research (Common Rule, 45 CFR Part 46.114) was revised with a requirement that a single IRB be named when multiple sites are using the same protocol. Rather than each site waiting for approval of a study by its local IRB before enrolling subjects, a single IRB review will expedite approval and improve the timeline for study initiation and completion. Researchers commented about the redundancy of effort, additional costs, and administrative burdens that often lead to delays and imbalances in enrollment of research participants in multi-site clinical studies. The burden of tasks related to IRB approval, which most frequently must be completed manually at multiple clinical investigational sites, can also adversely impact site data quality and sustainability.  Before creating the questionnaires, considerable effort was made to examine and compare the existing forms from a sample set of institutions. In arriving at the versions of the questionnaires in the IG, the content of the forms from the sample set were harmonized and rationalized in conjunction with the Common Rule provisions, where applicable.
+Launching a multi-site clinical research study is frequently a long and involved process that can delay the development of potentially effective clinical treatment. Ethics review and approval processes conducted by IRBs have been cited as a major contributor to delays in initiating multi-site studies. In response, the set of protections for research subjects in the code of federal regulations for human-subjects research (Common Rule, 45 CFR Part 46.114) was revised with a requirement that a single IRB be named when multiple sites are using the same protocol. Rather than each site waiting for approval of a study by its local IRB before enrolling subjects, a single IRB review will expedite approval and improve the timeline for study initiation and completion. Researchers commented about the redundancy of effort, additional costs, and administrative burdens that often lead to delays and imbalances in enrollment of research participants in multi-site clinical studies. Before creating the questionnaires, considerable effort was made to examine and compare the existing forms from a sample set of institutions. In arriving at the versions of the questionnaires in the IG, the content of the forms from the sample set were harmonized and rationalized in conjunction with the Common Rule provisions, where applicable.
 
 ### Project Goals
 The project is a proof of concept in hopes of moving toward a national standard for the content of the research study forms in widespread use.  As institutions trial these forms, it is expected that the authors will receive considerable feedback on the content of the forms.  
 
 The intent of this project is to use the SDC features of the Questionnaire resource so that the research study forms are standardized for exchange between the sIRB and the relying institutions, with a national standard being established so that all sIRB studies will use the same content with the same level of granularity in their forms.
-[Reviewing and Relying Sites](Cooperative Research Terminology.jpg)
+![Reviewing and Relying Sites](Cooperative Research Terminology.jpg)
 
 Right now, research study forms in common use have large text boxes which are not easily integrated with the research study management software, as each text box contains too many different fields of data.  Our design of the forms is novel in that it separates concepts into separate questions, as individual questionnaire items.
 
@@ -62,7 +62,7 @@ At this time, we have the preliminary metadata in the example [Determination Que
 If an institution is not using the populate functionality, then the Initiate a Study Questionnaire can be used to gather data to make a record of the research study in the ResearchStudy resource, to gather data to register the study with ClinicalTrials.gov  or it can be left out of the implementation altogether. 
 
 We rely on SDC for population purposes. We are using extensions from the SDC IG [CI build](https://build.fhir.org/ig/HL7/sdc ).  We utilized unpublished content for the answerExpression extension.  Due to this, there will be an error message in the sIRB IG until the SDC updates their published version.
-[Populate Process Flow](populate process flow.jpg)
+![Populate Process Flow](Populate Process Flow.jpg)
 
 ### Actors
 1. sIRB Form Repository: A form repository that stores standardized sIRB forms. IRB systems will request form templates from this repository.
@@ -70,7 +70,7 @@ We rely on SDC for population purposes. We are using extensions from the SDC IG 
 3. Relying IRB Application: An IRB software that receives and renders completed and approved forms by the central IRB.
 
 ### Forms
-[sIRB FHIR forms](sirb FHIR forms.jpg)
+![sIRB FHIR forms](sirb FHIR forms.jpg)
 
 
 Form (Link to Page) | Link to External Questionnaire Viewer
@@ -87,7 +87,7 @@ Form (Link to Page) | Link to External Questionnaire Viewer
 
 In the workflow outlined below, a Central IRB system requests one of the standardized sIRB questionnaires forms from the repository as a form of a questionnaire resource. The central IRB system receives the questionnaire response resource and renders/displays it to the Principal Investigator-PI (user). The PI enters and submits responses applicable to the selected standardized sIRB form. The submitted responses will be saved as questionnaire response resources on the Central IRB's FHIR server. The Central IRB will serve as a single source of truth for IRB Documents. The relying IRB system will send a RESTful request or implement a subscription resource to get most recent forms from the central IRB's FHIR server.
 
-[sIRB dataflow](sirb-dataflow.jpg)
+![sIRB dataflow](sirb-dataflow.jpg)
 
 
 
