@@ -594,7 +594,7 @@
 							"valueExpression" : {
 								"language" : "text/fhirpath",
 								"name" : "valueSelected-RelyingSite",
-								"expression" : ""
+								"expression" : "%resource.item.item.item.item.where(linkId = 'dl2.3.1.1').answer.value"
 							}
 						}
 					],
