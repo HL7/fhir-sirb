@@ -88,6 +88,13 @@ Form (Link to Page) | Link to External Questionnaire Viewer
 In the workflow outlined below, a Central IRB system requests one of the standardized sIRB questionnaires forms from the repository as a form of a questionnaire resource. The central IRB system receives the questionnaire response resource and renders/displays it to the Principal Investigator-PI (user). The PI enters and submits responses applicable to the selected standardized sIRB form. The submitted responses will be saved as questionnaire response resources on the Central IRB's FHIR server. The Central IRB will serve as a single source of truth for IRB Documents. The relying IRB system will send a RESTful request or implement a subscription resource to get most recent forms from the central IRB's FHIR server.
 
 ![sIRB dataflow](sirb-dataflow.jpg)
+Number 1, The software, whether our sIRB on FHIR software or the commercial IRB software at the sIRB, requests the official sIRB Questionnaire from the FHIR File Server at the central repository responsible for maintaining the official FHIR Questionnaires.
+Number 2, The FHIR Questionnaire is transmitted to the sIRB via the Internet to the FHIR File server associated with the IRB sofrware.
+Number 3 The IRB software at the sIRB processes the information in the FHIR Questionnaire and creates the Data Collection Form.  This form is then presented to the user.
+Number 4 After the study coordinator inputs the data and presses the “Submit” button, the data are saved into a structured FHIR Questionnaire Response and stored in the FHIR File Server at the sIRB.
+Number 5 The data  captured as a FHIR Questionnaire Response is rendered by the IRB software in a user-friendly End Result Display.  So this is the viewing of the data by reviewers at the IRB or other staff in a web browser, pdf, or within the custom IRB software. 
+Number 6, After the data is reviewed and finalized, the FHIR Questionnaire Response is transmitted over the Internet to the Relying IRB’s FHIR File Server for use within their systems.
+Number 7, Each of the relying IRBs can use their own software (whether sIRB on FHIR or a commercial vendor and render display friendly End Result Displays for their users.
 
 
 
