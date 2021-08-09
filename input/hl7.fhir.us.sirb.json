@@ -76,7 +76,7 @@
 					"display": "Initiate a Study Questionnaire"
 				},
 				"name": "Initiate a Study Questionnaire",
-				"description": "Form for collecting initial common fields used across IRB forms",
+				"description": "This questionnaire serves as an initial collection form for recurring data elements that are present in the other forms.  These other forms will then subsequently prepopulate with these data to minimize data entry time and errors.",
 				"groupingId": "new-group1"
 			},
 			{
@@ -86,7 +86,7 @@
 					"display": "Protocol Questionnaire"
 				},
 				"name": "Protocol Questionnaire",
-				"description": "Questionnaire for collecting Protocol information",
+				"description": "The Protocol Questionnaire is used by the Principal Investigator and/or the Study Coordinator to justify the study and request the approval for the study.  Contents include a synopsis for non-technical board members and a detailed protocol discussion.  Other important sections of form requesting approval for the protocol include work history of the researchers, risks to university personnel performing the research, risk mitigations being undertaken by the researchers, long discussions of the existing body of knowledge and explanations of how the study can be rationalized in light of the existing knowledge on this study topic.",
 				"groupingId": "new-group1"
 			},
 			{
@@ -96,7 +96,7 @@
 					"display": "Consent Questionnaire"
 				},
 				"name": "Consent Questionnaire",
-				"description": "Form for collecting information for creation of a consent document.",
+				"description": "The Consent Form Questionnaire creates the exact Consent Form content word-for-word that will be shown to the sIRB’s Institutional Review Board to be approved to use during the study.  The rendering and pdf format created by the software are also provided to the sIRB to be approved.",
 				"groupingId": "new-group1"
 			},
 			{
@@ -106,7 +106,7 @@
 					"display": "Recruitment Materials Questionnaire"
 				},
 				"name": "Recruitment Materials Questionnaire",
-				"description": "Reporting form for Recruitment Materials.",
+				"description": "The Recruitment Materials Form is used to seek approval from the sIRB to use the specified recruitment materials (at the requested time, place, duration and medium) during the study and for the methods of communication that are proposed for responding to the study participants",
 				"groupingId": "new-group1"
 			},
 			{
@@ -116,7 +116,7 @@
 					"display": "Determination Letter Questionnaire"
 				},
 				"name": "Determination Letter Questionnaire",
-				"description": "Reporting form for a Determination Letter",
+				"description": "This questionnaire collects information required in the production of a determination letter. These data are used to send a Determination Letter Report to each site when a decision is made regarding the institution’s approval to serve as a relying site.",
 				"groupingId": "new-group1"
 			},
 			{
@@ -126,7 +126,7 @@
 					"display": "Continuing Review Questionnaire"
 				},
 				"name": "Continuing Review Questionnaire",
-				"description": "Reporting form for Continuing Review.",
+				"description": "The Continuing Review Questionnaire collects data used in a report which is then provided to the sIRB on a regular basis so that continued activity on the study can be reviewed.",
 				"groupingId": "new-group1"
 			},
 			{
@@ -136,7 +136,7 @@
 					"display": "Adverse Medical Event Questionnaire"
 				},
 				"name": "Adverse Medical Event Questionnaire",
-				"description": "Reporting form for reportable Medical Adverse Events",
+				"description": "The Adverse Events Questionnaire is intended to create a Medical Adverse Event Report to the sIRB to notify them of the Medical Adverse Event, the medical description of the event, the resolution of the event, whether there were associated protocol violations and the relationship of the medical event to the study agent.",
 				"groupingId": "new-group1"
 			},
 			{
@@ -146,7 +146,7 @@
 					"display": "NonMedical Events"
 				},
 				"name": "Adverse Non-Medical Event Questionnaire",
-				"description": "Reporting form for reportable Non-Medical Adverse Events",
+				"description": "The Non-Medical Adverse Questionnaire is intended to create a Non-Medical Adverse Event Report to the sIRB.  An example of a Non-Medical Adverse Event is the inadvertent disclosure to several participants that they are receiving the placebo in a blind study.  The Non-Medical Adverse Questionnaire captures details for the report such as the root cause of the event, the corrective action plan and associated changes to the protocol or consent form as a result of the event.",
 				"groupingId": "new-group1"
 			},
 			{
@@ -173,7 +173,7 @@
 					"reference": "QuestionnaireResponse/MEDICAL-AE-QR"
 				},
 				"name": "Adverse Medical Event Questionnaire Response",
-				"description": "Adverse Medical Event Questionnaire Response",
+				"description": "Example of an Adverse Medical Event Questionnaire Response",
 				"groupingId": "new-group2"
 			},
 			{
