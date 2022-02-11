@@ -1,3211 +1,3693 @@
 {
-	"resourceType": "Questionnaire",
-	"id": "sirb-recruitment-materials-questionnaire",
-	"meta": {
-		"versionId": "14",
-		"lastUpdated": "2021-07-25T19:43:52.228+00:00",
-		"source": "#FuiyLAatHKRZGbor"
+	"resourceType" : "Questionnaire",
+	"id" : "V2POPULATE-sirb-recruitment-materials-questionnaire",
+	"meta" : {
+		"versionId" : "6",
+		"lastUpdated" : "2022-01-17T17:13:48.845+00:00",
+		"source" : "#hwhScbPPQ1RaFAAI"
 	},
-	"extension": [
+	"extension" : [
 		{
-			"url": "http://hl7.org/fhir/StructureDefinition/variable",
-			"valueExpression": {
-				"description": "response to get the data from",
-				"name": "lookupInitiateStudy",
-				"language": "application/x-fhir-query",
-				"expression": "https://docr-fhir.dev.cloud.duke.edu/hapi-fhir-jpaserver/fhir/QuestionnaireResponse/QRIDInitiateStudy"
+			"url" : "http://hl7.org/fhir/StructureDefinition/variable",
+			"valueExpression" : {
+				"description" : "response to get the data from",
+				"name" : "lookupInitiateStudy",
+				"language" : "application/x-fhir-query",
+				"expression" : "https://docr-fhir.dev.cloud.duke.edu/hapi-fhir-jpaserver/fhir/QuestionnaireResponse/QRIDInitiateStudy"
+			}
+		},
+		{
+			"url" : "http://hl7.org/fhir/StructureDefinition/variable",
+			"valueExpression" : {
+				"description" : "submission type (overall study or site-specific)",
+				"name" : "overallRMForm",
+				"language" : "text/fhirpath",
+				"expression" : "%resource.descendants().where(linkId = 'rm9.1').answer.valueCoding.code"
+			}
+		},
+		{
+			"url" : "http://hl7.org/fhir/StructureDefinition/variable",
+			"valueExpression" : {
+				"description" : "site that this recruitment materials form pertains to",
+				"name" : "relyingSiteForForm",
+				"language" : "text/fhirpath",
+				"expression" : "%resource.descendants().where(linkId = 'rm9.2').answer.valueCoding.display"
 			}
 		}
 	],
-	"url": "http://hl7.org/fhir/us/sirb/Questionnaire/sirb-recruitment-materials-questionnaire",
-	"version": "0.1.0",
-	"name": "RecruitmentMaterials",
-	"title": "Recruitment Materials",
-	"status": "draft",
-	"experimental": false,
-	"subjectType": [
-		"ResearchStudy"
-	],
-	"item": [
+	"url" : "http://hl7.org/fhir/us/sirb/Questionnaire/POPULATE-sirb-recruitment-materials-questionnaire",
+	"version" : "0.1.0",
+	"name" : "RecruitmentMaterials",
+	"title" : "Recruitment Materials",
+	"status" : "draft",
+	"experimental" : false,
+	"subjectType" : [ "ResearchStudy" ],
+	"item" : [
 		{
-			"linkId": "rm1",
-			"text": "Research Study",
-			"type": "group",
-			"required": false,
-			"item": [
+			"linkId" : "rm1",
+			"text" : "Research Study",
+			"_text" : {
+				"extension" : [
+					{
+						"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+						"valueString" : "color:#274e90; font-size: 150%"
+					}
+				]
+			},
+			"type" : "group",
+			"required" : false,
+			"item" : [
 				{
-					"linkId": "rm1.1",
-					"text": "Study Title",
-					"type": "string",
-					"required": false,
-					"item": [
+					"extension" : [
 						{
-							"extension": [
-								{
-									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-									"valueCodeableConcept": {
-										"coding": [
-											{
-												"system": "http://hl7.org/fhir/questionnaire-item-control",
-												"code": "help"
-											}
-										]
-									}
-								}
-							],
-							"linkId": "rm1.1_help",
-							"text": "Short Title of the Research Study intended for the lay audience",
-							"type": "display"
-						}
-					]
-				},
-				{
-					"linkId": "rm1.2",
-					"text": "IRB Protocol Number",
-					"type": "string",
-					"required": false,
-					"item": [
-						{
-							"extension": [
-								{
-									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-									"valueCodeableConcept": {
-										"coding": [
-											{
-												"system": "http://hl7.org/fhir/questionnaire-item-control",
-												"code": "help"
-											}
-										]
-									}
-								}
-							],
-							"linkId": "rm1.2_help",
-							"text": "IRB number assigned",
-							"type": "display"
-						}
-					]
-				}
-			]
-		},
-		{
-			"linkId": "rm2",
-			"text": "Study Institution for which Recruitment Materials are being provided",
-			"type": "group",
-			"required": false,
-			"repeats": false,
-			"readOnly": false,
-			"item": [
-				{
-					"linkId": "rm2.1",
-					"text": "Institution Name",
-					"type": "string",
-					"required": true
-				},
-				{
-					"linkId": "rm2.2",
-					"text": "City",
-					"type": "string",
-					"required": true
-				},
-				{
-					"linkId": "rm2.3",
-					"text": "State",
-					"type": "string",
-					"required": true
-				},
-				{
-					"linkId": "rm2.4",
-					"text": "Country",
-					"type": "string",
-					"required": true
-				},
-				{
-					"extension": [
-						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-							"valueCodeableConcept": {
-								"coding": [
-									{
-										"system": "http://hl7.org/fhir/questionnaire-item-control",
-										"code": "drop-down",
-										"display": "Drop down"
-									}
-								],
-								"text": "Drop down"
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-initialExpression",
+							"valueExpression" : {
+								"language" : "text/fhirpath",
+								"expression" : "%lookupInitiateStudy.descendants().where(linkId = 'in1.2').answer.value"
 							}
 						}
 					],
-					"linkId": "rm2.5",
-					"text": "Is this institution the sIRB (Reviewing Site) or a Relying Site?",
-					"type": "choice",
-					"required": true,
-					"answerOption": [
+					"linkId" : "rm1.1",
+					"text" : "Study Title",
+					"type" : "string",
+					"required" : false,
+					"item" : [
 						{
-							"valueCoding": {
-								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
-								"code": "sIRB",
-								"display": "sIRB (Reviewing Site)"
-							}
-						},
+							"extension" : [
+								{
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
+											{
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help"
+											}
+										]
+									}
+								}
+							],
+							"linkId" : "rm1.1_help",
+							"text" : "Short Title of the Research Study intended for the lay audience",
+							"type" : "display"
+						}
+					]
+				},
+				{
+					"extension" : [
 						{
-							"valueCoding": {
-								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
-								"code": "Relying",
-								"display": "Relying Site"
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-initialExpression",
+							"valueExpression" : {
+								"language" : "text/fhirpath",
+								"expression" : "%lookupInitiateStudy.descendants().where(linkId = 'in1.3').answer.value"
 							}
+						}
+					],
+					"linkId" : "rm1.2",
+					"text" : "IRB Protocol Number",
+					"type" : "string",
+					"required" : false,
+					"item" : [
+						{
+							"extension" : [
+								{
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
+											{
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help"
+											}
+										]
+									}
+								}
+							],
+							"linkId" : "rm1.2_help",
+							"text" : "IRB number assigned",
+							"type" : "display"
 						}
 					]
 				}
 			]
 		},
 		{
-			"linkId": "rm3",
-			"text": "Site Principal Investigator for the Site for which Recruitment Materials are being submitted",
-			"type": "group",
-			"required": false,
-			"repeats": false,
-			"readOnly": false,
-			"item": [
+			"linkId" : "rm9",
+			"text" : "Submission Type and Relying Site Selection (if applicable)",
+			"_text" : {
+				"extension" : [
+					{
+						"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+						"valueString" : "color:#274e90; font-size: 150%"
+					}
+				]
+			},
+			"type" : "group",
+			"required" : false,
+			"repeats" : false,
+			"readOnly" : false,
+			"item" : [
 				{
-					"extension": [
+					"linkId" : "rm9.1",
+					"text" : "Is this Recruitment Materials Form being submitted to request approval for the recruitment materials for the overall study?",
+					"type" : "choice",
+					"required" : true,
+					"answerOption" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-							"valueCodeableConcept": {
-								"coding": [
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y",
+								"display" : "Yes"
+							}
+						},
+						{
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "N",
+								"display" : "No"
+							}
+						}
+					],
+					"item" : [
+						{
+							"extension" : [
+								{
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
+											{
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help"
+											}
+										]
+									}
+								}
+							],
+							"linkId" : "rm9.1_help",
+							"text" : "The Recruitment Materials Form should be submitted to have the recruitment materials for the overall study in general reviewed and approved. Later, a Recruitment Materials Form that is customized to each specific relying site should be submitted for each relying site. Answer to indicate if this is the overall generalized recruitment materials submission.",
+							"type" : "display"
+						}
+					]
+				},
+				{
+					"extension" : [
+						{
+							"url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression",
+							"valueExpression" : {
+								"language" : "text/fhirpath",
+								"expression" : "%lookupInitiateStudy.descendants().where(linkId = 'in8.9').answer.value"
+							}
+						}
+					],
+					"linkId" : "rm9.2",
+					"text" : "If this form and the associated recruitment materials are specific to a relying site, select the relying site in order to pre-populate the relying institution and relying site principal investigator details below.",
+					"type" : "choice",
+					"enableWhen" : [
+						{
+							"question" : "rm9.1",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "N"
+							}
+						}
+					],
+					"required" : false,
+					"item" : [
+						{
+							"extension" : [
+								{
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
+											{
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help"
+											}
+										]
+									}
+								}
+							],
+							"linkId" : "rm9.2_help",
+							"text" : "This question and its answer will not print on the Recruitment Materials Form but are necessary for the form logic. If you do not want pre-population to occur, leave this question blank and manually fill in the relying institution and relying site principal investigator details.",
+							"type" : "display"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId" : "rm2",
+			"text" : "Study Institution for which Recruitment Materials are being provided",
+			"_text" : {
+				"extension" : [
+					{
+						"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+						"valueString" : "color:#274e90; font-size: 150%"
+					}
+				]
+			},
+			"type" : "group",
+			"required" : false,
+			"repeats" : false,
+			"readOnly" : false,
+			"item" : [
+				{
+					"extension" : [
+						{
+							"url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+							"valueExpression" : {
+								"language" : "text/fhirpath",
+								"expression" : "iif(%overallRMForm = 'Y', %lookupInitiateStudy.descendants().where(linkId = 'in7.1.1').answer.value, %lookupInitiateStudy.item.where(item.where(linkId = 'in8.9' and answer.value = %relyingSiteForForm)).item.descendants().where(linkId = 'in8.1.1').answer.value)"
+							}
+						}
+					],
+					"linkId" : "rm2.1",
+					"text" : "Institution Name",
+					"type" : "string",
+					"required" : true
+				},
+				{
+					"extension" : [
+						{
+							"url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+							"valueExpression" : {
+								"language" : "text/fhirpath",
+								"expression" : "iif(%overallRMForm = 'Y', %lookupInitiateStudy.descendants().where(linkId = 'in7.3.7.2').answer.value, %lookupInitiateStudy.item.where(item.where(linkId = 'in8.9' and answer.value = %relyingSiteForForm)).item.descendants().where(linkId = 'in8.3.7.2').answer.value)"
+							}
+						}
+					],
+					"linkId" : "rm2.2",
+					"text" : "City",
+					"type" : "string",
+					"required" : true
+				},
+				{
+					"extension" : [
+						{
+							"url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+							"valueExpression" : {
+								"language" : "text/fhirpath",
+								"expression" : "iif(%overallRMForm = 'Y', %lookupInitiateStudy.descendants().where(linkId = 'in7.3.7.3').answer.value, %lookupInitiateStudy.item.where(item.where(linkId = 'in8.9' and answer.value = %relyingSiteForForm)).item.descendants().where(linkId = 'in8.3.7.3').answer.value)"
+							}
+						}
+					],
+					"linkId" : "rm2.3",
+					"text" : "State",
+					"type" : "string",
+					"required" : true
+				},
+				{
+					"extension" : [
+						{
+							"url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+							"valueExpression" : {
+								"language" : "text/fhirpath",
+								"expression" : "iif(%overallRMForm = 'Y', %lookupInitiateStudy.descendants().where(linkId = 'in7.3.7.5').answer.value, %lookupInitiateStudy.item.where(item.where(linkId = 'in8.9' and answer.value = %relyingSiteForForm)).item.descendants().where(linkId = 'in8.3.7.5').answer.value)"
+							}
+						}
+					],
+					"linkId" : "rm2.4",
+					"text" : "Country",
+					"type" : "string",
+					"required" : true
+				}
+			]
+		},
+		{
+			"linkId" : "rm3",
+			"text" : "Site Principal Investigator for the Site for which Recruitment Materials are being submitted",
+			"_text" : {
+				"extension" : [
+					{
+						"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+						"valueString" : "color:#274e90; font-size: 150%"
+					}
+				]
+			},
+			"type" : "group",
+			"required" : false,
+			"repeats" : false,
+			"readOnly" : false,
+			"item" : [
+				{
+					"extension" : [
+						{
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+							"valueCodeableConcept" : {
+								"coding" : [
 									{
-										"system": "http://hl7.org/fhir/questionnaire-item-control",
-										"code": "help"
+										"system" : "http://hl7.org/fhir/questionnaire-item-control",
+										"code" : "help"
 									}
 								]
 							}
 						}
 					],
-					"linkId": "rm3_help",
-					"text": "The primary site investigator to contact",
-					"type": "display"
+					"linkId" : "rm3_help",
+					"text" : "Principal investigator at site for which recruitment materials are being submitted",
+					"type" : "display"
 				},
 				{
-					"linkId": "rm3.1",
-					"text": "First Name",
-					"type": "string",
-					"required": true,
-					"item": [
+					"extension" : [
 						{
-							"extension": [
+							"url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+							"valueExpression" : {
+								"language" : "text/fhirpath",
+								"expression" : "iif(%overallRMForm = 'Y', %lookupInitiateStudy.descendants().where(linkId = 'in7.3.1').answer.value, %lookupInitiateStudy.item.where(item.where(linkId = 'in8.9' and answer.value = %relyingSiteForForm)).item.descendants().where(linkId = 'in8.3.1').answer.value)"
+							}
+						}
+					],
+					"linkId" : "rm3.1",
+					"text" : "First Name",
+					"type" : "string",
+					"required" : true,
+					"item" : [
+						{
+							"extension" : [
 								{
-									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-									"valueCodeableConcept": {
-										"coding": [
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
 											{
-												"system": "http://hl7.org/fhir/questionnaire-item-control",
-												"code": "help"
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help"
 											}
 										]
 									}
 								}
 							],
-							"linkId": "rm3.1_help",
-							"text": "First or given name associated with the site principal investigator",
-							"type": "display"
+							"linkId" : "rm3.1_help",
+							"text" : "First or given name of the site principal investigator",
+							"type" : "display"
 						}
 					]
 				},
 				{
-					"linkId": "rm3.3",
-					"text": "Last Name",
-					"type": "string",
-					"required": true,
-					"item": [
+					"extension" : [
 						{
-							"extension": [
+							"url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+							"valueExpression" : {
+								"language" : "text/fhirpath",
+								"expression" : "iif(%overallRMForm = 'Y', %lookupInitiateStudy.descendants().where(linkId = 'in7.3.2').answer.value, %lookupInitiateStudy.item.where(item.where(linkId = 'in8.9' and answer.value = %relyingSiteForForm)).item.descendants().where(linkId = 'in8.3.2').answer.value)"
+							}
+						}
+					],
+					"linkId" : "rm3.3",
+					"text" : "Last Name",
+					"type" : "string",
+					"required" : true,
+					"item" : [
+						{
+							"extension" : [
 								{
-									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-									"valueCodeableConcept": {
-										"coding": [
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
 											{
-												"system": "http://hl7.org/fhir/questionnaire-item-control",
-												"code": "help"
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help"
 											}
 										]
 									}
 								}
 							],
-							"linkId": "rm3.3_help",
-							"text": "Surname or family name associated with the site principal investigator",
-							"type": "display"
+							"linkId" : "rm3.3_help",
+							"text" : "Surname or family name",
+							"type" : "display"
 						}
 					]
 				},
 				{
-					"linkId": "rm3.2",
-					"text": "Suffix",
-					"type": "string",
-					"required": false,
-					"repeats": false,
-					"readOnly": false,
-					"item": [
+					"extension" : [
 						{
-							"extension": [
+							"url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+							"valueExpression" : {
+								"language" : "text/fhirpath",
+								"expression" : "iif(%overallRMForm = 'Y', %lookupInitiateStudy.descendants().where(linkId = 'in7.3.3').answer.value, %lookupInitiateStudy.item.where(item.where(linkId = 'in8.9' and answer.value = %relyingSiteForForm)).item.descendants().where(linkId = 'in8.3.3').answer.value)"
+							}
+						}
+					],
+					"linkId" : "rm3.2",
+					"text" : "Suffix",
+					"type" : "string",
+					"required" : false,
+					"readOnly" : false,
+					"item" : [
+						{
+							"extension" : [
 								{
-									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-									"valueCodeableConcept": {
-										"coding": [
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
 											{
-												"system": "http://hl7.org/fhir/questionnaire-item-control",
-												"code": "help"
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help"
 											}
 										]
 									}
 								}
 							],
-							"linkId": "rm3.2_help",
-							"text": "Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc. associated with the site principal investigator's name",
-							"type": "display"
+							"linkId" : "rm3.2_help",
+							"text" : "Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc.",
+							"type" : "display"
 						}
 					]
 				},
 				{
-					"linkId": "rm3.4",
-					"text": "Degree(s)",
-					"type": "string",
-					"required": false,
-					"repeats": false,
-					"readOnly": false,
-					"item": [
+					"extension" : [
 						{
-							"extension": [
+							"url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+							"valueExpression" : {
+								"language" : "text/fhirpath",
+								"expression" : "iif(%overallRMForm = 'Y', %lookupInitiateStudy.descendants().where(linkId = 'in7.3.4').answer.value, %lookupInitiateStudy.item.where(item.where(linkId = 'in8.9' and answer.value = %relyingSiteForForm)).item.descendants().where(linkId = 'in8.3.4').answer.value)"
+							}
+						}
+					],
+					"linkId" : "rm3.4",
+					"text" : "Degree(s)",
+					"type" : "string",
+					"required" : false,
+					"readOnly" : false,
+					"item" : [
+						{
+							"extension" : [
 								{
-									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-									"valueCodeableConcept": {
-										"coding": [
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
 											{
-												"system": "http://hl7.org/fhir/questionnaire-item-control",
-												"code": "help"
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help"
 											}
 										]
 									}
 								}
 							],
-							"linkId": "rm3.4_help",
-							"text": "Professional and Academic degrees associated with the site principal investigator",
-							"type": "display"
+							"linkId" : "rm3.4_help",
+							"text" : "Professional and Academic degrees of the site principal investigator",
+							"type" : "display"
 						}
 					]
 				}
 			]
 		},
 		{
-			"linkId": "rm4",
-			"text": "Recruitment Materials",
-			"type": "group",
-			"required": false,
-			"item": [
+			"linkId" : "rm4",
+			"text" : "Recruitment Materials",
+			"_text" : {
+				"extension" : [
+					{
+						"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+						"valueString" : "color:#274e90; font-size: 150%"
+					}
+				]
+			},
+			"type" : "group",
+			"required" : false,
+			"item" : [
 				{
-					"extension": [
+					"extension" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-							"valueCodeableConcept": {
-								"coding": [
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+							"valueCodeableConcept" : {
+								"coding" : [
 									{
-										"system": "http://hl7.org/fhir/questionnaire-item-control",
-										"code": "help",
-										"display": "Help-Button"
+										"system" : "http://hl7.org/fhir/questionnaire-item-control",
+										"code" : "help",
+										"display" : "Help-Button"
 									}
 								],
-								"text": "Help-Button"
+								"text" : "Help-Button"
 							}
 						}
 					],
-					"linkId": "rm4_help",
-					"text": "Media of any type used as part of a participant recruitment strategy.",
-					"type": "display"
+					"linkId" : "rm4_help",
+					"text" : "Media of any type used as part of a participant recruitment strategy.",
+					"type" : "display"
 				},
 				{
-					"extension": [
+					"extension" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-							"valueCodeableConcept": {
-								"coding": [
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+							"valueCodeableConcept" : {
+								"coding" : [
 									{
-										"system": "http://hl7.org/fhir/questionnaire-item-control",
-										"code": "drop-down",
-										"display": "Drop down"
+										"system" : "http://hl7.org/fhir/questionnaire-item-control",
+										"code" : "drop-down",
+										"display" : "Drop down"
 									}
 								],
-								"text": "Drop down"
+								"text" : "Drop down"
 							}
 						}
 					],
-					"linkId": "rm4.1",
-					"text": "Will Recruitment Materials be Utilized?",
-					"type": "choice",
-					"required": true,
-					"answerOption": [
+					"linkId" : "rm4.1",
+					"text" : "Will Recruitment Materials be Utilized?",
+					"type" : "choice",
+					"required" : true,
+					"answerOption" : [
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y",
-								"display": "Yes"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y",
+								"display" : "Yes"
 							}
 						},
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "N",
-								"display": "No"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "N",
+								"display" : "No"
 							}
 						}
 					]
 				},
 				{
-					"extension": [
+					"extension" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-							"valueCodeableConcept": {
-								"coding": [
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+							"valueCodeableConcept" : {
+								"coding" : [
 									{
-										"system": "http://hl7.org/fhir/questionnaire-item-control",
-										"code": "drop-down",
-										"display": "Drop down"
+										"system" : "http://hl7.org/fhir/questionnaire-item-control",
+										"code" : "drop-down",
+										"display" : "Drop down"
 									}
 								],
-								"text": "Drop down"
+								"text" : "Drop down"
 							}
 						}
 					],
-					"linkId": "rm4.2",
-					"text": "Will Broadcast Materials be Utilized?",
-					"type": "choice",
-					"enableWhen": [
+					"linkId" : "rm4.2",
+					"text" : "Will Broadcast Materials be Utilized?",
+					"type" : "choice",
+					"enableWhen" : [
 						{
-							"question": "rm4.1",
-							"operator": "=",
-							"answerCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y"
+							"question" : "rm4.1",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
 							}
 						}
 					],
-					"enableBehavior": "all",
-					"required": false,
-					"answerOption": [
+					"enableBehavior" : "all",
+					"required" : false,
+					"answerOption" : [
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y",
-								"display": "Yes"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y",
+								"display" : "Yes"
 							}
 						},
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "N",
-								"display": "No"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "N",
+								"display" : "No"
 							}
 						}
 					],
-					"item": [
+					"item" : [
 						{
-							"extension": [
+							"extension" : [
 								{
-									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-									"valueCodeableConcept": {
-										"coding": [
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
 											{
-												"system": "http://hl7.org/fhir/questionnaire-item-control",
-												"code": "help",
-												"display": "Help-Button"
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help",
+												"display" : "Help-Button"
 											}
 										],
-										"text": "Help-Button"
+										"text" : "Help-Button"
 									}
 								}
 							],
-							"linkId": "rm4.2_help",
-							"text": "The distribution of audio or video content to a dispersed audience via any electronic mass communications medium.",
-							"type": "display"
+							"linkId" : "rm4.2_help",
+							"text" : "The distribution of audio or video content to a dispersed audience via any electronic mass communications medium.",
+							"type" : "display"
 						}
 					]
 				},
 				{
-					"linkId": "rm4.3",
-					"text": "Broadcast Communication",
-					"type": "group",
-					"enableWhen": [
+					"linkId" : "rm4.3",
+					"text" : "Broadcast Communication",
+					"_text" : {
+						"extension" : [
+							{
+								"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString" : "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type" : "group",
+					"enableWhen" : [
 						{
-							"question": "rm4.2",
-							"operator": "=",
-							"answerCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y"
+							"question" : "rm4.2",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
 							}
 						}
 					],
-					"enableBehavior": "all",
-					"required": false,
-					"item": [
+					"enableBehavior" : "all",
+					"required" : false,
+					"item" : [
 						{
-							"extension": [
+							"extension" : [
 								{
-									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-									"valueCodeableConcept": {
-										"coding": [
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
 											{
-												"system": "http://hl7.org/fhir/questionnaire-item-control",
-												"code": "help",
-												"display": "Help-Button"
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help",
+												"display" : "Help-Button"
 											}
 										],
-										"text": "Help-Button"
+										"text" : "Help-Button"
 									}
 								}
 							],
-							"linkId": "rm4.3_help",
-							"text": "Audio or video content to a dispersed audience via any electronic mass communications medium",
-							"type": "display"
+							"linkId" : "rm4.3_help",
+							"text" : "Audio or video content to a dispersed audience via any electronic mass communications medium",
+							"type" : "display"
 						},
 						{
-							"linkId": "rm4.3.1",
-							"text": "Audio",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.3.1",
+							"text" : "Audio",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.3.1_help",
-									"text": "A contiguous sound recording used to relay audible information.",
-									"type": "display"
+									"linkId" : "rm4.3.1_help",
+									"text" : "A contiguous sound recording used to relay audible information.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.3.2",
-							"text": "Audio Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.3.2",
+							"text" : "Audio Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.3.1",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.3.1",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.3.2_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.3.2_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.3.3",
-							"text": "Video",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.3.3",
+							"text" : "Video",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.3.3_help",
-									"text": "Video content to a dispersed audience via any electronic mass communications medium",
-									"type": "display"
+									"linkId" : "rm4.3.3_help",
+									"text" : "Video content to a dispersed audience via any electronic mass communications medium",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.3.4",
-							"text": "Video Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.3.4",
+							"text" : "Video Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.3.3",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.3.3",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.3.4_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.3.4_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.3.5",
-							"text": "Radio Spot",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.3.5",
+							"text" : "Radio Spot",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.3.5_help",
-									"text": "A contiguous segment of audio broadcasting airtime.",
-									"type": "display"
+									"linkId" : "rm4.3.5_help",
+									"text" : "A contiguous segment of audio broadcasting airtime.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.3.6",
-							"text": "Radio Spot Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.3.6",
+							"text" : "Radio Spot Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.3.5",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.3.5",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.3.6_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.3.6_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.3.7",
-							"text": "TV Spot",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.3.7",
+							"text" : "TV Spot",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.3.7_help",
-									"text": "A contiguous segment of video broadcasting airtime.",
-									"type": "display"
+									"linkId" : "rm4.3.7_help",
+									"text" : "A contiguous segment of video broadcasting airtime.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.3.8",
-							"text": "TV Spot Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.3.8",
+							"text" : "TV Spot Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.3.7",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.3.7",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.3.8_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.3.8_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						}
 					]
 				},
 				{
-					"extension": [
+					"extension" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-							"valueCodeableConcept": {
-								"coding": [
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+							"valueCodeableConcept" : {
+								"coding" : [
 									{
-										"system": "http://hl7.org/fhir/questionnaire-item-control",
-										"code": "drop-down",
-										"display": "Drop down"
+										"system" : "http://hl7.org/fhir/questionnaire-item-control",
+										"code" : "drop-down",
+										"display" : "Drop down"
 									}
 								],
-								"text": "Drop down"
+								"text" : "Drop down"
 							}
 						}
 					],
-					"linkId": "rm4.4",
-					"text": "Will Printed Materials be Utilized?",
-					"type": "choice",
-					"enableWhen": [
+					"linkId" : "rm4.4",
+					"text" : "Will Printed Materials be Utilized?",
+					"type" : "choice",
+					"enableWhen" : [
 						{
-							"question": "rm4.1",
-							"operator": "=",
-							"answerCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y"
+							"question" : "rm4.1",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
 							}
 						}
 					],
-					"enableBehavior": "all",
-					"required": false,
-					"answerOption": [
+					"enableBehavior" : "all",
+					"required" : false,
+					"answerOption" : [
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y",
-								"display": "Yes"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y",
+								"display" : "Yes"
 							}
 						},
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "N",
-								"display": "No"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "N",
+								"display" : "No"
 							}
 						}
 					],
-					"item": [
+					"item" : [
 						{
-							"extension": [
+							"extension" : [
 								{
-									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-									"valueCodeableConcept": {
-										"coding": [
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
 											{
-												"system": "http://hl7.org/fhir/questionnaire-item-control",
-												"code": "help",
-												"display": "Help-Button"
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help",
+												"display" : "Help-Button"
 											}
 										],
-										"text": "Help-Button"
+										"text" : "Help-Button"
 									}
 								}
 							],
-							"linkId": "rm4.4_help",
-							"text": "Materials produced by printers or publishers, such as books, magazines, booklets, brochures, newspaper.",
-							"type": "display"
+							"linkId" : "rm4.4_help",
+							"text" : "Materials produced by printers or publishers, such as books, magazines, booklets, brochures, newspaper.",
+							"type" : "display"
 						}
 					]
 				},
 				{
-					"linkId": "rm4.5",
-					"text": "Printed Communication",
-					"type": "group",
-					"enableWhen": [
+					"linkId" : "rm4.5",
+					"text" : "Printed Communication",
+					"_text" : {
+						"extension" : [
+							{
+								"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString" : "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type" : "group",
+					"enableWhen" : [
 						{
-							"question": "rm4.4",
-							"operator": "=",
-							"answerCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y"
+							"question" : "rm4.4",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
 							}
 						}
 					],
-					"enableBehavior": "all",
-					"required": false,
-					"item": [
+					"enableBehavior" : "all",
+					"required" : false,
+					"item" : [
 						{
-							"linkId": "rm4.5.1",
-							"text": "Billboard/Bus Ad",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.5.1",
+							"text" : "Billboard/Bus Ad",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.1_help",
-									"text": "A large outdoor advertising space designed to capture the attention of motorists and pedestrians.",
-									"type": "display"
+									"linkId" : "rm4.5.1_help",
+									"text" : "A large outdoor advertising space designed to capture the attention of motorists and pedestrians.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.2",
-							"text": "Billboard/Bus Ad Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.5.2",
+							"text" : "Billboard/Bus Ad Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.5.1",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.5.1",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.2_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.5.2_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.3",
-							"text": "Brochure/Pamphlet",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.5.3",
+							"text" : "Brochure/Pamphlet",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.3_help",
-									"text": "A small book or magazine that contains images and information about a company or organization's products and/or services.",
-									"type": "display"
+									"linkId" : "rm4.5.3_help",
+									"text" : "A small book or magazine that contains images and information about a company or organization's products and/or services.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.4",
-							"text": "Brochure/Pamphlet Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.5.4",
+							"text" : "Brochure/Pamphlet Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.5.3",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.5.3",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.4_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.5.4_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.5",
-							"text": "Flyer/Notice",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.5.5",
+							"text" : "Flyer/Notice",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.5_help",
-									"text": "A small piece of paper with information on it about a product or event",
-									"type": "display"
+									"linkId" : "rm4.5.5_help",
+									"text" : "A small piece of paper with information on it about a product or event",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.6",
-							"text": "Flyer/Notice Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.5.6",
+							"text" : "Flyer/Notice Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.5.5",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.5.5",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.6_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.5.6_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.7",
-							"text": "Magazine",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.5.7",
+							"text" : "Magazine",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.7_help",
-									"text": "A periodical publication containing articles and illustrations.",
-									"type": "display"
+									"linkId" : "rm4.5.7_help",
+									"text" : "A periodical publication containing articles and illustrations.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.8",
-							"text": "Magazine Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.5.8",
+							"text" : "Magazine Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.5.7",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.5.7",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.8_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.5.8_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.9",
-							"text": "Mail",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.5.9",
+							"text" : "Mail",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.9_help",
-									"text": "Letters and packages conveyed by the postal system.",
-									"type": "display"
+									"linkId" : "rm4.5.9_help",
+									"text" : "Letters and packages conveyed by the postal system.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.10",
-							"text": "Mail Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.5.10",
+							"text" : "Mail Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.5.9",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.5.9",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.10_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.5.10_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.11",
-							"text": "Newspaper",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.5.11",
+							"text" : "Newspaper",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.11_help",
-									"text": "A printed publication (usually issued daily or weekly) consisting of folded unstapled sheets and containing news, feature articles and advertisements.",
-									"type": "display"
+									"linkId" : "rm4.5.11_help",
+									"text" : "A printed publication (usually issued daily or weekly) consisting of folded unstapled sheets and containing news, feature articles and advertisements.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.12",
-							"text": "Newspaper Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.5.12",
+							"text" : "Newspaper Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.5.11",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.5.11",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.12_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.5.12_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.13",
-							"text": "Postcard",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.5.13",
+							"text" : "Postcard",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.13_help",
-									"text": "A message by mail without an envelope.",
-									"type": "display"
+									"linkId" : "rm4.5.13_help",
+									"text" : "A message by mail without an envelope.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.14",
-							"text": "Postcard Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.5.14",
+							"text" : "Postcard Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.5.13",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.5.13",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.14_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.5.14_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.15",
-							"text": "Poster/Sign",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.5.15",
+							"text" : "Poster/Sign",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.15_help",
-									"text": "A large printed picture, photograph, or notice that you stick or pin to a wall or board, usually for decoration or to advertise something.",
-									"type": "display"
+									"linkId" : "rm4.5.15_help",
+									"text" : "A large printed picture, photograph, or notice that you stick or pin to a wall or board, usually for decoration or to advertise something.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.16",
-							"text": "Poster/Sign Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.5.16",
+							"text" : "Poster/Sign Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.5.15",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.5.15",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.16_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.5.16_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.17",
-							"text": "Table Tent",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.5.17",
+							"text" : "Table Tent",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.17_help",
-									"text": "A self-standing promotional unit created from printed and folded card stock for table tops.",
-									"type": "display"
+									"linkId" : "rm4.5.17_help",
+									"text" : "A self-standing promotional unit created from printed and folded card stock for table tops.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.5.18",
-							"text": "Table Tent Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.5.18",
+							"text" : "Table Tent Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.5.17",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.5.17",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.5.18_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.5.18_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						}
 					]
 				},
 				{
-					"extension": [
+					"extension" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-							"valueCodeableConcept": {
-								"coding": [
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+							"valueCodeableConcept" : {
+								"coding" : [
 									{
-										"system": "http://hl7.org/fhir/questionnaire-item-control",
-										"code": "drop-down",
-										"display": "Drop down"
+										"system" : "http://hl7.org/fhir/questionnaire-item-control",
+										"code" : "drop-down",
+										"display" : "Drop down"
 									}
 								],
-								"text": "Drop down"
+								"text" : "Drop down"
 							}
 						}
 					],
-					"linkId": "rm4.6",
-					"text": "Will Electronic Materials be Utilized?",
-					"type": "choice",
-					"enableWhen": [
+					"linkId" : "rm4.6",
+					"text" : "Will Electronic Materials be Utilized?",
+					"type" : "choice",
+					"enableWhen" : [
 						{
-							"question": "rm4.1",
-							"operator": "=",
-							"answerCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y"
+							"question" : "rm4.1",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
 							}
 						}
 					],
-					"enableBehavior": "all",
-					"required": false,
-					"answerOption": [
+					"enableBehavior" : "all",
+					"required" : false,
+					"answerOption" : [
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y",
-								"display": "Yes"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y",
+								"display" : "Yes"
 							}
 						},
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "N",
-								"display": "No"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "N",
+								"display" : "No"
 							}
 						}
 					],
-					"item": [
+					"item" : [
 						{
-							"extension": [
+							"extension" : [
 								{
-									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-									"valueCodeableConcept": {
-										"coding": [
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
 											{
-												"system": "http://hl7.org/fhir/questionnaire-item-control",
-												"code": "help",
-												"display": "Help-Button"
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help",
+												"display" : "Help-Button"
 											}
 										],
-										"text": "Help-Button"
+										"text" : "Help-Button"
 									}
 								}
 							],
-							"linkId": "rm4.6_help",
-							"text": "Computer-based technology that facilitates the sharing of ideas and information and the building of virtual networks and communities.",
-							"type": "display"
+							"linkId" : "rm4.6_help",
+							"text" : "Computer-based technology that facilitates the sharing of ideas and information and the building of virtual networks and communities.",
+							"type" : "display"
 						}
 					]
 				},
 				{
-					"linkId": "rm4.7",
-					"text": "Electronic Communication",
-					"type": "group",
-					"enableWhen": [
+					"linkId" : "rm4.7",
+					"text" : "Electronic Communication",
+					"_text" : {
+						"extension" : [
+							{
+								"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString" : "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type" : "group",
+					"enableWhen" : [
 						{
-							"question": "rm4.6",
-							"operator": "=",
-							"answerCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y"
+							"question" : "rm4.6",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
 							}
 						}
 					],
-					"enableBehavior": "all",
-					"required": false,
-					"item": [
+					"enableBehavior" : "all",
+					"required" : false,
+					"item" : [
 						{
-							"linkId": "rm4.7.1",
-							"text": "Email",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.7.1",
+							"text" : "Email",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.1_help",
-									"text": "Messages distributed by electronic means from one computer user to one or more recipients via a network.",
-									"type": "display"
+									"linkId" : "rm4.7.1_help",
+									"text" : "Messages distributed by electronic means from one computer user to one or more recipients via a network.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.2",
-							"text": "Email Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.7.2",
+							"text" : "Email Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.7.1",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.7.1",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.2_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.7.2_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.3",
-							"text": "Networking Site",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.7.3",
+							"text" : "Networking Site",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.3_help",
-									"text": "An online platform that allows users to create a public profile and interact with other users on the website.",
-									"type": "display"
+									"linkId" : "rm4.7.3_help",
+									"text" : "An online platform that allows users to create a public profile and interact with other users on the website.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.4",
-							"text": "Networking Site Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.7.4",
+							"text" : "Networking Site Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.7.3",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.7.3",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.4_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.7.4_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.5",
-							"text": "Podcast",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.7.5",
+							"text" : "Podcast",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.5_help",
-									"text": "A digital audio file made available on the internet for download to a computer or mobile device. Typically available as a series.",
-									"type": "display"
+									"linkId" : "rm4.7.5_help",
+									"text" : "A digital audio file made available on the internet for download to a computer or mobile device. Typically available as a series.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.6",
-							"text": "Podcast Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.7.6",
+							"text" : "Podcast Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.7.5",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.7.5",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.6_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.7.6_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.7",
-							"text": "Social Media",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.7.7",
+							"text" : "Social Media",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.7_help",
-									"text": "A computer-based technology that facilitates the sharing of ideas and information and the building of virtual networks and communities.",
-									"type": "display"
+									"linkId" : "rm4.7.7_help",
+									"text" : "A computer-based technology that facilitates the sharing of ideas and information and the building of virtual networks and communities.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.8",
-							"text": "Social Media Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.7.8",
+							"text" : "Social Media Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.7.7",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.7.7",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.8_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.7.8_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.11",
-							"text": "Web Page Advertising",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.7.11",
+							"text" : "Web Page Advertising",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.11_help",
-									"text": "A form of advertising on the Word Wide Web delivered by an ad server and/or embedded in a web page.",
-									"type": "display"
+									"linkId" : "rm4.7.11_help",
+									"text" : "A form of advertising on the Word Wide Web delivered by an ad server and/or embedded in a web page.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.12",
-							"text": "Web Page Ad Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.7.12",
+							"text" : "Web Page Ad Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.7.11",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.7.11",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.12_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.7.12_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.13",
-							"text": "Web/Internet Posting",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.7.13",
+							"text" : "Web/Internet Posting",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.13_help",
-									"text": "Communication posted for public viewing or an electronic message sent to & displayed on an online forum.",
-									"type": "display"
+									"linkId" : "rm4.7.13_help",
+									"text" : "Communication posted for public viewing or an electronic message sent to & displayed on an online forum.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.14",
-							"text": "Web/Internet Posting Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.7.14",
+							"text" : "Web/Internet Posting Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.7.13",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.7.13",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.14_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.7.14_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.15",
-							"text": "Website",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.7.15",
+							"text" : "Website",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.15_help",
-									"text": "A page or collection of pages on the World Wide Web that contains specific information which was all provided by one person, group or an organization",
-									"type": "display"
+									"linkId" : "rm4.7.15_help",
+									"text" : "A page or collection of pages on the World Wide Web that contains specific information which was all provided by one person, group or an organization",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.16",
-							"text": "Website Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.7.16",
+							"text" : "Website Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.7.15",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.7.15",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.16_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.7.16_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.17",
-							"text": "Text messaging",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.7.17",
+							"text" : "Text messaging",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.17_help",
-									"text": "Text messaging, or texting, is the transmission of electronic communication between two or more users, often via mobile phones.",
-									"type": "display"
+									"linkId" : "rm4.7.17_help",
+									"text" : "Communication of messages between two or more users using mobile phones.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.18",
-							"text": "Texting Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.7.18",
+							"text" : "Texting Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.7.17",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.7.17",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.18_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.7.18_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.19",
-							"text": "eHealth Portal",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.7.19",
+							"text" : "eHealth Portal",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.19_help",
-									"text": "Communication to user(s) via the eHealth Portal or similar electronic medical record system",
-									"type": "display"
+									"linkId" : "rm4.7.19_help",
+									"text" : "Communication to user(s) via the eHealth Portal or similar electronic medical record system",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.20",
-							"text": "eHealthPortal Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.7.20",
+							"text" : "eHealthPortal Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.7.19",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.7.19",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.20_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.7.20_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.21",
-							"text": "Video Conferencing",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.7.21",
+							"text" : "Video Conferencing",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.21_help",
-									"text": "Use of two-way video communications via a computer, tablet or mobile phone",
-									"type": "display"
+									"linkId" : "rm4.7.21_help",
+									"text" : "Use of two-way video communications via a computer, tablet or mobile phone",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.7.22",
-							"text": "Video Conferencing Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.7.22",
+							"text" : "Video Conferencing Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.7.19",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.7.19",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.7.22_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.7.22_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						}
 					]
 				},
 				{
-					"extension": [
+					"extension" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-							"valueCodeableConcept": {
-								"coding": [
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+							"valueCodeableConcept" : {
+								"coding" : [
 									{
-										"system": "http://hl7.org/fhir/questionnaire-item-control",
-										"code": "drop-down",
-										"display": "Drop down"
+										"system" : "http://hl7.org/fhir/questionnaire-item-control",
+										"code" : "drop-down",
+										"display" : "Drop down"
 									}
 								],
-								"text": "Drop down"
+								"text" : "Drop down"
 							}
 						}
 					],
-					"linkId": "rm4.8",
-					"text": "Will Direct Communication Materials be Utilized?",
-					"type": "choice",
-					"enableWhen": [
+					"linkId" : "rm4.8",
+					"text" : "Will Direct Communication Materials be Utilized?",
+					"type" : "choice",
+					"enableWhen" : [
 						{
-							"question": "rm4.1",
-							"operator": "=",
-							"answerCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y"
+							"question" : "rm4.1",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
 							}
 						}
 					],
-					"enableBehavior": "all",
-					"required": false,
-					"answerOption": [
+					"enableBehavior" : "all",
+					"required" : false,
+					"answerOption" : [
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y",
-								"display": "Yes"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y",
+								"display" : "Yes"
 							}
 						},
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "N",
-								"display": "No"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "N",
+								"display" : "No"
 							}
 						}
 					],
-					"item": [
+					"item" : [
 						{
-							"extension": [
+							"extension" : [
 								{
-									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-									"valueCodeableConcept": {
-										"coding": [
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
 											{
-												"system": "http://hl7.org/fhir/questionnaire-item-control",
-												"code": "help",
-												"display": "Help-Button"
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help",
+												"display" : "Help-Button"
 											}
 										],
-										"text": "Help-Button"
+										"text" : "Help-Button"
 									}
 								}
 							],
-							"linkId": "rm4.8_help",
-							"text": "Communication addressed to a specific person.",
-							"type": "display"
+							"linkId" : "rm4.8_help",
+							"text" : "Communication addressed to a specific person.",
+							"type" : "display"
 						}
 					]
 				},
 				{
-					"linkId": "rm4.9",
-					"text": "Direct Communication",
-					"type": "group",
-					"enableWhen": [
+					"linkId" : "rm4.9",
+					"text" : "Direct Communication",
+					"_text" : {
+						"extension" : [
+							{
+								"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString" : "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type" : "group",
+					"enableWhen" : [
 						{
-							"question": "rm4.8",
-							"operator": "=",
-							"answerCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y"
+							"question" : "rm4.8",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
 							}
 						}
 					],
-					"enableBehavior": "all",
-					"required": false,
-					"item": [
+					"enableBehavior" : "all",
+					"required" : false,
+					"item" : [
 						{
-							"linkId": "rm4.9.1",
-							"text": "In-Person Discussion",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.9.1",
+							"text" : "In-Person Discussion",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.9.1_help",
-									"text": "Involves a person's physical presence rather than communication by phone, email, etc.,",
-									"type": "display"
+									"linkId" : "rm4.9.1_help",
+									"text" : "Involves a person's physical presence rather than communication by phone, email, etc.,",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.9.2",
-							"text": "In-Person Discussion Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.9.2",
+							"text" : "In-Person Discussion Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.9.1",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.9.1",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.9.2_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.9.2_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.9.3",
-							"text": "Letter/Invitation",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.9.3",
+							"text" : "Letter/Invitation",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.9.3_help",
-									"text": "A written, typed, or printed communication, especially one sent in an envelope by mail or messenger:",
-									"type": "display"
+									"linkId" : "rm4.9.3_help",
+									"text" : "A written, typed, or printed communication, especially one sent in an envelope by mail or messenger:",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.9.4",
-							"text": "Letter/Invitation Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.9.4",
+							"text" : "Letter/Invitation Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.9.3",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.9.3",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.9.4_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.9.4_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.9.5",
-							"text": "Phone Call",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.9.5",
+							"text" : "Phone Call",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.9.5_help",
-									"text": "A communication or conversation by phone.",
-									"type": "display"
+									"linkId" : "rm4.9.5_help",
+									"text" : "A communication or conversation by phone.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.9.6",
-							"text": "Phone Call Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.9.6",
+							"text" : "Phone Call Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.9.5",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.9.5",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.9.6_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.9.6_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						}
 					]
 				},
 				{
-					"extension": [
+					"extension" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-							"valueCodeableConcept": {
-								"coding": [
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+							"valueCodeableConcept" : {
+								"coding" : [
 									{
-										"system": "http://hl7.org/fhir/questionnaire-item-control",
-										"code": "drop-down",
-										"display": "Drop down"
+										"system" : "http://hl7.org/fhir/questionnaire-item-control",
+										"code" : "drop-down",
+										"display" : "Drop down"
 									}
 								],
-								"text": "Drop down"
+								"text" : "Drop down"
 							}
 						}
 					],
-					"linkId": "rm4.10",
-					"text": "Will Group Communication Materials be Utilized?",
-					"type": "choice",
-					"enableWhen": [
+					"linkId" : "rm4.10",
+					"text" : "Will Group Communication Materials be Utilized?",
+					"type" : "choice",
+					"enableWhen" : [
 						{
-							"question": "rm4.1",
-							"operator": "=",
-							"answerCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y"
+							"question" : "rm4.1",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
 							}
 						}
 					],
-					"enableBehavior": "all",
-					"required": false,
-					"answerOption": [
+					"enableBehavior" : "all",
+					"required" : false,
+					"answerOption" : [
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y",
-								"display": "Yes"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y",
+								"display" : "Yes"
 							}
 						},
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "N",
-								"display": "No"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "N",
+								"display" : "No"
 							}
 						}
 					],
-					"item": [
+					"item" : [
 						{
-							"extension": [
+							"extension" : [
 								{
-									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-									"valueCodeableConcept": {
-										"coding": [
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
 											{
-												"system": "http://hl7.org/fhir/questionnaire-item-control",
-												"code": "help",
-												"display": "Help-Button"
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help",
+												"display" : "Help-Button"
 											}
 										],
-										"text": "Help-Button"
+										"text" : "Help-Button"
 									}
 								}
 							],
-							"linkId": "rm4.10_help",
-							"text": "Communication addressed to a defined group of people.",
-							"type": "display"
+							"linkId" : "rm4.10_help",
+							"text" : "Communication addressed to a defined group of people.",
+							"type" : "display"
 						}
 					]
 				},
 				{
-					"linkId": "rm4.11",
-					"text": "Group Communication",
-					"type": "group",
-					"enableWhen": [
+					"linkId" : "rm4.11",
+					"text" : "Group Communication",
+					"_text" : {
+						"extension" : [
+							{
+								"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString" : "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type" : "group",
+					"enableWhen" : [
 						{
-							"question": "rm4.10",
-							"operator": "=",
-							"answerCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y"
+							"question" : "rm4.10",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
 							}
 						}
 					],
-					"enableBehavior": "all",
-					"required": false,
-					"item": [
+					"enableBehavior" : "all",
+					"required" : false,
+					"item" : [
 						{
-							"linkId": "rm4.11.1",
-							"text": "Advertisement",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.11.1",
+							"text" : "Advertisement",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.11.1_help",
-									"text": "An ad that may take many different forms. It could be a banner, a graphic image or an animated GIF of a designated pixel size and byte size.",
-									"type": "display"
+									"linkId" : "rm4.11.1_help",
+									"text" : "An ad that may take many different forms. It could be a banner, a graphic image or an animated GIF of a designated pixel size and byte size.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.11.2",
-							"text": "Advertisement Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.11.2",
+							"text" : "Advertisement Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.11.1",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.11.1",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.11.2_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.11.2_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.11.3",
-							"text": "Bulletin Board",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.11.3",
+							"text" : "Bulletin Board",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.11.3_help",
-									"text": "A website or web page where users can post comments about a particular issue or topic and reply to other users' postings.",
-									"type": "display"
+									"linkId" : "rm4.11.3_help",
+									"text" : "A website or web page where users can post comments about a particular issue or topic and reply to other users' postings.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.11.4",
-							"text": "Bulletin Board Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.11.4",
+							"text" : "Bulletin Board Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.11.3",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.11.3",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.11.4_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.11.4_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.11.5",
-							"text": "Newsletter",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.11.5",
+							"text" : "Newsletter",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.11.5_help",
-									"text": "Communication issued periodically to the members of a society, business, or organization.",
-									"type": "display"
+									"linkId" : "rm4.11.5_help",
+									"text" : "Communication issued periodically to the members of a society, business, or organization.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.11.6",
-							"text": "Newsletter Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.11.6",
+							"text" : "Newsletter Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.11.5",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.11.5",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.11.6_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.11.6_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.11.7",
-							"text": "Professional Journal",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.11.7",
+							"text" : "Professional Journal",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.11.7_help",
-									"text": "A scholarly journal addressed to a particular professional audience such as doctors, teachers or engineers and published by a professional organization.",
-									"type": "display"
+									"linkId" : "rm4.11.7_help",
+									"text" : "A scholarly journal addressed to a particular professional audience such as doctors, teachers or engineers and published by a professional organization.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.11.8",
-							"text": "Professional Journal Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.11.8",
+							"text" : "Professional Journal Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.11.7",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.11.7",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.11.8_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.11.8_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.11.9",
-							"text": "Tip Sheet",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.11.9",
+							"text" : "Tip Sheet",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.11.9_help",
-									"text": "A publication that containing the latest information/tips/predictions for a particular business or stock market information or horse racing results, etc.",
-									"type": "display"
+									"linkId" : "rm4.11.9_help",
+									"text" : "A publication that containing the latest information/tips/predictions for a particular business or stock market information or horse racing results, etc.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.11.10",
-							"text": "Tip Sheet Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.11.10",
+							"text" : "Tip Sheet Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.11.9",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.11.9",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.11.10_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.11.10_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						}
 					]
 				},
 				{
-					"extension": [
+					"extension" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-							"valueCodeableConcept": {
-								"coding": [
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+							"valueCodeableConcept" : {
+								"coding" : [
 									{
-										"system": "http://hl7.org/fhir/questionnaire-item-control",
-										"code": "drop-down",
-										"display": "Drop down"
+										"system" : "http://hl7.org/fhir/questionnaire-item-control",
+										"code" : "drop-down",
+										"display" : "Drop down"
 									}
 								],
-								"text": "Drop down"
+								"text" : "Drop down"
 							}
 						}
 					],
-					"linkId": "rm4.12",
-					"text": "Will Public Communication Materials be Utilized?",
-					"type": "choice",
-					"enableWhen": [
+					"linkId" : "rm4.12",
+					"text" : "Will Public Communication Materials be Utilized?",
+					"type" : "choice",
+					"enableWhen" : [
 						{
-							"question": "rm4.1",
-							"operator": "=",
-							"answerCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y"
+							"question" : "rm4.1",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
 							}
 						}
 					],
-					"enableBehavior": "all",
-					"required": false,
-					"answerOption": [
+					"enableBehavior" : "all",
+					"required" : false,
+					"answerOption" : [
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y",
-								"display": "Yes"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y",
+								"display" : "Yes"
 							}
 						},
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "N",
-								"display": "No"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "N",
+								"display" : "No"
 							}
 						}
 					],
-					"item": [
+					"item" : [
 						{
-							"extension": [
+							"extension" : [
 								{
-									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-									"valueCodeableConcept": {
-										"coding": [
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
 											{
-												"system": "http://hl7.org/fhir/questionnaire-item-control",
-												"code": "help",
-												"display": "Help-Button"
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help",
+												"display" : "Help-Button"
 											}
 										],
-										"text": "Help-Button"
+										"text" : "Help-Button"
 									}
 								}
 							],
-							"linkId": "rm4.12_help",
-							"text": "Communication addressed to the public.",
-							"type": "display"
+							"linkId" : "rm4.12_help",
+							"text" : "Communication addressed to the public.",
+							"type" : "display"
 						}
 					]
 				},
 				{
-					"linkId": "rm4.13",
-					"text": "Public Communication",
-					"type": "group",
-					"enableWhen": [
+					"linkId" : "rm4.13",
+					"text" : "Public Communication",
+					"_text" : {
+						"extension" : [
+							{
+								"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString" : "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type" : "group",
+					"enableWhen" : [
 						{
-							"question": "rm4.12",
-							"operator": "=",
-							"answerCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y"
+							"question" : "rm4.12",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
 							}
 						}
 					],
-					"enableBehavior": "all",
-					"required": false,
-					"item": [
+					"enableBehavior" : "all",
+					"required" : false,
+					"item" : [
 						{
-							"linkId": "rm4.13.1",
-							"text": "Announcement",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.13.1",
+							"text" : "Announcement",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.13.1_help",
-									"text": "A public and typically formal statement about a fact, occurrence, or intention.",
-									"type": "display"
+									"linkId" : "rm4.13.1_help",
+									"text" : "A public and typically formal statement about a fact, occurrence, or intention.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.13.2",
-							"text": "Announcement Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.13.2",
+							"text" : "Announcement Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.13.1",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.13.1",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.13.2_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.13.2_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.13.3",
-							"text": "Press Release",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.13.3",
+							"text" : "Press Release",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.13.3_help",
-									"text": "A written statement about a matter of public interest which is given to the press by an organization concerned with the matter.",
-									"type": "display"
+									"linkId" : "rm4.13.3_help",
+									"text" : "A written statement about a matter of public interest which is given to the press by an organization concerned with the matter.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.13.4",
-							"text": "Press Release Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.13.4",
+							"text" : "Press Release Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.13.3",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.13.3",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.13.4_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.13.4_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.13.5",
-							"text": "Public Solicitation",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.13.5",
+							"text" : "Public Solicitation",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.13.5_help",
-									"text": "A method of communication involving asking for or trying to obtain something from someone in public.",
-									"type": "display"
+									"linkId" : "rm4.13.5_help",
+									"text" : "A method of communication involving asking for or trying to obtain something from someone in public.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.13.6",
-							"text": "Public Solicitation Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.13.6",
+							"text" : "Public Solicitation Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.13.5",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.13.5",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.13.6_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.13.6_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.13.7",
-							"text": "Snowball Sampling",
-							"type": "boolean",
-							"required": false,
-							"item": [
+							"linkId" : "rm4.13.7",
+							"text" : "Snowball Sampling",
+							"type" : "boolean",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.13.7_help",
-									"text": "A technique among social scientists who wish to work with a population that is difficult to identify or locate.",
-									"type": "display"
+									"linkId" : "rm4.13.7_help",
+									"text" : "A technique among social scientists who wish to work with a population that is difficult to identify or locate.",
+									"type" : "display"
 								}
 							]
 						},
 						{
-							"linkId": "rm4.13.8",
-							"text": "Snowball Sampling Description",
-							"type": "text",
-							"enableWhen": [
+							"linkId" : "rm4.13.8",
+							"text" : "Snowball Sampling Description",
+							"type" : "text",
+							"enableWhen" : [
 								{
-									"question": "rm4.13.7",
-									"operator": "=",
-									"answerBoolean": true
+									"question" : "rm4.13.7",
+									"operator" : "=",
+									"answerBoolean" : true
 								}
 							],
-							"enableBehavior": "all",
-							"required": false,
-							"item": [
+							"enableBehavior" : "all",
+							"required" : false,
+							"item" : [
 								{
-									"extension": [
+									"extension" : [
 										{
-											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-											"valueCodeableConcept": {
-												"coding": [
+											"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept" : {
+												"coding" : [
 													{
-														"system": "http://hl7.org/fhir/questionnaire-item-control",
-														"code": "help",
-														"display": "Help-Button"
+														"system" : "http://hl7.org/fhir/questionnaire-item-control",
+														"code" : "help",
+														"display" : "Help-Button"
 													}
 												],
-												"text": "Help-Button"
+												"text" : "Help-Button"
 											}
 										}
 									],
-									"linkId": "rm4.13.8_help",
-									"text": "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
-									"type": "display"
+									"linkId" : "rm4.13.8_help",
+									"text" : "Specify when, where, duration and frequency of the recruitment materials that will be published, aired, distributed, posted or sent.",
+									"type" : "display"
 								}
 							]
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.33",
+					"text" : "Attachments for Broadcast Communication Recruitment Materials",
+					"_text" : {
+						"extension" : [
+							{
+								"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString" : "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type" : "group",
+					"enableWhen" : [
+						{
+							"question" : "rm4.2",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
+							}
+						}
+					],
+					"required" : false,
+					"repeats" : true,
+					"item" : [
+						{
+							"linkId" : "rm4.33.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"type" : "string"
+						},
+						{
+							"linkId" : "rm4.33.2",
+							"text" : "Attachment",
+							"type" : "attachment"
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.35",
+					"text" : "Attachments for Printed Communication Recruitment Materials",
+					"_text" : {
+						"extension" : [
+							{
+								"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString" : "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type" : "group",
+					"enableWhen" : [
+						{
+							"question" : "rm4.4",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
+							}
+						}
+					],
+					"required" : false,
+					"repeats" : true,
+					"item" : [
+						{
+							"linkId" : "rm4.35.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"type" : "string"
+						},
+						{
+							"linkId" : "rm4.35.2",
+							"text" : "Attachment",
+							"type" : "attachment"
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.37",
+					"text" : "Attachments for Electronic Communication Recruitment Materials",
+					"_text" : {
+						"extension" : [
+							{
+								"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString" : "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type" : "group",
+					"enableWhen" : [
+						{
+							"question" : "rm4.6",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
+							}
+						}
+					],
+					"required" : false,
+					"repeats" : true,
+					"item" : [
+						{
+							"linkId" : "rm4.37.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"type" : "string"
+						},
+						{
+							"linkId" : "rm4.37.2",
+							"text" : "Attachment",
+							"type" : "attachment"
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.39",
+					"text" : "Attachments for Direct Communication Recruitment Materials",
+					"_text" : {
+						"extension" : [
+							{
+								"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString" : "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type" : "group",
+					"enableWhen" : [
+						{
+							"question" : "rm4.8",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
+							}
+						}
+					],
+					"required" : false,
+					"repeats" : true,
+					"item" : [
+						{
+							"linkId" : "rm4.39.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"type" : "string"
+						},
+						{
+							"linkId" : "rm4.39.2",
+							"text" : "Attachment",
+							"type" : "attachment"
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.41",
+					"text" : "Attachments for Group Communication Recruitment Materials",
+					"_text" : {
+						"extension" : [
+							{
+								"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString" : "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type" : "group",
+					"enableWhen" : [
+						{
+							"question" : "rm4.10",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
+							}
+						}
+					],
+					"required" : false,
+					"repeats" : true,
+					"item" : [
+						{
+							"linkId" : "rm4.41.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"type" : "string"
+						},
+						{
+							"linkId" : "rm4.41.2",
+							"text" : "Attachment",
+							"type" : "attachment"
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.43",
+					"text" : "Attachments for Public Communication Recruitment Materials",
+					"_text" : {
+						"extension" : [
+							{
+								"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString" : "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type" : "group",
+					"enableWhen" : [
+						{
+							"question" : "rm4.12",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y"
+							}
+						}
+					],
+					"required" : false,
+					"repeats" : true,
+					"item" : [
+						{
+							"linkId" : "rm4.43.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"type" : "string"
+						},
+						{
+							"linkId" : "rm4.43.2",
+							"text" : "Attachment",
+							"type" : "attachment"
 						}
 					]
 				}
 			]
 		},
 		{
-			"linkId": "rm6",
-			"text": "Distribution List and Audience Identification",
-			"type": "group",
-			"required": false,
-			"repeats": false,
-			"readOnly": false,
-			"item": [
+			"linkId" : "rm6",
+			"text" : "Distribution List and Audience Identification",
+			"_text" : {
+				"extension" : [
+					{
+						"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+						"valueString" : "color:#274e90; font-size: 150%"
+					}
+				]
+			},
+			"type" : "group",
+			"required" : false,
+			"repeats" : false,
+			"readOnly" : false,
+			"item" : [
 				{
-					"linkId": "rm6.1",
-					"text": "If recruitment material is being mailed, emailed, texted or otherwise distributed, describe where/how the distribution list will be obtained.",
-					"type": "text",
-					"required": false
+					"linkId" : "rm6.1",
+					"text" : "If recruitment material is being mailed, emailed, texted or otherwise distributed, describe where/how the distribution list will be obtained.",
+					"type" : "text",
+					"required" : false
 				},
 				{
-					"linkId": "rm6.2",
-					"text": "Describe methods that will be used to identify audiences for advertising messages (eg. web advertising will be displayed on web sites popular with a particular demographic)",
-					"type": "text",
-					"required": false
+					"linkId" : "rm6.2",
+					"text" : "Describe methods that will be used to identify audiences for advertising messages (eg. web advertising will be displayed on web sites popular with a particular demographic)",
+					"type" : "text",
+					"required" : false
 				},
 				{
-					"extension": [
+					"extension" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-							"valueCodeableConcept": {
-								"coding": [
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+							"valueCodeableConcept" : {
+								"coding" : [
 									{
-										"system": "http://hl7.org/fhir/questionnaire-item-control",
-										"code": "drop-down",
-										"display": "Drop down"
+										"system" : "http://hl7.org/fhir/questionnaire-item-control",
+										"code" : "drop-down",
+										"display" : "Drop down"
 									}
 								],
-								"text": "Drop down"
+								"text" : "Drop down"
 							}
 						}
 					],
-					"linkId": "rm6.3",
-					"text": "Any necessary permission will be obtained for posting/airing these (for example, permission to post a flyer on a bulletin board).",
-					"type": "choice",
-					"required": true,
-					"answerOption": [
+					"linkId" : "rm6.3",
+					"text" : "Any necessary permission will be obtained for posting/airing these (for example, permission to post a flyer on a bulletin board).",
+					"type" : "choice",
+					"required" : true,
+					"answerOption" : [
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "Y",
-								"display": "Yes"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y",
+								"display" : "Yes"
 							}
 						},
 						{
-							"valueCoding": {
-								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-								"code": "N",
-								"display": "No"
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "N",
+								"display" : "No"
 							}
 						}
 					]
@@ -3213,254 +3695,381 @@
 			]
 		},
 		{
-			"linkId": "rm7",
-			"text": "Response to Recruitment Materials",
-			"type": "group",
-			"required": false,
-			"repeats": false,
-			"readOnly": false,
-			"item": [
+			"linkId" : "rm7",
+			"text" : "Response to Recruitment Materials",
+			"_text" : {
+				"extension" : [
+					{
+						"url" : "http://hl7.org/fhir/StructureDefinition/rendering-style",
+						"valueString" : "color:#274e90; font-size: 150%"
+					}
+				]
+			},
+			"type" : "group",
+			"required" : false,
+			"repeats" : false,
+			"readOnly" : false,
+			"item" : [
 				{
-					"linkId": "rm7.1",
-					"text": "When potential participants respond to recruitment material, describe the information that will be provided to them about the study.",
-					"type": "text",
-					"required": false
+					"linkId" : "rm7.1",
+					"text" : "When potential participants respond to recruitment material, describe the information that will be provided to them about the study.",
+					"type" : "text",
+					"required" : false
 				},
 				{
-					"linkId": "rm7.2",
-					"text": "Describe the plan to respond to potential participants who respond to recruitment materials. Include how many times you will attempt to respond to call the participant back, leave a voice message, send a reply email or conduct other follow-up communication.",
-					"type": "text",
-					"required": false
+					"linkId" : "rm7.2",
+					"text" : "Describe the plan to respond to potential participants who respond to recruitment materials. Include how many times you will attempt to respond to call the participant back, leave a voice message, send a reply email or conduct other follow-up communication.",
+					"type" : "text",
+					"required" : false
 				},
 				{
-					"extension": [
+					"extension" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-							"valueCodeableConcept": {
-								"coding": [
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+							"valueCodeableConcept" : {
+								"coding" : [
 									{
-										"system": "http://hl7.org/fhir/questionnaire-item-control",
-										"code": "check-box",
-										"display": "Check-box"
+										"system" : "http://hl7.org/fhir/questionnaire-item-control",
+										"code" : "check-box",
+										"display" : "Check-box"
 									}
 								],
-								"text": "Check box"
+								"text" : "Check box"
 							}
 						}
 					],
-					"linkId": "rm7.3",
-					"text": "Types of communication methods that will be used to reply to potential participants who respond to recruitment materials",
-					"type": "open-choice",
-					"required": true,
-					"repeats": true,
-					"answerOption": [
+					"linkId" : "rm7.3",
+					"text" : "Types of communication methods that will be used to reply to potential participants who respond to recruitment materials",
+					"type" : "open-choice",
+					"required" : true,
+					"repeats" : true,
+					"answerOption" : [
 						{
-							"valueCoding": {
-								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
-								"code": "VM",
-								"display": "Telephone and voice messages"
+							"valueCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "PHONECALL",
+								"display" : "Telephone calls"
 							}
 						},
 						{
-							"valueCoding": {
-								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
-								"code": "VC",
-								"display": "Video Conferencing"
+							"valueCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "VM",
+								"display" : "Voice mail and telephone voice messages"
 							}
 						},
 						{
-							"valueCoding": {
-								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
-								"code": "EMAIL",
-								"display": "Email"
+							"valueCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "VC",
+								"display" : "Video Conferencing"
 							}
 						},
 						{
-							"valueCoding": {
-								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
-								"code": "TXT",
-								"display": "Text messages/texting"
+							"valueCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "EMAIL",
+								"display" : "Email"
 							}
 						},
 						{
-							"valueCoding": {
-								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
-								"code": "EHPRTL",
-								"display": "eHealth Portal messaging"
+							"valueCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "TXT",
+								"display" : "Text messages/texting"
+							}
+						},
+						{
+							"valueCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "EHPRTL",
+								"display" : "eHealth Portal messaging"
 							}
 						}
 					]
 				},
 				{
-					"extension": [
+					"linkId" : "rm7.4",
+					"text" : "Attach the telephone call script for responding to potential participants",
+					"type" : "group",
+					"enableWhen" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-							"valueCode": "image/jpeg"
-						},
-						{
-							"url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-							"valueCode": "application/pdf"
-						},
-						{
-							"url": "http://hl7.org/fhir/StructureDefinition/maxSize",
-							"valueDecimal": 5
+							"question" : "rm7.3",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "PHONECALL"
+							}
 						}
 					],
-					"linkId": "rm7.4",
-					"text": "Attach the telephone and/or computer video conferencing script for responding to potential participants",
-					"type": "attachment"
+					"repeats" : true,
+					"item" : [
+						{
+							"linkId" : "rm7.4.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"type" : "string"
+						},
+						{
+							"linkId" : "rm7.4.2",
+							"text" : "Attachment",
+							"type" : "attachment"
+						}
+					]
 				},
 				{
-					"extension": [
+					"linkId" : "rm7.5",
+					"text" : "Attach the voice mail/telephone voice message script for responding to potential participants",
+					"type" : "group",
+					"enableWhen" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-							"valueCode": "image/jpeg"
-						},
-						{
-							"url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-							"valueCode": "application/pdf"
-						},
-						{
-							"url": "http://hl7.org/fhir/StructureDefinition/maxSize",
-							"valueDecimal": 5
+							"question" : "rm7.3",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "VM"
+							}
 						}
 					],
-					"linkId": "rm7.5",
-					"text": "Attach the voice mail script for responding to potential participants",
-					"type": "attachment"
+					"repeats" : true,
+					"item" : [
+						{
+							"linkId" : "rm7.5.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"type" : "string"
+						},
+						{
+							"linkId" : "rm7.5.2",
+							"text" : "Attachment",
+							"type" : "attachment"
+						}
+					]
 				},
 				{
-					"extension": [
+					"linkId" : "rm7.6",
+					"text" : "Attach the video conferencing script for responding to potential participants",
+					"type" : "group",
+					"enableWhen" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-							"valueCode": "image/jpeg"
-						},
-						{
-							"url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-							"valueCode": "application/pdf"
-						},
-						{
-							"url": "http://hl7.org/fhir/StructureDefinition/maxSize",
-							"valueDecimal": 5
+							"question" : "rm7.3",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "VC"
+							}
 						}
 					],
-					"linkId": "rm7.6",
-					"text": "Attach the email script for responding to potential participants",
-					"type": "attachment"
+					"repeats" : true,
+					"item" : [
+						{
+							"linkId" : "rm7.6.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"type" : "string"
+						},
+						{
+							"linkId" : "rm7.6.2",
+							"text" : "Attachment",
+							"type" : "attachment"
+						}
+					]
 				},
 				{
-					"extension": [
+					"linkId" : "rm7.7",
+					"text" : "Attach the email script for responding to potential participants",
+					"type" : "group",
+					"enableWhen" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-							"valueCode": "image/jpeg"
-						},
-						{
-							"url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-							"valueCode": "application/pdf"
-						},
-						{
-							"url": "http://hl7.org/fhir/StructureDefinition/maxSize",
-							"valueDecimal": 5
+							"question" : "rm7.3",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "EMAIL"
+							}
 						}
 					],
-					"linkId": "rm7.7",
-					"text": "Attach the text messaging script for responding to potential participants",
-					"type": "attachment"
+					"repeats" : true,
+					"item" : [
+						{
+							"linkId" : "rm7.7.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"type" : "string"
+						},
+						{
+							"linkId" : "rm7.7.2",
+							"text" : "Attachment",
+							"type" : "attachment"
+						}
+					]
 				},
 				{
-					"extension": [
+					"linkId" : "rm7.8",
+					"text" : "Attach the text messaging/texting script for responding to potential participants",
+					"type" : "group",
+					"enableWhen" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-							"valueCode": "image/jpeg"
-						},
-						{
-							"url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-							"valueCode": "application/pdf"
-						},
-						{
-							"url": "http://hl7.org/fhir/StructureDefinition/maxSize",
-							"valueDecimal": 5
+							"question" : "rm7.3",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "TXT"
+							}
 						}
 					],
-					"linkId": "rm7.8",
-					"text": "Attach any other script for responding to potential participants",
-					"type": "attachment"
+					"repeats" : true,
+					"item" : [
+						{
+							"linkId" : "rm7.8.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"type" : "string"
+						},
+						{
+							"linkId" : "rm7.8.2",
+							"text" : "Attachment",
+							"type" : "attachment"
+						}
+					]
+				},
+				{
+					"linkId" : "rm7.9",
+					"text" : "Attach the eHealth Portal messaging script for responding to potential participants",
+					"type" : "group",
+					"enableWhen" : [
+						{
+							"question" : "rm7.3",
+							"operator" : "=",
+							"answerCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "EHPRTL"
+							}
+						}
+					],
+					"repeats" : true,
+					"item" : [
+						{
+							"linkId" : "rm7.9.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"type" : "string"
+						},
+						{
+							"linkId" : "rm7.9.2",
+							"text" : "Attachment",
+							"type" : "attachment"
+						}
+					]
+				},
+				{
+					"linkId" : "rm7.10",
+					"text" : "Attach any other script for responding to potential participants",
+					"type" : "group",
+					"enableWhen" : [
+						{
+							"question" : "rm7.3",
+							"operator" : "exists",
+							"answerBoolean" : true
+						}
+					],
+					"repeats" : true,
+					"item" : [
+						{
+							"linkId" : "rm7.10.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"type" : "string"
+						},
+						{
+							"linkId" : "rm7.10.2",
+							"text" : "Attachment",
+							"type" : "attachment"
+						}
+					]
 				}
 			]
 		},
 		{
-			"extension": [
+			"extension" : [
 				{
-					"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-					"valueBoolean": true
+					"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+					"valueBoolean" : true
 				}
 			],
-			"linkId": "ADMIN00",
-			"text": "Administrative Use Only",
-			"type": "group",
-			"item": [
+			"linkId" : "ADMIN00",
+			"text" : "Administrative Use Only",
+			"type" : "group",
+			"item" : [
 				{
-					"extension": [
+					"extension" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-							"valueBoolean": true
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+							"valueBoolean" : true
 						}
 					],
-					"linkId": "ADMIN01",
-					"text": "Link ID prefix",
-					"type": "string",
-					"required": false,
-					"initial": [
+					"linkId" : "ADMIN01",
+					"text" : "Link ID prefix",
+					"type" : "string",
+					"required" : false,
+					"initial" : [
 						{
-							"valueString": "rm"
+							"valueString" : "rm"
 						}
 					]
 				},
 				{
-					"extension": [
+					"extension" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-							"valueBoolean": true
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+							"valueBoolean" : true
+						},
+						{
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-initialExpression",
+							"valueExpression" : {
+								"language" : "text/fhirpath",
+								"expression" : "%lookupInitiateStudy.descendants().where(linkId = 'ADMIN02').answer.value"
+							}
 						}
 					],
-					"linkId": "ADMIN02",
-					"text": "Questionnaire Response ID for the parent Questionnaire Response (such as the Initiate a Study Questionnaire Response), if any",
-					"type": "string",
-					"required": false,
-					"initial": [
+					"linkId" : "ADMIN02",
+					"text" : "Questionnaire Response ID for the parent Questionnaire Response (such as the Initiate a Study Questionnaire Response), if any",
+					"type" : "string",
+					"required" : false,
+					"initial" : [
 						{
-							"valueString": "temporarily unavailable"
+							"valueString" : "temporarily unavailable"
 						}
 					]
 				},
 				{
-					"extension": [
+					"extension" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-							"valueBoolean": true
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+							"valueBoolean" : true
+						},
+						{
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-initialExpression",
+							"valueExpression" : {
+								"language" : "text/fhirpath",
+								"expression" : "%lookupInitiateStudy.descendants().where(linkId = 'ADMIN03').answer.value"
+							}
 						}
 					],
-					"linkId": "ADMIN03",
-					"text": "ID of the Research Study FHIR Resource associated with the study Questionnaire Responses",
-					"type": "string",
-					"required": false,
-					"initial": [
+					"linkId" : "ADMIN03",
+					"text" : "ID of the Research Study FHIR Resource associated with the study Questionnaire Responses",
+					"type" : "string",
+					"required" : false,
+					"initial" : [
 						{
-							"valueString": "temporarily unavailable"
+							"valueString" : "temporarily unavailable"
 						}
 					]
 				},
 				{
-					"extension": [
+					"extension" : [
 						{
-							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-							"valueBoolean": true
+							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+							"valueBoolean" : true
 						}
 					],
-					"linkId": "ADMIN04",
-					"text": "Questionnaire Response ID of the local considerations Questionnaire Response, if any",
-					"type": "string",
-					"required": false
+					"linkId" : "ADMIN04",
+					"text" : "Questionnaire Response ID of the local considerations Questionnaire Response, if any",
+					"type" : "string",
+					"required" : false
 				}
 			]
 		}
