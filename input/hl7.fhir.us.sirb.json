@@ -204,21 +204,12 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "Questionnaire/sampleQ",
-                    "display": "AE_Questionnaire"
-                },
-                "name": "AE_Questionnaire"
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "CodeSystem/temporarycodes",
                     "display": "Temporary Codes"
                 },
                 "name": "Temporary Codes",
                 "description": "This is a temporary codesystem capturing the custom codelists used across the sIRB forms."
             },
-           
             {
                 "exampleBoolean": false,
                 "reference": {
@@ -227,7 +218,6 @@
                 },
                 "name": "Newer research study"
             },
-          
             {
                 "exampleBoolean": false,
                 "reference": {
