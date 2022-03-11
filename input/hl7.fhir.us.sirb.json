@@ -1,507 +1,390 @@
 {
-	"id": "hl7.fhir.us.sirb",
-	"meta": {
-		"versionId": "437",
-		"lastUpdated": "2022-03-11T00:57:18.474+00:00",
-		"source": "#UGWFWe8c4Kb7OqJs"
-	},
-	"resourceType": "ImplementationGuide",
-	"status": "draft",
-	"fhirVersion": [
-		"4.0.1"
-	],
-	"url": "http://hl7.org/fhir/us/sirb/ImplementationGuide/hl7.fhir.us.sirb",
-	"version": "0.1.0",
-	"name": "SingleInstitutionalReviewBoard",
-	"title": "Single Institutional Review Board (sIRB) Implementation Guide",
-	"date": "2021-07-23",
-	"publisher": "HL7 International - BR&R Work Group",
-	"contact": [
-		{
-			"name": "HL7 International - Biomedical Research and Regulation",
-			"telecom": [
-				{
-					"system": "url",
-					"value": "http://www.hl7.org/Special/committees/rcrim"
-				}
-			]
-		}
-	],
-	"description": "Data standards to move data and documents from clinical research sites to a single ethics review board in support of the \"NIH Policy on the Use of a Single Institutional Review Board for Multi-Site Research.",
-	"jurisdiction": [
-		{
-			"coding": [
-				{
-					"system": "urn:iso:std:iso:3166",
-					"code": "US",
-					"display": "United States of America"
-				}
-			],
-			"text": "United States of America"
-		}
-	],
-	"packageId": "hl7.fhir.us.sirb",
-	"dependsOn": [
-		{
-			"id": "hl7fhiruvsdc",
-			"uri": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc#3.0.0-preview",
-			"packageId": "hl7.fhir.uv.sdc",
-			"version": "3.0.0-preview"
-		}
-	],
-	"definition": {
-		"grouping": [
-			{
-				"id": "new-group7",
-				"name": "sIRB Questionnaires"
-			},
-			{
-				"id": "new-group8",
-				"name": "Examples of sIRB Questionnaire Responses"
-			},
-			{
-				"id": "new-group9",
-				"name": "Research Study Example"
-			}
-		],
-		"resource": [
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-initiate-study-questionnaire",
-					"display": "Initiate a Study Questionnaire"
-				},
-				"name": "Initiate a Study Questionnaire",
-				"description": "Form for collecting initial common fields used across IRB forms"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-protocol-questionnaire",
-					"display": "Protocol Questionnaire"
-				},
-				"name": "Protocol Questionnaire",
-				"description": "Questionnaire for collecting Protocol information"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-consent-questionnaire",
-					"display": "Consent Questionnaire"
-				},
-				"name": "Consent Questionnaire",
-				"description": "Form for collecting information for creation of a consent document."
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-recruitment-materials-questionnaire",
-					"display": "Recruitment Materials Questionnaire"
-				},
-				"name": "Recruitment Materials Questionnaire",
-				"description": "Reporting form for Recruitment Materials."
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-determination-letter-questionnaire",
-					"display": "Determination Letter Questionnaire"
-				},
-				"name": "Determination Letter Questionnaire",
-				"description": "Reporting form for a Determination Letter"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-continuing-review-questionnaire",
-					"display": "Continuing Review Questionnaire"
-				},
-				"name": "Continuing Review Questionnaire",
-				"description": "Reporting form for Continuing Review."
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-adverse-event-questionnaire",
-					"display": "Adverse Medical Event Questionnaire"
-				},
-				"name": "Adverse Medical Event Questionnaire",
-				"description": "Reporting form for reportable Medical Adverse Events"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-nonmedicalevent-questionnaire",
-					"display": "NonMedical Events"
-				},
-				"name": "Adverse Non-Medical Event Questionnaire",
-				"description": "Reporting form for reportable Non-Medical Adverse Events"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/NME-QR"
-				},
-				"name": "Adverse Non-Medical Event Questionnaire Response",
-				"description": "Example of Questionaire Response for Non=Medical Adverse Events"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/PROTOCOL-QR"
-				},
-				"name": "Protocol Questionnaire Response",
-				"description": "Example of a submitted Protocol Questionnaire Response"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/MEDICAL-AE-QR"
-				},
-				"name": "Adverse Medical Event Questionnaire Response",
-				"description": "Adverse Medical Event Questionnaire Response"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/INITIATE-QR"
-				},
-				"name": "Initiate a Study Questionnaire Response",
-				"description": "Example of a Intiate a Study Questionaire Response"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/DETERMINATION-QR"
-				},
-				"name": "Determination Letter Questionnaire Response",
-				"description": "Example of a Determination Letter Questionaire Response"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/RECRUIT-QR"
-				},
-				"name": "Recruit Questionnaire Response",
-				"description": "Example of a Recruitment Materials Questionnaire Response"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "ResearchStudy/ResearchStudy2858",
-					"display": "Double blind, placebo-controlled trial of a new class of arthritis medication"
-				},
-				"name": "Example of Research Study",
-				"description": "Example of Research Study"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/CONTINUING-REVIEW-QR"
-				},
-				"name": "Continuing Review Questionnaire Response",
-				"description": "Description of CR QR"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/CONSENT-QR"
-				},
-				"name": "Consent QR",
-				"description": "Description of Consent QR"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/POPULATE-sirb-determination-letter-questionnaire",
-					"display": "sIRB Determination Questionnaire"
-				},
-				"name": "Determination Questionnaire with pre-population",
-				"description": "Determination Questionnaire with pre-population"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/V2POPULATE-sirb-adverse-event-questionnaire",
-					"display": "Adverse Medical Event Questionnaire"
-				},
-				"name": "Adverse Medical Event Questionnaire"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sampleQ",
-					"display": "AE_Questionnaire"
-				},
-				"name": "AE_Questionnaire"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/V2POPULATE-sirb-protocol-questionnaire",
-					"display": "Protocol Questionnaire"
-				},
-				"name": "Protocol Questionnaire"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "CodeSystem/temporarycodes",
-					"display": "Temporary Codes"
-				},
-				"name": "Temporary Codes",
-				"description": "This is a temporary codesystem capturing the custom codelists used across the sIRB forms."
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/V2POPULATE-sirb-determination-letter-questionnaire",
-					"display": "sIRB Determination Questionnaire"
-				},
-				"name": "sIRB Determination Questionnaire"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/V2POPULATE-sirb-continuing-review-questionnaire",
-					"display": "Continuing Review"
-				},
-				"name": "Continuing Review"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/V2POPULATE-sirb-nonmedicalevent-questionnaire",
-					"display": "Unanticipated Problems Involving Risk to Subjects or Others (UPIRTSO)/Adverse Non-Medical Event Questionnaire"
-				},
-				"name": "Unanticipated Problems Involving Risk to Subjects or Others (UPIRTSO)/Adverse Non-Medical Event Questionnaire"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/V2POPULATE-sirb-recruitment-materials-questionnaire",
-					"display": "Recruitment Materials"
-				},
-				"name": "Recruitment Materials"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/V2POPULATE-sirb-initiate-study-questionnaire",
-					"display": "Initiate a Study Questionnaire"
-				},
-				"name": "Initiate a Study Questionnaire",
-				"description": "Initiate a Study Questionnaire"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/5138"
-				},
-				"name": "Adverse Non-Medical Event 5138"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/5139"
-				},
-				"name": "cr 5139"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "ResearchStudy/newerResearchStudy2858",
-					"display": "Double blind, placebo-controlled trial of a new class of arthritis medication"
-				},
-				"name": "Newer research study"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/V2POPULATE-sirb-consent-questionnaire",
-					"display": "Consent Questionnaire"
-				},
-				"name": "Consent Questionnaire"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/3141"
-				},
-				"name": "3141"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/5140"
-				},
-				"name": "5140"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/5137exampleQR"
-				}
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-determination-letter-questionnaire-populate",
-					"display": "sIRB Determination Questionnaire"
-				},
-				"name": "sIRB Determination Questionnaire",
-				"description": "This questionnaire collects information required in the production of a determination letter. These data are used to send a Determination Letter Report to each site when a decision is made regarding the institution’s approval to serve as a relying site.",
-				"groupingId": "new-group7"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-recruitment-materials-questionnaire-populate",
-					"display": "Recruitment Materials"
-				},
-				"name": "Recruitment Materials",
-				"description": "The Recruitment Materials Form is used to seek approval from the sIRB to use the specified recruitment materials (at the requested time, place, duration and medium) during the study and for the methods of communication that are proposed for responding to the study participants",
-				"groupingId": "new-group7"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-continuing-review-questionnaire-populate",
-					"display": "Continuing Review"
-				},
-				"name": "Continuing Review",
-				"description": "The Continuing Review Questionnaire collects data used in a report which is then provided to the sIRB on a regular basis so that continued activity on the study can be reviewed.",
-				"groupingId": "new-group7"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-initiate-study-questionnaire-populate",
-					"display": "Initiate a Study Questionnaire"
-				},
-				"name": "Initiate a Study Questionnaire",
-				"description": "This questionnaire serves as an initial collection form for recurring data elements that are present in the other forms. These other forms will then subsequently prepopulate with these data to minimize data entry time and errors.",
-				"groupingId": "new-group7"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-adverse-event-questionnaire-populate",
-					"display": "Adverse Medical Event Questionnaire"
-				},
-				"name": "Adverse Medical Event Questionnaire",
-				"description": "The Adverse Events Questionnaire is intended to create a Medical Adverse Event Report to the sIRB to notify them of the Medical Adverse Event, the medical description of the event, the resolution of the event, whether there were associated protocol violations and the relationship of the medical event to the study agent.",
-				"groupingId": "new-group7"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-nonmedicalevent-questionnaire-populate",
-					"display": "Unanticipated Problems Involving Risk to Subjects or Others (UPIRTSO)/Adverse Non-Medical Event Questionnaire"
-				},
-				"name": "Adverse Non-Medical Event Questionnaire",
-				"description": "The Non-Medical Adverse Questionnaire is intended to create a Non-Medical Adverse Event Report to the sIRB. An example of a Non-Medical Adverse Event is the inadvertent disclosure to several participants that they are receiving the placebo in a blind study. The Non-Medical Adverse Questionnaire captures details for the report such as the root cause of the event, the corrective action plan and associated changes to the protocol or consent form as a result of the event.",
-				"groupingId": "new-group7"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-consent-questionnaire-populate",
-					"display": "Consent Questionnaire"
-				},
-				"name": "Consent Questionnaire",
-				"description": "The Consent Form Questionnaire creates the exact Consent Form content word-for-word that will be shown to the sIRB’s Institutional Review Board to be approved to use during the study. The rendering and pdf format created by the software are also provided to the sIRB to be approved.",
-				"groupingId": "new-group7"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "Questionnaire/sirb-protocol-questionnaire-populate",
-					"display": "Protocol Questionnaire"
-				},
-				"name": "Protocol Questionnaire",
-				"description": "The Protocol Questionnaire is used by the Principal Investigator and/or the Study Coordinator to justify the study and request the approval for the study. Contents include a synopsis for non-technical board members and a detailed protocol discussion. Other important sections of form requesting approval for the protocol include work history of the researchers, risks to university personnel performing the research, risk mitigations being undertaken by the researchers, long discussions of the existing body of knowledge and explanations of how the study can be rationalized in light of the existing knowledge on this study topic.",
-				"groupingId": "new-group7"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/sirb-nonmedicalevent-questionnaire-populate-exampleQR",
-					"display": "Example Adverse Non-Medical Event Questionnaire Response"
-				},
-				"name": "Example Adverse Non-Medical Event Questionnaire Response",
-				"description": "Example Adverse Non-Medical Event sIRB Questionnaire Response",
-				"exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse",
-				"groupingId": "new-group8"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/sirb-initiate-study-questionnaire-populate-exampleQR"
-				},
-				"name": "Example Initiate a Study Questionnaire Response",
-				"description": "Example Initiate a Study sIRB Questionnaire Response",
-				"exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse",
-				"groupingId": "new-group8"
-			},
-			{
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "ResearchStudy/ResearchStudyExample-sIRB",
-					"display": "sIRB Research Study Example"
-				},
-				"name": "sIRB Research Study Example",
-				"description": "sIRB Research Study Example",
-				"groupingId": "new-group9"
-			},
-			{
-				"exampleBoolean": false,
-				"reference": {
-					"reference": "QuestionnaireResponse/sirb-continuing-review-questionnaire-populate-exampleQR",
-					"display": "Example Continuing Review Questionnaire Response"
-				},
-				"name": "Example Continuing Review Questionnaire Response",
-				"description": "Example Continuing Review sIRB Questionnaire Response",
-				"exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse",
-				"groupingId": "new-group8"
-			}
-		],
-		"page": {
-			"nameUrl": "index.html",
-			"title": "Single IRB (sIRB)",
-			"generation": "markdown",
-			"page": [
-				{
-					"nameUrl": "conformance_and_functionality_expectations.html",
-					"title": "Conformance and Functionality Expectations",
-					"generation": "markdown"
-				},
-				{
-					"nameUrl": "downloads.html",
-					"title": "Downloads",
-					"generation": "markdown"
-				},
-				{
-					"nameUrl": "codesystems_descriptions.html",
-					"title": "Descriptions of CodeSystems",
-					"generation": "markdown"
-				},
-				{
-					"nameUrl": "workflow_diagrams.html",
-					"title": "Workflow Diagrams",
-					"generation": "markdown"
-				}
-			]
-		},
-		"parameter": [
-			{
-				"code": "copyrightyear",
-				"value": "2020+"
-			},
-			{
-				"code": "releaselabel",
-				"value": "CI Build"
-			}
-		]
-	}
+    "id": "hl7.fhir.us.sirb",
+    "meta": {
+        "versionId": "437",
+        "lastUpdated": "2022-03-11T00:57:18.474+00:00",
+        "source": "#UGWFWe8c4Kb7OqJs"
+    },
+    "resourceType": "ImplementationGuide",
+    "status": "draft",
+    "fhirVersion": ["4.0.1"],
+    "url": "http://hl7.org/fhir/us/sirb/ImplementationGuide/hl7.fhir.us.sirb",
+    "version": "0.1.0",
+    "name": "SingleInstitutionalReviewBoard",
+    "title": "Single Institutional Review Board (sIRB) Implementation Guide",
+    "date": "2021-07-23",
+    "publisher": "HL7 International - BR&R Work Group",
+    "contact": [
+        {
+            "name": "HL7 International - Biomedical Research and Regulation",
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.hl7.org/Special/committees/rcrim"
+                }
+            ]
+        }
+    ],
+    "description": "Data standards to move data and documents from clinical research sites to a single ethics review board in support of the \"NIH Policy on the Use of a Single Institutional Review Board for Multi-Site Research.",
+    "jurisdiction": [
+        {
+            "coding": [
+                {
+                    "system": "urn:iso:std:iso:3166",
+                    "code": "US",
+                    "display": "United States of America"
+                }
+            ],
+            "text": "United States of America"
+        }
+    ],
+    "packageId": "hl7.fhir.us.sirb",
+    "dependsOn": [
+        {
+            "id": "hl7fhiruvsdc",
+            "uri": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc#3.0.0-preview",
+            "packageId": "hl7.fhir.uv.sdc",
+            "version": "3.0.0-preview"
+        }
+    ],
+    "definition": {
+        "grouping": [
+            {
+                "id": "new-group7",
+                "name": "sIRB Questionnaires"
+            },
+            {
+                "id": "new-group8",
+                "name": "Examples of sIRB Questionnaire Responses"
+            },
+            {
+                "id": "new-group9",
+                "name": "Research Study Example"
+            }
+        ],
+        "resource": [
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-initiate-study-questionnaire",
+                    "display": "Initiate a Study Questionnaire"
+                },
+                "name": "Initiate a Study Questionnaire",
+                "description": "Form for collecting initial common fields used across IRB forms"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-protocol-questionnaire",
+                    "display": "Protocol Questionnaire"
+                },
+                "name": "Protocol Questionnaire",
+                "description": "Questionnaire for collecting Protocol information"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-consent-questionnaire",
+                    "display": "Consent Questionnaire"
+                },
+                "name": "Consent Questionnaire",
+                "description": "Form for collecting information for creation of a consent document."
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-recruitment-materials-questionnaire",
+                    "display": "Recruitment Materials Questionnaire"
+                },
+                "name": "Recruitment Materials Questionnaire",
+                "description": "Reporting form for Recruitment Materials."
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-determination-letter-questionnaire",
+                    "display": "Determination Letter Questionnaire"
+                },
+                "name": "Determination Letter Questionnaire",
+                "description": "Reporting form for a Determination Letter"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-continuing-review-questionnaire",
+                    "display": "Continuing Review Questionnaire"
+                },
+                "name": "Continuing Review Questionnaire",
+                "description": "Reporting form for Continuing Review."
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-adverse-event-questionnaire",
+                    "display": "Adverse Medical Event Questionnaire"
+                },
+                "name": "Adverse Medical Event Questionnaire",
+                "description": "Reporting form for reportable Medical Adverse Events"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-nonmedicalevent-questionnaire",
+                    "display": "NonMedical Events"
+                },
+                "name": "Adverse Non-Medical Event Questionnaire",
+                "description": "Reporting form for reportable Non-Medical Adverse Events"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {"reference": "QuestionnaireResponse/NME-QR"},
+                "name": "Adverse Non-Medical Event Questionnaire Response",
+                "description": "Example of Questionaire Response for Non=Medical Adverse Events"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {"reference": "QuestionnaireResponse/PROTOCOL-QR"},
+                "name": "Protocol Questionnaire Response",
+                "description": "Example of a submitted Protocol Questionnaire Response"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {"reference": "QuestionnaireResponse/MEDICAL-AE-QR"},
+                "name": "Adverse Medical Event Questionnaire Response",
+                "description": "Adverse Medical Event Questionnaire Response"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {"reference": "QuestionnaireResponse/INITIATE-QR"},
+                "name": "Initiate a Study Questionnaire Response",
+                "description": "Example of a Intiate a Study Questionaire Response"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {"reference": "QuestionnaireResponse/DETERMINATION-QR"},
+                "name": "Determination Letter Questionnaire Response",
+                "description": "Example of a Determination Letter Questionaire Response"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {"reference": "QuestionnaireResponse/RECRUIT-QR"},
+                "name": "Recruit Questionnaire Response",
+                "description": "Example of a Recruitment Materials Questionnaire Response"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "ResearchStudy/ResearchStudy2858",
+                    "display": "Double blind, placebo-controlled trial of a new class of arthritis medication"
+                },
+                "name": "Example of Research Study",
+                "description": "Example of Research Study"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {"reference": "QuestionnaireResponse/CONTINUING-REVIEW-QR"},
+                "name": "Continuing Review Questionnaire Response",
+                "description": "Description of CR QR"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {"reference": "QuestionnaireResponse/CONSENT-QR"},
+                "name": "Consent QR",
+                "description": "Description of Consent QR"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/POPULATE-sirb-determination-letter-questionnaire",
+                    "display": "sIRB Determination Questionnaire"
+                },
+                "name": "Determination Questionnaire with pre-population",
+                "description": "Determination Questionnaire with pre-population"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sampleQ",
+                    "display": "AE_Questionnaire"
+                },
+                "name": "AE_Questionnaire"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "CodeSystem/temporarycodes",
+                    "display": "Temporary Codes"
+                },
+                "name": "Temporary Codes",
+                "description": "This is a temporary codesystem capturing the custom codelists used across the sIRB forms."
+            },
+           
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "ResearchStudy/newerResearchStudy2858",
+                    "display": "Double blind, placebo-controlled trial of a new class of arthritis medication"
+                },
+                "name": "Newer research study"
+            },
+          
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-determination-letter-questionnaire-populate",
+                    "display": "sIRB Determination Questionnaire"
+                },
+                "name": "sIRB Determination Questionnaire",
+                "description": "This questionnaire collects information required in the production of a determination letter. These data are used to send a Determination Letter Report to each site when a decision is made regarding the institution\u2019s approval to serve as a relying site.",
+                "groupingId": "new-group7"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-recruitment-materials-questionnaire-populate",
+                    "display": "Recruitment Materials"
+                },
+                "name": "Recruitment Materials",
+                "description": "The Recruitment Materials Form is used to seek approval from the sIRB to use the specified recruitment materials (at the requested time, place, duration and medium) during the study and for the methods of communication that are proposed for responding to the study participants",
+                "groupingId": "new-group7"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-continuing-review-questionnaire-populate",
+                    "display": "Continuing Review"
+                },
+                "name": "Continuing Review",
+                "description": "The Continuing Review Questionnaire collects data used in a report which is then provided to the sIRB on a regular basis so that continued activity on the study can be reviewed.",
+                "groupingId": "new-group7"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-initiate-study-questionnaire-populate",
+                    "display": "Initiate a Study Questionnaire"
+                },
+                "name": "Initiate a Study Questionnaire",
+                "description": "This questionnaire serves as an initial collection form for recurring data elements that are present in the other forms. These other forms will then subsequently prepopulate with these data to minimize data entry time and errors.",
+                "groupingId": "new-group7"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-adverse-event-questionnaire-populate",
+                    "display": "Adverse Medical Event Questionnaire"
+                },
+                "name": "Adverse Medical Event Questionnaire",
+                "description": "The Adverse Events Questionnaire is intended to create a Medical Adverse Event Report to the sIRB to notify them of the Medical Adverse Event, the medical description of the event, the resolution of the event, whether there were associated protocol violations and the relationship of the medical event to the study agent.",
+                "groupingId": "new-group7"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-nonmedicalevent-questionnaire-populate",
+                    "display": "Unanticipated Problems Involving Risk to Subjects or Others (UPIRTSO)/Adverse Non-Medical Event Questionnaire"
+                },
+                "name": "Adverse Non-Medical Event Questionnaire",
+                "description": "The Non-Medical Adverse Questionnaire is intended to create a Non-Medical Adverse Event Report to the sIRB. An example of a Non-Medical Adverse Event is the inadvertent disclosure to several participants that they are receiving the placebo in a blind study. The Non-Medical Adverse Questionnaire captures details for the report such as the root cause of the event, the corrective action plan and associated changes to the protocol or consent form as a result of the event.",
+                "groupingId": "new-group7"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-consent-questionnaire-populate",
+                    "display": "Consent Questionnaire"
+                },
+                "name": "Consent Questionnaire",
+                "description": "The Consent Form Questionnaire creates the exact Consent Form content word-for-word that will be shown to the sIRB\u2019s Institutional Review Board to be approved to use during the study. The rendering and pdf format created by the software are also provided to the sIRB to be approved.",
+                "groupingId": "new-group7"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "Questionnaire/sirb-protocol-questionnaire-populate",
+                    "display": "Protocol Questionnaire"
+                },
+                "name": "Protocol Questionnaire",
+                "description": "The Protocol Questionnaire is used by the Principal Investigator and/or the Study Coordinator to justify the study and request the approval for the study. Contents include a synopsis for non-technical board members and a detailed protocol discussion. Other important sections of form requesting approval for the protocol include work history of the researchers, risks to university personnel performing the research, risk mitigations being undertaken by the researchers, long discussions of the existing body of knowledge and explanations of how the study can be rationalized in light of the existing knowledge on this study topic.",
+                "groupingId": "new-group7"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "QuestionnaireResponse/sirb-nonmedicalevent-questionnaire-populate-exampleQR",
+                    "display": "Example Adverse Non-Medical Event Questionnaire Response"
+                },
+                "name": "Example Adverse Non-Medical Event Questionnaire Response",
+                "description": "Example Adverse Non-Medical Event sIRB Questionnaire Response",
+                "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse",
+                "groupingId": "new-group8"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {"reference": "QuestionnaireResponse/sirb-initiate-study-questionnaire-populate-exampleQR"},
+                "name": "Example Initiate a Study Questionnaire Response",
+                "description": "Example Initiate a Study sIRB Questionnaire Response",
+                "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse",
+                "groupingId": "new-group8"
+            },
+            {
+                "exampleBoolean": true,
+                "reference": {
+                    "reference": "ResearchStudy/ResearchStudyExample-sIRB",
+                    "display": "sIRB Research Study Example"
+                },
+                "name": "sIRB Research Study Example",
+                "description": "sIRB Research Study Example",
+                "groupingId": "new-group9"
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "QuestionnaireResponse/sirb-continuing-review-questionnaire-populate-exampleQR",
+                    "display": "Example Continuing Review Questionnaire Response"
+                },
+                "name": "Example Continuing Review Questionnaire Response",
+                "description": "Example Continuing Review sIRB Questionnaire Response",
+                "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse",
+                "groupingId": "new-group8"
+            }
+        ],
+        "page": {
+            "nameUrl": "index.html",
+            "title": "Single IRB (sIRB)",
+            "generation": "markdown",
+            "page": [
+                {
+                    "nameUrl": "conformance_and_functionality_expectations.html",
+                    "title": "Conformance and Functionality Expectations",
+                    "generation": "markdown"
+                },
+                {
+                    "nameUrl": "downloads.html",
+                    "title": "Downloads",
+                    "generation": "markdown"
+                },
+                {
+                    "nameUrl": "codesystems_descriptions.html",
+                    "title": "Descriptions of CodeSystems",
+                    "generation": "markdown"
+                },
+                {
+                    "nameUrl": "workflow_diagrams.html",
+                    "title": "Workflow Diagrams",
+                    "generation": "markdown"
+                }
+            ]
+        },
+        "parameter": [
+            {
+                "code": "copyrightyear",
+                "value": "2020+"
+            },
+            {
+                "code": "releaselabel",
+                "value": "CI Build"
+            }
+        ]
+    }
 }
