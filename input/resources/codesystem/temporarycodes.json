@@ -2,9 +2,9 @@
 	"resourceType": "CodeSystem",
 	"id": "temporarycodes",
 	"meta": {
-		"versionId": "14",
-		"lastUpdated": "2021-07-28T19:57:43.738+00:00",
-		"source": "#zromzYz4qd2dRhUi",
+		"versionId": "25",
+		"lastUpdated": "2022-03-01T05:48:06.916+00:00",
+		"source": "#xB060rjIVhkfCGdb",
 		"profile": [
 			"http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 		]
@@ -104,18 +104,13 @@
 			"definition": "TBD"
 		},
 		{
-			"code": "sIRB",
-			"display": "sIRB (Reviewing Site)",
-			"definition": "Site is the sIRB"
-		},
-		{
-			"code": "Relying",
-			"display": "Relying Site",
-			"definition": "Site is the Relying Site"
+			"code": "PHONECALL",
+			"display": "Telephone calls",
+			"definition": "TBD"
 		},
 		{
 			"code": "VM",
-			"display": "Telephone and voice messages",
+			"display": "Voice mail and telephone voice messages",
 			"definition": "TBD"
 		},
 		{
@@ -269,7 +264,7 @@
 			"definition": "TBD"
 		},
 		{
-			"code": "continue-intvnt",
+			"code": "continue-meds",
 			"display": "Continuing interventions",
 			"definition": "TBD"
 		},
@@ -311,11 +306,6 @@
 		{
 			"code": "otherfund",
 			"display": "Other Funding Source",
-			"definition": "TBD"
-		},
-		{
-			"code": "Other",
-			"display": "Other",
 			"definition": "TBD"
 		},
 		{
@@ -424,9 +414,94 @@
 			"definition": "TBD"
 		},
 		{
-			"code": "continue-meds",
-			"display": "Continuing interventions",
+			"code": "sourceQuestionnaireResponse",
+			"display": "The content of the Questionnaire Response transferred to this Questionnaire during form launch",
+			"definition": "The content of the Questionnaire Response transferred to this Questionnaire during form launch"
+		},
+		{
+			"code": "ResultsInDeath",
+			"display": "Results in death",
+			"definition": "Results in death"
+		},
+		{
+			"code": "IsLifeThreatening",
+			"display": "Is Life-threatening",
+			"definition": "Is Life-threatening"
+		},
+		{
+			"code": "ResultsInHospitalization",
+			"display": "Requires or prolongs inpatient hospitalization",
+			"definition": "Requires or prolongs inpatient hospitalization"
+		},
+		{
+			"code": "IsBirthDefect",
+			"display": "Is a congenital anomaly/birth defect",
+			"definition": "Is a congenital anomaly/birth defect"
+		},
+		{
+			"code": "ResultsInDisability",
+			"display": "Results in persistent or significant disability/incapacity",
+			"definition": "Results in persistent or significant disability/incapacity"
+		},
+		{
+			"code": "RequiresPreventImpairment",
+			"display": "Requires intervention to prevent permanent impairment",
+			"definition": "Requires intervention to prevent permanent impairment"
+		},
+		{
+			"code": "Other",
+			"display": "Other",
 			"definition": "TBD"
+		},
+		{
+			"code": "RCVRED",
+			"display": "Recovered/Resolved",
+			"definition": "Recovered/Resolved"
+		},
+		{
+			"code": "RCVRING",
+			"display": "Recovering/Resolving",
+			"definition": "Recovering/Resolving"
+		},
+		{
+			"code": "NRCVRED",
+			"display": "Not recovered/Not resolved/Ongoing",
+			"definition": "Not recovered/Not resolved/Ongoing"
+		},
+		{
+			"code": "SEQL",
+			"display": "Recovered/Resolved with sequelae",
+			"definition": "Recovered/Resolved with sequelae"
+		},
+		{
+			"code": "FATAL",
+			"display": "Fatal",
+			"definition": "Fatal"
+		},
+		{
+			"code": "UNK",
+			"display": "Unknown",
+			"definition": "Unknown"
+		},
+		{
+			"code": "NC",
+			"display": "Product dose or frequency of use not changed",
+			"definition": "Product dose or frequency of use not changed"
+		},
+		{
+			"code": "NA",
+			"display": "Not applicable",
+			"definition": "Not applicable"
+		},
+		{
+			"code": "PreviousAccrual",
+			"display": "Previous Accrual",
+			"definition": "Previous Accrual"
+		},
+		{
+			"code": "AdditionalEnrollees",
+			"display": "Additional enrollees this approval period",
+			"definition": "Additional enrollees this approval period"
 		}
 	]
 }

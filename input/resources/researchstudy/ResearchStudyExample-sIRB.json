@@ -1,0 +1,93 @@
+{
+	"resourceType": "ResearchStudy",
+	"id": "ResearchStudyExample-sIRB",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2022-03-10T21:36:40.631+00:00",
+		"source": "#qrJaMlzqImIvhHH2"
+	},
+	"contained": [
+		{
+			"resourceType": "PlanDefinition",
+			"id": "plandefinition-sirb-initiate-study-questionnaire-populate-exampleQR",
+			"identifier": [
+				{
+					"use": "usual",
+					"system": "https://www.examplestudymanagementdb.org",
+					"value": "PRO098765"
+				}
+			],
+			"name": "PlanDefsirb-initiate-study-questionnaire-populate-exampleQR",
+			"status": "draft"
+		},
+		{
+			"resourceType": "Practitioner",
+			"id": "practitioner-sirb-initiate-study-questionnaire-populate-exampleQR",
+			"name": [
+				{
+					"use": "official",
+					"text": "Jane Doe, MD",
+					"family": "Doe",
+					"given": [
+						"Jane"
+					],
+					"suffix": [
+						"MD"
+					]
+				}
+			]
+		}
+	],
+	"identifier": [
+		{
+			"use": "usual",
+			"type": {
+				"text": "The Questionnaire Response ID for the associated Initiate a Study FHIR Questionnaire Response"
+			},
+			"system": "https://hl7.org/fhir/us/sirb/QuestionnaireResponse",
+			"value": "sirb-initiate-study-questionnaire-populate-exampleQR"
+		},
+		{
+			"use": "usual",
+			"type": {
+				"text": "IRB Study Protocol Number assigned by the research study management database of the lead institution"
+			},
+			"value": "PRO098765",
+			"assigner": {
+				"display": "Sample University Medical Center"
+			}
+		}
+	],
+	"title": "A clinical study of the efficacy of Drug A for arthritis",
+	"protocol": [
+		{
+			"reference": "#plandefinition-sirb-initiate-study-questionnaire-populate-exampleQR"
+		}
+	],
+	"status": "in-review",
+	"category": [
+		{
+			"coding": [
+				{
+					"system": "http://ncimeta.nci.nih.gov",
+					"code": "C98388",
+					"display": "Interventional Study"
+				}
+			]
+		}
+	],
+	"keyword": [
+		{
+			"coding": [
+				{
+					"system": "https://www.protocols.examplenationalgovernmentfunder.org",
+					"code": "Gov-123456"
+				}
+			],
+			"text": "Gov-123456"
+		}
+	],
+	"principalInvestigator": {
+		"reference": "#practitioner-sirb-initiate-study-questionnaire-populate-exampleQR"
+	}
+}

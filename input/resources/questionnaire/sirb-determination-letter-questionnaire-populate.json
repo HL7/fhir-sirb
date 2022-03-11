@@ -1,0 +1,1159 @@
+{
+	"resourceType": "Questionnaire",
+	"id": "sirb-determination-letter-questionnaire-populate",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2022-03-10T05:21:58.895+00:00",
+		"source": "#nwmJq5lKbOozFgrC"
+	},
+	"extension": [
+		{
+			"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext",
+			"extension": [
+				{
+					"url": "name",
+					"valueCoding": {
+						"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+						"code": "sourceQuestionnaireResponse",
+						"display": "The content of the Questionnaire Response transferred to this Questionnaire during form launch"
+					}
+				},
+				{
+					"url": "type",
+					"valueCode": "QuestionnaireResponse"
+				},
+				{
+					"url": "description",
+					"valueString": "The Initiate a Study Questionnaire Response content that will be used to pre-populate this Questionnaire"
+				}
+			]
+		},
+		{
+			"url": "http://hl7.org/fhir/StructureDefinition/variable",
+			"valueExpression": {
+				"description": "variable to store the incoming data from the launchContext extension for populate and other expressions",
+				"name": "lookupInitiateStudy",
+				"language": "text/fhirpath",
+				"expression": "%sourceQuestionnaireResponse"
+			}
+		},
+		{
+			"url": "http://hl7.org/fhir/StructureDefinition/variable",
+			"valueExpression": {
+				"description": "site that the determination letter pertains to",
+				"name": "relyingSiteForForm",
+				"language": "text/fhirpath",
+				"expression": "%resource.descendants().where(linkId = 'dl7.5.1').answer.valueCoding.display"
+			}
+		}
+	],
+	"url": "http://hl7.org/fhir/us/sirb/Questionnaire/sirb-determination-letter-questionnaire-populate",
+	"version": "0.1.0",
+	"name": "SIRBDeterminationQuestionnaire",
+	"title": "sIRB Determination Questionnaire",
+	"status": "draft",
+	"experimental": false,
+	"subjectType": [
+		"ResearchStudy"
+	],
+	"item": [
+		{
+			"linkId": "dl1",
+			"text": "Research Study",
+			"_text": {
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+						"valueString": "color:#274e90; font-size: 150%"
+					}
+				]
+			},
+			"type": "group",
+			"required": false,
+			"item": [
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+							"valueExpression": {
+								"language": "text/fhirpath",
+								"expression": "%lookupInitiateStudy.descendants().where(linkId = 'in1.2').answer.value"
+							}
+						}
+					],
+					"linkId": "dl1.1",
+					"text": "Study Title",
+					"type": "string",
+					"required": true,
+					"item": [
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "http://hl7.org/fhir/questionnaire-item-control",
+												"code": "help",
+												"display": "Help-Button"
+											}
+										]
+									}
+								}
+							],
+							"linkId": "dl1.1_help",
+							"text": "Short Title of the Research Study",
+							"type": "display"
+						}
+					]
+				},
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+							"valueExpression": {
+								"language": "text/fhirpath",
+								"expression": "%lookupInitiateStudy.descendants().where(linkId = 'in1.3').answer.value"
+							}
+						}
+					],
+					"linkId": "dl1.2",
+					"text": "IRB Protocol Number",
+					"type": "string",
+					"required": false,
+					"item": [
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "http://hl7.org/fhir/questionnaire-item-control",
+												"code": "help",
+												"display": "Help-Button"
+											}
+										]
+									}
+								}
+							],
+							"linkId": "dl1.2_help",
+							"text": "IRB number assigned by the site institution",
+							"type": "display"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "dl2",
+			"text": "Reliance Determination",
+			"_text": {
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+						"valueString": "color:#274e90; font-size: 150%"
+					}
+				]
+			},
+			"type": "group",
+			"required": false,
+			"item": [
+				{
+					"linkId": "dl2.1",
+					"text": "sIRB (Reviewing Institution)",
+					"_text": {
+						"extension": [
+							{
+								"url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString": "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type": "group",
+					"required": false,
+					"item": [
+						{
+							"linkId": "dl2.1.1",
+							"text": "Institution",
+							"type": "group",
+							"required": false,
+							"item": [
+								{
+									"extension": [
+										{
+											"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+											"valueExpression": {
+												"language": "text/fhirpath",
+												"expression": "%lookupInitiateStudy.descendants().where(linkId = 'in6.1').answer.value"
+											}
+										}
+									],
+									"linkId": "dl2.1.1.1",
+									"text": "sIRB (Reviewing Institution) Name",
+									"type": "string",
+									"required": true
+								},
+								{
+									"extension": [
+										{
+											"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+											"valueExpression": {
+												"language": "text/fhirpath",
+												"expression": "%lookupInitiateStudy.descendants().where(linkId = 'in6.9').answer.value"
+											}
+										}
+									],
+									"linkId": "dl2.1.1.2",
+									"text": "Federal Wide Assurance (FWA)",
+									"type": "integer",
+									"required": false,
+									"item": [
+										{
+											"extension": [
+												{
+													"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+													"valueCodeableConcept": {
+														"coding": [
+															{
+																"system": "http://hl7.org/fhir/questionnaire-item-control",
+																"code": "help",
+																"display": "Help-Button"
+															}
+														]
+													}
+												}
+											],
+											"linkId": "dl2.1.1.2_help",
+											"text": "DHHS assigned number indicating Assurance of Compliance with the Office of Human Research Protections. Enter just the numeric value of the FWA.",
+											"type": "display"
+										}
+									]
+								},
+								{
+									"extension": [
+										{
+											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept": {
+												"coding": [
+													{
+														"system": "http://hl7.org/fhir/questionnaire-item-control",
+														"code": "help",
+														"display": "Help-Button"
+													}
+												]
+											}
+										}
+									],
+									"linkId": "dl2.1.1_help",
+									"text": "Institution providing overall review of research study activities for most sites enrolling participants in a researach study. Its role is to protect the rights and welfare of human research participants. It has the authority to approve and require modifications of all research activities that fall within its jurisdiction for all relying sites.",
+									"type": "display"
+								}
+							]
+						},
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "http://hl7.org/fhir/questionnaire-item-control",
+												"code": "help",
+												"display": "Help-Button"
+											}
+										]
+									}
+								}
+							],
+							"linkId": "dl2.1_help",
+							"text": "IRB responsible for the overall approval of the study, and whose approval will then stand for the relying institutions in the network.",
+							"type": "display"
+						}
+					]
+				},
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+							"valueCodeableConcept": {
+								"coding": [
+									{
+										"system": "http://hl7.org/fhir/questionnaire-item-control",
+										"code": "drop-down",
+										"display": "Drop down"
+									}
+								],
+								"text": "Drop down"
+							}
+						}
+					],
+					"linkId": "dl2.2",
+					"text": "Determination Decision",
+					"type": "choice",
+					"required": true,
+					"answerOption": [
+						{
+							"valueCoding": {
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code": "AR",
+								"display": "Accepts Review"
+							}
+						},
+						{
+							"valueCoding": {
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code": "DR",
+								"display": "Denies Review"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "dl5",
+			"text": "Lead Principal Investigator Responsible for Overall Study",
+			"_text": {
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+						"valueString": "color:#274e90; font-size: 150%"
+					}
+				]
+			},
+			"type": "group",
+			"required": false,
+			"repeats": false,
+			"item": [
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+							"valueExpression": {
+								"language": "text/fhirpath",
+								"expression": "%lookupInitiateStudy.descendants().where(linkId = 'in7.3.1').answer.value"
+							}
+						}
+					],
+					"linkId": "dl5.1",
+					"text": "First Name",
+					"type": "string",
+					"required": true,
+					"item": [
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "http://hl7.org/fhir/questionnaire-item-control",
+												"code": "help",
+												"display": "Help-Button"
+											}
+										]
+									}
+								}
+							],
+							"linkId": "dl5.1_help",
+							"text": "First or Given name of the lead principal investigator",
+							"type": "display"
+						}
+					]
+				},
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+							"valueExpression": {
+								"language": "text/fhirpath",
+								"expression": "%lookupInitiateStudy.descendants().where(linkId = 'in7.3.2').answer.value"
+							}
+						}
+					],
+					"linkId": "dl5.2",
+					"text": "Last Name",
+					"type": "string",
+					"required": true,
+					"item": [
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "http://hl7.org/fhir/questionnaire-item-control",
+												"code": "help",
+												"display": "Help-Button"
+											}
+										]
+									}
+								}
+							],
+							"linkId": "dl5.2_help",
+							"text": "Surname or family name",
+							"type": "display"
+						}
+					]
+				},
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+							"valueExpression": {
+								"language": "text/fhirpath",
+								"expression": "%lookupInitiateStudy.descendants().where(linkId = 'in7.3.3').answer.value"
+							}
+						}
+					],
+					"linkId": "dl5.4",
+					"text": "Suffix",
+					"type": "string",
+					"required": false,
+					"readOnly": false,
+					"item": [
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "http://hl7.org/fhir/questionnaire-item-control",
+												"code": "help",
+												"display": "Help-Button"
+											}
+										]
+									}
+								}
+							],
+							"linkId": "dl5.4_help",
+							"text": "Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc.",
+							"type": "display"
+						}
+					]
+				},
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+							"valueExpression": {
+								"language": "text/fhirpath",
+								"expression": "%lookupInitiateStudy.descendants().where(linkId = 'in7.3.4').answer.value"
+							}
+						}
+					],
+					"linkId": "dl5.5",
+					"text": "Degree(s)",
+					"type": "string",
+					"required": false,
+					"readOnly": false,
+					"item": [
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "http://hl7.org/fhir/questionnaire-item-control",
+												"code": "help",
+												"display": "Help-Button"
+											}
+										]
+									}
+								}
+							],
+							"linkId": "dl5.5_help",
+							"text": "Professional and Academic degrees of the lead principal investigator",
+							"type": "display"
+						}
+					]
+				},
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+							"valueExpression": {
+								"language": "text/fhirpath",
+								"expression": "%lookupInitiateStudy.descendants().where(linkId = 'in7.3.6').answer.value"
+							}
+						}
+					],
+					"linkId": "dl5.3",
+					"text": "Email",
+					"type": "string",
+					"required": true
+				},
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+							"valueCodeableConcept": {
+								"coding": [
+									{
+										"system": "http://hl7.org/fhir/questionnaire-item-control",
+										"code": "help",
+										"display": "Help-Button"
+									}
+								]
+							}
+						}
+					],
+					"linkId": "dl5_help",
+					"text": "Prinicpal investigator leading the study, ultimately responsible for the overall conduct of the study",
+					"type": "display"
+				}
+			]
+		},
+		{
+			"linkId": "dl11",
+			"text": "Lead Principal Investigator Institution",
+			"_text": {
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+						"valueString": "color:#274e90; font-size: 150%"
+					}
+				]
+			},
+			"type": "group",
+			"required": false,
+			"repeats": false,
+			"item": [
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+							"valueExpression": {
+								"language": "text/fhirpath",
+								"expression": "%lookupInitiateStudy.descendants().where(linkId = 'in7.1.1').answer.value"
+							}
+						}
+					],
+					"linkId": "dl11.1",
+					"text": "Lead Principal Investigator Institution Name",
+					"type": "string",
+					"required": true
+				}
+			]
+		},
+		{
+			"linkId": "dl7",
+			"text": "Relying IRB",
+			"_text": {
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+						"valueString": "color:#274e90; font-size: 150%"
+					}
+				]
+			},
+			"type": "group",
+			"required": false,
+			"repeats": false,
+			"item": [
+				{
+					"linkId": "dl7.5",
+					"text": "Relying institution and Relying Site Principal Investigator for this Determination Letter",
+					"_text": {
+						"extension": [
+							{
+								"url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString": "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type": "group",
+					"required": false,
+					"item": [
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "http://hl7.org/fhir/questionnaire-item-control",
+												"code": "drop-down",
+												"display": "Drop down"
+											}
+										],
+										"text": "Drop down"
+									}
+								},
+								{
+									"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression",
+									"valueExpression": {
+										"language": "text/fhirpath",
+										"expression": "%lookupInitiateStudy.descendants().where(linkId = 'in8.9').answer.value"
+									}
+								}
+							],
+							"linkId": "dl7.5.1",
+							"text": "Select the relying site in order to pre-populate the relying institution and relying site principal investigator details below.",
+							"type": "choice"
+						},
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "http://hl7.org/fhir/questionnaire-item-control",
+												"code": "help",
+												"display": "Help-Button"
+											}
+										]
+									}
+								}
+							],
+							"linkId": "dl7.5_help",
+							"text": "This question and its answer will not print on the Determination Letter but are necessary for the form logic. If you do not want pre-population to occur, leave this question blank and manually fill in the relying institution and relying site principal investigator details.",
+							"type": "display"
+						}
+					]
+				},
+				{
+					"linkId": "dl7.1",
+					"text": "Relying Institution",
+					"_text": {
+						"extension": [
+							{
+								"url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString": "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type": "group",
+					"required": false,
+					"item": [
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+									"valueExpression": {
+										"language": "text/fhirpath",
+										"expression": "%lookupInitiateStudy.descendants().where(item.where(linkId = 'in8.9' and answer.value = %relyingSiteForForm)).item.descendants().where(linkId = 'in8.1.1').answer.value"
+									}
+								}
+							],
+							"linkId": "dl7.1.1",
+							"text": "Name",
+							"type": "string",
+							"required": true
+						},
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+									"valueExpression": {
+										"language": "text/fhirpath",
+										"expression": "%lookupInitiateStudy.descendants().where(item.where(linkId = 'in8.9' and answer.value = %relyingSiteForForm)).item.descendants().where(linkId = 'in8.1.5').answer.value"
+									}
+								}
+							],
+							"linkId": "dl7.1.2",
+							"text": "Federal Wide Assurance (FWA)",
+							"type": "string",
+							"required": false,
+							"item": [
+								{
+									"extension": [
+										{
+											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept": {
+												"coding": [
+													{
+														"system": "http://hl7.org/fhir/questionnaire-item-control",
+														"code": "help",
+														"display": "Help-Button"
+													}
+												]
+											}
+										}
+									],
+									"linkId": "dl7.1.2_help",
+									"text": "DHHS assigned number indicating Assurance of Compliance with the Office of Human Research Protections. Enter just the numeric value of the FWA.",
+									"type": "display"
+								}
+							]
+						},
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "http://hl7.org/fhir/questionnaire-item-control",
+												"code": "help",
+												"display": "Help-Button"
+											}
+										]
+									}
+								}
+							],
+							"linkId": "dl7.1_help",
+							"text": "Name of Institution where its IRB has agreed to IRB oversite by the reviewing IRB (sIRB)",
+							"type": "display"
+						}
+					]
+				},
+				{
+					"linkId": "dl7.2",
+					"text": "Relying Site Principal Investigator",
+					"_text": {
+						"extension": [
+							{
+								"url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+								"valueString": "color:#2a623d;  font-size: 125%"
+							}
+						]
+					},
+					"type": "group",
+					"required": false,
+					"item": [
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+									"valueExpression": {
+										"language": "text/fhirpath",
+										"expression": "%lookupInitiateStudy.descendants().where(item.where(linkId = 'in8.9' and answer.value = %relyingSiteForForm)).item.descendants().where(linkId = 'in8.3.1').answer.value"
+									}
+								}
+							],
+							"linkId": "dl7.2.1",
+							"text": "First Name",
+							"type": "string",
+							"required": true,
+							"item": [
+								{
+									"extension": [
+										{
+											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept": {
+												"coding": [
+													{
+														"system": "http://hl7.org/fhir/questionnaire-item-control",
+														"code": "help",
+														"display": "Help-Button"
+													}
+												]
+											}
+										}
+									],
+									"linkId": "dl7.2.1_help",
+									"text": "First or Given name of the site investigator",
+									"type": "display"
+								}
+							]
+						},
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+									"valueExpression": {
+										"language": "text/fhirpath",
+										"expression": "%lookupInitiateStudy.descendants().where(item.where(linkId = 'in8.9' and answer.value = %relyingSiteForForm)).item.descendants().where(linkId = 'in8.3.2').answer.value"
+									}
+								}
+							],
+							"linkId": "dl7.2.2",
+							"text": "Last Name",
+							"type": "string",
+							"required": true,
+							"item": [
+								{
+									"extension": [
+										{
+											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept": {
+												"coding": [
+													{
+														"system": "http://hl7.org/fhir/questionnaire-item-control",
+														"code": "help",
+														"display": "Help-Button"
+													}
+												]
+											}
+										}
+									],
+									"linkId": "dl7.2.2_help",
+									"text": "Surname or family name",
+									"type": "display"
+								}
+							]
+						},
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+									"valueExpression": {
+										"language": "text/fhirpath",
+										"expression": "%lookupInitiateStudy.descendants().where(item.where(linkId = 'in8.9' and answer.value = %relyingSiteForForm)).item.descendants().where(linkId = 'in8.3.3').answer.value"
+									}
+								}
+							],
+							"linkId": "dl7.2.4",
+							"text": "Suffix",
+							"type": "string",
+							"required": false,
+							"repeats": false,
+							"readOnly": false,
+							"item": [
+								{
+									"extension": [
+										{
+											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept": {
+												"coding": [
+													{
+														"system": "http://hl7.org/fhir/questionnaire-item-control",
+														"code": "help",
+														"display": "Help-Button"
+													}
+												]
+											}
+										}
+									],
+									"linkId": "dl7.2.4_help",
+									"text": "Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc.",
+									"type": "display"
+								}
+							]
+						},
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+									"valueExpression": {
+										"language": "text/fhirpath",
+										"expression": "%lookupInitiateStudy.descendants().where(item.where(linkId = 'in8.9' and answer.value = %relyingSiteForForm)).item.descendants().where(linkId = 'in8.3.4').answer.value"
+									}
+								}
+							],
+							"linkId": "dl7.2.5",
+							"text": "Professional Degree(s)",
+							"type": "string",
+							"required": false,
+							"readOnly": false,
+							"item": [
+								{
+									"extension": [
+										{
+											"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+											"valueCodeableConcept": {
+												"coding": [
+													{
+														"system": "http://hl7.org/fhir/questionnaire-item-control",
+														"code": "help",
+														"display": "Help-Button"
+													}
+												]
+											}
+										}
+									],
+									"linkId": "dl7.2.5_help",
+									"text": "Professional and Academic degrees of the site investigator",
+									"type": "display"
+								}
+							]
+						},
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+									"valueExpression": {
+										"language": "text/fhirpath",
+										"expression": "%lookupInitiateStudy.descendants().where(item.where(linkId = 'in8.9' and answer.value = %relyingSiteForForm)).item.descendants().where(linkId = 'in8.3.6').answer.value"
+									}
+								}
+							],
+							"linkId": "dl7.2.3",
+							"text": "Email",
+							"type": "string",
+							"required": true
+						},
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "http://hl7.org/fhir/questionnaire-item-control",
+												"code": "help",
+												"display": "Help-Button"
+											}
+										]
+									}
+								}
+							],
+							"linkId": "dl7.2_help",
+							"text": "Site principal investigator responsible for the conduct of the study at the relying site research location for which this Determination Letter is being created",
+							"type": "display"
+						}
+					]
+				},
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+							"valueCodeableConcept": {
+								"coding": [
+									{
+										"system": "http://hl7.org/fhir/questionnaire-item-control",
+										"code": "help",
+										"display": "Help-Button"
+									}
+								]
+							}
+						}
+					],
+					"linkId": "dl7_help",
+					"text": "IRB at relying institution that has agreed to IRB oversite by the reviewing IRB (sIRB)",
+					"type": "display"
+				}
+			]
+		},
+		{
+			"linkId": "dl9",
+			"text": "Point of Contact for Study Participants",
+			"_text": {
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/rendering-style",
+						"valueString": "color:#274e90; font-size: 150%"
+					}
+				]
+			},
+			"type": "group",
+			"required": false,
+			"item": [
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+							"valueCodeableConcept": {
+								"coding": [
+									{
+										"system": "http://hl7.org/fhir/questionnaire-item-control",
+										"code": "help",
+										"display": "Help-Button"
+									}
+								]
+							}
+						}
+					],
+					"linkId": "dl9_help",
+					"text": "Primary person with whom a study participant will interact: may be PI or study coordinator or other designated personnel.",
+					"type": "display"
+				},
+				{
+					"linkId": "dl9.1",
+					"text": "First Name",
+					"type": "string",
+					"required": true,
+					"item": [
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "http://hl7.org/fhir/questionnaire-item-control",
+												"code": "help",
+												"display": "Help-Button"
+											}
+										]
+									}
+								}
+							],
+							"linkId": "dl2.1.2.1_help",
+							"text": "First or given name of the point of contact",
+							"type": "display"
+						}
+					]
+				},
+				{
+					"linkId": "dl9.2",
+					"text": "Last Name",
+					"type": "string",
+					"required": true,
+					"item": [
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "http://hl7.org/fhir/questionnaire-item-control",
+												"code": "help",
+												"display": "Help-Button"
+											}
+										]
+									}
+								}
+							],
+							"linkId": "dl9.2_help",
+							"text": "Surname or family name",
+							"type": "display"
+						}
+					]
+				},
+				{
+					"linkId": "dl9.4",
+					"text": "Suffix",
+					"type": "string",
+					"required": false,
+					"item": [
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "http://hl7.org/fhir/questionnaire-item-control",
+												"code": "help",
+												"display": "Help-Button"
+											}
+										]
+									}
+								}
+							],
+							"linkId": "dl9.4_help",
+							"text": "Suffix such as Junior (Jr.), Senior (Sr.), I, II, III, IV, etc.",
+							"type": "display"
+						}
+					]
+				},
+				{
+					"linkId": "dl9.5",
+					"text": "Professional Degree(s)",
+					"type": "string",
+					"required": false,
+					"item": [
+						{
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "http://hl7.org/fhir/questionnaire-item-control",
+												"code": "help",
+												"display": "Help-Button"
+											}
+										]
+									}
+								}
+							],
+							"linkId": "dl9.5_help",
+							"text": "Professional and Academic degrees of the point of contact",
+							"type": "display"
+						}
+					]
+				},
+				{
+					"linkId": "dl9.3",
+					"text": "Email",
+					"type": "string",
+					"required": true
+				}
+			]
+		},
+		{
+			"extension": [
+				{
+					"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+					"valueBoolean": true
+				}
+			],
+			"linkId": "ADMIN00",
+			"text": "Administrative Use Only",
+			"type": "group",
+			"item": [
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+							"valueBoolean": true
+						}
+					],
+					"linkId": "ADMIN01",
+					"text": "Link ID prefix",
+					"type": "string",
+					"required": false,
+					"initial": [
+						{
+							"valueString": "dl"
+						}
+					]
+				},
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+							"valueBoolean": true
+						},
+						{
+							"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+							"valueExpression": {
+								"language": "text/fhirpath",
+								"expression": "%lookupInitiateStudy.descendants().where(linkId = 'ADMIN02').answer.value"
+							}
+						}
+					],
+					"linkId": "ADMIN02",
+					"text": "Questionnaire Response ID for the parent Questionnaire Response (such as the Initiate a Study Questionnaire Response), if any",
+					"type": "string",
+					"required": false
+				},
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+							"valueBoolean": true
+						},
+						{
+							"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+							"valueExpression": {
+								"language": "text/fhirpath",
+								"expression": "%lookupInitiateStudy.descendants().where(linkId = 'ADMIN03').answer.value"
+							}
+						}
+					],
+					"linkId": "ADMIN03",
+					"text": "ID of the Research Study FHIR Resource associated with the study Questionnaire Responses, if any",
+					"type": "string",
+					"required": false,
+					"initial": [
+						{
+							"valueString": "temporarily unavailable"
+						}
+					]
+				},
+				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+							"valueBoolean": true
+						}
+					],
+					"linkId": "ADMIN04",
+					"text": "Questionnaire Response ID of the local considerations Questionnaire Response, if any",
+					"type": "string",
+					"required": false
+				}
+			]
+		}
+	]
+}

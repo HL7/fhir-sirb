@@ -1,0 +1,749 @@
+{
+	"resourceType": "QuestionnaireResponse",
+	"id": "sirb-nonmedicalevent-questionnaire-populate-exampleQR",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2022-03-10T10:24:08.072+00:00",
+		"source": "#etuFIbBH39YS1Bf5",
+		"profile": [
+			"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"
+		]
+	},
+	"extension": [
+		{
+			"url": "http://hl7.org/fhir/StructureDefinition/workflow-researchStudy",
+			"valueReference": {
+				"reference": "ResearchStudy/ResearchStudyExample-sIRB",
+				"display": "ResearchStudyExample-sIRB"
+			}
+		}
+	],
+	"questionnaire": "https://hl7.org/fhir/us/sirb/Questionnaire/sirb-nonmedicalevents-questionnaire-populate",
+	"status": "completed",
+	"authored": "2022-02-28T01:16:19.909Z",
+	"item": [
+		{
+			"linkId": "nme1",
+			"text": "Research Study",
+			"item": [
+				{
+					"linkId": "nme1.1",
+					"text": "Study Title",
+					"answer": [
+						{
+							"valueString": "Study of Drug A for arthritis"
+						}
+					]
+				},
+				{
+					"linkId": "nme1.3",
+					"text": "IRB Protocol Number",
+					"answer": [
+						{
+							"valueString": "PRO098765"
+						}
+					]
+				},
+				{
+					"linkId": "nme1.4",
+					"text": "Status",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code": "nochange",
+								"display": "No change in research activities"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "nme7",
+			"text": "Organization/Site",
+			"item": [
+				{
+					"linkId": "nme7.1",
+					"text": "Where Adverse Non-Medical Event Occurred",
+					"item": [
+						{
+							"linkId": "nme7.1.8",
+							"text": "Did the Adverse Non-Medical Event occur at the lead principal investigator site?",
+							"answer": [
+								{
+									"valueCoding": {
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+										"code": "N",
+										"display": "No"
+									}
+								}
+							]
+						},
+						{
+							"linkId": "nme7.1.11",
+							"text": "Did the Adverse Non-Medical Event occur at one of the relying sites?",
+							"answer": [
+								{
+									"valueCoding": {
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+										"code": "Y",
+										"display": "Yes"
+									}
+								}
+							]
+						},
+						{
+							"linkId": "nme7.1.9",
+							"text": "If the Adverse Non-Medical Event occurred at one of the relying sites, select the relying site in order to pre-populate the relying institution and relying site principal investigator details below.",
+							"answer": [
+								{
+									"valueCoding": {
+										"display": "Sample University Medical Center  |     |  Jane Doe, MD  |  Sample City, NC"
+									}
+								}
+							]
+						},
+						{
+							"linkId": "nme7.1.1",
+							"text": "Name of organization/site where the Adverse Non-Medical Event occurred",
+							"answer": [
+								{
+									"valueString": "Sample University Medical Center"
+								}
+							]
+						},
+						{
+							"linkId": "nme7.1.2",
+							"text": "City",
+							"answer": [
+								{
+									"valueString": "Sample City"
+								}
+							]
+						},
+						{
+							"linkId": "nme7.1.3",
+							"text": "State",
+							"answer": [
+								{
+									"valueString": "NC"
+								}
+							]
+						},
+						{
+							"linkId": "nme7.1.4",
+							"text": "Country",
+							"answer": [
+								{
+									"valueString": "United States"
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId": "nme7.2",
+					"text": "Responsibility for Adverse Non-Medical Event Reporting",
+					"item": [
+						{
+							"linkId": "nme7.2.8",
+							"text": "If the Adverse Non-Medical Event occurred at a relying site or at another organization (unrelated to the lead principal investigator organization/site or relying sites), will the lead principal investigator site be recording the Adverse Non-Medical Event?",
+							"answer": [
+								{
+									"valueCoding": {
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+										"code": "Y",
+										"display": "Yes"
+									}
+								}
+							]
+						},
+						{
+							"linkId": "nme7.2.1",
+							"text": "Name of organization/site which is recording the Adverse Non-Medical Event",
+							"answer": [
+								{
+									"valueString": "Sample University Medical Center"
+								}
+							]
+						},
+						{
+							"linkId": "nme7.2.2",
+							"text": "City",
+							"answer": [
+								{
+									"valueString": "Sample City"
+								}
+							]
+						},
+						{
+							"linkId": "nme7.2.3",
+							"text": "State",
+							"answer": [
+								{
+									"valueString": "NC"
+								}
+							]
+						},
+						{
+							"linkId": "nme7.2.4",
+							"text": "Country",
+							"answer": [
+								{
+									"valueString": "United States"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "nme8",
+			"text": "Site Principal Investigator for the site where Adverse Non-Medical Event occurred",
+			"item": [
+				{
+					"linkId": "nme8.1",
+					"text": "First Name",
+					"answer": [
+						{
+							"valueString": "Jane"
+						}
+					]
+				},
+				{
+					"linkId": "nme8.4",
+					"text": "Last Name",
+					"answer": [
+						{
+							"valueString": "Doe"
+						}
+					]
+				},
+				{
+					"linkId": "nme8.6",
+					"text": "Degree(s)",
+					"answer": [
+						{
+							"valueString": "MD"
+						}
+					]
+				},
+				{
+					"linkId": "nme8.2",
+					"text": "Phone",
+					"answer": [
+						{
+							"valueString": "567-123-1234"
+						}
+					]
+				},
+				{
+					"linkId": "nme8.3",
+					"text": "Email",
+					"answer": [
+						{
+							"valueString": "drjanedoe@sampleuniversity.edu"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "nme3",
+			"text": "Report",
+			"item": [
+				{
+					"linkId": "nme3.1",
+					"text": "Report Date",
+					"answer": [
+						{
+							"valueDate": "2022-02-27"
+						}
+					]
+				},
+				{
+					"linkId": "nme3.2",
+					"text": "Report Status",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code": "init",
+								"display": "Initial"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme3.3",
+					"text": "Select at least one of the following criteria:",
+					"item": [
+						{
+							"linkId": "nme3.3.4",
+							"text": "New information resulted in unexpected change in risks of the research",
+							"answer": [
+								{
+									"valueBoolean": true
+								}
+							]
+						},
+						{
+							"linkId": "nme3.3.5",
+							"text": "New or increased risk",
+							"item": [
+								{
+									"linkId": "nme3.3.5.1",
+									"text": "Date:",
+									"answer": [
+										{
+											"valueDate": "2022-02-27"
+										}
+									]
+								},
+								{
+									"linkId": "nme3.3.5.2",
+									"text": "Date discovered:",
+									"answer": [
+										{
+											"valueDate": "2022-02-26"
+										}
+									]
+								},
+								{
+									"linkId": "nme3.3.5.3",
+									"text": "Description:",
+									"answer": [
+										{
+											"valueString": "[answer]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"linkId": "nme3.3.6",
+							"text": "Unanticipated Problem Involving Risk to Participants or Others",
+							"answer": [
+								{
+									"valueBoolean": true
+								}
+							]
+						},
+						{
+							"linkId": "nme3.3.7",
+							"text": "Unanticipated Problem",
+							"item": [
+								{
+									"linkId": "nme3.3.7.1",
+									"text": "Event date:",
+									"answer": [
+										{
+											"valueDate": "2022-02-26"
+										}
+									]
+								},
+								{
+									"linkId": "nme3.3.7.2",
+									"text": "Date event became aware to study team:",
+									"answer": [
+										{
+											"valueDate": "2022-02-27"
+										}
+									]
+								},
+								{
+									"linkId": "nme3.3.7.3",
+									"text": "Event Summary:",
+									"answer": [
+										{
+											"valueString": "[answer]"
+										}
+									]
+								},
+								{
+									"linkId": "nme3.3.7.4",
+									"text": "Was this event Unexpected?",
+									"answer": [
+										{
+											"valueCoding": {
+												"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+												"code": "Y",
+												"display": "Yes"
+											}
+										}
+									]
+								},
+								{
+									"linkId": "nme3.3.7.5",
+									"text": "If yes, please explain:",
+									"answer": [
+										{
+											"valueString": "[answer]"
+										}
+									]
+								},
+								{
+									"linkId": "nme3.3.7.6",
+									"text": "Was this event Related or Possibly Related to participation in the research?",
+									"answer": [
+										{
+											"valueCoding": {
+												"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+												"code": "Y",
+												"display": "Yes"
+											}
+										}
+									]
+								},
+								{
+									"linkId": "nme3.3.7.7",
+									"text": "If yes, please explain:",
+									"answer": [
+										{
+											"valueString": "[answer]"
+										}
+									]
+								},
+								{
+									"linkId": "nme3.3.7.8",
+									"text": "Does this event suggest that the research places participant(s) or others at a greater Risk of harm than was previously known?",
+									"answer": [
+										{
+											"valueCoding": {
+												"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+												"code": "Y",
+												"display": "Yes"
+											}
+										}
+									]
+								},
+								{
+									"linkId": "nme3.3.7.9",
+									"text": "If yes, please explain:",
+									"answer": [
+										{
+											"valueString": "[answer]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"linkId": "nme3.3.10",
+							"text": "A breach of Confidentiality",
+							"answer": [
+								{
+									"valueBoolean": false
+								}
+							]
+						},
+						{
+							"linkId": "nme3.3.14",
+							"text": "Complaint of a participant indicating unexpected risks or the compliant cannot be resolved by team",
+							"answer": [
+								{
+									"valueBoolean": true
+								}
+							]
+						},
+						{
+							"linkId": "nme3.3.15",
+							"text": "Participant Complaint",
+							"item": [
+								{
+									"linkId": "nme3.3.15.1",
+									"text": "Complaint Date:",
+									"answer": [
+										{
+											"valueDate": "2022-02-27"
+										}
+									]
+								},
+								{
+									"linkId": "nme3.3.15.2",
+									"text": "Date received:",
+									"answer": [
+										{
+											"valueDate": "2022-02-27"
+										}
+									]
+								},
+								{
+									"linkId": "nme3.3.15.3",
+									"text": "Description:",
+									"answer": [
+										{
+											"valueString": "[answer]"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "nme4",
+			"text": "Reporting",
+			"item": [
+				{
+					"linkId": "nme4.1",
+					"text": "Was the Sponsor notified?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code": "Y",
+								"display": "Yes"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme4.2",
+					"text": "Notification date:",
+					"answer": [
+						{
+							"valueDate": "2022-02-27"
+						}
+					]
+				},
+				{
+					"linkId": "nme4.3",
+					"text": "Was the IRB notified?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code": "Y",
+								"display": "Yes"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme4.4",
+					"text": "Notification date:",
+					"answer": [
+						{
+							"valueDate": "2022-02-27"
+						}
+					]
+				},
+				{
+					"linkId": "nme4.5",
+					"text": "Were any Other Parties notified?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code": "Y",
+								"display": "Yes"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme4.6",
+					"text": "List other notified parties",
+					"answer": [
+						{
+							"valueString": "[answer]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "nme5",
+			"text": "Corrective and Preventative Action Plan",
+			"item": [
+				{
+					"linkId": "nme5.1",
+					"text": "Was a Root Cause analysis performed?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code": "pending",
+								"display": "Pending - Currently under development"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme5.2b",
+					"text": "If pending, describe status and interim findings, if any:",
+					"answer": [
+						{
+							"valueString": "[answer]"
+						}
+					]
+				},
+				{
+					"linkId": "nme5.3",
+					"text": "Was Corrective Action implemented?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code": "pending",
+								"display": "Pending - Currently under development"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme5.4",
+					"text": "If Corrective Action was implemented or is pending, provide a summary:",
+					"answer": [
+						{
+							"valueString": "[answer]"
+						}
+					]
+				},
+				{
+					"linkId": "nme5.5",
+					"text": "Was Preventitive Action implemented?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code": "completed",
+								"display": "Done, performed or completed"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme5.6",
+					"text": "If Preventitive Action was implemented or is pending, provide a summary:",
+					"answer": [
+						{
+							"valueString": "[answer]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "nme6",
+			"text": "Study Protocol and Informed Consent",
+			"item": [
+				{
+					"linkId": "nme6.1a",
+					"text": "Are changes required to the Study Protocol as a result of this report?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code": "Y",
+								"display": "Yes"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme6.3a",
+					"text": "Are changes required to the Informed Consent as a result of this report?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code": "Y",
+								"display": "Yes"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme6.5",
+					"text": "Are notifications or re-consenting of participants required as a result of changes in Study Protocol or Informed Consent?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code": "Y",
+								"display": "Yes"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "nme6.6",
+					"text": "If yes, detail how the notification and/or re-consent will occur:",
+					"answer": [
+						{
+							"valueString": "[answer]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "nme11",
+			"text": "Optional Attachments",
+			"item": [
+				{
+					"linkId": "nme11.1",
+					"text": "Describe the file that is being attached (optional)",
+					"answer": [
+						{
+							"valueString": "[answer]"
+						}
+					]
+				},
+				{
+					"linkId": "nme11.2",
+					"text": "Attachment",
+					"answer": [
+						{
+							"valueAttachment": {
+								"contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+								"data": "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",
+								"title": "Example attachment.docx",
+								"creation": "2022-02-27T22:24:16.963Z"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "ADMIN00",
+			"text": "Administrative Use Only",
+			"item": [
+				{
+					"linkId": "ADMIN01",
+					"text": "Link ID prefix",
+					"answer": [
+						{
+							"valueString": "nme"
+						}
+					]
+				},
+				{
+					"linkId": "ADMIN02",
+					"text": "Questionnaire Response ID for the parent Questionnaire Response (such as the Initiate a Study Questionnaire Response), if any",
+					"answer": [
+						{
+							"valueString": "5133"
+						}
+					]
+				},
+				{
+					"linkId": "ADMIN03",
+					"text": "ID of the Research Study FHIR Resource associated with the study Questionnaire Responses",
+					"answer": [
+						{
+							"valueString": "ResearchStudyExample-sIRB"
+						}
+					]
+				}
+			]
+		}
+	]
+}

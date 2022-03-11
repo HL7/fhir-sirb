@@ -33,7 +33,7 @@ Some of the relying sites may be small clinics or rural providers that do not ha
 
 In order to keep the implementation burden very low, the project was designed with the intent that the institutions would not be integrating the questionnaires with any of their existing research study management software.  Lists of the research studies, names of principal investigators, names of study participants and all study details would be stored, maintained and searched from within the existing research study management software that already exists at the institutions.  
 
-Some of the institutions may participate in a sIRB study only once every few years. Therefore, they may not want to devote time and money to implementing a large set of FHIR resources if they are not using a FHIR server already and if they can get the forms created and transmitted using only Questionnaire and QuestionnaireResponse resources. 
+Some of the institutions may participate in a sIRB study only once every few years. Therefore, they may not want to devote time and money to implementing a large set of FHIR resources if they are not using a FHIR server already if they can get the forms created and transmitted using only Questionnaire and QuestionnaireResponse resources. 
 
 Some of the sites may never implement a FHIR server, instead accessing the forms via web browser using the form viewers and FHIR servers maintained by the lead (sIRB) site. 
 
