@@ -213,14 +213,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "ResearchStudy/newerResearchStudy2858",
-                    "display": "Double blind, placebo-controlled trial of a new class of arthritis medication"
-                },
-                "name": "Newer research study"
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "Questionnaire/sirb-determination-letter-questionnaire-populate",
                     "display": "sIRB Determination Questionnaire"
                 },
