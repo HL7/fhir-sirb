@@ -1,0 +1,818 @@
+{
+	"resourceType": "QuestionnaireResponse",
+	"id": "medical-ae-populate-exampleQR",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2022-03-17T19:46:06.429+00:00",
+		"source": "#vMTBpNjbHaADyM8y"
+	},
+	"extension": [
+		{
+			"url": "http://hl7.org/fhir/StructureDefinition/workflow-researchStudy",
+			"valueReference": {
+				"reference": "ResearchStudy/ResearchStudyExample-sIRB",
+				"display": "ResearchStudyExample-sIRB"
+			}
+		}
+	],
+	"questionnaire": "http://hl7.org/fhir/us/sirb/Questionnaire/toValidateQR-medical-ae-populate-questionnaire",
+	"status": "completed",
+	"authored": "2022-03-12T01:53:25.336Z",
+	"item": [
+		{
+			"linkId": "mae1",
+			"text": "Research Study",
+			"item": [
+				{
+					"linkId": "mae1.1",
+					"text": "Study Title",
+					"answer": [
+						{
+							"valueString": "Study of Drug A for arthritis"
+						}
+					]
+				},
+				{
+					"linkId": "mae1.2",
+					"text": "IRB Protocol Number",
+					"answer": [
+						{
+							"valueString": "PRO098765"
+						}
+					]
+				},
+				{
+					"linkId": "mae1.3",
+					"text": "Study Type",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code": "INT",
+								"display": "Interventional"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae1.4",
+					"text": "Does this protocol require an FDA exemption?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code": "Y",
+								"display": "Yes"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae1.5",
+					"text": "Is an IND or IDE being used in this study?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code": "Y",
+								"display": "Yes"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "mae4",
+			"text": "Organization/Site",
+			"item": [
+				{
+					"linkId": "mae4.1",
+					"text": "Where Adverse Medical Event Occurred",
+					"item": [
+						{
+							"linkId": "mae4.1.7",
+							"text": "Did the Adverse Medical Event occur at the lead principal investigator site?",
+							"answer": [
+								{
+									"valueCoding": {
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+										"code": "N",
+										"display": "No"
+									}
+								}
+							]
+						},
+						{
+							"linkId": "mae4.1.1",
+							"text": "If the Adverse Medical Event occurred at one of the relying sites, select the relying site in order to pre-populate the the relying institution and relying site principal investigator details below.",
+							"answer": [
+								{
+									"valueCoding": {
+										"display": "Test Example University  |     |  Xi-Yang Lee, Jr., MD, PhD  |  Example, MA"
+									}
+								}
+							]
+						},
+						{
+							"linkId": "mae4.1.2",
+							"text": "Name of organization/site where the event occurred",
+							"answer": [
+								{
+									"valueString": "Test Example University"
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId": "mae4.7",
+					"text": "Site Principal Investigator",
+					"item": [
+						{
+							"linkId": "mae4.7.1",
+							"text": "First Name",
+							"answer": [
+								{
+									"valueString": "Xi-Yang"
+								}
+							]
+						},
+						{
+							"linkId": "mae4.7.2",
+							"text": "Last Name",
+							"answer": [
+								{
+									"valueString": "Lee"
+								}
+							]
+						},
+						{
+							"linkId": "mae4.7.5",
+							"text": "Suffix",
+							"answer": [
+								{
+									"valueString": "Jr."
+								}
+							]
+						},
+						{
+							"linkId": "mae4.7.6",
+							"text": "Degree(s)",
+							"answer": [
+								{
+									"valueString": "MD, PhD"
+								}
+							]
+						},
+						{
+							"linkId": "mae4.7.3",
+							"text": "Phone",
+							"answer": [
+								{
+									"valueString": "6781233456"
+								}
+							]
+						},
+						{
+							"linkId": "mae4.7.4",
+							"text": "Email",
+							"answer": [
+								{
+									"valueString": "XiYangLee@teu.med.edu"
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId": "mae4.9",
+					"text": "Responsibility for Adverse Medical Event Reporting",
+					"item": [
+						{
+							"linkId": "mae4.9.1",
+							"text": "If the Adverse Medical Event occurred at a relying site, will the lead principal investigator site be recording the Adverse Non-Medical Event?",
+							"answer": [
+								{
+									"valueCoding": {
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+										"code": "Y",
+										"display": "Yes"
+									}
+								}
+							]
+						},
+						{
+							"linkId": "mae4.9.2",
+							"text": "Name of organization/site which is recording the Adverse Medical event",
+							"answer": [
+								{
+									"valueString": "Sample University Medical Center"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "mae3",
+			"text": "Primary Contact",
+			"item": [
+				{
+					"linkId": "mae3.1",
+					"text": "First Name",
+					"answer": [
+						{
+							"valueString": "Jane"
+						}
+					]
+				},
+				{
+					"linkId": "mae3.2",
+					"text": "Last Name",
+					"answer": [
+						{
+							"valueString": "Doe"
+						}
+					]
+				},
+				{
+					"linkId": "mae3.3",
+					"text": "Phone",
+					"answer": [
+						{
+							"valueString": "567-123-1234"
+						}
+					]
+				},
+				{
+					"linkId": "mae3.4",
+					"text": "Email",
+					"answer": [
+						{
+							"valueString": "drjanedoe@sampleuniversity.edu"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "mae5",
+			"text": "Participant Information",
+			"item": [
+				{
+					"linkId": "mae5.1",
+					"text": "Patient ID",
+					"answer": [
+						{
+							"valueString": "12345"
+						}
+					]
+				},
+				{
+					"linkId": "mae5.2",
+					"text": "Age",
+					"answer": [
+						{
+							"valueString": "58"
+						}
+					]
+				},
+				{
+					"linkId": "mae5.3",
+					"text": "Birth Sex",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0001",
+								"code": "M",
+								"display": "Male"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae5.4",
+					"text": "Weight",
+					"answer": [
+						{
+							"valueQuantity": {
+								"value": 245,
+								"unit": "[lb]"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae5.5",
+					"text": "Height",
+					"answer": [
+						{
+							"valueQuantity": {
+								"value": 67,
+								"unit": "[in]"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae5.6",
+					"text": "Ethnicity",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v3-Ethnicity",
+								"code": "2186-5",
+								"display": "Not Hispanic or Latino"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae5.7",
+					"text": "Race",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v3-Race",
+								"code": "2106-3",
+								"display": "White"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae5.8",
+					"text": "Which Arm/Cohort/treatment group was the participant assigned to (if known)?",
+					"answer": [
+						{
+							"valueString": "unknown"
+						}
+					]
+				},
+				{
+					"linkId": "mae5.9",
+					"text": "Participant dosed or received study agent",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code": "NI",
+								"display": "No Information"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae5.11",
+					"text": "Were there any Protocol Deviations/Violations/Exceptions for this participant?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code": "N",
+								"display": "No"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "mae6",
+			"text": "Adverse Medical Event Information",
+			"item": [
+				{
+					"linkId": "mae6.1",
+					"text": "Submission Type",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code": "INITIAL",
+								"display": "Initial"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.2",
+					"text": "Start Date",
+					"answer": [
+						{
+							"valueDate": "2021-11-05"
+						}
+					]
+				},
+				{
+					"linkId": "mae6.3",
+					"text": "Reported Date",
+					"answer": [
+						{
+							"valueDate": "2021-11-06"
+						}
+					]
+				},
+				{
+					"linkId": "mae6.4",
+					"text": "Recorded Date",
+					"answer": [
+						{
+							"valueDate": "2021-11-06"
+						}
+					]
+				},
+				{
+					"linkId": "mae6.10",
+					"text": "Is the Adverse Medical Event Serious?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness",
+								"code": "serious",
+								"display": "Serious"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.9",
+					"text": "Severity",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/adverse-event-severity",
+								"code": "mild",
+								"display": "Mild"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.40",
+					"text": "Narrative of the Adverse Event:",
+					"answer": [
+						{
+							"valueString": "Blood clot developed in right leg after several days of inactivity.  Participant experienced swelling and pain."
+						}
+					]
+				},
+				{
+					"linkId": "mae6.5",
+					"text": "Medical Description of Adverse Event",
+					"answer": [
+						{
+							"valueString": "Deep Vein Thrombosis"
+						}
+					]
+				},
+				{
+					"linkId": "mae6.6",
+					"text": "Is the Adverse Medical event still ongoing?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code": "N",
+								"display": "No"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.7",
+					"text": "Stop Date",
+					"answer": [
+						{
+							"valueDate": "2021-11-05"
+						}
+					]
+				},
+				{
+					"linkId": "mae6.8",
+					"text": "Was the event expected?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0239",
+								"code": "N",
+								"display": "No"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.11",
+					"text": "Seriousness",
+					"item": [
+						{
+							"linkId": "mae6.11.1",
+							"text": "Seriousness",
+							"answer": [
+								{
+									"valueCoding": {
+										"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+										"code": "ResultsInHospitalization",
+										"display": "Requires or prolongs inpatient hospitalization"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId": "mae6.12",
+					"text": "What is the date Adverse Medical Event became serious?",
+					"answer": [
+						{
+							"valueDate": "2021-11-05"
+						}
+					]
+				},
+				{
+					"linkId": "mae6.13",
+					"text": "Outcome of Adverse Medical Event",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code": "RCVRED",
+								"display": "recovered/resolved"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.15",
+					"text": "Relationship of Adverse Medical Event to Study Intervention",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess",
+								"code": "possible",
+								"display": "Possible"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.16",
+					"text": "Rationale for relationship with study intervention",
+					"answer": [
+						{
+							"valueString": "Patient was inactive for several days which might have been the cause."
+						}
+					]
+				},
+				{
+					"linkId": "mae6.23",
+					"text": "Action Taken",
+					"item": [
+						{
+							"linkId": "mae6.23.1",
+							"text": "Action Taken Regarding Study Intervention",
+							"answer": [
+								{
+									"valueCoding": {
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0251",
+										"code": "WT",
+										"display": "Product withdrawn temporarily"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId": "mae6.24",
+					"text": "If study intervention was discontinued, interrupted, or dose reduced (dechallenged), did Adverse Medical Event diminish/abate?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code": "Y",
+								"display": "Yes"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.25",
+					"text": "If study intervention was restarted (rechallenge) did AE recur?",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code": "N",
+								"display": "No"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "mae6.50",
+					"text": "SAE Concomitant Medications, Treatments/Procedures and Tests",
+					"item": [
+						{
+							"linkId": "mae6.50.26",
+							"text": "Did the participant receive any relevant concomitant medications in response to the SAE?",
+							"answer": [
+								{
+									"valueCoding": {
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+										"code": "Y",
+										"display": "Yes"
+									}
+								}
+							]
+						},
+						{
+							"linkId": "mae6.50.28",
+							"text": "SAE Concomitant Medications",
+							"item": [
+								{
+									"linkId": "mae6.50.28.1",
+									"text": "Medication Name",
+									"answer": [
+										{
+											"valueString": "warfarin"
+										}
+									]
+								},
+								{
+									"linkId": "mae6.50.28.2",
+									"text": "Indication",
+									"answer": [
+										{
+											"valueString": "anticoagulant"
+										}
+									]
+								},
+								{
+									"linkId": "mae6.50.28.3",
+									"text": "Start Date",
+									"answer": [
+										{
+											"valueDate": "2021-11-05"
+										}
+									]
+								},
+								{
+									"linkId": "mae6.50.28.4",
+									"text": "Stop Date",
+									"answer": [
+										{
+											"valueDate": "2022-02-04"
+										}
+									]
+								},
+								{
+									"linkId": "mae6.50.28.5",
+									"text": "Ongoing",
+									"answer": [
+										{
+											"valueCoding": {
+												"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+												"code": "N",
+												"display": "No"
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"linkId": "mae6.50.29",
+							"text": "Did the participant receive any treatments/procedures in response to the SAE?",
+							"answer": [
+								{
+									"valueCoding": {
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+										"code": "N",
+										"display": "No"
+									}
+								}
+							]
+						},
+						{
+							"linkId": "mae6.50.37",
+							"text": "Did the participant receive relevant laboratory or diagnostic tests in response to the SAE?",
+							"answer": [
+								{
+									"valueCoding": {
+										"system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+										"code": "Y",
+										"display": "Yes"
+									}
+								}
+							]
+						},
+						{
+							"linkId": "mae6.50.38",
+							"text": "SAE Laboratory or Diagnostic Tests",
+							"item": [
+								{
+									"linkId": "mae6.50.38.1",
+									"text": "Lab/Diagnostic Test",
+									"answer": [
+										{
+											"valueString": "ultrasound"
+										}
+									]
+								},
+								{
+									"linkId": "mae6.50.38.2",
+									"text": "Date",
+									"answer": [
+										{
+											"valueDate": "2021-11-05"
+										}
+									]
+								},
+								{
+									"linkId": "mae6.50.38.3",
+									"text": "Result",
+									"answer": [
+										{
+											"valueString": "positive"
+										}
+									]
+								},
+								{
+									"linkId": "mae6.50.38.6",
+									"text": "Comments",
+									"answer": [
+										{
+											"valueString": "blood clot noted"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "mae11",
+			"text": "Optional Attachments",
+			"item": [
+				{
+					"linkId": "mae11.1",
+					"text": "Describe the file that is being attached (optional)",
+					"answer": [
+						{
+							"valueString": "Treatment instructions received from sponsor regarding this AE."
+						}
+					]
+				},
+				{
+					"linkId": "mae11.2",
+					"text": "Attachment",
+					"answer": [
+						{
+							"valueAttachment": {
+								"url": "http://www.example.com/NationalGovernmentFunder/AE",
+								"title": "NationalGovernmentFunderInstructions.pdf"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "ADMIN00",
+			"text": "Administrative Use Only",
+			"item": [
+				{
+					"linkId": "ADMIN01",
+					"text": "Link ID prefix",
+					"answer": [
+						{
+							"valueString": "mae"
+						}
+					]
+				},
+				{
+					"linkId": "ADMIN02",
+					"text": "Questionnaire Response ID for the parent Questionnaire Response (such as the Initiate a Study Questionnaire Response), if any",
+					"answer": [
+						{
+							"valueString": "initiate-study-populate-exampleQR"
+						}
+					]
+				},
+				{
+					"linkId": "ADMIN03",
+					"text": "ID of the Research Study FHIR Resource associated with the study Questionnaire Responses",
+					"answer": [
+						{
+							"valueString": "ResearchStudyExample-sIRB"
+						}
+					]
+				}
+			]
+		}
+	]
+}

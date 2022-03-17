@@ -1,0 +1,335 @@
+{
+	"resourceType": "QuestionnaireResponse",
+	"id": "determination-populate-exampleQR",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2022-03-14T04:26:37.715+00:00",
+		"source": "#eT4G7JjM9L1q8dUz"
+	},
+	"extension": [
+		{
+			"url": "http://hl7.org/fhir/StructureDefinition/workflow-researchStudy",
+			"valueReference": {
+				"reference": "ResearchStudy/ResearchStudyExample-sIRB",
+				"display": "ResearchStudyExample-sIRB"
+			}
+		}
+	],
+	"questionnaire": "http://hl7.org/fhir/us/sirb/Questionnaire/sirb-determination-letter-questionnaire-populate",
+	"status": "completed",
+	"authored": "2022-03-11T00:28:27.661Z",
+	"item": [
+		{
+			"linkId": "dl1",
+			"text": "Research Study",
+			"item": [
+				{
+					"linkId": "dl1.1",
+					"text": "Study Title",
+					"answer": [
+						{
+							"valueString": "Study of Drug A for arthritis"
+						}
+					]
+				},
+				{
+					"linkId": "dl1.2",
+					"text": "IRB Protocol Number",
+					"answer": [
+						{
+							"valueString": "PRO098765"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "dl2",
+			"text": "Reliance Determination",
+			"item": [
+				{
+					"linkId": "dl2.1",
+					"text": "sIRB (Reviewing Institution)",
+					"item": [
+						{
+							"linkId": "dl2.1.1",
+							"text": "Institution",
+							"item": [
+								{
+									"linkId": "dl2.1.1.1",
+									"text": "sIRB (Reviewing Institution) Name",
+									"answer": [
+										{
+											"valueString": "X Pharmaceutical Research IRB"
+										}
+									]
+								},
+								{
+									"linkId": "dl2.1.1.2",
+									"text": "Federal Wide Assurance (FWA)",
+									"answer": [
+										{
+											"valueInteger": 12345
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId": "dl2.2",
+					"text": "Determination Decision",
+					"answer": [
+						{
+							"valueCoding": {
+								"system": "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code": "AR",
+								"display": "Accepts Review"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "dl5",
+			"text": "Lead Principal Investigator Responsible for Overall Study",
+			"item": [
+				{
+					"linkId": "dl5.1",
+					"text": "First Name",
+					"answer": [
+						{
+							"valueString": "Jane"
+						}
+					]
+				},
+				{
+					"linkId": "dl5.2",
+					"text": "Last Name",
+					"answer": [
+						{
+							"valueString": "Doe"
+						}
+					]
+				},
+				{
+					"linkId": "dl5.5",
+					"text": "Degree(s)",
+					"answer": [
+						{
+							"valueString": "MD"
+						}
+					]
+				},
+				{
+					"linkId": "dl5.3",
+					"text": "Email",
+					"answer": [
+						{
+							"valueString": "drjanedoe@sampleuniversity.edu"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "dl11",
+			"text": "Lead Principal Investigator Institution",
+			"item": [
+				{
+					"linkId": "dl11.1",
+					"text": "Lead Principal Investigator Institution Name",
+					"answer": [
+						{
+							"valueString": "Sample University Medical Center"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "dl7",
+			"text": "Relying IRB",
+			"item": [
+				{
+					"linkId": "dl7.5",
+					"text": "Relying institution and Relying Site Principal Investigator for this Determination Letter",
+					"item": [
+						{
+							"linkId": "dl7.5.1",
+							"text": "Select the relying site in order to pre-populate the relying institution and relying site principal investigator details below.",
+							"answer": [
+								{
+									"valueCoding": {
+										"display": "Test Example University  |     |  Xi-Yang Lee, Jr., MD, PhD  |  Example, MA"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId": "dl7.1",
+					"text": "Relying Institution",
+					"item": [
+						{
+							"linkId": "dl7.1.1",
+							"text": "Name",
+							"answer": [
+								{
+									"valueString": "Test Example University"
+								}
+							]
+						},
+						{
+							"linkId": "dl7.1.2",
+							"text": "Federal Wide Assurance (FWA)",
+							"answer": [
+								{
+									"valueString": "34567"
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId": "dl7.2",
+					"text": "Relying Site Principal Investigator",
+					"item": [
+						{
+							"linkId": "dl7.2.1",
+							"text": "First Name",
+							"answer": [
+								{
+									"valueString": "Xi-Yang"
+								}
+							]
+						},
+						{
+							"linkId": "dl7.2.2",
+							"text": "Last Name",
+							"answer": [
+								{
+									"valueString": "Lee"
+								}
+							]
+						},
+						{
+							"linkId": "dl7.2.4",
+							"text": "Suffix",
+							"answer": [
+								{
+									"valueString": "Jr."
+								}
+							]
+						},
+						{
+							"linkId": "dl7.2.5",
+							"text": "Professional Degree(s)",
+							"answer": [
+								{
+									"valueString": "MD, PhD"
+								}
+							]
+						},
+						{
+							"linkId": "dl7.2.3",
+							"text": "Email",
+							"answer": [
+								{
+									"valueString": "XiYangLee@teu.med.edu"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "dl9",
+			"text": "Point of Contact for Study Participants",
+			"item": [
+				{
+					"linkId": "dl9.1",
+					"text": "First Name",
+					"answer": [
+						{
+							"valueString": "Xi-Yang"
+						}
+					]
+				},
+				{
+					"linkId": "dl9.2",
+					"text": "Last Name",
+					"answer": [
+						{
+							"valueString": "Lee"
+						}
+					]
+				},
+				{
+					"linkId": "dl9.4",
+					"text": "Suffix",
+					"answer": [
+						{
+							"valueString": "Jr."
+						}
+					]
+				},
+				{
+					"linkId": "dl9.5",
+					"text": "Professional Degree(s)",
+					"answer": [
+						{
+							"valueString": "MD, PhD"
+						}
+					]
+				},
+				{
+					"linkId": "dl9.3",
+					"text": "Email",
+					"answer": [
+						{
+							"valueString": "XiYangLee@teu.med.edu"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "ADMIN00",
+			"text": "Administrative Use Only",
+			"item": [
+				{
+					"linkId": "ADMIN01",
+					"text": "Link ID prefix",
+					"answer": [
+						{
+							"valueString": "dl"
+						}
+					]
+				},
+				{
+					"linkId": "ADMIN02",
+					"text": "Questionnaire Response ID for the parent Questionnaire Response (such as the Initiate a Study Questionnaire Response), if any",
+					"answer": [
+						{
+							"valueString": "initiate-study-populate-exampleQR"
+						}
+					]
+				},
+				{
+					"linkId": "ADMIN03",
+					"text": "ID of the Research Study FHIR Resource associated with the study Questionnaire Responses, if any",
+					"answer": [
+						{
+							"valueString": "ResearchStudyExample-sIRB"
+						}
+					]
+				}
+			]
+		}
+	]
+}
