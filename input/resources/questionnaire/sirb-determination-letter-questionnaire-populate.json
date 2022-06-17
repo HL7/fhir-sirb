@@ -1,6 +1,6 @@
 {
 	"resourceType" : "Questionnaire",
-	"id" : "sirb-determination-letter-questionnaire",
+	"id" : "sirb-determination-letter-questionnaire-populate",
 	"extension" : [
 		{
 			"extension" : [
@@ -42,7 +42,7 @@
 			}
 		}
 	],
-	"url" : "http://hl7.org/fhir/us/sirb/Questionnaire/sirb-determination-letter-questionnaire",
+	"url" : "http://hl7.org/fhir/us/sirb/Questionnaire/sirb-determination-letter-questionnaire-populate",
 	"version" : "0.1.0",
 	"name" : "SIRBDeterminationQuestionnaire",
 	"title" : "sIRB Determination Questionnaire",
