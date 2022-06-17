@@ -1,9 +1,9 @@
 {
 	"id" : "hl7.fhir.us.sirb",
 	"meta" : {
-		"versionId" : "498",
-		"lastUpdated" : "2022-03-17T20:26:09.184+00:00",
-		"source" : "#0Ui5oy4PciRtL2ay"
+		"versionId" : "534",
+		"lastUpdated" : "2022-06-17T07:00:22.320+00:00",
+		"source" : "#ArRwZiT2abYzquvM"
 	},
 	"resourceType" : "ImplementationGuide",
 	"status" : "draft",
@@ -42,9 +42,9 @@
 	"dependsOn" : [
 		{
 			"id" : "hl7fhiruvsdc",
-			"uri" : "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc#3.0.0-preview",
+			"uri" : "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc#3.0.0",
 			"packageId" : "hl7.fhir.uv.sdc",
-			"version" : "3.0.0-preview"
+			"version" : "3.0.0"
 		}
 	],
 	"definition" : {
@@ -66,59 +66,11 @@
 				"name" : "Media"
 			},
 			{
-				"id" : "new-group5",
-				"name" : "Old IG"
-			},
-			{
 				"id" : "new-group6",
 				"name" : "Codesystem Resource"
-			},
-			{
-				"id" : "new-group10",
-				"name" : "Example Questionnaires Hardcoded with Initiate a Study QR to validate Example QRs against"
 			}
 		],
 		"resource" : [
-			{
-				"exampleBoolean" : false,
-				"reference" : {
-					"reference" : "CodeSystem/temporarycodes",
-					"display" : "Temporary Codes"
-				},
-				"name" : "Temporary Codes",
-				"groupingId" : "new-group6",
-				"description" : "This is a temporary codesystem capturing the custom codelists used across the sIRB forms."
-			},
-			{
-				"exampleBoolean" : false,
-				"reference" : {
-					"reference" : "Questionnaire/sirb-determination-letter-questionnaire-populate",
-					"display" : "sIRB Determination Questionnaire"
-				},
-				"name" : "sIRB Determination Questionnaire",
-				"description" : "This questionnaire collects information required in the production of a determination letter. These data are used to send a Determination Letter Report to each site when a decision is made regarding the institution’s approval to serve as a relying site.",
-				"groupingId" : "new-group7"
-			},
-			{
-				"exampleBoolean" : false,
-				"reference" : {
-					"reference" : "Questionnaire/sirb-recruitment-materials-questionnaire-populate",
-					"display" : "Recruitment Materials"
-				},
-				"name" : "Recruitment Materials",
-				"description" : "The Recruitment Materials Form is used to seek approval from the sIRB to use the specified recruitment materials (at the requested time, place, duration and medium) during the study and for the methods of communication that are proposed for responding to the study participants",
-				"groupingId" : "new-group7"
-			},
-			{
-				"exampleBoolean" : false,
-				"reference" : {
-					"reference" : "Questionnaire/sirb-continuing-review-questionnaire-populate",
-					"display" : "Continuing Review"
-				},
-				"name" : "Continuing Review",
-				"description" : "The Continuing Review Questionnaire collects data used in a report which is then provided to the sIRB on a regular basis so that continued activity on the study can be reviewed.",
-				"groupingId" : "new-group7"
-			},
 			{
 				"exampleBoolean" : false,
 				"reference" : {
@@ -127,16 +79,6 @@
 				},
 				"name" : "Initiate a Study Questionnaire",
 				"description" : "This questionnaire serves as an initial collection form for recurring data elements that are present in the other forms. These other forms will then subsequently prepopulate with these data to minimize data entry time and errors.",
-				"groupingId" : "new-group7"
-			},
-			{
-				"exampleBoolean" : false,
-				"reference" : {
-					"reference" : "Questionnaire/sirb-adverse-event-questionnaire-populate",
-					"display" : "Adverse Medical Event Questionnaire"
-				},
-				"name" : "Adverse Medical Event Questionnaire",
-				"description" : "The Adverse Events Questionnaire is intended to create a Medical Adverse Event Report to the sIRB to notify them of the Medical Adverse Event, the medical description of the event, the resolution of the event, whether there were associated protocol violations and the relationship of the medical event to the study agent.",
 				"groupingId" : "new-group7"
 			},
 			{
@@ -170,6 +112,94 @@
 				"groupingId" : "new-group7"
 			},
 			{
+				"exampleBoolean" : false,
+				"reference" : {
+					"reference" : "Questionnaire/sirb-adverse-event-questionnaire-populate",
+					"display" : "Adverse Medical Event Questionnaire"
+				},
+				"name" : "Adverse Medical Event Questionnaire",
+				"groupingId" : "new-group7"
+			},
+			{
+				"exampleBoolean" : false,
+				"reference" : {
+					"reference" : "Questionnaire/sirb-recruitment-materials-questionnaire-populate",
+					"display" : "Recruitment Materials"
+				},
+				"name" : "Recruitment Materials",
+				"description" : "Recruitment Materials",
+				"groupingId" : "new-group7"
+			},
+			{
+				"exampleBoolean" : false,
+				"reference" : {
+					"reference" : "Questionnaire/sirb-continuing-review-questionnaire-populate",
+					"display" : "Continuing Review"
+				},
+				"name" : "Continuing Review",
+				"description" : "Continuing Review",
+				"groupingId" : "new-group7"
+			},
+			{
+				"exampleBoolean" : false,
+				"reference" : {
+					"reference" : "Questionnaire/sirb-determination-letter-questionnaire-populate",
+					"display" : "sIRB Determination Questionnaire"
+				},
+				"name" : "sIRB Determination Questionnaire",
+				"description" : "sIRB Determination Questionnaire",
+				"groupingId" : "new-group7"
+			},
+			{
+				"exampleBoolean" : true,
+				"reference" : {
+					"reference" : "QuestionnaireResponse/continuing-review-populate-exampleQR"
+				},
+				"name" : "Example Continuing Review Questionnaire Response",
+				"description" : "Example Continuing Review Questionnaire Response",
+				"groupingId" : "new-group8"
+			},
+			{
+				"exampleBoolean" : true,
+				"reference" : {
+					"reference" : "QuestionnaireResponse/medical-ae-populate-exampleQR",
+					"display" : "medical-ae-populate-exampleQR"
+				},
+				"name" : "medical-ae-populate-exampleQR",
+				"description" : "medical-ae-populate-exampleQR",
+				"groupingId" : "new-group8"
+			},
+			{
+				"exampleBoolean" : true,
+				"reference" : {
+					"reference" : "QuestionnaireResponse/determination-populate-exampleQR",
+					"display" : "determination-populate-exampleQR"
+				},
+				"name" : "determination-populate-exampleQR",
+				"description" : "determination-populate-exampleQR",
+				"groupingId" : "new-group8"
+			},
+			{
+				"exampleBoolean" : true,
+				"reference" : {
+					"reference" : "QuestionnaireResponse/nme-populate-exampleQR",
+					"display" : "nme-populate-exampleQR"
+				},
+				"name" : "nme-populate-exampleQR",
+				"description" : "nme-populate-exampleQR",
+				"groupingId" : "new-group8"
+			},
+			{
+				"exampleBoolean" : true,
+				"reference" : {
+					"reference" : "QuestionnaireResponse/initiate-study-populate-exampleQR",
+					"display" : "initiate-study-populate-exampleQR"
+				},
+				"name" : "initiate-study-populate-exampleQR",
+				"description" : "initiate-study-populate-exampleQR",
+				"groupingId" : "new-group8"
+			},
+			{
 				"exampleBoolean" : true,
 				"reference" : {
 					"reference" : "ResearchStudy/ResearchStudyExample-sIRB",
@@ -180,79 +210,14 @@
 				"groupingId" : "new-group9"
 			},
 			{
-				"exampleBoolean" : true,
+				"exampleBoolean" : false,
 				"reference" : {
-					"reference" : "QuestionnaireResponse/nme-populate-exampleQR"
+					"reference" : "CodeSystem/temporarycodes",
+					"display" : "Temporary Codes"
 				},
-				"name" : "Example Adverse Non-Medical Event Questionnaire Response",
-				"groupingId" : "new-group8"
-			},
-			{
-				"exampleBoolean" : true,
-				"reference" : {
-					"reference" : "QuestionnaireResponse/continuing-review-populate-exampleQR"
-				},
-				"name" : "Example Continuing Review Questionnaire Response",
-				"groupingId" : "new-group8"
-			},
-			{
-				"exampleBoolean" : true,
-				"reference" : {
-					"reference" : "QuestionnaireResponse/initiate-study-populate-exampleQR"
-				},
-				"name" : "Example Initiate a Study Questionnaire Response",
-				"description" : "Example Initiate a Study Questionnaire Response",
-				"groupingId" : "new-group8"
-			},
-			{
-				"exampleBoolean" : true,
-				"reference" : {
-					"reference" : "QuestionnaireResponse/determination-populate-exampleQR",
-					"display" : "Example Determination Letter Questionnaire Response"
-				},
-				"name" : "Example Determination Letter Questionnaire Response",
-				"description" : "Example Determination Letter Questionnaire Response",
-				"groupingId" : "new-group8"
-			},
-			{
-				"exampleBoolean" : true,
-				"reference" : {
-					"reference" : "QuestionnaireResponse/protocol-populate-exampleQR",
-					"display" : "Example Protocol Questionnaire Response"
-				},
-				"name" : "Example Protocol Questionnaire Response",
-				"description" : "Example Protocol Questionnaire Response",
-				"groupingId" : "new-group8"
-			},
-			{
-				"exampleBoolean" : true,
-				"reference" : {
-					"reference" : "QuestionnaireResponse/medical-ae-populate-exampleQR",
-					"display" : "Example Adverse Medical Event Questionnaire Response"
-				},
-				"name" : "Example Adverse Medical Event Questionnaire Response",
-				"description" : "Example Adverse Medical Event Questionnaire Response",
-				"groupingId" : "new-group8"
-			},
-			{
-				"exampleBoolean" : true,
-				"reference" : {
-					"reference" : "Questionnaire/toValidateQR-medical-ae-populate-questionnaire",
-					"display" : "Adverse Medical Event Questionnaire"
-				},
-				"name" : "Adverse Medical Event Questionnaire",
-				"description" : "Example Adverse Medical Event Questionnaire  hardcoded with Initiate a Study QR to validate Example Adverse Medical Event  QR against",
-				"groupingId" : "new-group10"
-			},
-			{
-				"exampleBoolean" : true,
-				"reference" : {
-					"reference" : "Questionnaire/toValidateQR-protocol-populate-questionnaire",
-					"display" : "Protocol Questionnaire"
-				},
-				"name" : "Protocol Questionnaire",
-				"description" : "Example Protocol Questionnaire Hardcoded with Initiate a Study QR to validate Example Protocol Questionnaire against",
-				"groupingId" : "new-group10"
+				"name" : "Temporary Codes",
+				"groupingId" : "new-group6",
+				"description" : "This is a temporary codesystem capturing the custom codelists used across the sIRB forms."
 			}
 		],
 		"page" : {
