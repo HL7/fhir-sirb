@@ -6463,7 +6463,7 @@
 				{
 					"linkId" : "c32.2",
 					"text" : "sIRB Version Date of Consent",
-					"type" : "string",
+					"type" : "date",
 					"required" : false,
 					"item" : [
 						{
@@ -6491,7 +6491,7 @@
 				{
 					"linkId" : "c32.3",
 					"text" : "Relying Site Version Date of Consent",
-					"type" : "string",
+					"type" : "date",
 					"required" : false,
 					"item" : [
 						{
