@@ -2885,8 +2885,23 @@
 					"required" : false,
 					"item" : [
 						{
+							"extension" : [
+								{
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
+											{
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help",
+												"display" : "Help-Button"
+											}
+										],
+										"text" : "Help-Button"
+									}
+								}
+							],
 							"linkId" : "c12.2_help",
-							"text" : "Additional text for description of other costs not directly associated with a risk",
+							"text" : "Additional text for description of other risks",
 							"type" : "display"
 						}
 					]
