@@ -8541,7 +8541,7 @@
 										}
 									],
 									"linkId" : "p17.6.2.1",
-									"text" : "Name of the sponsor",
+									"text" : "Name of the sponsor(s)",
 									"type" : "open-choice",
 									"required" : false,
 									"repeats" : true
