@@ -202,6 +202,36 @@
 			{
 				"exampleBoolean" : true,
 				"reference" : {
+					"reference" : "QuestionnaireResponse/protocol-populate-exampleQR",
+					"display" : "protocol-populate-exampleQR"
+				},
+				"name" : "protocol-populate-exampleQR",
+				"description" : "protocol-populate-exampleQR",
+				"groupingId" : "new-group8"
+			},
+			{
+				"exampleBoolean" : true,
+				"reference" : {
+					"reference" : "QuestionnaireResponse/recruitment-populate-exampleQR",
+					"display" : "recruitment-populate-exampleQR"
+				},
+				"name" : "recruitment-populate-exampleQR",
+				"description" : "recruitment-populate-exampleQR",
+				"groupingId" : "new-group8"
+			},
+			{
+				"exampleBoolean" : true,
+				"reference" : {
+					"reference" : "QuestionnaireResponse/consent-form-populate-exampleQR",
+					"display" : "consent-form-populate-exampleQR"
+				},
+				"name" : "consent-form-populate-exampleQR",
+				"description" : "consent-form-populate-exampleQR",
+				"groupingId" : "new-group8"
+			},
+			{
+				"exampleBoolean" : true,
+				"reference" : {
 					"reference" : "ResearchStudy/ResearchStudyExample-sIRB",
 					"display" : "sIRB Research Study Example"
 				},
