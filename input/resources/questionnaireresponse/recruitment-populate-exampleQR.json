@@ -1,0 +1,742 @@
+{
+	"resourceType" : "QuestionnaireResponse",
+	"id" : "recruitment-populate-exampleQR",
+	"meta" : {
+		"versionId" : "1",
+		"lastUpdated" : "2022-06-19T23:48:27.362+00:00"
+	},
+	"extension" : [
+		{
+			"url" : "http://hl7.org/fhir/StructureDefinition/workflow-researchStudy",
+			"valueReference" : {
+				"reference" : "ResearchStudy/ResearchStudyExample-sIRB",
+				"display" : "ResearchStudyExample-sIRB"
+			}
+		}
+	],
+	"questionnaire" : "http://hl7.org/fhir/us/sirb/Questionnaire/sirb-recruitment-materials-questionnaire-populate",
+	"status" : "completed",
+	"authored" : "2022-06-19T23:48:21.443Z",
+	"item" : [
+		{
+			"linkId" : "rm1",
+			"text" : "Research Study",
+			"item" : [
+				{
+					"linkId" : "rm1.1",
+					"text" : "Study Title",
+					"answer" : [
+						{
+							"valueString" : "Study of Drug A for arthritis"
+						}
+					]
+				},
+				{
+					"linkId" : "rm1.2",
+					"text" : "IRB Protocol Number",
+					"answer" : [
+						{
+							"valueString" : "PRO098765"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId" : "rm9",
+			"text" : "Submission Type and Relying Site Selection (if applicable)",
+			"item" : [
+				{
+					"linkId" : "rm9.1",
+					"text" : "Is this Recruitment Materials Form being submitted to request approval for the recruitment materials for the overall study?",
+					"answer" : [
+						{
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "N",
+								"display" : "No"
+							}
+						}
+					]
+				},
+				{
+					"linkId" : "ExternalDataFor_rm9.2",
+					"text" : "External Data For linkId rm9.2",
+					"answer" : [
+						{
+							"valueString" : "Sample University Medical Center  |     |  Jane Doe, MD  |  Sample City, NC"
+						},
+						{
+							"valueString" : "Test Example University  |     |  Xi-Yang Lee, Jr., MD, PhD  |  Example, MA"
+						},
+						{
+							"valueString" : "Central Campus Test University  |     |  Maria Smith, PhD  |  Central, MI"
+						}
+					]
+				},
+				{
+					"linkId" : "rm9.2",
+					"text" : "If this form and the associated recruitment materials are specific to a relying site, select the relying site in order to pre-populate the relying institution and relying site principal investigator details below.",
+					"answer" : [
+						{
+							"valueCoding" : {
+								"display" : "Central Campus Test University  |     |  Maria Smith, PhD  |  Central, MI"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId" : "rm2",
+			"text" : "Study Institution for which Recruitment Materials are being provided",
+			"item" : [
+				{
+					"linkId" : "rm2.1",
+					"text" : "Institution Name",
+					"answer" : [
+						{
+							"valueString" : "Central Campus Test University"
+						}
+					]
+				},
+				{
+					"linkId" : "rm2.2",
+					"text" : "City",
+					"answer" : [
+						{
+							"valueString" : "Central"
+						}
+					]
+				},
+				{
+					"linkId" : "rm2.3",
+					"text" : "State",
+					"answer" : [
+						{
+							"valueString" : "MI"
+						}
+					]
+				},
+				{
+					"linkId" : "rm2.4",
+					"text" : "Country",
+					"answer" : [
+						{
+							"valueString" : "United States"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId" : "rm3",
+			"text" : "Site Principal Investigator for the Site for which Recruitment Materials are being submitted",
+			"item" : [
+				{
+					"linkId" : "rm3.1",
+					"text" : "First Name",
+					"answer" : [
+						{
+							"valueString" : "Maria"
+						}
+					]
+				},
+				{
+					"linkId" : "rm3.3",
+					"text" : "Last Name",
+					"answer" : [
+						{
+							"valueString" : "Smith"
+						}
+					]
+				},
+				{
+					"linkId" : "rm3.4",
+					"text" : "Degree(s)",
+					"answer" : [
+						{
+							"valueString" : "PhD"
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId" : "rm4",
+			"text" : "Recruitment Materials",
+			"item" : [
+				{
+					"linkId" : "rm4.1",
+					"text" : "Will Recruitment Materials be Utilized?",
+					"answer" : [
+						{
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y",
+								"display" : "Yes"
+							}
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.2",
+					"text" : "Will Broadcast Materials be Utilized?",
+					"answer" : [
+						{
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y",
+								"display" : "Yes"
+							}
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.3",
+					"text" : "Broadcast Communication",
+					"item" : [
+						{
+							"linkId" : "rm4.3.7",
+							"text" : "TV Spot",
+							"answer" : [
+								{
+									"valueBoolean" : true
+								}
+							]
+						},
+						{
+							"linkId" : "rm4.3.8",
+							"text" : "TV Spot Description",
+							"answer" : [
+								{
+									"valueString" : "30 second TV ad airing once daily for 4 weeks during nightly news on TV news show with most viewers this year"
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.4",
+					"text" : "Will Printed Materials be Utilized?",
+					"answer" : [
+						{
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y",
+								"display" : "Yes"
+							}
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.5",
+					"text" : "Printed Communication",
+					"item" : [
+						{
+							"linkId" : "rm4.5.1",
+							"text" : "Billboard/Bus Ad",
+							"answer" : [
+								{
+									"valueBoolean" : true
+								}
+							]
+						},
+						{
+							"linkId" : "rm4.5.2",
+							"text" : "Billboard/Bus Ad Description",
+							"answer" : [
+								{
+									"valueString" : "Billboard for 6 months on 3 interstate highway locations in MI once study opens for enrollment"
+								}
+							]
+						},
+						{
+							"linkId" : "rm4.5.13",
+							"text" : "Postcard",
+							"answer" : [
+								{
+									"valueBoolean" : true
+								}
+							]
+						},
+						{
+							"linkId" : "rm4.5.14",
+							"text" : "Postcard Description",
+							"answer" : [
+								{
+									"valueString" : "Postcard mailed to all patients in the Central Campus Test University eHealth Portal with arthritis diagnosis codes during the month that the study opens for recruitment"
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.6",
+					"text" : "Will Electronic Materials be Utilized?",
+					"answer" : [
+						{
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y",
+								"display" : "Yes"
+							}
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.7",
+					"text" : "Electronic Communication",
+					"item" : [
+						{
+							"linkId" : "rm4.7.11",
+							"text" : "Web Page Advertising",
+							"answer" : [
+								{
+									"valueBoolean" : true
+								}
+							]
+						},
+						{
+							"linkId" : "rm4.7.12",
+							"text" : "Web Page Ad Description",
+							"answer" : [
+								{
+									"valueString" : "Ads triggered by searches for \"arthritis\" running for 6 months"
+								}
+							]
+						},
+						{
+							"linkId" : "rm4.7.19",
+							"text" : "eHealth Portal",
+							"answer" : [
+								{
+									"valueBoolean" : true
+								}
+							]
+						},
+						{
+							"linkId" : "rm4.7.20",
+							"text" : "eHealthPortal Description",
+							"answer" : [
+								{
+									"valueString" : "eHealth Portal message to all patients in the Central Campus Test University eHealth Portal with arthritis diagnosis codes"
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.8",
+					"text" : "Will Direct Communication Materials be Utilized?",
+					"answer" : [
+						{
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "N",
+								"display" : "No"
+							}
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.10",
+					"text" : "Will Group Communication Materials be Utilized?",
+					"answer" : [
+						{
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "N",
+								"display" : "No"
+							}
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.12",
+					"text" : "Will Public Communication Materials be Utilized?",
+					"answer" : [
+						{
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "N",
+								"display" : "No"
+							}
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.33",
+					"text" : "Attachments for Broadcast Communication Recruitment Materials",
+					"item" : [
+						{
+							"linkId" : "rm4.33.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"answer" : [
+								{
+									"valueString" : "TV Spot"
+								}
+							]
+						},
+						{
+							"linkId" : "rm4.33.2",
+							"text" : "Attachment",
+							"answer" : [
+								{
+									"valueAttachment" : {
+										"url" : "http://example.org/RecruitmentMaterialSamples/TVSpot.mp4",
+										"title" : "TVSpot.mp4"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.35",
+					"text" : "Attachments for Printed Communication Recruitment Materials",
+					"item" : [
+						{
+							"linkId" : "rm4.35.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"answer" : [
+								{
+									"valueString" : "Billboard Ad"
+								}
+							]
+						},
+						{
+							"linkId" : "rm4.35.2",
+							"text" : "Attachment",
+							"answer" : [
+								{
+									"valueAttachment" : {
+										"url" : "http://example.org/RecruitmentMaterialSamples/BillboardAd.jpg",
+										"title" : "BillboardAd.jpg"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.35",
+					"text" : "Attachments for Printed Communication Recruitment Materials",
+					"item" : [
+						{
+							"linkId" : "rm4.35.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"answer" : [
+								{
+									"valueString" : "Postcard"
+								}
+							]
+						},
+						{
+							"linkId" : "rm4.35.2",
+							"text" : "Attachment",
+							"answer" : [
+								{
+									"valueAttachment" : {
+										"url" : "http://example.org/RecruitmentMaterialSamples/Postcard.doc",
+										"title" : "Postcard.doc"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.37",
+					"text" : "Attachments for Electronic Communication Recruitment Materials",
+					"item" : [
+						{
+							"linkId" : "rm4.37.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"answer" : [
+								{
+									"valueString" : "Web Page Advertising"
+								}
+							]
+						},
+						{
+							"linkId" : "rm4.37.2",
+							"text" : "Attachment",
+							"answer" : [
+								{
+									"valueAttachment" : {
+										"url" : "http://example.org/RecruitmentMaterialSamples/WebPageAd.jpg",
+										"title" : "WebPageAd.jpg"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId" : "rm4.37",
+					"text" : "Attachments for Electronic Communication Recruitment Materials",
+					"item" : [
+						{
+							"linkId" : "rm4.37.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"answer" : [
+								{
+									"valueString" : "eHealth Portal message"
+								}
+							]
+						},
+						{
+							"linkId" : "rm4.37.2",
+							"text" : "Attachment",
+							"answer" : [
+								{
+									"valueAttachment" : {
+										"url" : "http://example.org/RecruitmentMaterialSamples/eHealthPortalMessage.pdf",
+										"title" : "eHealthPortalMessage.pdf"
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId" : "rm6",
+			"text" : "Distribution List and Audience Identification",
+			"item" : [
+				{
+					"linkId" : "rm6.1",
+					"text" : "If recruitment material is being mailed, emailed, texted or otherwise distributed, describe where/how the distribution list will be obtained.",
+					"answer" : [
+						{
+							"valueString" : "All patients in the Central Campus Test University eHealth Portal with arthritis diagnosis codes."
+						}
+					]
+				},
+				{
+					"linkId" : "rm6.2",
+					"text" : "Describe methods that will be used to identify audiences for advertising messages (eg. web advertising will be displayed on web sites popular with a particular demographic)",
+					"answer" : [
+						{
+							"valueString" : "TV broadcast ads are targeted at community news viewers as a whole. Web advertising is shown to search engine users who query for the keyword \"arthritis\"."
+						}
+					]
+				},
+				{
+					"linkId" : "rm6.3",
+					"text" : "Any necessary permission will be obtained for posting/airing these (for example, permission to post a flyer on a bulletin board).",
+					"answer" : [
+						{
+							"valueCoding" : {
+								"system" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+								"code" : "Y",
+								"display" : "Yes"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId" : "rm7",
+			"text" : "Response to Recruitment Materials",
+			"item" : [
+				{
+					"linkId" : "rm7.1",
+					"text" : "When potential participants respond to recruitment material, describe the information that will be provided to them about the study.",
+					"answer" : [
+						{
+							"valueString" : "Inclusion and exclusion criteria, study length, study goals, explanation of a double-blind study and enrollment process."
+						}
+					]
+				},
+				{
+					"linkId" : "rm7.2",
+					"text" : "Describe the plan to respond to potential participants who respond to recruitment materials. Include how many times you will attempt to respond to call the participant back, leave a voice message, send a reply email or conduct other follow-up communication.",
+					"answer" : [
+						{
+							"valueString" : "If potential participant responds via email, then replies will be via email.   If potential participant calls, then replies will be phone calls or voice messages.  If potential participant  responds via eHealth Portal, then replies will be via the eHealth Portal.  If participants don't response, then one followup communication in the same media as the first will be one."
+						}
+					]
+				},
+				{
+					"linkId" : "rm7.3",
+					"text" : "Types of communication methods that will be used to reply to potential participants who respond to recruitment materials",
+					"answer" : [
+						{
+							"valueCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "PHONECALL",
+								"display" : "Telephone calls"
+							}
+						},
+						{
+							"valueCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "VM",
+								"display" : "Voice mail and telephone voice messages"
+							}
+						},
+						{
+							"valueCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "EMAIL",
+								"display" : "Email"
+							}
+						},
+						{
+							"valueCoding" : {
+								"system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+								"code" : "EHPRTL",
+								"display" : "eHealth Portal messaging"
+							}
+						}
+					]
+				},
+				{
+					"linkId" : "rm7.4",
+					"text" : "Attach the telephone call script for responding to potential participants",
+					"item" : [
+						{
+							"linkId" : "rm7.4.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"answer" : [
+								{
+									"valueString" : "Telephone call reply script"
+								}
+							]
+						},
+						{
+							"linkId" : "rm7.4.2",
+							"text" : "Attachment",
+							"answer" : [
+								{
+									"valueAttachment" : {
+										"url" : "http://example.org/ReplyMessageSamples/TelephoneReply.pdf",
+										"title" : "TelephoneReply.pdf"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId" : "rm7.5",
+					"text" : "Attach the voice mail/telephone voice message script for responding to potential participants",
+					"item" : [
+						{
+							"linkId" : "rm7.5.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"answer" : [
+								{
+									"valueString" : "Voice mail/telephone voice message script"
+								}
+							]
+						},
+						{
+							"linkId" : "rm7.5.2",
+							"text" : "Attachment",
+							"answer" : [
+								{
+									"valueAttachment" : {
+										"url" : "http://example.org/ReplyMessageSamples/VoicemailReply.pdf",
+										"title" : "VoicemailReply.pdf"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId" : "rm7.7",
+					"text" : "Attach the email script for responding to potential participants",
+					"item" : [
+						{
+							"linkId" : "rm7.7.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"answer" : [
+								{
+									"valueString" : "Email reply message"
+								}
+							]
+						},
+						{
+							"linkId" : "rm7.7.2",
+							"text" : "Attachment",
+							"answer" : [
+								{
+									"valueAttachment" : {
+										"url" : "http://example.org/ReplyMessageSamples/EmailReply.pdf",
+										"title" : "EmailReply.pdf"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"linkId" : "rm7.9",
+					"text" : "Attach the eHealth Portal messaging script for responding to potential participants",
+					"item" : [
+						{
+							"linkId" : "rm7.9.1",
+							"text" : "Describe the file that is being attached (optional)",
+							"answer" : [
+								{
+									"valueString" : "eHealth Portal reply message"
+								}
+							]
+						},
+						{
+							"linkId" : "rm7.9.2",
+							"text" : "Attachment",
+							"answer" : [
+								{
+									"valueAttachment" : {
+										"url" : "http://example.org/ReplyMessageSamples/eHealthPortalReply.doc",
+										"title" : "eHealthPortalReply.doc"
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId" : "ADMIN00",
+			"text" : "Administrative Use Only",
+			"item" : [
+				{
+					"linkId" : "ADMIN01",
+					"text" : "Link ID prefix",
+					"answer" : [
+						{
+							"valueString" : "rm"
+						}
+					]
+				},
+				{
+					"linkId" : "ADMIN02",
+					"text" : "Questionnaire Response ID for the parent Questionnaire Response (such as the Initiate a Study Questionnaire Response), if any",
+					"answer" : [
+						{
+							"valueString" : "initiate-study-populate-exampleQR"
+						}
+					]
+				},
+				{
+					"linkId" : "ADMIN03",
+					"text" : "ID of the Research Study FHIR Resource associated with the study Questionnaire Responses",
+					"answer" : [
+						{
+							"valueString" : "ResearchStudyExample-sIRB"
+						}
+					]
+				}
+			]
+		}
+	]
+}
