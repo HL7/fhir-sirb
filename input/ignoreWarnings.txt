@@ -1,8 +1,62 @@
 == Suppressed Messages ==
 # No applicable codes exist for these values. Binding is extensible.
-WARNING: ResearchStudy/ResearchStudy2858: ResearchStudy.identifier[0].type: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)
-WARNING: ResearchStudy/ResearchStudy2858: ResearchStudy.identifier[1].type: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)
+WARNING: ResearchStudy/ResearchStudyExample-sIRB: ResearchStudy.identifier[0].type: No code provided, and a code should be provided from the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type)
+WARNING: ResearchStudy/ResearchStudyExample-sIRB: ResearchStudy.identifier[1].type: No code provided, and a code should be provided from the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type)
 
 # URLs outside of the HL7 domain
 INFORMATION: ResearchStudy/ResearchStudy2858: ResearchStudy.category[0].coding[0]: Code System URI 'http://ncimeta.nci.nih.gov' is unknown so the code cannot be validated
 INFORMATION: ResearchStudy/ResearchStudy2858: ResearchStudy.keyword[0].coding[0]: Code System URI 'https://www.examplestudymanagementdb.org' is unknown so the code cannot be validated
+INFORMATION: ResearchStudy/ResearchStudyExample-sIRB: ResearchStudy.category[0].coding[0]: Code System URI 'http://ncimeta.nci.nih.gov' is unknown so the code cannot be validated
+INFORMATION: ResearchStudy/ResearchStudyExample-sIRB: ResearchStudy.keyword[0].coding[0]: Code System URI 'https://www.protocols.examplenationalgovernmentfunder.org' is unknown so the code cannot be validated
+INFORMATION: Questionnaire/sirb-initiate-study-questionnaire-populate: Questionnaire.meta.tag[0]: Code System URI 'http://lhncbc.github.io/lforms/' is unknown so the code cannot be validated
+
+# The content of the rendering-xhtml extension in help links has been reviewed and the XHTML is not malicious. Implementers should control access to unauthorized editing of the questionnaire definitions to reduce security risks.
+INFORMATION: Questionnaire/sirb-protocol-questionnaire-populate: Questionnaire.item[0].item[7].item[8].text.extension[0].value.ofType(string): The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: Questionnaire/sirb-protocol-questionnaire-populate: Questionnaire.item[3].item[1].item[1].text.extension[0].value.ofType(string): The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+
+# Validator needs to be enhanced to handle answerExpression extension per Lloyd McKenzie
+INFORMATION: QuestionnaireResponse/determination-populate-exampleQR: QuestionnaireResponse.item[4].item[0].item[1].answer[0]: Cannot validate options because no option or options are provided
+INFORMATION: QuestionnaireResponse/medical-ae-populate-exampleQR: QuestionnaireResponse.item[1].item[0].item[2].answer[0]: Cannot validate options because no option or options are provided
+INFORMATION: QuestionnaireResponse/nme-populate-exampleQR: QuestionnaireResponse.item[1].item[0].item[3].answer[0]: Cannot validate options because no option or options are provided
+INFORMATION: QuestionnaireResponse/consent-form-populate-exampleQR: QuestionnaireResponse.item[4].item[1].answer[0]: Cannot validate options because no option or options are provided
+INFORMATION: QuestionnaireResponse/consent-form-populate-exampleQR: QuestionnaireResponse.item[4].item[1].answer[1]: Cannot validate options because no option or options are provided
+INFORMATION: QuestionnaireResponse/consent-form-populate-exampleQR: QuestionnaireResponse.item[1].item[1].answer[0]: Cannot validate options because no option or options are provided
+INFORMATION: QuestionnaireResponse/recruitment-populate-exampleQR: QuestionnaireResponse.item[1].item[2].answer[0]: Cannot validate options because no option or options are provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[0].item[11].item[1].item[0].answer[0]: Cannot validate options because no option or options are provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[0].item[11].item[2].item[0].answer[0]: Cannot validate options because no option or options are provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[0].item[18].item[1].item[0].answer[0]: Cannot validate options because no option or options are provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[0].item[18].item[2].item[0].answer[0]: Cannot validate options because no option or options are provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[0].item[19].item[1].item[0].answer[0]: Cannot validate options because no option or options are provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[0].item[19].item[2].item[0].answer[0]: Cannot validate options because no option or options are provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[18].item[5].item[1].item[1].answer[0]: Cannot validate options because no option or options are provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[18].item[5].item[1].item[1].answer[1]: Cannot validate options because no option or options are provided
+
+# there no constraints on the string values, and we don't expect there to be because of the nature of strings
+INFORMATION: QuestionnaireResponse/continuing-review-populate-exampleQR: QuestionnaireResponse.item[2].item[1].answer[0]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/continuing-review-populate-exampleQR: QuestionnaireResponse.item[2].item[1].answer[1]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/continuing-review-populate-exampleQR: QuestionnaireResponse.item[2].item[1].answer[2]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/determination-populate-exampleQR: QuestionnaireResponse.item[4].item[0].item[0].answer[0]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/determination-populate-exampleQR: QuestionnaireResponse.item[4].item[0].item[0].answer[1]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/determination-populate-exampleQR: QuestionnaireResponse.item[4].item[0].item[0].answer[2]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/medical-ae-populate-exampleQR: QuestionnaireResponse.item[1].item[0].item[1].answer[0]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/medical-ae-populate-exampleQR: QuestionnaireResponse.item[1].item[0].item[1].answer[1]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/medical-ae-populate-exampleQR: QuestionnaireResponse.item[1].item[0].item[1].answer[2]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/nme-populate-exampleQR: QuestionnaireResponse.item[1].item[0].item[2].answer[0]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/nme-populate-exampleQR: QuestionnaireResponse.item[1].item[0].item[2].answer[1]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/nme-populate-exampleQR: QuestionnaireResponse.item[1].item[0].item[2].answer[2]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/consent-form-populate-exampleQR: QuestionnaireResponse.item[1].item[0].answer[0]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/consent-form-populate-exampleQR: QuestionnaireResponse.item[1].item[0].answer[1]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/consent-form-populate-exampleQR: QuestionnaireResponse.item[1].item[0].answer[2]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/consent-form-populate-exampleQR: QuestionnaireResponse.item[4].item[0].answer[0]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/consent-form-populate-exampleQR: QuestionnaireResponse.item[4].item[0].answer[1]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/recruitment-populate-exampleQR: QuestionnaireResponse.item[1].item[1].answer[0]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/recruitment-populate-exampleQR: QuestionnaireResponse.item[1].item[1].answer[1]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/recruitment-populate-exampleQR: QuestionnaireResponse.item[1].item[1].answer[2]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[0].item[11].item[0].answer[0]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[0].item[11].item[0].answer[1]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[0].item[18].item[0].answer[0]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[0].item[18].item[0].answer[1]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[0].item[19].item[0].answer[0]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[0].item[19].item[0].answer[1]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[18].item[5].item[1].item[0].answer[0]: Cannot validate string answer option because no option list is provided
+INFORMATION: QuestionnaireResponse/protocol-populate-exampleQR: QuestionnaireResponse.item[18].item[5].item[1].item[0].answer[1]: Cannot validate string answer option because no option list is provided
