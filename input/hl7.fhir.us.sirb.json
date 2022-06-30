@@ -88,7 +88,7 @@
 					"display" : "Unanticipated Problems Involving Risk to Subjects or Others (UPIRTSO)/Adverse Non-Medical Event Questionnaire"
 				},
 				"name" : "Adverse Non-Medical Event Questionnaire",
-				"description" : "The Non-Medical Adverse Questionnaire is intended to create a Non-Medical Adverse Event Report to the sIRB. An example of a Non-Medical Adverse Event is the inadvertent disclosure to several participants that they are receiving the placebo in a blind study. The Non-Medical Adverse Questionnaire captures details for the report such as the root cause of the event, the corrective action plan and associated changes to the protocol or consent form as a result of the event.",
+				"description" : "The Non-Medical Adverse Event Questionnaire is intended to create a Non-Medical Adverse Event Report to the sIRB. An example of a Non-Medical Adverse Event is the inadvertent disclosure to several participants that they are receiving the placebo in a blind study. The Non-Medical Adverse Questionnaire captures details for the report such as the root cause of the event, the corrective action plan and associated changes to the protocol or consent form as a result of the event.",
 				"groupingId" : "new-group7"
 			},
 			{
@@ -97,8 +97,8 @@
 					"reference" : "Questionnaire/sirb-consent-questionnaire-populate",
 					"display" : "Consent Questionnaire"
 				},
-				"name" : "Consent Questionnaire",
-				"description" : "The Consent Form Questionnaire creates the exact Consent Form content word-for-word that will be shown to the sIRBâ€™s Institutional Review Board to be approved to use during the study. The rendering and pdf format created by the software are also provided to the sIRB to be approved.",
+				"name" : "Consent Form Questionnaire",
+				"description" : "The Consent Form Questionnaire creates the exact Consent Form content word-for-word that will be shown to the sIRB’s Institutional Review Board to be approved to use during the study. The rendering and pdf format created by the software are also provided to the sIRB to be approved.",
 				"groupingId" : "new-group7"
 			},
 			{
@@ -118,6 +118,7 @@
 					"display" : "Adverse Medical Event Questionnaire"
 				},
 				"name" : "Adverse Medical Event Questionnaire",
+				"description" : "The Adverse Events Questionnaire is intended to create a Medical Adverse Event Report to the sIRB to notify them of the Medical Adverse Event, the medical description of the event, the resolution of the event, whether there were associated protocol violations and the relationship of the medical event to the study agent.",
 				"groupingId" : "new-group7"
 			},
 			{
@@ -127,7 +128,7 @@
 					"display" : "Recruitment Materials"
 				},
 				"name" : "Recruitment Materials",
-				"description" : "Recruitment Materials",
+				"description" : "The Recruitment Materials Form is used to seek approval from the sIRB to use the specified recruitment materials (at the requested time, place, duration and medium) during the study and for the methods of communication that are proposed for responding to the study participants.",
 				"groupingId" : "new-group7"
 			},
 			{
@@ -137,7 +138,7 @@
 					"display" : "Continuing Review"
 				},
 				"name" : "Continuing Review",
-				"description" : "Continuing Review",
+				"description" : "The Continuing Review Questionnaire collects data used in a report which is then provided to the sIRB on a regular basis so that continued activity on the study can be reviewed.",
 				"groupingId" : "new-group7"
 			},
 			{
@@ -147,7 +148,7 @@
 					"display" : "sIRB Determination Questionnaire"
 				},
 				"name" : "sIRB Determination Questionnaire",
-				"description" : "sIRB Determination Questionnaire",
+				"description" : "This questionnaire collects information required in the production of a determination letter. These data are used to send a Determination Letter Report to each site when a decision is made regarding the institution’s approval to serve as a relying site.",
 				"groupingId" : "new-group7"
 			},
 			{
@@ -156,7 +157,7 @@
 					"reference" : "QuestionnaireResponse/continuing-review-populate-exampleQR"
 				},
 				"name" : "Example Continuing Review Questionnaire Response",
-				"description" : "Example Continuing Review Questionnaire Response",
+				"description" : "Example of a Continuing Review Questionnaire Response",
 				"groupingId" : "new-group8"
 			},
 			{
@@ -165,8 +166,8 @@
 					"reference" : "QuestionnaireResponse/medical-ae-populate-exampleQR",
 					"display" : "medical-ae-populate-exampleQR"
 				},
-				"name" : "medical-ae-populate-exampleQR",
-				"description" : "medical-ae-populate-exampleQR",
+				"name" : "Example Adverse Medical Event Questionnaire Response",
+				"description" : "Example of an Adverse Medical Event Questionnaire Response",
 				"groupingId" : "new-group8"
 			},
 			{
@@ -175,8 +176,8 @@
 					"reference" : "QuestionnaireResponse/determination-populate-exampleQR",
 					"display" : "determination-populate-exampleQR"
 				},
-				"name" : "determination-populate-exampleQR",
-				"description" : "determination-populate-exampleQR",
+				"name" : "Example Determination Letter Questionnaire Response",
+				"description" : "Example of a Determination Letter Questionnaire Response",
 				"groupingId" : "new-group8"
 			},
 			{
@@ -185,8 +186,8 @@
 					"reference" : "QuestionnaireResponse/nme-populate-exampleQR",
 					"display" : "nme-populate-exampleQR"
 				},
-				"name" : "nme-populate-exampleQR",
-				"description" : "nme-populate-exampleQR",
+				"name" : "Example Adverse Non-Medical Event Questionnaire Response",
+				"description" : "Example of an Adverse Non-Medical Event Questionnaire Response",
 				"groupingId" : "new-group8"
 			},
 			{
@@ -195,8 +196,8 @@
 					"reference" : "QuestionnaireResponse/initiate-study-populate-exampleQR",
 					"display" : "initiate-study-populate-exampleQR"
 				},
-				"name" : "initiate-study-populate-exampleQR",
-				"description" : "initiate-study-populate-exampleQR",
+				"name" : "Example Initiate a Study Questionnaire Response",
+				"description" : "Example of an Initiate a Study Questionnaire Response",
 				"groupingId" : "new-group8"
 			},
 			{
@@ -205,8 +206,8 @@
 					"reference" : "QuestionnaireResponse/protocol-populate-exampleQR",
 					"display" : "protocol-populate-exampleQR"
 				},
-				"name" : "protocol-populate-exampleQR",
-				"description" : "protocol-populate-exampleQR",
+				"name" : "Example Protocol Questionnaire Response",
+				"description" : "Example of a Protocol Questionnaire Response",
 				"groupingId" : "new-group8"
 			},
 			{
@@ -215,8 +216,8 @@
 					"reference" : "QuestionnaireResponse/recruitment-populate-exampleQR",
 					"display" : "recruitment-populate-exampleQR"
 				},
-				"name" : "recruitment-populate-exampleQR",
-				"description" : "recruitment-populate-exampleQR",
+				"name" : "Example Recruitment Materials Questionnaire Response",
+				"description" : "Example of a Recruitment Materials Questionnaire Response",
 				"groupingId" : "new-group8"
 			},
 			{
@@ -225,8 +226,8 @@
 					"reference" : "QuestionnaireResponse/consent-form-populate-exampleQR",
 					"display" : "consent-form-populate-exampleQR"
 				},
-				"name" : "consent-form-populate-exampleQR",
-				"description" : "consent-form-populate-exampleQR",
+				"name" : "Example Consent Form Questionnaire Response",
+				"description" : "Example of a Consent Form Questionnaire Response",
 				"groupingId" : "new-group8"
 			},
 			{
