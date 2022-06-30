@@ -6,7 +6,7 @@
 The sIRB IG assumes that the implementer is using the [SDC Specification]( http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse).
 <br>
 <br>
-The Questionnaires were built with the free and open source NLM Form Builder available from [https://lhcformbuilder.nlm.nih.gov/]([https://lhcformbuilder.nlm.nih.gov/)
+The Questionnaires were built with the free and open source NLM Form Builder available from [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/)
 <br>
 <br>
 The Questionnaires and Questionnaire Responses are rendered with the free and open source LHC Forms software available from [http://lhncbc.github.io/lforms/](http://lhncbc.github.io/lforms/).
@@ -34,19 +34,8 @@ The following SDC extensions SHALL be used for the populate functionality to wor
 | [Answer Expression](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression)  | [Populatable Questionnaire - Expression](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp)  |
 | [Initial Expression](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression)    | [Populatable Questionnaire - Expression](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp) |
 | [Calculated Expression](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression)   | [Populatable Questionnaire - Expression](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp)  |
-| [Launch Contexts](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext)  |   [Populatable Questionnaire - Expression](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp)  |
+| [Launch Context](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext)  |   [Populatable Questionnaire - Expression](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp)  |
 {: .grid}
-
-<br>
-<br>
-
-The Questionnaires also utilize another SDC Extension: <br>
-
-| Extension  | Profile   |  
-| -------------------- | ---------------- | 
-| [Enable when Expression](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression) | [Advanced Behavior Questionnaire](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-behave)  |
-{: .grid}
-
 
 <br>
 <br>
@@ -134,4 +123,6 @@ The official URL for the workflow-researchStudy is [http://hl7.org/fhir/Structur
 
 # fhirpath
 <br>
-[fhirpath](https://hl7.org/fhirpath/) is used in the Answer Expression(s), Initial Expression(s), Calculated Expression(s), Launch Context Expression(s) and Enable When Expression(s) used in the Questionnaires.
+[fhirpath](https://hl7.org/fhirpath/) is used in the Answer Expression(s), Initial Expression(s), Calculated Expression(s) and Launch Context Expression(s) used in the Questionnaires.
+
+
