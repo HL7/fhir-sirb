@@ -1,4 +1,4 @@
-# Usage of Codesystems from HL7 CodeSystems Registry[1]
+# Usage of Codesystems from HL7 CodeSystems Registry[1] in the sIRB Questionnaires
 <br>
 Where possible, the sIRB Questionnaires use the values in the [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html). For some questions, not all values in a given codesystem were applicable to the sIRB use case and only a subset of the values were included as answer options for those questions.
 <br>
@@ -28,9 +28,9 @@ The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.
 <br>
 ---
 <br>
-# sIRB-specific Codesystem
+# sIRB-specific Codesystem in the sIRB Questionnaires
 <br>
-In many cases, the values and concepts in the sIRB Questionnaires were not yet captured by an existing HL7 Codesystem or the existing Codesystems did not contain all of the values needed.  In these circumstances, we have created our own codes for the [sIRB Questionnaires](artifacts#questionnaires). We have included these in the siRB IG at [CodeSystem-temporarycodes.html](CodeSystem-temporarycodes.html), which is represented as a codeSystem resource.
+In many cases, the values and concepts in the sIRB Questionnaires were not yet captured by an existing HL7 Codesystem or the existing Codesystems did not contain all of the values needed.  In these circumstances, we have created our own codes for the [sIRB Questionnaires](artifacts#sirb-questionnaires). We have included these in the siRB IG at [CodeSystem-temporarycodes.html](CodeSystem-temporarycodes.html), which is represented as a codeSystem resource.
 <br>
 <br>
 Because of the low maturity level of the sIRB IG, a temporary code list within the IG was used. As the sIRB Questionnaires mature, the codes within the sIRB Questionnaires will grow in maturity and we foresee that we will work with the HL7 terminology workgroup to have officially registered CodeSystems created and listed in the  [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html).
@@ -164,6 +164,11 @@ Below are the descriptions of the [sIRB temporary codes](CodeSystem-temporarycod
 |Participant Accrual Type|AdditionalEnrollees|Additional enrollees this approval period|Continuing Review Questionnaire|
 {: .grid}
 
+
+<br>
+# Example ResearchStudy resource (optional)
+<br>
+In the example, the research study category of C98388 Interventional Study from the [NCI Metathesaurus](http://ncimeta.nci.nih.gov)[6] codesystem is shown. This codesystem is not meant to imply that this codesystem is the required or suggested codesystem to use in the ResearchStudy category element in the sIRB utililization of the ResearchStudy resource.
 <br>
 
 ---
@@ -193,3 +198,7 @@ The value "Requires intervention to prevent permanent impairment" is from What i
 <br>
 <br>
 [5] : These codes are additional values needed to broaden the existing HL7 Codesystem [actionTakenInResponseToTheEvent](http://terminology.hl7.org/CodeSystem/v2-0251) to represent all of values in the ICSR Implementation Guide. ICSR G.k.8 Action(s) Taken with Drug in the [Implementation Guide for Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016](https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by ICH. Copyright ICH. May be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
+<br>
+<br>
+<br>
+[6] NCI Metathesaurus at [http://ncimeta.nci.nih.gov](http://ncimeta.nci.nih.gov) is in the public domain. For more details about the NCI Metathesaurus, see [Using the NCI Metathesaurus with FHIR](https://hl7.org/fhir/2021may/ncimeta.html).
