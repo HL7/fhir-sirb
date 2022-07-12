@@ -98,7 +98,7 @@
 					"display" : "Consent Questionnaire"
 				},
 				"name" : "Consent Form Questionnaire",
-				"description" : "The Consent Form Questionnaire creates the exact Consent Form content word-for-word that will be shown to the sIRB’s Institutional Review Board to be approved to use during the study. The rendering and pdf format created by the software are also provided to the sIRB to be approved.",
+				"description" : "The Consent Form Questionnaire creates the exact Consent Form content word-for-word that will be shown to the sIRB's Institutional Review Board to be approved to use during the study. The rendering and pdf format created by the software are also provided to the sIRB to be approved.",
 				"groupingId" : "new-group7"
 			},
 			{
@@ -148,7 +148,7 @@
 					"display" : "sIRB Determination Questionnaire"
 				},
 				"name" : "sIRB Determination Questionnaire",
-				"description" : "This questionnaire collects information required in the production of a determination letter. These data are used to send a Determination Letter Report to each site when a decision is made regarding the institution’s approval to serve as a relying site.",
+				"description" : "This questionnaire collects information required in the production of a determination letter. These data are used to send a Determination Letter Report to each site when a decision is made regarding the institution's approval to serve as a relying site.",
 				"groupingId" : "new-group7"
 			},
 			{
