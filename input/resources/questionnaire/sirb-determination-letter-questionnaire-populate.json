@@ -681,7 +681,7 @@
 							],
 							"linkId" : "dl7.1.2",
 							"text" : "Federal Wide Assurance (FWA)",
-							"type" : "string",
+							"type" : "integer",
 							"required" : false,
 							"item" : [
 								{
@@ -998,7 +998,7 @@
 									}
 								}
 							],
-							"linkId" : "dl2.1.2.1_help",
+							"linkId" : "dl9.1_help",
 							"text" : "First or given name of the point of contact",
 							"type" : "display"
 						}
