@@ -2384,7 +2384,7 @@
 											}
 										}
 									],
-									"linkId" : "p3.2.3_help",
+									"linkId" : "p3.1.3_help",
 									"text" : "Short description of the protocol, including a brief statement of the study hypothesis. This should be only a few sentences in length. A detailed schematic describing all visits and a schedule of assessments should be included in the Schema and Schedule of Activities",
 									"type" : "display"
 								}
@@ -2773,7 +2773,7 @@
 											}
 										}
 									],
-									"linkId" : "p1.3.15_help",
+									"linkId" : "p3.1.15_help",
 									"text" : "Procedures that are required for the study (e.g. harvesting of tumor, vaccine, tumor biopsy and blood draws)",
 									"type" : "display"
 								}
