@@ -86,7 +86,27 @@
 					"linkId" : "rm1.1",
 					"text" : "Study Title",
 					"type" : "string",
-					"required" : false
+					"required" : false,
+					"item" : [
+						{
+							"extension" : [
+								{
+									"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+									"valueCodeableConcept" : {
+										"coding" : [
+											{
+												"system" : "http://hl7.org/fhir/questionnaire-item-control",
+												"code" : "help"
+											}
+										]
+									}
+								}
+							],
+							"linkId" : "rm1.1_help",
+							"text" : "Short Title of the Research Study intended for the lay audience",
+							"type" : "display"
+						}
+					]
 				},
 				{
 					"extension" : [
@@ -122,24 +142,6 @@
 							"type" : "display"
 						}
 					]
-				},
-				{
-					"extension" : [
-						{
-							"url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-							"valueCodeableConcept" : {
-								"coding" : [
-									{
-										"system" : "http://hl7.org/fhir/questionnaire-item-control",
-										"code" : "help"
-									}
-								]
-							}
-						}
-					],
-					"linkId" : "rm1.1_help",
-					"text" : "Short Title of the Research Study intended for the lay audience",
-					"type" : "display"
 				}
 			]
 		},
