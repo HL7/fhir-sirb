@@ -202,7 +202,7 @@
 							"text" : "Federal Wide Assurance (FWA)",
 							"answer" : [
 								{
-									"valueInteger" : "34567"
+									"valueInteger" : 34567
 								}
 							]
 						}
