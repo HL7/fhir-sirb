@@ -1,4 +1,4 @@
-<h2>FHIR Server</h2>
+### FHIR Server
 <br>
 The sIRB IG is based on FHIR R4 (v4.0.1). Our assumption is that the implementer will have implemented a HAPI FHIR R4 Server that is running HAPI version 5.0.2 or later, or a FHIR Server that has the equivalent capabilities. 
 <br>
@@ -12,15 +12,17 @@ The HAPI Server free open-source download is available from [https://github.com/
 For the sIRB project and IG, the HAPI FHIR JPA Starter Project available at [https://github.com/hapifhir/hapi-fhir-jpaserver-starter](https://github.com/hapifhir/hapi-fhir-jpaserver-starter)  was utilized. The JPA starter kit contains an embedded H2 Java Database as the default database, but it can be configured to use other databases. For more details on other database choices, see [https://hapifhir.io/hapi-fhir/docs/server_jpa/database_support.html](https://hapifhir.io/hapi-fhir/docs/server_jpa/database_support.html).
 <br>
 <br>
-<h2>Required and Optional Resources</h2>
+### Required and Optional Resources
 <br>
 The FHIR R4 resources required for this IG are:
+<br>
 Questionnaire
 <br>
 QuestionnaireResponse
 <br>
 <br>
 Optional FHIR R4 resource utilized in this IG:
+<br>
 ResearchStudy
 <br>
 <br>
@@ -28,7 +30,7 @@ ResearchStudy
 
 
 
-<h2>Implementation Using the [NLM Form Builder](https://lhcformbuilder.nlm.nih.gov/) and [LHC-Forms](http://lhncbc.github.io/lforms/)</h2>
+### Implementation Using the [NLM Form Builder](https://lhcformbuilder.nlm.nih.gov/) and [LHC-Forms](http://lhncbc.github.io/lforms/)
 <br>
 The sIRB IG assumes that the implementer is using the [SDC Specification]( http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse).
 <br>
@@ -71,11 +73,11 @@ The following SDC extensions SHALL be used for the populate functionality to wor
 
 
 
-<h2>Implementation Without Using the [NLM Form Builder](https://lhcformbuilder.nlm.nih.gov/) and [LHC-Forms](http://lhncbc.github.io/lforms/)</h2>
+### Implementation Without Using the [NLM Form Builder](https://lhcformbuilder.nlm.nih.gov/) and [LHC-Forms](http://lhncbc.github.io/lforms/)
 <br>
 If an implementer does not desire to use the NLM Form Builder and/or the LHC Forms software, then the implementer SHOULD implement a system that additionally utilizes everything described in the [Implementation Using the NLM Form Builder and LHC-Forms](#implementation-using-the-nlm-form-builder-and-lhc-forms) section above plus the following:
  <br>
-<h3>Capabilities</h3>
+#### Capabilities
 <br>
 [SDC Form Designer](http://hl7.org/fhir/uv/sdc/CapabilityStatement/sdc-form-designer)
 <br>
@@ -90,7 +92,7 @@ If an implementer does not desire to use the NLM Form Builder and/or the LHC For
 [SDC Form Archiver](http://hl7.org/fhir/uv/sdc/CapabilityStatement/sdc-form-archiver)
 <br>
 <br>
-<h3>Operations</h3>
+#### Operations
 <br>
 [Populate Questionnaire](http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-populate)
 <br>
@@ -99,9 +101,9 @@ If an implementer does not desire to use the NLM Form Builder and/or the LHC For
 
 
 
-<h2>Core and Questionnaire Extensions Used in the sIRB IG</h2>
+### Core and Questionnaire Extensions Used in the sIRB IG
 <br>
-<h3>Questionnaire Extensions</h3>
+#### Questionnaire Extensions
 <br>
 [choiceOrientation](http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation)
 <br>
@@ -119,7 +121,7 @@ If an implementer does not desire to use the NLM Form Builder and/or the LHC For
 <br>
 <br>
 
-<h3>Base FHIR Extensions</h3>
+#### Base FHIR Extensions
 <br>
 [rendering-style](http://hl7.org/fhir/StructureDefinition/rendering-style)
 <br>
@@ -133,14 +135,14 @@ If an implementer does not desire to use the NLM Form Builder and/or the LHC For
 
 
 
-<h2>Optional ResearchStudy Resource</h2>
+### Optional ResearchStudy Resource
 <br>
-<h3>ResearchStudy R4 Base Definition</h3>
+#### ResearchStudy R4 Base Definition
 If an implementer wishes to optionally use the ResearchStudy resource to transmit or persist data, the R4 base definition of the [ResearchStudy](https://www.hl7.org/fhir/researchstudy.profile.json.html) resource MAY be used.
 <br>
 <br>
 
-<h3>workflow-researchStudy Extension</h3>
+#### workflow-researchStudy Extension
 <br>
 If an implementer chooses to use the ResearchStudy resource, the workflow-researchStudy MAY optionally be used on the QuestionnaireResponses to capture that the QuestionnaireResponses are relevant to the specified research study(ies).
 <br>
@@ -149,7 +151,7 @@ The official URL for the workflow-researchStudy is [http://hl7.org/fhir/Structur
 <br>
 <br>
 
-<h2>fhirpath</h2>
+### fhirpath
 <br>
 [fhirpath](https://hl7.org/fhirpath/) is used in the Answer Expression(s), Initial Expression(s), Calculated Expression(s) and Launch Context Expression(s) used in the Questionnaires. LHC Forms includes [fhirpath.js](https://github.com/HL7/fhirpath.js/). If other form software is used, an implementation of fhirpath will need to be added if not bundled with the form software package.
 
