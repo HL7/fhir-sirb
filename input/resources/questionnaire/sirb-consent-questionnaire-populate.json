@@ -390,7 +390,7 @@
 										}
 									],
 									"linkId" : "c40.5.2_help",
-									"text" : "First or given name associated with the site primary responsibility holder",
+									"text" : "First or given name of the relying site PI",
 									"type" : "display"
 								}
 							]
@@ -538,7 +538,7 @@
 										}
 									],
 									"linkId" : "c40.5.4_help",
-									"text" : "Relying site PI's Academic or Profressional Institution",
+									"text" : "Relying site PI's Academic or Professional Institution",
 									"type" : "display"
 								}
 							]
@@ -894,7 +894,7 @@
 										}
 									],
 									"linkId" : "c49.2.2_help",
-									"text" : "First or given name of the relying site PI",
+									"text" : "First or given name of the lead PI",
 									"type" : "display"
 								}
 							]
