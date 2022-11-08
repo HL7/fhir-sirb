@@ -1,21 +1,10 @@
-# Other
-
-<br>
-<br>
-<br /> 
-<br /> 
-
 
 ## Cross Version Analysis
 
 {% include cross-version-analysis.xhtml %}
 
-<p>This is an R4 IG, based on  FHIR 4.0.1</p>
-
 <br>
 <br>
-<br /> 
-<br /> 
 
 ## IG Dependencies
 
@@ -23,28 +12,23 @@
 
 <br>
 <br>
-See dependencies at the [QA link](qa.html).
-<br>
-<br>
-
-
 
 ## Globals Table
 
 {% include globals-table.xhtml %}
-
-<p><i>No Global profiles found</i></p>
-<br>
 
 <br>
 <br>
 
 ## Copyright/Legal
 
+<p>See the Copyright/Legal section at the [Descriptions of CodeSystems](codesystems_descriptions.html) page.</p>
+<br>
+<br>
+<p>Also note the following: </p>
+<br>
+<br>
+
 {% include ip-statements.xhtml %}
 
-<p>Used by permission of HL7 International, all rights reserved Creative Commons License</p>
-<br>
-<p>Also see the Copyright/Legal section at the [Descriptions of CodeSystems](codesystems_descriptions.html) page.</p>
-<br>
-<br>
+
