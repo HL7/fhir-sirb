@@ -1,32 +1,27 @@
 
-## Cross Version Analysis
+# Cross Version Analysis
 
 {% include cross-version-analysis.xhtml %}
 
 <br>
-<br>
 
-## IG Dependencies
+# IG Dependencies
 
 {% include dependency-table.xhtml %}
 
 <br>
-<br>
 
-## Globals Table
+# Globals Table
 
 {% include globals-table.xhtml %}
 
 <br>
-<br>
 
-## Copyright/Legal
+# Copyright/Legal
 
-<p>See the Copyright/Legal section at the [Descriptions of CodeSystems](codesystems_descriptions.html) page.</p>
-<br>
+See the Copyright/Legal section at the [Descriptions of CodeSystems](codesystems_descriptions.html) page.
 <br>
 <p>Also note the following: </p>
-<br>
 <br>
 
 {% include ip-statements.xhtml %}
