@@ -180,8 +180,8 @@ In the example, the research study category of C98388 Interventional Study from 
 | -------------------- | ---------------- | ---------------------------------- |
 | Inventory1  | $3000   |   354 |
 | Inventory2  | $2000   |   200 |
-| Inventory3\[^7]  | $1000   |   700 |
-| Inventory4 \[^8]  | $4000   |   600 |
+| Inventory3 `[^7]`{=markdown}  | $1000   |   700 |
+| Inventory4 `[^8]`{=markdown}  | $4000   |   600 |
 
 
 <br>
@@ -190,8 +190,8 @@ In the example, the research study category of C98388 Interventional Study from 
 
 <table>
 <tr>
-	<td>test1[^9]</td>
-	<td>test2 /[^10]</td>
+	<td markdown="9">test1[^9]</td>
+	<td>test2 <a id="fn-10-ref " href="#fn-10">[10]</a></td>
 </tr>
 <tr>
 	<td>test3</td>
@@ -233,11 +233,11 @@ The value "Requires intervention to prevent permanent impairment" is from What i
 <br>
 <br>
 <br>
-[^7]: Footnote1 reference goes here.
+`[^7]:`{=markdown} Footnote1 reference goes here.
 <br>
 <br>
 <br>
-[^8]: Footnote2 reference goes here.
+`[^8]:`{=markdown} Footnote2 reference goes here.
 <br>
 <br>
 <br>
@@ -246,3 +246,4 @@ The value "Requires intervention to prevent permanent impairment" is from What i
 <br>
 <br>
 [^10]: Footnote4 reference goes here.
+<p id="fn-10">Footnote4 reference goes here.<a href="#fn-10-ref">10</a></p>
