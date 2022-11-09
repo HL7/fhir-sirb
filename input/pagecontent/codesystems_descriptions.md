@@ -1,4 +1,4 @@
-# Usage of Codesystems from HL7 CodeSystems Registry[1] in the sIRB Questionnaires
+### Usage of Codesystems from HL7 CodeSystems Registry[^1] in the sIRB Questionnaires
 <br>
 Where possible, the sIRB Questionnaires use the values in the [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html). For some questions, not all values in a given codesystem were applicable to the sIRB use case and only a subset of the values were included as answer options for those questions.
 <br>
@@ -13,7 +13,7 @@ The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.
 | -------------------- | ---------------- | ---------------------------------- |
 |expandedYes-NoIndicator|[http://terminology.hl7.org/CodeSystem/v2-0532](http://terminology.hl7.org/CodeSystem/v2-0532)|Initiate a Study Questionnaire, Protocol Questionnaire, Consent Questionnaire, Recruitment Materials Questionnaire, Continuing Review Questionnaire, Adverse Medical Event Questionnaire and Adverse Non-Medical Event Questionnaire|
 |ResearchStudyPhase|[http://terminology.hl7.org/CodeSystem/research-study-phase](http://terminology.hl7.org/CodeSystem/research-study-phase)|Protocol Questionnaire|
-|Unified Code for Units of Measure (UCUM) [2]|[http://unitsofmeasure.org](http://unitsofmeasure.org)|Consent Questionnaire|
+|Unified Code for Units of Measure (UCUM) [^2]|[http://unitsofmeasure.org](http://unitsofmeasure.org)|Consent Questionnaire|
 |relationship|[http://terminology.hl7.org/CodeSystem/v2-0063](http://terminology.hl7.org/CodeSystem/v2-0063)|Consent Questionnaire|
 |ResearchStudyStatus|[http://hl7.org/fhir/research-study-status](http://hl7.org/fhir/research-study-status)|Continuing Review Questionnaire|
 |administrativeSex|[http://terminology.hl7.org/CodeSystem/v2-0001](http://terminology.hl7.org/CodeSystem/v2-0001)|Adverse Medical Event Questionnaire|
@@ -28,7 +28,7 @@ The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.
 <br>
 ---
 <br>
-# sIRB-specific Codesystem in the sIRB Questionnaires
+### sIRB-specific Codesystem in the sIRB Questionnaires
 <br>
 In many cases, the values and concepts in the sIRB Questionnaires were not yet captured by an existing HL7 Codesystem or the existing Codesystems did not contain all of the values needed.  In these circumstances, we have created our own codes for the [sIRB Questionnaires](artifacts.html#sirb-questionnaires). We have included these in the siRB IG at [CodeSystem-temporarycodes.html](CodeSystem-temporarycodes.html), which is represented as a codeSystem resource.
 <br>
@@ -166,7 +166,7 @@ Below are the descriptions of the [sIRB temporary codes](CodeSystem-temporarycod
 
 
 <br>
-# Example ResearchStudy resource (optional)
+### Example ResearchStudy resource (optional)
 <br>
 In the example, the research study category of C98388 Interventional Study from the [NCI Metathesaurus](http://ncimeta.nci.nih.gov)[6] codesystem is shown. This codesystem is not meant to imply that this codesystem is the required or suggested codesystem to use in the ResearchStudy category element in the sIRB utililization of the ResearchStudy resource.
 <br>
@@ -174,14 +174,14 @@ In the example, the research study category of C98388 Interventional Study from 
 ---
 
 <br>
-# Copyright/Legal
+### Copyright/Legal
 <br>
 
-[1] : [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html). Content is copyright HL7. Licensed under creative commons public domain.
+[^1] : [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html). Content is copyright HL7. Licensed under creative commons public domain.
 <br>
 <br>
 <br>
-[2] : The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. [https://ucum.org/trac/wiki/TermsOfUse](https://ucum.org/trac/wiki/TermsOfUse)
+[^2] : The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. [https://ucum.org/trac/wiki/TermsOfUse](https://ucum.org/trac/wiki/TermsOfUse)
 <br>
 <br>
 <br>
