@@ -180,9 +180,10 @@ In the example, the research study category of C98388 Interventional Study from 
 | -------------------- | ---------------- | ---------------------------------- |
 | Inventory1  | $3000   |   354 |
 | Inventory2  | $2000   |   200 |
-| Inventory3 `[^7]`{=markdown}  | $1000   |   700 |
-| Inventory4 `[^8]`{=markdown}  | $4000   |   600 |
-
+| `Inventory3 [^7]`  | $1000   |   700 |
+| <sup a id="fn-8">8</a> Inventory4   | $4000   |   600 |
+| `<sup a id="fn-8">8</a>` Inventory5   | $5000   |   800 |
+| \<sup a id=\"fn-8\"\>8\<\/\a\> Inventory5   | $5000   |   800 |
 
 <br>
 <br>
@@ -233,11 +234,11 @@ The value "Requires intervention to prevent permanent impairment" is from What i
 <br>
 <br>
 <br>
-`[^7]:`{=markdown} Footnote1 reference goes here.
+`[^7]: Footnote1 reference goes here.`
 <br>
 <br>
 <br>
-`[^8]:`{=markdown} Footnote2 reference goes here.
+`[^8]: Footnote2 reference goes here.`
 <br>
 <br>
 <br>
@@ -246,4 +247,7 @@ The value "Requires intervention to prevent permanent impairment" is from What i
 <br>
 <br>
 [^10]: Footnote4 reference goes here.
+
 <p id="fn-10">Footnote4 reference goes here.<a href="#fn-10-ref">10</a></p>
+
+<sup a href="#fn-8-ref"  id="fn-8">8</a>Footnote for 8 goes here.
