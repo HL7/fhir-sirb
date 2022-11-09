@@ -18,11 +18,9 @@
 
 ### Copyright/Legal
 
-<br>
 
-#### See the Copyright/Legal section at the [Descriptions of CodeSystems](codesystems_descriptions.html) page.
+#### See the Copyright/Legal section at the [Descriptions of CodeSystems](codesystems_descriptions.html#copyrightlegal) page.
 
-<br>
 
 #### Also note the following:
 

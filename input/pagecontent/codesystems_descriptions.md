@@ -26,7 +26,6 @@ The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.
 {: .grid}
 
 <br>
----
 <br>
 ### sIRB-specific Codesystem in the sIRB Questionnaires
 <br>
@@ -177,15 +176,15 @@ In the example, the research study category of C98388 Interventional Study from 
 ### Copyright/Legal
 <br>
 
-[^1] : [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html). Content is copyright HL7. Licensed under creative commons public domain.
+[^1]:   [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html). Content is copyright HL7. Licensed under creative commons public domain.
 <br>
 <br>
 <br>
-[^2] : The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. [https://ucum.org/trac/wiki/TermsOfUse](https://ucum.org/trac/wiki/TermsOfUse)
+[^2]:   The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. [https://ucum.org/trac/wiki/TermsOfUse](https://ucum.org/trac/wiki/TermsOfUse)
 <br>
 <br>
 <br>
-[3] : Based on the Boolean data elements for ICSR E.i.3.2 Seriousness Criteria at Event Level in the [Implementation Guide for
+[^footnote]:   Based on the Boolean data elements for ICSR E.i.3.2 Seriousness Criteria at Event Level in the [Implementation Guide for
 Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016](https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use (ICH).  Copyright International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use (ICH) and may be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
 <br>
 <br>
