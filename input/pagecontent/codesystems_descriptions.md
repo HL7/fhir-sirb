@@ -181,9 +181,9 @@ In the example, the research study category of C98388 Interventional Study from 
 | Inventory1  | $3000   |   354 |
 | Inventory2  | $2000   |   200 |
 | `Inventory3 [^7]`  | $1000   |   700 |
-| <sup a id="fn-8">8</a> Inventory4   | $4000   |   600 |
-| `<sup a id="fn-8">8</a>` Inventory5   | $5000   |   800 |
-| \<sup a id=\"fn-8\"\>8\<\/\a\> Inventory5   | $5000   |   800 |
+| <sup a id="fn-8">108</a> Inventory4   | $4000   |   600 |
+| `<sup a id="fn-8">109</a>` Inventory5   | $5000   |   800 |
+| \<sup a id=\"fn-8\"\>110\<\/\a\> Inventory5   | $5000   |   800 |
 
 <br>
 <br>
@@ -191,7 +191,7 @@ In the example, the research study category of C98388 Interventional Study from 
 
 <table>
 <tr>
-	<td markdown="1">test1[^9]</td>
+	<td markdown="1">test1[^footnotenumberhere]</td>
 	<td>test2 <a id="fn-10-ref " href="#fn-10">[10]</a></td>
 </tr>
 <tr>
@@ -245,11 +245,13 @@ The value "Requires intervention to prevent permanent impairment" is from What i
 [^9]: Footnote3 reference goes here.
 <br>
 <br>
-<div markdown="1">[^9]: Footnote3 reference goes here.</div>
+<div markdown="1">[^9]: Footnote3 reference goes here. Test 200.</div>
+
+<div markdown="1">[^footnotenumberhere]: Footnote3 reference goes here. Test 300.</div markdown="1">
 
 <br>
 [^10]: Footnote4 reference goes here.
 
-<p id="fn-10">Footnote4 reference goes here.<a href="#fn-10-ref">10</a></p>
+<p id="fn-10">Footnote4 reference goes here. Test 10.<a href="#fn-10-ref">10</a></p>
 
 <sup a href="#fn-8-ref"  id="fn-8">8</a>Footnote for 8 goes here.
