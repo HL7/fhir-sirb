@@ -189,6 +189,17 @@ In the example, the research study category of C98388 Interventional Study from 
 <br>
 <br>
 
+
+| More Items  | Price   |   Qty |
+| -------------------- | ---------------- | ---------------------------------- |
+| Inventory50  | $3000   |   354 |
+| Inventory60  | $2000   |   200 |
+| Inventory70^b  | $2000   |   200 |
+
+<br>
+<br>
+<br>
+
 <table>
 <tr>
 	<td markdown="1">test1[^footnotenumberhere]</td>
@@ -248,6 +259,9 @@ The value "Requires intervention to prevent permanent impairment" is from What i
 <div markdown="1">[^9]: Footnote3 reference goes here. Test 200.</div>
 
 <div markdown="1">[^footnotenumberhere]: Footnote3 reference goes here. Test 300.</div markdown="1">
+
+[^footnotenumberhere]: Footnote3 reference goes here. Test 600.
+
 
 <br>
 [^10]: Footnote4 reference goes here.
