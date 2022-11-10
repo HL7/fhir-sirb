@@ -191,7 +191,7 @@ In the example, the research study category of C98388 Interventional Study from 
 
 <table>
 <tr>
-	<td markdown="9">test1[^9]</td>
+	<td markdown="1">test1[^9]</td>
 	<td>test2 <a id="fn-10-ref " href="#fn-10">[10]</a></td>
 </tr>
 <tr>
@@ -245,6 +245,8 @@ The value "Requires intervention to prevent permanent impairment" is from What i
 [^9]: Footnote3 reference goes here.
 <br>
 <br>
+<div markdown="1">[^9]: Footnote3 reference goes here.</div>
+
 <br>
 [^10]: Footnote4 reference goes here.
 
