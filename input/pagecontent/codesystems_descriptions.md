@@ -226,6 +226,9 @@ In the example, the research study category of C98388 Interventional Study from 
 | Inventory1900 <sup><a href="#footnotek">k</a></sup>  | $4000   |   700 |
 | Inventory2100 <sup><a href="#footnotem">m</a></sup>  | $7000   |   800 |
 | Inventory2300 <sup><a href="#footnoten">n</a></sup>  | $8000   |   200 |
+| Inventory2500 <a id="fn-p-ref" href="#fn-p"><sup>p</sup></a>  | $9000   |   300 |
+
+
 
 
 
@@ -338,3 +341,10 @@ The value "Requires intervention to prevent permanent impairment" is from What i
 <p id="fn-10">Footnote4 reference goes here. Test 10.<a href="#fn-10-ref">10</a></p>
 
 <sup a href="#fn-8-ref"  id="fn-8">8</a>Footnote for 8 goes here.
+
+
+<br>
+<br>
+
+
+<p id="fn-p">This is the text of the footnote P <a href="#fn-p-ref">%</a></p>
