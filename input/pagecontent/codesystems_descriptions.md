@@ -357,5 +357,5 @@ The value "Requires intervention to prevent permanent impairment" is from What i
 <br>
 <br>
 
-[^#fn-r-ref]: This is the text of the footnote R
+[^fn-r-ref]: This is the text of the footnote R
 
