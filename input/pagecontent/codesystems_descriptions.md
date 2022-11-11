@@ -199,8 +199,12 @@ In the example, the research study category of C98388 Interventional Study from 
 
 <br>
 <br>
+
+
+
+
 | Even More Items  | Price   |   Qty |
-| -------------------- | ---------------- | ---------------------------------- |
+| ---------------------------------- | ---------------- | ---------------------------------- |
 | Inventory80  | $3000   |   354 |
 | Inventory90  | $2000   |   200 |
 | Inventory1000\^c  | $2000   |   200 |
@@ -208,12 +212,21 @@ In the example, the research study category of C98388 Interventional Study from 
 
 <br>
 <br>
+
+
+
 | Even More and More Items  | Price   |   Qty |
 | -------------------- | ---------------- | ---------------------------------- |
 | Inventory80  | $3000   |   354 |
 | Inventory90  | $2000   |   200 |
 | Inventory1000 <sub markdown="1">d/<//sub/>  | $2000   |   200 |
 | Inventory1100 <sub>d</sub>  | $2000   |   200 |
+| Inventory1400 <sup>h</sup>  | $2000   |   200 |
+| Inventory1800 <sup>k</sup>  | $3000   |   500 |
+| Inventory1900 <sup><a href="#footnotek">k</a></sup>  | $4000   |   700 |
+| Inventory2100 <sup><a href="#footnotem">m</a></sup>  | $7000   |   800 |
+
+
 
 <br>
 <br>
@@ -225,8 +238,8 @@ In the example, the research study category of C98388 Interventional Study from 
 | Inventory80  | $3000   |   354 |
 | Inventory90  | $2000   |   200 |
 | Inventory1200 <sub markdown="1">[^e]/<//sub/>  | $2000   |   200 |
-| Inventory1500 <sub markdown="1">[^f]\<\/sub\>  | $2000   |   200 |
-
+| Inventory1500 <sub markdown="0">[^f]\<\/sub\>  | $2000   |   200 |
+| Inventory1700 <sub markdown="0">[^f]</sub> | $2000   |   200 |
 
 <br>
 <br>
@@ -306,7 +319,18 @@ The value "Requires intervention to prevent permanent impairment" is from What i
 [^footnote2numberhere]: Footnote3 reference goes here. Test 900.
 
 
+<p id="footnotek">This is Footnote K.</p>
+
 <br>
+<br>
+
+<p role="doc-endnote"><a id="footnotem">M.<br></a>This is Footnote M.</p>
+
+
+<br>
+<br>
+
+
 [^10]: Footnote4 reference goes here.
 
 <p id="fn-10">Footnote4 reference goes here. Test 10.<a href="#fn-10-ref">10</a></p>
