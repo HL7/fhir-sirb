@@ -194,9 +194,40 @@ In the example, the research study category of C98388 Interventional Study from 
 | -------------------- | ---------------- | ---------------------------------- |
 | Inventory50  | $3000   |   354 |
 | Inventory60  | $2000   |   200 |
-| Inventory70^b  | $2000   |   200 |
+| Inventory70`^b`  | $2000   |   200 |
+
 
 <br>
+<br>
+| Even More Items  | Price   |   Qty |
+| -------------------- | ---------------- | ---------------------------------- |
+| Inventory80  | $3000   |   354 |
+| Inventory90  | $2000   |   200 |
+| Inventory1000\^c  | $2000   |   200 |
+
+
+<br>
+<br>
+| Even More and More Items  | Price   |   Qty |
+| -------------------- | ---------------- | ---------------------------------- |
+| Inventory80  | $3000   |   354 |
+| Inventory90  | $2000   |   200 |
+| Inventory1000 <sub markdown="1">d/<//sub/>  | $2000   |   200 |
+| Inventory1100 <sub>d</sub>  | $2000   |   200 |
+
+<br>
+<br>
+
+<br>
+<br>
+| Additional Items  | Price   |   Qty |
+| -------------------- | ---------------- | ---------------------------------- |
+| Inventory80  | $3000   |   354 |
+| Inventory90  | $2000   |   200 |
+| Inventory1200 <sub markdown="1">[^e]/<//sub/>  | $2000   |   200 |
+| Inventory1500 <sub markdown="1">[^f]\<\/sub\>  | $2000   |   200 |
+
+
 <br>
 <br>
 
@@ -212,6 +243,16 @@ In the example, the research study category of C98388 Interventional Study from 
 </table>
 
 
+<table>
+<tr>
+	<td markdown="1">test20[^footnote2numberhere]\<\/td\>
+	<td>test30</td>
+</tr>
+<tr>
+	<td>test40</td>
+	<td>test50</td>
+</tr>
+</table>
 
 
 ### Copyright/Legal
@@ -261,6 +302,8 @@ The value "Requires intervention to prevent permanent impairment" is from What i
 <div markdown="1">[^footnotenumberhere]: Footnote3 reference goes here. Test 300.</div markdown="1">
 
 [^footnotenumberhere]: Footnote3 reference goes here. Test 600.
+
+[^footnote2numberhere]: Footnote3 reference goes here. Test 900.
 
 
 <br>
