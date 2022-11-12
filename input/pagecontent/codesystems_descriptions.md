@@ -192,7 +192,7 @@ In the example, the research study category of C98388 Interventional Study from 
 | Column 1 Header  | Column 2 Header   |  Column 3 Header |
 | -------------------- | ---------------- | ---------------------------------- |
 | cell1 <a id="fn-t-ref-1" href="#fn-t"><sup>t</sup></a>  | cell2   |   cell3 <a id="fn-v-ref-1" href="#fn-v"><sup>v</sup></a>  |
-| cell4  | cell5  <a id="fn-t-ref-2" href="#fn-t"><sup>t</sup></a>  |   cell6 |
+| cell4^# ^*  | cell5  <a id="fn-t-ref-2" href="#fn-t"><sup>t</sup></a>  |   cell6 <a id="fn-y-ref-1" href="#fn-y"><sup>y</sup></a> |
 | cell7  | cell8 <a id="fn-u-ref-1" href="#fn-u"><sup>u</sup></a>  |   cell9 <a id="fn-t-ref-3" href="#fn-t"><sup>t</sup></a> |
 
 <br>
@@ -209,14 +209,31 @@ This sentence <a id="fn-w-ref" href="#fn-w"><sup>also</sup></a> has a footnote.
 
 
 
-### Copyright/Legal
+### Copyright/Legal Notes for Codesystems
 <br>
 
-[^1]: [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html). Content is copyright HL7. Licensed under creative commons public domain.
+
+{#put-id-here}
+
+y {#fn-y}  This is footnote y.
+
+
+z^3 {#fn-y}  This is footnote z raised to the 3rd power.
+
+
+
+<div role="doc-endnotes" class="footnotes">
+
+<p role="doc-endnote" id="#fn:1"><sup>1</sup>[HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html). Content is copyright HL7. Licensed under creative commons public domain.</p>
 <br>
 <br>
 <br>
-[^2]: The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. [https://ucum.org/trac/wiki/TermsOfUse](https://ucum.org/trac/wiki/TermsOfUse)
+
+
+<p role="doc-endnote" id="#fn:2"><sup>2</sup>
+
+
+<p role="doc-endnote" id="#fn:2"><sup>2</sup> The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. [https://ucum.org/trac/wiki/TermsOfUse](https://ucum.org/trac/wiki/TermsOfUse)</p>
 <br>
 <br>
 <br>
@@ -246,7 +263,7 @@ The value "Requires intervention to prevent permanent impairment" is from What i
 <br>
 
 
-<div role="doc-endnotes" class="footnotes">
+
 
 	<p role="doc-endnote" id="#fn:t"><sup>t</sup> This is footnote T. Footnote T is very very very very very very very very very very very very very very long. Footnote T is very very very very very very very very very very very long. Footnote T is very very very very very very very very very very very long.</p>
 
