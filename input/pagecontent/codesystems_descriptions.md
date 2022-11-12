@@ -176,100 +176,37 @@ In the example, the research study category of C98388 Interventional Study from 
 <br>
 <br>
 
-| Item  | Price   |   Qty |
+
+
+<br>
+<br>
+<br>
+
+
+
+
+
+<br>
+<br>
+
+| Column 1 Header  | Column 2 Header   |  Column 3 Header |
 | -------------------- | ---------------- | ---------------------------------- |
-| Inventory1  | $3000   |   354 |
-| Inventory2  | $2000   |   200 |
-| `Inventory3 [^7]`  | $1000   |   700 |
-| <sup a id="fn-8">108</a> Inventory4   | $4000   |   600 |
-| `<sup a id="fn-8">109</a>` Inventory5   | $5000   |   800 |
-| \<sup a id=\"fn-8\"\>110\<\/\a\> Inventory5   | $5000   |   800 |
+| cell1 <a id="fn-t-ref-1" href="#fn-t"><sup>t</sup></a>  | cell2   |   cell3 <a id="fn-v-ref-1" href="#fn-v"><sup>v</sup></a>  |
+| cell4  | cell5  <a id="fn-t-ref-2" href="#fn-t"><sup>t</sup></a>  |   cell6 |
+| cell7  | cell8 <a id="fn-u-ref-1" href="#fn-u"><sup>u</sup></a>  |   cell9 <a id="fn-t-ref-3" href="#fn-t"><sup>t</sup></a> |
+
+<br>
+<br>
+This sentence <a id="fn-w-ref" href="#fn-w"><sup>also</sup></a> has a footnote.
+
 
 <br>
 <br>
 <br>
-
-
-| More Items  | Price   |   Qty |
-| -------------------- | ---------------- | ---------------------------------- |
-| Inventory50  | $3000   |   354 |
-| Inventory60  | $2000   |   200 |
-| Inventory70`^b`  | $2000   |   200 |
-
-
 <br>
 <br>
 
 
-
-
-| Even More Items  | Price   |   Qty |
-| ---------------------------------- | ---------------- | ---------------------------------- |
-| Inventory80  | $3000   |   354 |
-| Inventory90  | $2000   |   200 |
-| Inventory1000\^c  | $2000   |   200 |
-
-
-<br>
-<br>
-
-
-
-| Even More and More Items  | Price   |   Qty |
-| -------------------- | ---------------- | ---------------------------------- |
-| Inventory80  | $3000   |   354 |
-| Inventory90  | $2000   |   200 |
-| Inventory1000 <sub markdown="1">d/<//sub/>  | $2000   |   200 |
-| Inventory1100 <sub>d</sub>  | $2000   |   200 |
-| Inventory1400 <sup>h</sup>  | $2000   |   200 |
-| Inventory1800 <sup>k</sup>  | $3000   |   500 |
-| Inventory1900 <sup><a href="#footnotek">k</a></sup>  | $4000   |   700 |
-| Inventory2100 <sup><a href="#footnotem">m</a></sup>  | $7000   |   800 |
-| Inventory2300 <sup><a href="#footnoten">n</a></sup>  | $8000   |   200 |
-| Inventory2500 <a id="fn-p-ref" href="#fn-p"><sup>p</sup></a>  | $9000   |   300 |
-| Inventory2700 <a id="fn-q-ref" href="#fn-q"><sup>q</sup></a>  | $1000   |   200 |
-| Inventory2900 <a id="fn-r-ref" href="#fn-r"><sup>r</sup></a>  | $2000   |   600 |
-| Inventory3200 `[^s]`{=markdown}  | $3000   |   500 |
-
-
-<br>
-<br>
-
-<br>
-<br>
-| Additional Items  | Price   |   Qty |
-| -------------------- | ---------------- | ---------------------------------- |
-| Inventory80  | $3000   |   354 |
-| Inventory90  | $2000   |   200 |
-| Inventory1200 <sub markdown="1">[^e]/<//sub/>  | $2000   |   200 |
-| Inventory1500 <sub markdown="0">[^f]\<\/sub\>  | $2000   |   200 |
-| Inventory1700 <sub markdown="0">[^f]</sub> | $2000   |   200 |
-
-<br>
-<br>
-
-<table>
-<tr>
-	<td markdown="1">test1[^footnotenumberhere]</td>
-	<td>test2 <a id="fn-10-ref " href="#fn-10">[10]</a></td>
-</tr>
-<tr>
-	<td>test3</td>
-	<td>test4</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-	<td markdown="1">test20[^footnote2numberhere]\<\/td\>
-	<td>test30</td>
-</tr>
-<tr>
-	<td>test40</td>
-	<td>test50</td>
-</tr>
-</table>
 
 
 ### Copyright/Legal
@@ -302,64 +239,23 @@ The value "Requires intervention to prevent permanent impairment" is from What i
 [^6]: NCI Metathesaurus at [http://ncimeta.nci.nih.gov](http://ncimeta.nci.nih.gov) is in the public domain. For more details about the NCI Metathesaurus, see [Using the NCI Metathesaurus with FHIR](https://hl7.org/fhir/2021may/ncimeta.html).
 <br>
 <br>
-<br>
-`[^7]: Footnote1 reference goes here.`
-<br>
-<br>
-<br>
-`[^8]: Footnote2 reference goes here.`
-<br>
-<br>
-<br>
-[^9]: Footnote3 reference goes here.
-<br>
-<br>
-<div markdown="1">[^9]: Footnote3 reference goes here. Test 200.</div>
 
-<div markdown="1">[^footnotenumberhere]: Footnote3 reference goes here. Test 300.</div markdown="1">
-
-[^footnotenumberhere]: Footnote3 reference goes here. Test 600.
-
-[^footnote2numberhere]: Footnote3 reference goes here. Test 900.
-
-
-<p id="footnotek">This is Footnote K.</p>
-
-<br>
-<br>
-
-<p role="doc-endnote"><span id="footnotem">M.&nbsp;</span>This is Footnote M.</p>
-
-
-<br>
-<br>
-<p role="doc-endnote"><span id="footnoten">N.&nbsp;</span>This is Footnote N.</p>
-<br>
-<br>
-[^10]: Footnote4 reference goes here.
-
-<p id="fn-10">Footnote4 reference goes here. Test 10.<a href="#fn-10-ref">10</a></p>
-
-<sup a href="#fn-8-ref"  id="fn-8">8</a>Footnote for 8 goes here.
 
 
 <br>
 <br>
 
 
-<p id="fn-p">This is the text of the footnote P <a href="#fn-p-ref">%</a></p>
+<div role="doc-endnotes" class="footnotes">
 
-<br>
-<br>
+	<p role="doc-endnote" id="#fn:t"><sup>t</sup> This is footnote T. Footnote T is very very very very very very very very very very very very very very long. Footnote T is very very very very very very very very very very very long. Footnote T is very very very very very very very very very very very long.</p>
 
-[^#fn-q]: This is the text of the footnote Q
 
-<br>
-<br>
+	<p role="doc-endnote" id="#fn:u"><sup>u</sup> This is footnote U. Footnote U is very very very very very very very very very very very very very very long. Footnote U is very very very very very very very very very very very long. Footnote U is very very very very very very very very very very very long.</p>
 
-[^fn-r]: This is the text of the footnote R
 
-<br>
-<br>
+	<p role="doc-endnote" id="#fn:v"><sup>v</sup> This is footnote V.</p>
 
-`[^s]:`{=markdown} This is footnote S.
+	<p role="doc-endnote" id="#fn:w"><sup>w</sup> This is footnote W.</p>
+
+</div>
