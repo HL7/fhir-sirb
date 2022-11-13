@@ -1,4 +1,4 @@
-### Usage of Codesystems from HL7 CodeSystems Registry[^1] in the sIRB Questionnaires
+### Usage of Codesystems from HL7 CodeSystems Registry <a href="#fn-1"><sup>1</sup></a> [1] in the sIRB Questionnaires
 <br>
 Where possible, the sIRB Questionnaires use the values in the [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html). For some questions, not all values in a given codesystem were applicable to the sIRB use case and only a subset of the values were included as answer options for those questions.
 <br>
@@ -13,7 +13,7 @@ The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.
 | -------------------- | ---------------- | ---------------------------------- |
 |expandedYes-NoIndicator|[http://terminology.hl7.org/CodeSystem/v2-0532](http://terminology.hl7.org/CodeSystem/v2-0532)|Initiate a Study Questionnaire, Protocol Questionnaire, Consent Questionnaire, Recruitment Materials Questionnaire, Continuing Review Questionnaire, Adverse Medical Event Questionnaire and Adverse Non-Medical Event Questionnaire|
 |ResearchStudyPhase|[http://terminology.hl7.org/CodeSystem/research-study-phase](http://terminology.hl7.org/CodeSystem/research-study-phase)|Protocol Questionnaire|
-|Unified Code for Units of Measure (UCUM) [^2]|[http://unitsofmeasure.org](http://unitsofmeasure.org)|Consent Questionnaire|
+|Unified Code for Units of Measure (UCUM) <a href="#fn-2"><sup>2</sup></a> [2]|[http://unitsofmeasure.org](http://unitsofmeasure.org)|Consent Questionnaire|
 |relationship|[http://terminology.hl7.org/CodeSystem/v2-0063](http://terminology.hl7.org/CodeSystem/v2-0063)|Consent Questionnaire|
 |ResearchStudyStatus|[http://hl7.org/fhir/research-study-status](http://hl7.org/fhir/research-study-status)|Continuing Review Questionnaire|
 |administrativeSex|[http://terminology.hl7.org/CodeSystem/v2-0001](http://terminology.hl7.org/CodeSystem/v2-0001)|Adverse Medical Event Questionnaire|
@@ -26,6 +26,7 @@ The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.
 {: .grid}
 
 <br>
+---
 <br>
 ### sIRB-specific Codesystem in the sIRB Questionnaires
 <br>
@@ -140,24 +141,24 @@ Below are the descriptions of the [sIRB temporary codes](CodeSystem-temporarycod
 | | | | |
 |launchContext name code|sourceQuestionnaireResponse|The content of the Questionnaire Response transferred to this Questionnaire during form launch|Protocol Questionnaire, Consent Questionnaire, Determination Letter Questionnaire, Recruitment Materials Questionnaire, Adverse Medical Event Questionnaire, Adverse Non-Medical Event Questionnaire and Continuing Review Questionnaire|
 | | | | |
-|Justification for Adverse Event Classification as Serious[^3]|ResultsInDeath|Results in death|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious[^3]|IsLifeThreatening|Is Life-threatening|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious[^3]|ResultsInHospitalization|Requires or prolongs inpatient hospitalization|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious[^3]|IsBirthDefect|Is a congenital anomaly/birth defect|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious[^3]|ResultsInDisability|Results in persistent or significant disability/incapacity|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious[^3]|RequiresPreventImpairment|Requires intervention to prevent permanent impairment|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious[^3]|Other|Other|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|ResultsInDeath|Results in death|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|IsLifeThreatening|Is Life-threatening|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|ResultsInHospitalization|Requires or prolongs inpatient hospitalization|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|IsBirthDefect|Is a congenital anomaly/birth defect|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|ResultsInDisability|Results in persistent or significant disability/incapacity|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious <a href="#fn-4"><sup>4</sup></a>   [3]|RequiresPreventImpairment|Requires intervention to prevent permanent impairment|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|Other|Other|Adverse Medical Event Questionnaire|
 | | | | |
-|Outcome of Adverse Medical Event [^4]|RCVRED|Recovered/Resolved|Adverse Medical Event Questionnaire|
-|Outcome of Adverse Medical Event [^4]|RCVRING|Recovering/Resolving|Adverse Medical Event Questionnaire|
-|Outcome of Adverse Medical Event [^4]|NRCVRED|Not recovered/Not resolved/Ongoing|Adverse Medical Event Questionnaire|
-|Outcome of Adverse Medical Event [^4]|SEQL|Recovered/Resolved with sequelae|Adverse Medical Event Questionnaire|
-|Outcome of Adverse Medical Event [^4]|FATAL|Fatal|Adverse Medical Event Questionnaire|
-|Outcome of Adverse Medical Event [^4]|UNK|Unknown|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|RCVRED|Recovered/Resolved|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|RCVRING|Recovering/Resolving|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|NRCVRED|Not recovered/Not resolved/Ongoing|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|SEQL|Recovered/Resolved with sequelae|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|FATAL|Fatal|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|UNK|Unknown|Adverse Medical Event Questionnaire|
 | | | | |
-|Other Actions Taken Regarding Study Intervention in Response to Adverse Event[^5]|NC|Product dose or frequency of use not changed|Adverse Medical Event Questionnaire|
-|Other Actions Taken Regarding Study Intervention in Response to Adverse Event[^5]|NA|Not applicable|Adverse Medical Event Questionnaire|
-|Other Actions Taken Regarding Study Intervention in Response to Adverse Event[^5]|UNK|Unknown|Adverse Medical Event Questionnaire|
+|Other Actions Taken Regarding Study Intervention in Response to Adverse Event <a href="#fn-6"><sup>6</sup></a>    [5]|NC|Product dose or frequency of use not changed|Adverse Medical Event Questionnaire|
+|Other Actions Taken Regarding Study Intervention in Response to Adverse Event <a href="#fn-6"><sup>6</sup></a>   [5]|NA|Not applicable|Adverse Medical Event Questionnaire|
+|Other Actions Taken Regarding Study Intervention in Response to Adverse Event <a href="#fn-6"><sup>6</sup></a>   [5]|UNK|Unknown|Adverse Medical Event Questionnaire|
 | | | | |
 |Participant Accrual Type|PreviousAccrual|Previous Accrual|Continuing Review Questionnaire|
 |Participant Accrual Type|AdditionalEnrollees|Additional enrollees this approval period|Continuing Review Questionnaire|
@@ -167,112 +168,60 @@ Below are the descriptions of the [sIRB temporary codes](CodeSystem-temporarycod
 <br>
 ### Example ResearchStudy resource (optional)
 <br>
-In the example, the research study category of C98388 Interventional Study from the [NCI Metathesaurus](http://ncimeta.nci.nih.gov)[^6] codesystem is shown. This codesystem is not meant to imply that this codesystem is the required or suggested codesystem to use in the ResearchStudy category element in the sIRB utililization of the ResearchStudy resource.
+In the example, the research study category of C98388 Interventional Study from the [NCI Metathesaurus](http://ncimeta.nci.nih.gov)<a href="#fn-7"><sup>7</sup></a>  [6] codesystem is shown. This codesystem is not meant to imply that this codesystem is the required or suggested codesystem to use in the ResearchStudy category element in the sIRB utililization of the ResearchStudy resource.
 <br>
 
 ---
 
 <br>
-<br>
-<br>
-
-
-
-<br>
-<br>
-<br>
-
-
-
-
-
-<br>
-<br>
-
-| Column 1 Header  | Column 2 Header   |  Column 3 Header |
-| -------------------- | ---------------- | ---------------------------------- |
-| cell1 <a id="fn-t-ref-1" href="#fn-t"><sup>t</sup></a>  | cell2   |   cell3 <a id="fn-v-ref-1" href="#fn-v"><sup>v</sup></a>  |
-| cell4^# ^*  | cell5  <a id="fn-t-ref-2" href="#fn-t"><sup>t</sup></a>  |   cell6 <a id="fn-y-ref-1" href="#fn-y"><sup>y</sup></a> |
-| cell7  | cell8 <a id="fn-u-ref-1" href="#fn-u"><sup>u</sup></a>  |   cell9 <a id="fn-t-ref-3" href="#fn-t"><sup>t</sup></a> |
-
-<br>
-<br>
-This sentence <a id="fn-w-ref" href="#fn-w"><sup>also</sup></a> has a footnote.
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-
 ### Copyright/Legal Notes for Codesystems
 <br>
-
-
-{#put-id-here}
-
-y {#fn-y}  This is footnote y.
-
-
-z^3 {#fn-y}  This is footnote z raised to the 3rd power.
 
 
 
 <div role="doc-endnotes" class="footnotes">
 
-<p role="doc-endnote" id="#fn:1"><sup>1</sup>[HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html). Content is copyright HL7. Licensed under creative commons public domain.</p>
+
+	<div role="doc-endnote" id="#fn:1"><sup>1</sup>
+		<a href="https://terminology.hl7.org/3.0.0/codesystems.html">[HL7 CodeSystems Registry]</a>(https://terminology.hl7.org/3.0.0/codesystems.html). Content is copyright HL7. Licensed under creative commons public domain.
+	</div>
+<br>
+<br>
+<br>
+	<div role="doc-endnote" id="#fn:2"><sup>2</sup>
+		[2] : The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. <a href="https://ucum.org/trac/wiki/TermsOfUse">[https://ucum.org/trac/wiki/TermsOfUse]</a>(https://ucum.org/trac/wiki/TermsOfUse)
+	</div>
+<br>
+<br>
+<br>
+	<div role="doc-endnote" id="#fn:3"><sup>3</sup>
+		[3] : Based on the Boolean data elements for ICSR E.i.3.2 Seriousness Criteria at Event Level in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">[Implementation Guide for
+Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016]</a>(https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use (ICH).  Copyright International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use (ICH) and may be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
+	</div>
+<br>
+<br>
+	<div role="doc-endnote" id="#fn:4"><sup>4</sup>	
+		The value "Requires intervention to prevent permanent impairment" is from What is a Serious Adverse Event? at <a href="https://www.fda.gov/safety/reporting-serious-problems-fda/what-serious-adverse-event"> [https://www.fda.gov/safety/reporting-serious-problems-fda/what-serious-adverse-event]</a>(https://www.fda.gov/safety/reporting-serious-problems-fda/what-serious-adverse-event), which is in the public domain.
+<br>
+<br>
+<br>
+	</div>
+		
+	<div role="doc-endnote" id="#fn:5"><sup>5</sup>	
+		[4] : Based on the values in ICSR E.i.7 Outcome of Reaction / Event at the Time of Last Observation in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">[Implementation Guide for Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016]</a>(https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by ICH.  Copyright ICH. May be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
+	</div>
 <br>
 <br>
 <br>
 
-
-<p role="doc-endnote" id="#fn:2"><sup>2</sup>
-
-
-<p role="doc-endnote" id="#fn:2"><sup>2</sup> The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. [https://ucum.org/trac/wiki/TermsOfUse](https://ucum.org/trac/wiki/TermsOfUse)</p>
+	<div role="doc-endnote" id="#fn:6"><sup>6</sup>
+		[5] : These codes are additional values needed to broaden the existing HL7 Codesystem <a href="http://terminology.hl7.org/CodeSystem/v2-0251">[actionTakenInResponseToTheEvent]</a>(http://terminology.hl7.org/CodeSystem/v2-0251) to represent all of values in the ICSR Implementation Guide. ICSR G.k.8 Action(s) Taken with Drug in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">[Implementation Guide for Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016]</a>(https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by ICH. Copyright ICH. May be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
+	</div>
 <br>
 <br>
 <br>
-[^3]: Based on the Boolean data elements for ICSR E.i.3.2 Seriousness Criteria at Event Level in the [Implementation Guide for
-Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016](https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use (ICH).  Copyright International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use (ICH) and may be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
-<br>
-<br>
-The value "Requires intervention to prevent permanent impairment" is from What is a Serious Adverse Event? at [https://www.fda.gov/safety/reporting-serious-problems-fda/what-serious-adverse-event](https://www.fda.gov/safety/reporting-serious-problems-fda/what-serious-adverse-event), which is in the public domain.
-<br>
-<br>
-<br>
-[^4]: Based on the values in ICSR E.i.7 Outcome of Reaction / Event at the Time of Last Observation in the [Implementation Guide for Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016](https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by ICH.  Copyright ICH. May be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
-<br>
-<br>
-<br>
-[^5]: These codes are additional values needed to broaden the existing HL7 Codesystem [actionTakenInResponseToTheEvent](http://terminology.hl7.org/CodeSystem/v2-0251) to represent all of values in the ICSR Implementation Guide. ICSR G.k.8 Action(s) Taken with Drug in the [Implementation Guide for Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016](https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by ICH. Copyright ICH. May be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
-<br>
-<br>
-<br>
-[^6]: NCI Metathesaurus at [http://ncimeta.nci.nih.gov](http://ncimeta.nci.nih.gov) is in the public domain. For more details about the NCI Metathesaurus, see [Using the NCI Metathesaurus with FHIR](https://hl7.org/fhir/2021may/ncimeta.html).
-<br>
-<br>
-
-
-
-<br>
-<br>
-
-
-
-
-	<p role="doc-endnote" id="#fn:t"><sup>t</sup> This is footnote T. Footnote T is very very very very very very very very very very very very very very long. Footnote T is very very very very very very very very very very very long. Footnote T is very very very very very very very very very very very long.</p>
-
-
-	<p role="doc-endnote" id="#fn:u"><sup>u</sup> This is footnote U. Footnote U is very very very very very very very very very very very very very very long. Footnote U is very very very very very very very very very very very long. Footnote U is very very very very very very very very very very very long.</p>
-
-
-	<p role="doc-endnote" id="#fn:v"><sup>v</sup> This is footnote V.</p>
-
-	<p role="doc-endnote" id="#fn:w"><sup>w</sup> This is footnote W.</p>
+	<div role="doc-endnote" id="#fn:7"><sup>7</sup>
+		[6] NCI Metathesaurus at <a href="http://ncimeta.nci.nih.gov">http://ncimeta.nci.nih.gov</a> is in the public domain. For more details about the NCI Metathesaurus, see <a href="https://hl7.org/fhir/2021may/ncimeta.html">Using the NCI Metathesaurus with FHIR</a>.
+	</div>
 
 </div>
