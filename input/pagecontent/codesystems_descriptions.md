@@ -1,6 +1,6 @@
-### Usage of Codesystems from HL7 CodeSystems Registry <a href="#fn-1"><sup>1</sup></a> [1] in the sIRB Questionnaires
+### Usage of Codesystems from HL7 CodeSystems Registry in the sIRB Questionnaires
 <br>
-Where possible, the sIRB Questionnaires use the values in the [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html). For some questions, not all values in a given codesystem were applicable to the sIRB use case and only a subset of the values were included as answer options for those questions.
+Where possible, the sIRB Questionnaires use the values in the HL7 CodeSystems Registry<a href="#fn-1"><sup>1</sup></a> at <a href="https://terminology.hl7.org/3.0.0/codesystems.html">https://terminology.hl7.org/3.0.0/codesystems.html</a>. For some questions, not all values in a given codesystem were applicable to the sIRB use case and only a subset of the values were included as answer options for those questions.
 <br>
 <br>
 The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html) that were used in the sIRB Questionnaires are:
@@ -141,24 +141,24 @@ Below are the descriptions of the [sIRB temporary codes](CodeSystem-temporarycod
 | | | | |
 |launchContext name code|sourceQuestionnaireResponse|The content of the Questionnaire Response transferred to this Questionnaire during form launch|Protocol Questionnaire, Consent Questionnaire, Determination Letter Questionnaire, Recruitment Materials Questionnaire, Adverse Medical Event Questionnaire, Adverse Non-Medical Event Questionnaire and Continuing Review Questionnaire|
 | | | | |
-|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|ResultsInDeath|Results in death|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|IsLifeThreatening|Is Life-threatening|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|ResultsInHospitalization|Requires or prolongs inpatient hospitalization|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|IsBirthDefect|Is a congenital anomaly/birth defect|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|ResultsInDisability|Results in persistent or significant disability/incapacity|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious <a href="#fn-4"><sup>4</sup></a>   [3]|RequiresPreventImpairment|Requires intervention to prevent permanent impairment|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|Other|Other|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious [3]|ResultsInDeath<a href="#fn-3"><sup>3</sup></a>|Results in death|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|IsLifeThreatening<a href="#fn-3"><sup>3</sup></a>|Is Life-threatening|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|ResultsInHospitalization<a href="#fn-3"><sup>3</sup></a>|Requires or prolongs inpatient hospitalization|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|IsBirthDefect<a href="#fn-3"><sup>3</sup></a>|Is a congenital anomaly/birth defect|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|ResultsInDisability<a href="#fn-3"><sup>3</sup></a>|Results in persistent or significant disability/incapacity|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious <a href="#fn-4"><sup>4</sup></a>   [3]|RequiresPreventImpairment<a href="#fn-4"><sup>4</sup></a>|Requires intervention to prevent permanent impairment|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|Other<a href="#fn-3"><sup>3</sup></a>|Other|Adverse Medical Event Questionnaire|
 | | | | |
-|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|RCVRED|Recovered/Resolved|Adverse Medical Event Questionnaire|
-|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|RCVRING|Recovering/Resolving|Adverse Medical Event Questionnaire|
-|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|NRCVRED|Not recovered/Not resolved/Ongoing|Adverse Medical Event Questionnaire|
-|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|SEQL|Recovered/Resolved with sequelae|Adverse Medical Event Questionnaire|
-|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|FATAL|Fatal|Adverse Medical Event Questionnaire|
-|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|UNK|Unknown|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|RCVRED<a href="#fn-5"><sup>5</sup></a>|Recovered/Resolved|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|RCVRING<a href="#fn-5"><sup>5</sup></a>|Recovering/Resolving|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|NRCVRED<a href="#fn-5"><sup>5</sup></a>|Not recovered/Not resolved/Ongoing|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|SEQL<a href="#fn-5"><sup>5</sup></a>|Recovered/Resolved with sequelae|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|FATAL<a href="#fn-5"><sup>5</sup></a>|Fatal|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|UNK<a href="#fn-5"><sup>5</sup></a>|Unknown|Adverse Medical Event Questionnaire|
 | | | | |
-|Other Actions Taken Regarding Study Intervention in Response to Adverse Event <a href="#fn-6"><sup>6</sup></a>    [5]|NC|Product dose or frequency of use not changed|Adverse Medical Event Questionnaire|
-|Other Actions Taken Regarding Study Intervention in Response to Adverse Event <a href="#fn-6"><sup>6</sup></a>   [5]|NA|Not applicable|Adverse Medical Event Questionnaire|
-|Other Actions Taken Regarding Study Intervention in Response to Adverse Event <a href="#fn-6"><sup>6</sup></a>   [5]|UNK|Unknown|Adverse Medical Event Questionnaire|
+|Other Actions Taken Regarding Study Intervention in Response to Adverse Event <a href="#fn-6"><sup>6</sup></a>    [5]|NC<a href="#fn-6"><sup>6</sup>|Product dose or frequency of use not changed|Adverse Medical Event Questionnaire|
+|Other Actions Taken Regarding Study Intervention in Response to Adverse Event <a href="#fn-6"><sup>6</sup></a>   [5]|NA<a href="#fn-6"><sup>6</sup>|Not applicable|Adverse Medical Event Questionnaire|
+|Other Actions Taken Regarding Study Intervention in Response to Adverse Event <a href="#fn-6"><sup>6</sup></a>   [5]|UNK<a href="#fn-6"><sup>6</sup>|Unknown|Adverse Medical Event Questionnaire|
 | | | | |
 |Participant Accrual Type|PreviousAccrual|Previous Accrual|Continuing Review Questionnaire|
 |Participant Accrual Type|AdditionalEnrollees|Additional enrollees this approval period|Continuing Review Questionnaire|
