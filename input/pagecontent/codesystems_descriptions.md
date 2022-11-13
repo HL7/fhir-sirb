@@ -13,7 +13,7 @@ The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.
 | -------------------- | ---------------- | ---------------------------------- |
 |expandedYes-NoIndicator|[http://terminology.hl7.org/CodeSystem/v2-0532](http://terminology.hl7.org/CodeSystem/v2-0532)|Initiate a Study Questionnaire, Protocol Questionnaire, Consent Questionnaire, Recruitment Materials Questionnaire, Continuing Review Questionnaire, Adverse Medical Event Questionnaire and Adverse Non-Medical Event Questionnaire|
 |ResearchStudyPhase|[http://terminology.hl7.org/CodeSystem/research-study-phase](http://terminology.hl7.org/CodeSystem/research-study-phase)|Protocol Questionnaire|
-|Unified Code for Units of Measure (UCUM) <a href="#fn-2"><sup>2</sup></a> [2]|[http://unitsofmeasure.org](http://unitsofmeasure.org)|Consent Questionnaire|
+|Unified Code for Units of Measure (UCUM) <a href="#fn-2"><sup>2</sup></a>|[http://unitsofmeasure.org](http://unitsofmeasure.org)|Consent Questionnaire|
 |relationship|[http://terminology.hl7.org/CodeSystem/v2-0063](http://terminology.hl7.org/CodeSystem/v2-0063)|Consent Questionnaire|
 |ResearchStudyStatus|[http://hl7.org/fhir/research-study-status](http://hl7.org/fhir/research-study-status)|Continuing Review Questionnaire|
 |administrativeSex|[http://terminology.hl7.org/CodeSystem/v2-0001](http://terminology.hl7.org/CodeSystem/v2-0001)|Adverse Medical Event Questionnaire|
@@ -26,7 +26,6 @@ The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.
 {: .grid}
 
 <br>
----
 <br>
 ### sIRB-specific Codesystem in the sIRB Questionnaires
 <br>
@@ -181,15 +180,14 @@ In the example, the research study category of C98388 Interventional Study from 
 
 <div role="doc-endnotes" class="footnotes">
 
-
 	<div role="doc-endnote" id="#fn:1"><sup>1</sup>
-		<a href="https://terminology.hl7.org/3.0.0/codesystems.html">[HL7 CodeSystems Registry]</a>(https://terminology.hl7.org/3.0.0/codesystems.html). Content is copyright HL7. Licensed under creative commons public domain.
+		<a href="https://terminology.hl7.org/3.0.0/codesystems.html">HL7 CodeSystems Registry</a>. Content is copyright HL7. Licensed under creative commons public domain.
 	</div>
 <br>
 <br>
 <br>
 	<div role="doc-endnote" id="#fn:2"><sup>2</sup>
-		[2] : The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. <a href="https://ucum.org/trac/wiki/TermsOfUse">[https://ucum.org/trac/wiki/TermsOfUse]</a>(https://ucum.org/trac/wiki/TermsOfUse)
+		The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. <a href="https://ucum.org/trac/wiki/TermsOfUse">https://ucum.org/trac/wiki/TermsOfUse</a>.
 	</div>
 <br>
 <br>
