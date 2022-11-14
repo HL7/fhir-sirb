@@ -165,7 +165,7 @@ Below are the descriptions of the [sIRB temporary codes](CodeSystem-temporarycod
 <br>
 ### Example ResearchStudy resource (optional)
 <br>
-In the example, the research study category of C98388 Interventional Study from the [NCI Metathesaurus](http://ncimeta.nci.nih.gov)<a href="#fn-7"><sup>7</sup></a>  [6] codesystem is shown. This codesystem is not meant to imply that this codesystem is the required or suggested codesystem to use in the ResearchStudy category element in the sIRB utililization of the ResearchStudy resource.
+In the example, the research study category of C98388 Interventional Study from the <a href="http://ncimeta.nci.nih.gov">NCI Metathesaurus</a><a href="#fn-7"><sup>7</sup></a> codesystem is shown. This codesystem is not meant to imply that this codesystem is the required or suggested codesystem to use in the ResearchStudy category element in the sIRB utililization of the ResearchStudy resource.
 <br>
 
 
@@ -203,7 +203,7 @@ Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data E
 
 <br>
 	<div role="doc-endnote" id="fn-7"><sup>7</sup>
-		[6] NCI Metathesaurus at <a href="http://ncimeta.nci.nih.gov">http://ncimeta.nci.nih.gov</a> is in the public domain. For more details about the NCI Metathesaurus, see <a href="https://hl7.org/fhir/2021may/ncimeta.html">Using the NCI Metathesaurus with FHIR</a>.
+		NCI Metathesaurus at <a href="http://ncimeta.nci.nih.gov">http://ncimeta.nci.nih.gov</a> is in the public domain. For more details about the NCI Metathesaurus, see <a href="https://hl7.org/fhir/2021may/ncimeta.html">Using the NCI Metathesaurus with FHIR</a>.
 	</div>
 
 </div>
