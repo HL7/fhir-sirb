@@ -11,7 +11,7 @@ The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.
 | -------------------- | ---------------- | ---------------------------------- |
 |expandedYes-NoIndicator|[http://terminology.hl7.org/CodeSystem/v2-0532](http://terminology.hl7.org/CodeSystem/v2-0532)|Initiate a Study Questionnaire, Protocol Questionnaire, Consent Questionnaire, Recruitment Materials Questionnaire, Continuing Review Questionnaire, Adverse Medical Event Questionnaire and Adverse Non-Medical Event Questionnaire|
 |ResearchStudyPhase|[http://terminology.hl7.org/CodeSystem/research-study-phase](http://terminology.hl7.org/CodeSystem/research-study-phase)|Protocol Questionnaire|
-|Unified Code for Units of Measure (UCUM) <a href="#fn-2"><sup>2</sup></a>|[http://unitsofmeasure.org](http://unitsofmeasure.org)|Consent Questionnaire|
+|Unified Code for Units of Measure (UCUM)<a href="#fn-2"><sup>2</sup></a>|[http://unitsofmeasure.org](http://unitsofmeasure.org)|Consent Questionnaire|
 |relationship|[http://terminology.hl7.org/CodeSystem/v2-0063](http://terminology.hl7.org/CodeSystem/v2-0063)|Consent Questionnaire|
 |ResearchStudyStatus|[http://hl7.org/fhir/research-study-status](http://hl7.org/fhir/research-study-status)|Continuing Review Questionnaire|
 |administrativeSex|[http://terminology.hl7.org/CodeSystem/v2-0001](http://terminology.hl7.org/CodeSystem/v2-0001)|Adverse Medical Event Questionnaire|
@@ -168,7 +168,6 @@ Below are the descriptions of the [sIRB temporary codes](CodeSystem-temporarycod
 In the example, the research study category of C98388 Interventional Study from the [NCI Metathesaurus](http://ncimeta.nci.nih.gov)<a href="#fn-7"><sup>7</sup></a>  [6] codesystem is shown. This codesystem is not meant to imply that this codesystem is the required or suggested codesystem to use in the ResearchStudy category element in the sIRB utililization of the ResearchStudy resource.
 <br>
 
----
 
 <br>
 ### Copyright/Legal Notes for Codesystems
@@ -180,40 +179,31 @@ In the example, the research study category of C98388 Interventional Study from 
 		<a href="https://terminology.hl7.org/3.0.0/codesystems.html">HL7 CodeSystems Registry</a>. Content is copyright HL7. Licensed under creative commons public domain.
 	</div>
 <br>
-<br>
 	<div role="doc-endnote" id="fn-2"><sup>2</sup>
 		The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. <a href="https://ucum.org/trac/wiki/TermsOfUse">https://ucum.org/trac/wiki/TermsOfUse</a>.
 	</div>
 <br>
-<br>
-<br>
-	<div role="doc-endnote" id="#fn-3"><sup>3</sup>
-		[3] : Based on the Boolean data elements for ICSR E.i.3.2 Seriousness Criteria at Event Level in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">[Implementation Guide for
+	<div role="doc-endnote" id="fn-3"><sup>3</sup>
+		Based on the Boolean data elements for ICSR E.i.3.2 Seriousness Criteria at Event Level in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">[Implementation Guide for
 Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016]</a>(https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use (ICH).  Copyright International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use (ICH) and may be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
 	</div>
 <br>
-<br>
-	<div role="doc-endnote" id="#fn:4"><sup>4</sup>	
+	<div role="doc-endnote" id="fn-4"><sup>4</sup>	
 		The value "Requires intervention to prevent permanent impairment" is from What is a Serious Adverse Event? at <a href="https://www.fda.gov/safety/reporting-serious-problems-fda/what-serious-adverse-event"> [https://www.fda.gov/safety/reporting-serious-problems-fda/what-serious-adverse-event]</a>(https://www.fda.gov/safety/reporting-serious-problems-fda/what-serious-adverse-event), which is in the public domain.
-<br>
-<br>
 <br>
 	</div>
 		
-	<div role="doc-endnote" id="#fn:5"><sup>5</sup>	
-		[4] : Based on the values in ICSR E.i.7 Outcome of Reaction / Event at the Time of Last Observation in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">[Implementation Guide for Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016]</a>(https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by ICH.  Copyright ICH. May be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
+	<div role="doc-endnote" id="fn-5"><sup>5</sup>	
+		Based on the values in ICSR E.i.7 Outcome of Reaction / Event at the Time of Last Observation in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">[Implementation Guide for Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016]</a>(https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by ICH.  Copyright ICH. May be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
 	</div>
-<br>
-<br>
 <br>
 
-	<div role="doc-endnote" id="#fn:6"><sup>6</sup>
-		[5] : These codes are additional values needed to broaden the existing HL7 Codesystem <a href="http://terminology.hl7.org/CodeSystem/v2-0251">[actionTakenInResponseToTheEvent]</a>(http://terminology.hl7.org/CodeSystem/v2-0251) to represent all of values in the ICSR Implementation Guide. ICSR G.k.8 Action(s) Taken with Drug in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">[Implementation Guide for Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016]</a>(https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by ICH. Copyright ICH. May be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
+	<div role="doc-endnote" id="fn-6"><sup>6</sup>
+		These codes are additional values needed to broaden the existing HL7 Codesystem <a href="http://terminology.hl7.org/CodeSystem/v2-0251">[actionTakenInResponseToTheEvent]</a>(http://terminology.hl7.org/CodeSystem/v2-0251) to represent all of values in the ICSR Implementation Guide. ICSR G.k.8 Action(s) Taken with Drug in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">[Implementation Guide for Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016]</a>(https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by ICH. Copyright ICH. May be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
 	</div>
+
 <br>
-<br>
-<br>
-	<div role="doc-endnote" id="#fn:7"><sup>7</sup>
+	<div role="doc-endnote" id="fn-7"><sup>7</sup>
 		[6] NCI Metathesaurus at <a href="http://ncimeta.nci.nih.gov">http://ncimeta.nci.nih.gov</a> is in the public domain. For more details about the NCI Metathesaurus, see <a href="https://hl7.org/fhir/2021may/ncimeta.html">Using the NCI Metathesaurus with FHIR</a>.
 	</div>
 
