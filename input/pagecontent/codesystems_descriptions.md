@@ -138,24 +138,24 @@ Below are the descriptions of the [sIRB temporary codes](CodeSystem-temporarycod
 | | | | |
 |launchContext name code|sourceQuestionnaireResponse|The content of the Questionnaire Response transferred to this Questionnaire during form launch|Protocol Questionnaire, Consent Questionnaire, Determination Letter Questionnaire, Recruitment Materials Questionnaire, Adverse Medical Event Questionnaire, Adverse Non-Medical Event Questionnaire and Continuing Review Questionnaire|
 | | | | |
-|Justification for Adverse Event Classification as Serious [3]|ResultsInDeath<a href="#fn-3"><sup>3</sup></a>|Results in death|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|IsLifeThreatening<a href="#fn-3"><sup>3</sup></a>|Is Life-threatening|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|ResultsInHospitalization<a href="#fn-3"><sup>3</sup></a>|Requires or prolongs inpatient hospitalization|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|IsBirthDefect<a href="#fn-3"><sup>3</sup></a>|Is a congenital anomaly/birth defect|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|ResultsInDisability<a href="#fn-3"><sup>3</sup></a>|Results in persistent or significant disability/incapacity|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious <a href="#fn-4"><sup>4</sup></a>   [3]|RequiresPreventImpairment<a href="#fn-4"><sup>4</sup></a>|Requires intervention to prevent permanent impairment|Adverse Medical Event Questionnaire|
-|Justification for Adverse Event Classification as Serious <a href="#fn-3"><sup>3</sup></a> [3]|Other<a href="#fn-3"><sup>3</sup></a>|Other|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious|ResultsInDeath<a href="#fn-3"><sup>3</sup></a>|Results in death|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious|IsLifeThreatening<a href="#fn-3"><sup>3</sup></a>|Is Life-threatening|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious|ResultsInHospitalization<a href="#fn-3"><sup>3</sup></a>|Requires or prolongs inpatient hospitalization|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious|IsBirthDefect<a href="#fn-3"><sup>3</sup></a>|Is a congenital anomaly/birth defect|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious|ResultsInDisability<a href="#fn-3"><sup>3</sup></a>|Results in persistent or significant disability/incapacity|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious|RequiresPreventImpairment<a href="#fn-4"><sup>4</sup></a>|Requires intervention to prevent permanent impairment|Adverse Medical Event Questionnaire|
+|Justification for Adverse Event Classification as Serious|Other<a href="#fn-3"><sup>3</sup></a>|Other|Adverse Medical Event Questionnaire|
 | | | | |
-|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|RCVRED<a href="#fn-5"><sup>5</sup></a>|Recovered/Resolved|Adverse Medical Event Questionnaire|
-|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|RCVRING<a href="#fn-5"><sup>5</sup></a>|Recovering/Resolving|Adverse Medical Event Questionnaire|
-|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|NRCVRED<a href="#fn-5"><sup>5</sup></a>|Not recovered/Not resolved/Ongoing|Adverse Medical Event Questionnaire|
-|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|SEQL<a href="#fn-5"><sup>5</sup></a>|Recovered/Resolved with sequelae|Adverse Medical Event Questionnaire|
-|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|FATAL<a href="#fn-5"><sup>5</sup></a>|Fatal|Adverse Medical Event Questionnaire|
-|Outcome of Adverse Medical Event <a href="#fn-5"><sup>5</sup></a> [4]|UNK<a href="#fn-5"><sup>5</sup></a>|Unknown|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event|RCVRED<a href="#fn-5"><sup>5</sup></a>|Recovered/Resolved|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event|RCVRING<a href="#fn-5"><sup>5</sup></a>|Recovering/Resolving|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event|NRCVRED<a href="#fn-5"><sup>5</sup></a>|Not recovered/Not resolved/Ongoing|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event|SEQL<a href="#fn-5"><sup>5</sup></a>|Recovered/Resolved with sequelae|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event|FATAL<a href="#fn-5"><sup>5</sup></a>|Fatal|Adverse Medical Event Questionnaire|
+|Outcome of Adverse Medical Event|UNK<a href="#fn-5"><sup>5</sup></a>|Unknown|Adverse Medical Event Questionnaire|
 | | | | |
-|Other Actions Taken Regarding Study Intervention in Response to Adverse Event <a href="#fn-6"><sup>6</sup></a>    [5]|NC<a href="#fn-6"><sup>6</sup>|Product dose or frequency of use not changed|Adverse Medical Event Questionnaire|
-|Other Actions Taken Regarding Study Intervention in Response to Adverse Event <a href="#fn-6"><sup>6</sup></a>   [5]|NA<a href="#fn-6"><sup>6</sup>|Not applicable|Adverse Medical Event Questionnaire|
-|Other Actions Taken Regarding Study Intervention in Response to Adverse Event <a href="#fn-6"><sup>6</sup></a>   [5]|UNK<a href="#fn-6"><sup>6</sup>|Unknown|Adverse Medical Event Questionnaire|
+|Other Actions Taken Regarding Study Intervention in Response to Adverse Event|NC<a href="#fn-6"><sup>6</sup>|Product dose or frequency of use not changed|Adverse Medical Event Questionnaire|
+|Other Actions Taken Regarding Study Intervention in Response to Adverse Event|NA<a href="#fn-6"><sup>6</sup>|Not applicable|Adverse Medical Event Questionnaire|
+|Other Actions Taken Regarding Study Intervention in Response to Adverse Event|UNK<a href="#fn-6"><sup>6</sup>|Unknown|Adverse Medical Event Questionnaire|
 | | | | |
 |Participant Accrual Type|PreviousAccrual|Previous Accrual|Continuing Review Questionnaire|
 |Participant Accrual Type|AdditionalEnrollees|Additional enrollees this approval period|Continuing Review Questionnaire|
@@ -184,22 +184,21 @@ In the example, the research study category of C98388 Interventional Study from 
 	</div>
 <br>
 	<div role="doc-endnote" id="fn-3"><sup>3</sup>
-		Based on the Boolean data elements for ICSR E.i.3.2 Seriousness Criteria at Event Level in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">[Implementation Guide for
-Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016]</a>(https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use (ICH).  Copyright International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use (ICH) and may be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
+		Based on the Boolean data elements for ICSR E.i.3.2 Seriousness Criteria at Event Level in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">Implementation Guide for
+Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016</a> by International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use (ICH).  Copyright International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use (ICH) and may be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
 	</div>
 <br>
 	<div role="doc-endnote" id="fn-4"><sup>4</sup>	
-		The value "Requires intervention to prevent permanent impairment" is from What is a Serious Adverse Event? at <a href="https://www.fda.gov/safety/reporting-serious-problems-fda/what-serious-adverse-event"> [https://www.fda.gov/safety/reporting-serious-problems-fda/what-serious-adverse-event]</a>(https://www.fda.gov/safety/reporting-serious-problems-fda/what-serious-adverse-event), which is in the public domain.
-<br>
+		The value "Requires intervention to prevent permanent impairment" is from What is a Serious Adverse Event? at <a href="https://www.fda.gov/safety/reporting-serious-problems-fda/what-serious-adverse-event"> https://www.fda.gov/safety/reporting-serious-problems-fda/what-serious-adverse-event</a>, which is in the public domain.
 	</div>
-		
+<br>		
 	<div role="doc-endnote" id="fn-5"><sup>5</sup>	
-		Based on the values in ICSR E.i.7 Outcome of Reaction / Event at the Time of Last Observation in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">[Implementation Guide for Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016]</a>(https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by ICH.  Copyright ICH. May be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
+		Based on the values in ICSR E.i.7 Outcome of Reaction / Event at the Time of Last Observation in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">Implementation Guide for Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016</a> by ICH.  Copyright ICH. May be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
 	</div>
 <br>
 
 	<div role="doc-endnote" id="fn-6"><sup>6</sup>
-		These codes are additional values needed to broaden the existing HL7 Codesystem <a href="http://terminology.hl7.org/CodeSystem/v2-0251">[actionTakenInResponseToTheEvent]</a>(http://terminology.hl7.org/CodeSystem/v2-0251) to represent all of values in the ICSR Implementation Guide. ICSR G.k.8 Action(s) Taken with Drug in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">[Implementation Guide for Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016]</a>(https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by ICH. Copyright ICH. May be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
+		These codes are additional values needed to broaden the existing HL7 Codesystem <a href="http://terminology.hl7.org/CodeSystem/v2-0251">actionTakenInResponseToTheEvent</a> to represent all of values in the ICSR Implementation Guide. ICSR G.k.8 Action(s) Taken with Drug in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">Implementation Guide for Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016</a> by ICH. Copyright ICH. May be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
 	</div>
 
 <br>
