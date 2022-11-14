@@ -1,12 +1,13 @@
 ### Usage of Codesystems from HL7 CodeSystems Registry in the sIRB Questionnaires
 <br>
-Where possible, the sIRB Questionnaires use the values in the HL7 CodeSystems Registry<a href="#fn-1"><sup>1</sup></a> at <a href="https://terminology.hl7.org/3.0.0/codesystems.html">https://terminology.hl7.org/3.0.0/codesystems.html</a>. For some questions, not all values in a given codesystem were applicable to the sIRB use case and only a subset of the values were included as answer options for those questions.
-<br>
-<br>
-The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html) that were used in the sIRB Questionnaires are:
-<br>
-<br>
-
+<p>
+	Where possible, the sIRB Questionnaires use the values in the HL7 CodeSystems Registry<a href="#fn-1"><sup>1</sup></a> at <a href="https://terminology.hl7.org/3.0.0/codesystems.html">https://terminology.hl7.org/3.0.0/codesystems.html</a>. For some questions, not all values in a given codesystem were applicable to the sIRB use case and only a subset of the values were included as answer options for those questions.
+	<br>
+	<br>
+	The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html) that were used in the sIRB Questionnaires are:
+	<br>
+	<br>
+</p>
 
 
 | CodeSystem  | Official URL   |   Questionnaire(s) Using this CodeSystem |
@@ -174,19 +175,16 @@ In the example, the research study category of C98388 Interventional Study from 
 
 <br>
 ### Copyright/Legal Notes for Codesystems
-<br>
-
 
 
 <div role="doc-endnotes" class="footnotes">
 
-	<div role="doc-endnote" id="#fn:1"><sup>1</sup>
+	<div role="doc-endnote" id="fn:1"><sup>1</sup>
 		<a href="https://terminology.hl7.org/3.0.0/codesystems.html">HL7 CodeSystems Registry</a>. Content is copyright HL7. Licensed under creative commons public domain.
 	</div>
 <br>
 <br>
-<br>
-	<div role="doc-endnote" id="#fn:2"><sup>2</sup>
+	<div role="doc-endnote" id="fn:2"><sup>2</sup>
 		The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. <a href="https://ucum.org/trac/wiki/TermsOfUse">https://ucum.org/trac/wiki/TermsOfUse</a>.
 	</div>
 <br>
