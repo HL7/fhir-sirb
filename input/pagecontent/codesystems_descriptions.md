@@ -1,14 +1,11 @@
 ### Usage of Codesystems from HL7 CodeSystems Registry in the sIRB Questionnaires
 <br>
-<p>
-	Where possible, the sIRB Questionnaires use the values in the HL7 CodeSystems Registry<a href="#fn-1"><sup>1</sup></a> at <a href="https://terminology.hl7.org/3.0.0/codesystems.html">https://terminology.hl7.org/3.0.0/codesystems.html</a>. For some questions, not all values in a given codesystem were applicable to the sIRB use case and only a subset of the values were included as answer options for those questions.
-	<br>
-	<br>
-	The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html) that were used in the sIRB Questionnaires are:
-	<br>
-	<br>
-</p>
-
+Where possible, the sIRB Questionnaires use the values in the HL7 CodeSystems Registry<a href="#fn-1"><sup>1</sup></a> at <a href="https://terminology.hl7.org/3.0.0/codesystems.html">https://terminology.hl7.org/3.0.0/codesystems.html</a>. For some questions, not all values in a given codesystem were applicable to the sIRB use case and only a subset of the values were included as answer options for those questions.
+<br>
+<br>
+The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html) that were used in the sIRB Questionnaires are:
+<br>
+<br>
 
 | CodeSystem  | Official URL   |   Questionnaire(s) Using this CodeSystem |
 | -------------------- | ---------------- | ---------------------------------- |
@@ -179,18 +176,18 @@ In the example, the research study category of C98388 Interventional Study from 
 
 <div role="doc-endnotes" class="footnotes">
 
-	<div role="doc-endnote" id="fn:1"><sup>1</sup>
+	<div role="doc-endnote" id="fn-1"><sup>1</sup>
 		<a href="https://terminology.hl7.org/3.0.0/codesystems.html">HL7 CodeSystems Registry</a>. Content is copyright HL7. Licensed under creative commons public domain.
 	</div>
 <br>
 <br>
-	<div role="doc-endnote" id="fn:2"><sup>2</sup>
+	<div role="doc-endnote" id="fn-2"><sup>2</sup>
 		The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. <a href="https://ucum.org/trac/wiki/TermsOfUse">https://ucum.org/trac/wiki/TermsOfUse</a>.
 	</div>
 <br>
 <br>
 <br>
-	<div role="doc-endnote" id="#fn:3"><sup>3</sup>
+	<div role="doc-endnote" id="#fn-3"><sup>3</sup>
 		[3] : Based on the Boolean data elements for ICSR E.i.3.2 Seriousness Criteria at Event Level in the <a href="https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files">[Implementation Guide for
 Electronic Transmission of Individual Case Safety Reports (ICSRs) E2B(R3) Data Elements and Message Specification, Version 5.02, 10 November 2016]</a>(https://www.ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) by International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use (ICH).  Copyright International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use (ICH) and may be used, reproduced, incorporated into other works, adapted, modified, translated or distributed under a public license provided that the ICH's copyright is acknowledged at all times.
 	</div>
