@@ -19,10 +19,10 @@
 ### Copyright/Legal
 
 
-#### See the Copyright/Legal section at the [Descriptions of CodeSystems](codesystems_descriptions.html#copyrightlegal) page.
+* See the [Copyright/Legal](codesystems_descriptions.html#copyrightlegal-notes-for-codesystems) section on the [Descriptions of CodeSystems](codesystems_descriptions.html) page.
 
 
-#### Also note the following:
+* Review the following notices:
 
 {% include ip-statements.xhtml %}
 
