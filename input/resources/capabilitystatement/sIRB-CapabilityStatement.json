@@ -31,6 +31,7 @@
 			"text" : "United States of America"
 		}
 	],
+	"description" : "This resource describes the required and desired behavior of software clients and FHIR servers for use and exchange of the single Institutional Review Board (sIRB) forms.",
 	"kind" : "requirements",
 	"fhirVersion" : "4.0.1",
 	"format" : [ "xml", "json" ],
