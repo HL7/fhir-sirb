@@ -1,3 +1,6 @@
+The following sections are included as part of the HL7 initiative to provide increased transparency regarding cross-version compatibility, global profiles, dependencies and intellectual property.
+<br>
+<br>
 ### Cross Version Analysis
 
 {% include cross-version-analysis.xhtml %}
