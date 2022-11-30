@@ -6,7 +6,7 @@
   <li class="dropdown">
   
   
-      <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance Dropdown Here<b class="caret">
+      <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance Guidance<b class="caret">
           </b>
       </a>
   
@@ -22,9 +22,6 @@
   
   </li>
   
-  
-
-  <li><a href="conformance_and_functionality_expectations.html">Conformance and Functionality Expectations</a></li>
 
   <li><a href="downloads.html">Downloads</a></li>
 
