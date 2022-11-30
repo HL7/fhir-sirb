@@ -1,6 +1,4 @@
-## Implementation Requirements and Considerations
-
-The Capability Statement does not capture all of the necessary functionality for sIRB IG compliance. This section explains other necessary and optional functionality.
+The Capability Statement does not capture all of the necessary functionality for sIRB IG compliance. This page explains other necessary and optional functionality.
 
 The sIRB IG assumes that the implementer is familiar with the [SDC Specification]( http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse).
 <br>
@@ -14,7 +12,8 @@ The sIRB IG assumes that the implementer is familiar with the [SDC Specification
 <br>
 <br>
 * A system also SHALL support and render the QuestionnaireResponses.
-
+<br>
+<br>
 
 #### Extensions for the Questionnaire and QuestionnaireResponse
 
@@ -40,34 +39,38 @@ A system SHALL support the following extensions:
 <br>
 <br>
 For more information about Questionnaire extensions, please see the [SDC Implementation Guide Extension definitions](http://hl7.org/fhir/uv/sdc/artifacts.html#structures-extension-definitions) and [SDC Implementation Guide Examples](http://hl7.org/fhir/uv/sdc/examples.html). 
-
-
 <br>
 <br>
 ### Recommendations for Questionnaire Population
 
 A client SHOULD utilize the [population](http://hl7.org/fhir/uv/sdc/populate.html#pre-population-service). functionality that is designed in the sIRB Questionnaires in this IG.
 
-The sIRB Questionnaires are [populatable](http://hl7.org/fhir/uv/sdc/populate.html#pre-population-service). So that researchers do not need to re-type the same information into multiple forms, the sIRB forms are designed with one master form, the [Initiate a Study](Questionnaire-sirb-initiate-study-questionnaire-populate.html) questionnaire, that collects common data elements which will then be populatable into the other sIRB forms. Entering common data elements only once (via the [Initiate a Study](Questionnaire-sirb-initiate-study-questionnaire-populate.html) questionnaire, saves time for the researchers and study coordinators and reduces data entry errors.
+The sIRB Questionnaires are [populatable](http://hl7.org/fhir/uv/sdc/populate.html#pre-population-service). So that researchers do not need to re-type the same information into multiple forms, the sIRB forms are designed with one master form, the [Initiate a Study](Questionnaire-sirb-initiate-study-questionnaire-populate.html) questionnaire, that collects common data elements which will then be populatable into the other sIRB forms. Entering common data elements only once (via the [Initiate a Study](Questionnaire-sirb-initiate-study-questionnaire-populate.html) questionnaire) saves time for the researchers and study coordinators while reducing data entry errors.
 
 Implementation also assumes that the implementers will be knowledgeable about [SDC Form Population](http://hl7.org/fhir/uv/sdc/populate.html).
 <br>
 <br>
 Some guidance is provided here:
 
-* The client software SHOULD be designed to function similar to the [population operations] (http://hl7.org/fhir/uv/sdc/populate.html##population-operations) described in the SDC IG, but as a client-side process, rather than calling the FHIR server population operations.
+* The client software SHOULD be designed to function similar to the [population operations] (http://hl7.org/fhir/uv/sdc/populate.html#population-operations) described in the SDC IG, but as a client-side process, rather than calling the FHIR server population operations.
 <br>
 <br>
 * Implementers should be aware that sIRB Questionnaires use [Expression-Based Population](http://hl7.org/fhir/uv/sdc/populate.html#exp-pop).
 <br>
 <br>
-* The Questionnaires also utilize [answerExpression](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-answerExpression.html) functionality from the Form Behavior and Calculation  (http://hl7.org/fhir/uv/sdc/STU3/behavior.html) section of the SDC IG in order to populate the drop-down list of [permitted](http://hl7.org/fhir/uv/sdc/STU3/behavior.html#choice-restriction) answers for some of the questions.  
-<br>
+* The Questionnaires also utilize [answerExpression](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-answerExpression.html) functionality from the Form Behavior and Calculation  (http://hl7.org/fhir/uv/sdc/STU3/behavior.html) section of the SDC IG in order to populate the drop-down list of [permitted](http://hl7.org/fhir/uv/sdc/STU3/behavior.html#choice-restriction) answers for some of the questions.
 <br>
 * For more information on Expressions, also see [Expression Extensions](http://hl7.org/fhir/uv/sdc/STU3/expressions.html)
 <br>
 <br>
 * The following SDC extensions SHOULD be used for the populate functionality to work as described:
+
+<style type="text/css">
+table{
+margin-left: 50px
+}
+</style>
+
 
 | Extension  |  
 | -------------------------------------------------------------------------------------------------------- | 
@@ -79,24 +82,20 @@ Some guidance is provided here:
 {: .grid}
 
 <br>
-<br>
-* fhirpath
-<br>
-[fhirpath](https://hl7.org/fhirpath/) is used in the Answer Expression(s), Initial Expression(s), Calculated Expression(s) and Launch Context Expression(s) used in the Questionnaires. An [implementation of fhirpath](http://hl7.org/fhirpath/#fhirpath-tooling-and-implementation) will need to be included with the software client for the sIRB forms.
+* [fhirpath](https://hl7.org/fhirpath/) is used in the Answer Expression(s), Initial Expression(s), Calculated Expression(s) and Launch Context Expression(s) used in the Questionnaires. An [implementation of fhirpath](http://hl7.org/fhirpath/#fhirpath-tooling-and-implementation) will need to be included with the software client for the sIRB forms.
 <br>
 <br>
 
 
 
 ### Optional ResearchStudy Resource
-<br>
+
 #### ResearchStudy R4 Base Definition
 If an implementer wishes to optionally use the ResearchStudy resource to transmit or persist data, the R4 base definition of the [ResearchStudy](https://www.hl7.org/fhir/researchstudy.profile.json.html) resource MAY be used.
 <br>
 <br>
 
 #### workflow-researchStudy Extension
-<br>
 If an implementer chooses to use the ResearchStudy resource, the workflow-researchStudy MAY optionally be used on the QuestionnaireResponses to capture that the QuestionnaireResponses are relevant to the specified research study(ies).
 <br>
 <br>
@@ -104,17 +103,12 @@ The official URL for the workflow-researchStudy is [http://hl7.org/fhir/Structur
 
 <br>
 <br>
-
-
 ### Optional Provenance Resource
-<br>
-<br>
+
 If an implementer wishes to capture information about data creation, update, modification or deletion activities, the [Provenance](https://www.hl7.org/fhir/provenance.html) resource MAY be utilized. The Provenance resource can assist with data authenticity and assessing the entities involved with data being stored or transmitted via the system
 <br>
 <br>
-
 ### Other implementation recommendations
-<br>
 <br>
 The client software (the REST FHIR Questionnaire Management Software) will need to perform activities such as:
 
@@ -128,7 +122,11 @@ The client software (the REST FHIR Questionnaire Management Software) will need 
 
 * Retrieving Questionnaire Responses for edit and display
 
-<br>
+* Extracting data from the Initiate a Study Questionnaire Response to create and update the ResearchStudy resource (if the optional ResearchStudy resource is being used)
+
+* Creating the workflow-researchStudy extension (if the optional workflow-researchStudy extension is being used)
+
+* Creating the optional Provenance resource and providing the data for the elements of the resource
 <br>
 It is beyond the scope of this IG to provide detailed instructions on how to implement these functions, especially because the client REST FHIR Questionnaire Management Software could be the research study system of the lead principal investigator's institution, another type of software or the sIRB on FHIR software.
 <br>
@@ -138,17 +136,15 @@ It is beyond the scope of this IG to provide detailed instructions on how to imp
 
 ### Some suggestions for Starter (Beginner) Implementation
 <br>
+#### LHC-Forms
+The sIRB on FHIR software uses [LHC-Forms](http://lhncbc.github.io/lforms/), which is free and open source, to   render, populate, edit, validate and submit the forms to the FHIR Server. The LHC Forms software was created by the [U.S. National Library of Medicine (NLM)](https://www.nlm.nih.gov/).
 <br>
-#### The sIRB on FHIR software uses [LHC-Forms](http://lhncbc.github.io/lforms/), which is free and open source, to   render, populate, edit, validate and submit the forms to the FHIR Server. The LHC Forms software was created by the [U.S. National Library of Medicine (NLM)](https://www.nlm.nih.gov/).
-<br>
-<br>
-#### LHC Forms includes [fhirpath.js](https://github.com/HL7/fhirpath.js/), which is needed for the [fhirpath](https://hl7.org/fhirpath/) that is used in the Answer Expression(s), Initial Expression(s), Calculated Expression(s) and Launch Context Expression(s) used in the Questionnaires.
+LHC Forms includes [fhirpath.js](https://github.com/HL7/fhirpath.js/), which is needed for the [fhirpath](https://hl7.org/fhirpath/) that is used in the Answer Expression(s), Initial Expression(s), Calculated Expression(s) and Launch Context Expression(s) used in the Questionnaires.
 <br>
 <br>
 #### FHIR Server
 <br>
-The sIRB IG is based on FHIR R4 (v4.0.1). Please see the [FHIR Server requirements](URL here).  
-<br>
+The sIRB IG is based on FHIR R4 (v4.0.1). Please see the [FHIR Server requirements](conformance_and_functionality_expectations.html#fhir-server).  
 <br>
 If interested in using the HAPI server, implementers can refer to the HAPI Server project page at [https://hapifhir.io/hapi-fhir/](https://hapifhir.io/hapi-fhir/).  The HAPI Server free open-source download is available from [https://github.com/hapifhir/hapi-fhir](https://github.com/hapifhir/hapi-fhir).
 <br>
