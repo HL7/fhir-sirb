@@ -1,7 +1,7 @@
 == Suppressed Messages ==
 # No applicable codes exist for these values. Binding is extensible.
-WARNING: ResearchStudy/ResearchStudyExample-sIRB: ResearchStudy.identifier[0].type: No code provided, and a code should be provided from the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type)
-WARNING: ResearchStudy/ResearchStudyExample-sIRB: ResearchStudy.identifier[1].type: No code provided, and a code should be provided from the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type)
+WARNING: ResearchStudy/ResearchStudyExample-sIRB: ResearchStudy.identifier[0].type: No code provided, and a code should be provided from the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1)
+WARNING: ResearchStudy/ResearchStudyExample-sIRB: ResearchStudy.identifier[1].type: No code provided, and a code should be provided from the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1)
 
 # URLs outside of the HL7 domain
 INFORMATION: ResearchStudy/ResearchStudy2858: ResearchStudy.category[0].coding[0]: Code System URI 'http://ncimeta.nci.nih.gov' is unknown so the code cannot be validated
