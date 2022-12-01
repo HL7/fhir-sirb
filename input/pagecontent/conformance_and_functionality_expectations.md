@@ -1,24 +1,17 @@
 
 ### Actors
 
-**Host (generally the lead principal investigator's institution)**
-
+**Host (generally the lead principal investigator's institution)**<br>
 In general, the lead principal investigator's institution will be the institution hosting the sIRB FHIR server that stores the Questionnaires and the QuestionnaireResponses. This is the server referenced in the [sIRB Capability Statement](CapabilityStatement-sIRB-CapabilityStatement.html). 
 
-The lead principal investigator's institution will also host a website or other sIRB software to render the blank forms and display the completed questionnaire responses for edits, review or saving to pdf. This is the client referenced in the [sIRB Capability Statement](CapabilityStatement-sIRB-CapabilityStatement.html).  The client REST FHIR Questionnaire Management Software could be the research study system of the lead principal investigator's institution, another type of software or the sIRB on FHIR software).
-
-**Single Institutional Review Board (sIRB)**
+The lead principal investigator's institution will also host a website or other sIRB software to render the blank forms and display the completed questionnaire responses for edits, review or saving to pdf. This is the client referenced in the [sIRB Capability Statement](CapabilityStatement-sIRB-CapabilityStatement.html).  The client REST FHIR Questionnaire Management Software could be the research study system of the lead principal investigator's institution, another type of software or the sIRB on FHIR software).<br>
+**Single Institutional Review Board (sIRB)**<br>
 The single Institutional Review Board (sIRB) is either the ethics review board at the lead principal investigator's institution or a 3rd party ethics review board retained by the lead principal investigator's institution. The sIRB will need access to the research study system, the sIRB on FHIR software or other sIRB software to review the completed forms.
 <br>
-<br>
-
-
-**Relying Sites (generally non-hosts)**
+**Relying Sites (generally non-hosts)**<br>
 If the relying sites wish to interact with the forms without the requirement of having a FHIR server, then the host institution must provide client software, such as the sIRB on FHIR software, or a website with the client software for viewing, completing and storing the forms on the host institution's FHIR server. If the relying sites wish to use a FHIR server, then the FHIR server should have the capabilities defined in the "Host (generally the lead principal investigator's institution)" section.
 <br>
 <br>
-
-
 
 ### Exchange Framework
 
