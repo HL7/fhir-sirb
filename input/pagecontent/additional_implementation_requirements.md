@@ -1,6 +1,6 @@
 The Capability Statement does not capture all of the requirements for sIRB IG compliance. This page explains other requirements necessary to meet conformance expectations. It also discusses optional capabilities which could be implemented depending on the use case.
 
-The sIRB IG assumes that the implementer is familiar with the [SDC Specification](http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc).
+The sIRB IG assumes that the implementer is familiar with the [SDC Specification](http://hl7.org/fhir/uv/sdc).
 <br>
 <br>
 
@@ -61,7 +61,7 @@ Some guidance is provided here:
 * The Questionnaires also utilize [answerExpression](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-answerExpression.html) functionality from the Form Behavior and Calculation  (http://hl7.org/fhir/uv/sdc/STU3/behavior.html) section of the SDC IG in order to populate the drop-down list of [permitted](http://hl7.org/fhir/uv/sdc/STU3/behavior.html#choice-restriction) answers for some of the questions.
 <br>
 <br>
-* For more information on Expressions, also see [Expression Extensions](http://hl7.org/fhir/uv/sdc/STU3/expressions.html)
+* For more information on Expressions, also see [Expression Extensions](http://hl7.org/fhir/uv/sdc/STU3/expressions.html).
 <br>
 <br>
 * The following SDC extensions SHOULD be used for the populate functionality to work as described:
@@ -81,7 +81,7 @@ margin-left: 35px
 | [Launch Context](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext)  |
 |[variable](http://hl7.org/fhir/StructureDefinition/variable)| 
 {: .grid}
-<br>
+
 * [fhirpath](https://hl7.org/fhirpath/) is used in the Answer Expression(s), Initial Expression(s), Calculated Expression(s) and Launch Context Expression(s) used in the Questionnaires. An [implementation of fhirpath](http://hl7.org/fhirpath/#fhirpath-tooling-and-implementation) will need to be included with the software client for the sIRB forms.
 <br>
 <br>
@@ -93,16 +93,17 @@ margin-left: 35px
 #### ResearchStudy R4 Base Definition
 If an implementer wishes to optionally use the ResearchStudy resource to transmit or persist data, the R4 base definition of the [ResearchStudy](https://www.hl7.org/fhir/researchstudy.profile.json.html) resource MAY be used.
 <br>
-<br>
 #### workflow-researchStudy Extension
 If an implementer chooses to use the ResearchStudy resource, the workflow-researchStudy MAY optionally be used on the QuestionnaireResponses to capture that the QuestionnaireResponses are relevant to the specified research study(ies).
 <br>
 <br>
 The official URL for the workflow-researchStudy is [http://hl7.org/fhir/StructureDefinition/workflow-researchStudy](http://hl7.org/fhir/StructureDefinition/workflow-researchStudy).
 <br>
+<br>
 ### Optional Provenance Resource
 
 If an implementer wishes to capture information about data creation, update, modification or deletion activities, the [Provenance](https://www.hl7.org/fhir/provenance.html) resource MAY be utilized. The Provenance resource can assist with data authenticity and assessing the entities involved with data being stored or transmitted via the system.
+<br>
 <br>
 ### Other implementation recommendations
 <br>
@@ -124,15 +125,15 @@ The client software (the REST FHIR Questionnaire Management Software) will need 
 
 * Creating the optional Provenance resource and providing the data for the elements of the resource
 <br>
-<br>
-It is beyond the scope of this IG to provide detailed instructions on how to implement these functions, especially because the client REST FHIR Questionnaire Management Software could be the research study system of the lead principal investigator's institution, another type of software or the sIRB on FHIR software.
+<p>It is beyond the scope of this IG to provide detailed instructions on how to implement these functions, especially because the client REST FHIR Questionnaire Management Software could be the research study system of the lead principal investigator's institution, another type of software or the sIRB on FHIR software.
+</p>
 <br>
 <br>
 
 
 
 ### Some suggestions for Starter (Beginner) Implementation
-<br>
+
 #### LHC-Forms
 The sIRB on FHIR software uses [LHC-Forms](http://lhncbc.github.io/lforms/), which is free and open source, to render, populate, edit, validate and submit the forms to the FHIR Server. The LHC Forms software was created by the [U.S. National Library of Medicine (NLM)](https://www.nlm.nih.gov/).
 <br>
@@ -141,7 +142,7 @@ LHC Forms includes [fhirpath.js](https://github.com/HL7/fhirpath.js/), which is 
 <br>
 <br>
 #### FHIR Server
-<br>
+
 The sIRB IG is based on FHIR R4 (v4.0.1). Please see the [FHIR Server requirements](conformance_and_functionality_expectations.html#fhir-server).  
 <br>
 If interested in using the HAPI server, implementers can refer to the HAPI Server project page at [https://hapifhir.io/hapi-fhir/](https://hapifhir.io/hapi-fhir/).  The HAPI Server free open-source download is available from [https://github.com/hapifhir/hapi-fhir](https://github.com/hapifhir/hapi-fhir).
