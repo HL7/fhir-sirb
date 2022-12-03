@@ -1,6 +1,6 @@
 The Capability Statement does not capture all of the requirements for sIRB IG compliance. This page explains other requirements necessary to meet conformance expectations. It also discusses optional capabilities which could be implemented depending on the use case.
 
-The sIRB IG assumes that the implementer is familiar with the [SDC Specification](http://hl7.org/fhir/uv/sdc).
+The sIRB IG assumes that the implementer is familiar with the [SDC Specification](http://hl7.org/fhir/uv/sdc/STU3/).
 <br>
 <br>
 
@@ -81,7 +81,7 @@ margin-left: 35px
 | [Launch Context](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext)  |
 |[variable](http://hl7.org/fhir/StructureDefinition/variable)| 
 {: .grid}
-
+<br>
 * [fhirpath](https://hl7.org/fhirpath/) is used in the Answer Expression(s), Initial Expression(s), Calculated Expression(s) and Launch Context Expression(s) used in the Questionnaires. An [implementation of fhirpath](http://hl7.org/fhirpath/#fhirpath-tooling-and-implementation) will need to be included with the software client for the sIRB forms.
 <br>
 <br>
@@ -106,7 +106,7 @@ If an implementer wishes to capture information about data creation, update, mod
 <br>
 <br>
 ### Other implementation recommendations
-<br>
+
 The client software (the REST FHIR Questionnaire Management Software) will need to perform activities such as:
 
 * Retrieving Questionnaires from the repository
@@ -128,8 +128,6 @@ The client software (the REST FHIR Questionnaire Management Software) will need 
 <p>It is beyond the scope of this IG to provide detailed instructions on how to implement these functions, especially because the client REST FHIR Questionnaire Management Software could be the research study system of the lead principal investigator's institution, another type of software or the sIRB on FHIR software.
 </p>
 <br>
-<br>
-
 
 
 ### Some suggestions for Starter (Beginner) Implementation
