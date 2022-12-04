@@ -260,11 +260,6 @@
 					"generation" : "markdown"
 				},
 				{
-					"nameUrl" : "downloads.html",
-					"title" : "Downloads",
-					"generation" : "markdown"
-				},
-				{
 					"nameUrl" : "codesystems_descriptions.html",
 					"title" : "Descriptions of CodeSystems",
 					"generation" : "markdown"
@@ -277,6 +272,11 @@
 				{
 					"nameUrl" : "otherrequired.html",
 					"title" : "Other",
+					"generation" : "markdown"
+				},
+				{
+					"nameUrl" : "downloads.html",
+					"title" : "Downloads",
 					"generation" : "markdown"
 				}
 			]
