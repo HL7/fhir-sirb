@@ -1,0 +1,35 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+
+  <li><a href="toc.html">Table of Contents</a></li>
+  
+  <li class="dropdown">
+  
+  
+      <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance Guidance<b class="caret">
+          </b>
+      </a>
+  
+  
+      <ul class="dropdown-menu">
+      
+          <li><a href="conformance_and_functionality_expectations.html">Conformance and Functionality Expectations</a></li>
+      
+          <li><a href="additional_implementation_requirements.html">Additional Implementation Requirements and Considerations</a></li>   
+  
+      </ul>
+  
+  
+  </li>
+  
+
+  <li><a href="codesystems_descriptions.html">Descriptions of CodeSystems</a></li>
+
+  <li><a href="workflow_diagrams.html">Workflow Diagrams</a></li>
+
+  <li><a href="otherrequired.html">Other</a></li>
+
+  <li><a href="downloads.html">Downloads</a></li>
+
+  <li><a href="artifacts.html">Artifact Index</a></li>
+</ul>
