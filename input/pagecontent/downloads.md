@@ -13,4 +13,5 @@ In addition there are format specific definitions files.
 * [TTl](examples.ttl.zip)
 
 **Referenced Implementation Guide**
+
 Download the Structured Data Capture (SDC) Implementation Guide: [Structured Data Capture (SDC)](http://hl7.org/fhir/uv/sdc/STU3/full-ig.zip)
