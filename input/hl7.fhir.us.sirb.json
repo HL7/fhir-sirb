@@ -51,7 +51,7 @@
 		"grouping" : [
 			{
 				"id" : "new-group7",
-				"name" : "sIRB Questionnaires"
+				"name" : "Questionnaires"
 			},
 			{
 				"id" : "new-group8",
@@ -74,8 +74,7 @@
 			{
 				"exampleBoolean" : false,
 				"reference" : {
-					"reference" : "Questionnaire/sirb-initiate-study-questionnaire-populate",
-					"display" : "Initiate a Study Questionnaire"
+					"reference" : "Questionnaire/sirb-initiate-study-questionnaire-populate"
 				},
 				"name" : "Initiate a Study Questionnaire",
 				"description" : "This questionnaire serves as an initial collection form for recurring data elements that are present in the other forms. These other forms will then subsequently prepopulate with these data to minimize data entry time and errors.",
@@ -84,18 +83,16 @@
 			{
 				"exampleBoolean" : false,
 				"reference" : {
-					"reference" : "Questionnaire/sirb-nonmedicalevent-questionnaire-populate",
-					"display" : "Unanticipated Problems Involving Risk to Subjects or Others (UPIRTSO)/Adverse Non-Medical Event Questionnaire"
+					"reference" : "Questionnaire/sirb-protocol-questionnaire-populate"
 				},
-				"name" : "Adverse Non-Medical Event Questionnaire",
-				"description" : "The Non-Medical Adverse Event Questionnaire is intended to create a Non-Medical Adverse Event Report to the sIRB. An example of a Non-Medical Adverse Event is the inadvertent disclosure to several participants that they are receiving the placebo in a blind study. The Non-Medical Adverse Questionnaire captures details for the report such as the root cause of the event, the corrective action plan and associated changes to the protocol or consent form as a result of the event.",
+				"name" : "Protocol Questionnaire",
+				"description" : "The Protocol Questionnaire is used by the Principal Investigator and/or the Study Coordinator to justify the study and request the approval for the study. Contents include a synopsis for non-technical board members and a detailed protocol discussion. Other important sections of form requesting approval for the protocol include work history of the researchers, risks to university personnel performing the research, risk mitigations being undertaken by the researchers, long discussions of the existing body of knowledge and explanations of how the study can be rationalized in light of the existing knowledge on this study topic.",
 				"groupingId" : "new-group7"
 			},
 			{
 				"exampleBoolean" : false,
 				"reference" : {
-					"reference" : "Questionnaire/sirb-consent-questionnaire-populate",
-					"display" : "Consent Questionnaire"
+					"reference" : "Questionnaire/sirb-consent-questionnaire-populate"
 				},
 				"name" : "Consent Form Questionnaire",
 				"description" : "The Consent Form Questionnaire creates the exact Consent Form content word-for-word that will be shown to the sIRB's Institutional Review Board to be approved to use during the study. The rendering and pdf format created by the software are also provided to the sIRB to be approved.",
@@ -104,11 +101,29 @@
 			{
 				"exampleBoolean" : false,
 				"reference" : {
-					"reference" : "Questionnaire/sirb-protocol-questionnaire-populate",
-					"display" : "Protocol Questionnaire"
+					"reference" : "Questionnaire/sirb-recruitment-materials-questionnaire-populate",
+					"display" : "Recruitment Materials"
 				},
-				"name" : "Protocol Questionnaire",
-				"description" : "The Protocol Questionnaire is used by the Principal Investigator and/or the Study Coordinator to justify the study and request the approval for the study. Contents include a synopsis for non-technical board members and a detailed protocol discussion. Other important sections of form requesting approval for the protocol include work history of the researchers, risks to university personnel performing the research, risk mitigations being undertaken by the researchers, long discussions of the existing body of knowledge and explanations of how the study can be rationalized in light of the existing knowledge on this study topic.",
+				"name" : "Recruitment Materials Questionnaire",
+				"description" : "The Recruitment Materials Form is used to seek approval from the sIRB to use the specified recruitment materials (at the requested time, place, duration and medium) during the study and for the methods of communication that are proposed for responding to the study participants.",
+				"groupingId" : "new-group7"
+			},
+			{
+				"exampleBoolean" : false,
+				"reference" : {
+					"reference" : "Questionnaire/sirb-determination-letter-questionnaire-populate"
+				},
+				"name" : "Determination Letter Questionnaire",
+				"description" : "This questionnaire collects information required in the production of a determination letter. These data are used to send a Determination Letter Report to each site when a decision is made regarding the institution's approval to serve as a relying site.",
+				"groupingId" : "new-group7"
+			},
+			{
+				"exampleBoolean" : false,
+				"reference" : {
+					"reference" : "Questionnaire/sirb-continuing-review-questionnaire-populate"
+				},
+				"name" : "Continuing Review Questionnaire",
+				"description" : "The Continuing Review Questionnaire collects data used in a report which is then provided to the sIRB on a regular basis so that continued activity on the study can be reviewed.",
 				"groupingId" : "new-group7"
 			},
 			{
@@ -124,32 +139,65 @@
 			{
 				"exampleBoolean" : false,
 				"reference" : {
-					"reference" : "Questionnaire/sirb-recruitment-materials-questionnaire-populate",
-					"display" : "Recruitment Materials"
+					"reference" : "Questionnaire/sirb-nonmedicalevent-questionnaire-populate"
 				},
-				"name" : "Recruitment Materials",
-				"description" : "The Recruitment Materials Form is used to seek approval from the sIRB to use the specified recruitment materials (at the requested time, place, duration and medium) during the study and for the methods of communication that are proposed for responding to the study participants.",
+				"name" : "Adverse Non-Medical Event Questionnaire",
+				"description" : "The Non-Medical Adverse Event Questionnaire is intended to create a Non-Medical Adverse Event Report to the sIRB. An example of a Non-Medical Adverse Event is the inadvertent disclosure to several participants that they are receiving the placebo in a blind study. The Non-Medical Adverse Event Questionnaire captures details for the report such as the root cause of the event, the corrective action plan and associated changes to the protocol or consent form as a result of the event.",
 				"groupingId" : "new-group7"
 			},
 			{
-				"exampleBoolean" : false,
+				"exampleBoolean" : true,
 				"reference" : {
-					"reference" : "Questionnaire/sirb-continuing-review-questionnaire-populate",
-					"display" : "Continuing Review"
+					"reference" : "QuestionnaireResponse/nme-populate-exampleQR"
 				},
-				"name" : "Continuing Review",
-				"description" : "The Continuing Review Questionnaire collects data used in a report which is then provided to the sIRB on a regular basis so that continued activity on the study can be reviewed.",
-				"groupingId" : "new-group7"
+				"name" : "Example Adverse Non-Medical Event Questionnaire Response",
+				"description" : "Example of an Adverse Non-Medical Event Questionnaire Response",
+				"groupingId" : "new-group8"
 			},
 			{
-				"exampleBoolean" : false,
+				"exampleBoolean" : true,
 				"reference" : {
-					"reference" : "Questionnaire/sirb-determination-letter-questionnaire-populate",
-					"display" : "sIRB Determination Questionnaire"
+					"reference" : "QuestionnaireResponse/protocol-populate-exampleQR"
 				},
-				"name" : "sIRB Determination Questionnaire",
-				"description" : "This questionnaire collects information required in the production of a determination letter. These data are used to send a Determination Letter Report to each site when a decision is made regarding the institution's approval to serve as a relying site.",
-				"groupingId" : "new-group7"
+				"name" : "Example Protocol Questionnaire Response",
+				"description" : "Example of a Protocol Questionnaire Response",
+				"groupingId" : "new-group8"
+			},
+			{
+				"exampleBoolean" : true,
+				"reference" : {
+					"reference" : "QuestionnaireResponse/medical-ae-populate-exampleQR"
+				},
+				"name" : "Example Adverse Medical Event Questionnaire Response",
+				"description" : "Example of an Adverse Medical Event Questionnaire Response",
+				"groupingId" : "new-group8"
+			},
+			{
+				"exampleBoolean" : true,
+				"reference" : {
+					"reference" : "QuestionnaireResponse/initiate-study-populate-exampleQR"
+				},
+				"name" : "Example Initiate a Study Questionnaire Response",
+				"description" : "Example of an Initiate a Study Questionnaire Response",
+				"groupingId" : "new-group8"
+			},
+			{
+				"exampleBoolean" : true,
+				"reference" : {
+					"reference" : "QuestionnaireResponse/determination-populate-exampleQR"
+				},
+				"name" : "Example Determination Letter Questionnaire Response",
+				"description" : "Example of a Determination Letter Questionnaire Response",
+				"groupingId" : "new-group8"
+			},
+			{
+				"exampleBoolean" : true,
+				"reference" : {
+					"reference" : "QuestionnaireResponse/recruitment-populate-exampleQR"
+				},
+				"name" : "Example Recruitment Materials Questionnaire Response",
+				"description" : "Example of a Recruitment Materials Questionnaire Response",
+				"groupingId" : "new-group8"
 			},
 			{
 				"exampleBoolean" : true,
@@ -163,68 +211,7 @@
 			{
 				"exampleBoolean" : true,
 				"reference" : {
-					"reference" : "QuestionnaireResponse/medical-ae-populate-exampleQR",
-					"display" : "medical-ae-populate-exampleQR"
-				},
-				"name" : "Example Adverse Medical Event Questionnaire Response",
-				"description" : "Example of an Adverse Medical Event Questionnaire Response",
-				"groupingId" : "new-group8"
-			},
-			{
-				"exampleBoolean" : true,
-				"reference" : {
-					"reference" : "QuestionnaireResponse/determination-populate-exampleQR",
-					"display" : "determination-populate-exampleQR"
-				},
-				"name" : "Example Determination Letter Questionnaire Response",
-				"description" : "Example of a Determination Letter Questionnaire Response",
-				"groupingId" : "new-group8"
-			},
-			{
-				"exampleBoolean" : true,
-				"reference" : {
-					"reference" : "QuestionnaireResponse/nme-populate-exampleQR",
-					"display" : "nme-populate-exampleQR"
-				},
-				"name" : "Example Adverse Non-Medical Event Questionnaire Response",
-				"description" : "Example of an Adverse Non-Medical Event Questionnaire Response",
-				"groupingId" : "new-group8"
-			},
-			{
-				"exampleBoolean" : true,
-				"reference" : {
-					"reference" : "QuestionnaireResponse/initiate-study-populate-exampleQR",
-					"display" : "initiate-study-populate-exampleQR"
-				},
-				"name" : "Example Initiate a Study Questionnaire Response",
-				"description" : "Example of an Initiate a Study Questionnaire Response",
-				"groupingId" : "new-group8"
-			},
-			{
-				"exampleBoolean" : true,
-				"reference" : {
-					"reference" : "QuestionnaireResponse/protocol-populate-exampleQR",
-					"display" : "protocol-populate-exampleQR"
-				},
-				"name" : "Example Protocol Questionnaire Response",
-				"description" : "Example of a Protocol Questionnaire Response",
-				"groupingId" : "new-group8"
-			},
-			{
-				"exampleBoolean" : true,
-				"reference" : {
-					"reference" : "QuestionnaireResponse/recruitment-populate-exampleQR",
-					"display" : "recruitment-populate-exampleQR"
-				},
-				"name" : "Example Recruitment Materials Questionnaire Response",
-				"description" : "Example of a Recruitment Materials Questionnaire Response",
-				"groupingId" : "new-group8"
-			},
-			{
-				"exampleBoolean" : true,
-				"reference" : {
-					"reference" : "QuestionnaireResponse/consent-form-populate-exampleQR",
-					"display" : "consent-form-populate-exampleQR"
+					"reference" : "QuestionnaireResponse/consent-form-populate-exampleQR"
 				},
 				"name" : "Example Consent Form Questionnaire Response",
 				"description" : "Example of a Consent Form Questionnaire Response",
@@ -233,18 +220,16 @@
 			{
 				"exampleBoolean" : true,
 				"reference" : {
-					"reference" : "ResearchStudy/ResearchStudyExample-sIRB",
-					"display" : "sIRB Research Study Example"
+					"reference" : "ResearchStudy/ResearchStudyExample-sIRB"
 				},
-				"name" : "sIRB Research Study Example",
-				"description" : "sIRB Research Study Example",
+				"name" : "Example of Research Study",
+				"description" : "Example of Research Study",
 				"groupingId" : "new-group9"
 			},
 			{
 				"exampleBoolean" : false,
 				"reference" : {
-					"reference" : "CodeSystem/temporarycodes",
-					"display" : "Temporary Codes"
+					"reference" : "CodeSystem/temporarycodes"
 				},
 				"name" : "Temporary Codes",
 				"groupingId" : "new-group6",
@@ -253,8 +238,7 @@
 			{
 				"exampleBoolean" : false,
 				"reference" : {
-					"reference" : "CapabilityStatement/sIRB-CapabilityStatement",
-					"display" : "sIRB Capability Statement"
+					"reference" : "CapabilityStatement/sIRB-CapabilityStatement"
 				},
 				"name" : "sIRB Capability Statement",
 				"description" : "This resource describes the required and desired behavior of software clients and FHIR servers for use and exchange of the Single Institutional Review Board (sIRB) forms."
