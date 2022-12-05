@@ -7,7 +7,7 @@ Launching a multi-site clinical research study is frequently a long and involved
 The project is a proof of concept in hopes of moving toward a national standard for the content of the research study forms in widespread use.  As institutions trial these forms, it is expected that the authors will receive considerable feedback on the content of the forms.  
 
 The intent of this project is to use the [Structured Data Capture (SDC)](http://hl7.org/fhir/uv/sdc/STU3/) features of the Questionnaire resource so that the research study forms are standardized for exchange between the sIRB and the relying institutions, with a national standard being established so that all sIRB studies will use the same content with the same level of granularity in their forms.
-![Reviewing and Relying Sites](Cooperative Research Terminology.jpg){:width="700px"}
+![Reviewing and Relying Sites](Cooperative Research Terminology.jpg){:width="90%"}
 
 Right now, research study forms in common use have large text boxes which are not easily integrated with the research study management software, as each text box contains too many different fields of data.  Our design of the forms is novel in that it separates concepts into separate questions, as individual questionnaire items.
 
@@ -60,7 +60,7 @@ The intention is that the 7 core forms will all be populatable using the data co
 
 If an institution is not using the populate functionality, then the Initiate a Study Questionnaire can be used to gather data to make a record of the research study in the ResearchStudy resource, to gather data to register the study with ClinicalTrials.gov  or it can be left out of the implementation altogether. 
 
-![Populate Process Flow](Populate Process Flow.jpg){:width="700px"}
+![Populate Process Flow](Populate Process Flow.jpg){:width="97%"}
 
 ### Actors
 1. sIRB Form Repository: A form repository that stores standardized sIRB forms. IRB systems will request form templates from this repository.
@@ -70,10 +70,13 @@ If an institution is not using the populate functionality, then the Initiate a S
 ### Forms
 ![sIRB FHIR forms](sirb FHIR forms.jpg){:width="700px"}
 
+
+
 ### List of Forms
-Form (Link to Page) | Link to External Questionnaire Viewer
-[Initiate Study](Questionnaire-sirb-initiate-study-questionnaire-populate.html)| [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-initiate-study-questionnaire-populate.json)
-[Protocol](Questionnaire-sirb-protocol-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=)
+ Form (Link to Page) | Link to External Questionnaire Viewer 
+ --------------|-----------
+[Initiate Study](Questionnaire-sirb-initiate-study-questionnaire-populate.html)| [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-initiate-study-questionnaire-populate.html)
+[Protocol](Questionnaire-sirb-protocol-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=http://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-protocol-questionnaire-populate.html)
 [Consent](Questionnaire-sirb-consent-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=)
 [Determination Letter](Questionnaire-sirb-determination-letter-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=)
 [Recruitment Materials](Questionnaire-sirb-recruitment-materials-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=)
