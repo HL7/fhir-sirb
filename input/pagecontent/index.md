@@ -6,8 +6,8 @@ Launching a multi-site clinical research study is frequently a long and involved
 ### Project Goals
 The project is a proof of concept in hopes of moving toward a national standard for the content of the research study forms in widespread use.  As institutions trial these forms, it is expected that the authors will receive considerable feedback on the content of the forms.  
 
-The intent of this project is to use the Structured Data Capture (SDC) features of the Questionnaire resource so that the research study forms are standardized for exchange between the sIRB and the relying institutions, with a national standard being established so that all sIRB studies will use the same content with the same level of granularity in their forms.
-![Reviewing and Relying Sites](Cooperative Research Terminology.jpg){:width="900px"}
+The intent of this project is to use the [Structured Data Capture (SDC)](http://hl7.org/fhir/uv/sdc/STU3/) features of the Questionnaire resource so that the research study forms are standardized for exchange between the sIRB and the relying institutions, with a national standard being established so that all sIRB studies will use the same content with the same level of granularity in their forms.
+![Reviewing and Relying Sites](Cooperative Research Terminology.jpg){:width="700px"}
 
 Right now, research study forms in common use have large text boxes which are not easily integrated with the research study management software, as each text box contains too many different fields of data.  Our design of the forms is novel in that it separates concepts into separate questions, as individual questionnaire items.
 
@@ -27,7 +27,7 @@ This Implementation guide covers the suite of seven research study questionnaire
 The sIRB implementation guide deals with creation and exchange of standardized sIRB forms and form responses using FHIR questionnaire and questionnaire response resources. The questionnaires may have nested structures and embed skip/branching logics to display appropriate questions based on previous answers. Extraction of data elements/resources from questionnaire responses is out of scope for the current version of sIRB implementation guide. Extraction can be incorporated into your specific implementation by referring to [Structured Data Capture (SDC) implementation guide](http://hl7.org/fhir/uv/sdc/STU3/extraction.html).
 
 ### Assumptions
-The implementation guide assumes that the implementer has or will have a capability to send, receive, render and display FHIR questionnaires and questionnaire responses. Implementers may consider using free software such as National Library of Medicine's (NLM) FHIR Questionnaire rendering tool or incorporate these standards into a tool of their own. Exchange of resources can be achieved by any of the FHIR messaging mechanisms. Please refer to FHIR standard documentation, open source implementations of FHIR specifications, and FHIR Messaging for additional information. 
+The implementation guide assumes that the implementer has or will have a capability to send, receive, render and display FHIR questionnaires and questionnaire responses. Implementers may consider using free software such as [National Library of Medicine's (NLM)](https://www.nlm.nih.gov/) FHIR Questionnaire [rendering tool](http://lhncbc.github.io/lforms/) or incorporate these standards into a tool of their own. [Exchange](https://www.hl7.org/fhir/R4/exchange-module.html) of resources can be achieved by any of the FHIR messaging mechanisms. Please refer to FHIR standard documentation, open source implementations of FHIR specifications, and FHIR Messaging for additional information. 
 
 ### Design Decisions
 Some of the relying sites may be small clinics or rural providers that do not have their own FHIR server.  They may be using paper forms at this time for any research study activities. To allow for easier adoption of the FHIR forms and make it more likely for the smaller sites to transition away from paper forms, it was decided to keep the technical and implementation burden very low.  
@@ -49,9 +49,9 @@ The Questionnaires and Questionnaire Responses are rendered with the free and op
 All [code sets](codesystems_descriptions.html) are defined within the questionnaire form definitions.  No external valuesets are used. Where concepts in the forms aligned to concepts in existing Code Systems, the existing Code Systems were used to allow for interoperability with resources.  As the forms stabilize, the temporary codes defined in this implementation guide will be submitted to and migrate into other ‘official’ terminologies, such as SNOMED or HL7’s shared terminologies.
 
 
-As part of the proof of concept, the sIRB on FHIR software creates a ResearchStudy resource in the FHIR server for each research study.  A sample of a ResearchStudy resource created by the sIRB on FHIR software is [included](https://build.fhir.org/ig/HL7/fhir-sirb/ResearchStudy-ResearchStudy2858.html).  In the future, information from this resource can also be used to report study details to ClinicalTrials.gov.
+As part of the proof of concept, the sIRB on FHIR software creates a ResearchStudy resource in the FHIR server for each research study.  A sample of a ResearchStudy resource created by the sIRB on FHIR software is [included](ResearchStudy-ResearchStudyExample-sIRB.html).  In the future, information from this resource can also be used to report study details to ClinicalTrials.gov.
 
-References to other resources (PlanDefinition and Practitioner) used by the ResearchStudy resource are ‘[contained](https://www.hl7.org/fhir/references.html#contained)’ references.  If an institution implements the sIRB questionnaires after a trial use, the best practice recommended is to use references to the full PlanDefinition and Practitioner resources.
+References to other resources (PlanDefinition and Practitioner) used by the ResearchStudy resource are ['contained'](https://www.hl7.org/fhir/references.html#contained) references.  If an institution implements the sIRB questionnaires after a trial use, the best practice recommended is to use references to the full PlanDefinition and Practitioner resources.
 
 The use of the ResearchStudy resource is completely optional.  The official record at this time is the QuestionnaireResponse.  There is no expectation in the implementation that the software will use the ResearchStudy resource.
 
@@ -60,7 +60,7 @@ The intention is that the 7 core forms will all be populatable using the data co
 
 If an institution is not using the populate functionality, then the Initiate a Study Questionnaire can be used to gather data to make a record of the research study in the ResearchStudy resource, to gather data to register the study with ClinicalTrials.gov  or it can be left out of the implementation altogether. 
 
-![Populate Process Flow](Populate Process Flow.jpg){:height="600px"}
+![Populate Process Flow](Populate Process Flow.jpg){:width="700px"}
 
 ### Actors
 1. sIRB Form Repository: A form repository that stores standardized sIRB forms. IRB systems will request form templates from this repository.
@@ -68,24 +68,24 @@ If an institution is not using the populate functionality, then the Initiate a S
 3. Relying IRB Application: An IRB software that receives and renders completed and approved forms by the central IRB.
 
 ### Forms
-![sIRB FHIR forms](sirb FHIR forms.jpg){:width="1200px"}
+![sIRB FHIR forms](sirb FHIR forms.jpg){:width="700px"}
 
-
+### List of Forms
 Form (Link to Page) | Link to External Questionnaire Viewer
-[Intiate Study](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-initiate-study-questionnaire.html)| [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-initiate-study-questionnaire.json)
-[Protocol](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-protocol-questionnaire.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-protocol-questionnaire.json)
-[Consent](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-consent-questionnaire.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-consent-questionnaire.json)
-[Determination Letter](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-determination-letter-questionnaire.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-determination-letter-questionnaire.json)
-[Recruitment Materials](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-recruitment-materials-questionnaire.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-recruitment-materials-questionnaire.json)
-[Medical Adverse Events](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-adverse-event-questionnaire.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-adverse-event-questionnaire.json)
-[Non Medical Adverse Events](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-nonmedicalevent-questionnaire.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-nonmedicalevent-questionnaire.json)
-[Continuing Review](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-continuing-review-questionnaire.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://github.com/HL7/fhir-sirb/raw/master/input/resources/questionnaire/sirb-continuing-review-questionnaire.json)
+[Initiate Study](Questionnaire-sirb-initiate-study-questionnaire-populate.html)| [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://raw.githubusercontent.com/HL7/fhir-sirb/master/input/resources/questionnaire/sirb-initiate-study-questionnaire-populate.json)
+[Protocol](Questionnaire-sirb-protocol-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=)
+[Consent](Questionnaire-sirb-consent-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=)
+[Determination Letter](Questionnaire-sirb-determination-letter-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=)
+[Recruitment Materials](Questionnaire-sirb-recruitment-materials-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=)
+[Medical Adverse Events](Questionnaire-sirb-adverse-event-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=)
+[Non Medical Adverse Events](Questionnaire-sirb-nonmedicalevent-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=)
+[Continuing Review]() | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=)
 
 ### Workflow Overview
 
 In the workflow outlined below, a Central IRB system requests one of the standardized sIRB questionnaires forms from the repository as a form of a questionnaire resource. The central IRB system receives the questionnaire response resource and renders/displays it to the Principal Investigator-PI (user). The PI enters and submits responses applicable to the selected standardized sIRB form. The submitted responses will be saved as questionnaire response resources on the Central IRB's FHIR server. The Central IRB will serve as a single source of truth for IRB Documents. The relying IRB system will send a RESTful request or implement a subscription resource to get most recent forms from the central IRB's FHIR server.
 
-![sIRB dataflow](sirb-dataflow.jpg){:width="500px"}
+![sIRB dataflow](sirb-dataflow.jpg){:width="700px"}
 Number 1, The software, whether our sIRB on FHIR software or the commercial IRB software at the sIRB, requests the official sIRB Questionnaire from the FHIR File Server at the central repository responsible for maintaining the official FHIR Questionnaires.
 Number 2, The FHIR Questionnaire is transmitted to the sIRB via the Internet to the FHIR File server associated with the IRB sofrware.
 Number 3 The IRB software at the sIRB processes the information in the FHIR Questionnaire and creates the Data Collection Form.  This form is then presented to the user.
