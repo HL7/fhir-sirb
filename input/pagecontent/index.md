@@ -1,12 +1,13 @@
-Data standards to move data and documents from clinical research sites to a single ethics review board in support of the "NIH Policy on the Use of a Single Institutional Review Board for Multi-Site Research
+Data standards to move data and documents from clinical research sites to a single ethics review board in support of the "NIH Policy on the Use of a Single Institutional Review Board for Multi-Site Research".
+
 ### Background
 Launching a multi-site clinical research study is frequently a long and involved process that can delay the development of potentially effective clinical treatment. Part of this process is applying for and receiving the review and approval of an ethics review board, termed the Institutional Review Board or IRB.  This IRB is reponsible for reviewing all study methodology prior to enrollment of any participants, as well as providing ongoing monitoring of the study. Ethics review and approval processes conducted by IRBs have been cited as a major contributor to delays in initiating multi-site studies. In response, the set of protections for research subjects in the code of federal regulations for human-subjects research (Common Rule, 45 CFR Part 46.114) was revised with a requirement that a single IRB be named when multiple sites are using the same protocol. Rather than each site waiting for approval of a study by its local IRB before enrolling subjects, a single IRB review will expedite approval and improve the timeline for study initiation and completion. Researchers commented about the redundancy of effort, additional costs, and administrative burdens that often lead to delays and imbalances in enrollment of research participants in multi-site clinical studies. Before creating the questionnaires, considerable effort was made to examine and compare the existing forms from a sample set of institutions. In arriving at the versions of the questionnaires in the IG, the content of the forms from the sample set were harmonized and rationalized in conjunction with the Common Rule provisions, where applicable.
 
 ### Project Goals
 The project is a proof of concept in hopes of moving toward a national standard for the content of the research study forms in widespread use.  As institutions trial these forms, it is expected that the authors will receive considerable feedback on the content of the forms.  
 
-The intent of this project is to use the Strucutred Data Capture (SDC) features of the Questionnaire resource so that the research study forms are standardized for exchange between the sIRB and the relying institutions, with a national standard being established so that all sIRB studies will use the same content with the same level of granularity in their forms.
-![Reviewing and Relying Sites](Cooperative Research Terminology.jpg)
+The intent of this project is to use the Structured Data Capture (SDC) features of the Questionnaire resource so that the research study forms are standardized for exchange between the sIRB and the relying institutions, with a national standard being established so that all sIRB studies will use the same content with the same level of granularity in their forms.
+![Reviewing and Relying Sites](Cooperative Research Terminology.jpg){:width="900px"}
 
 Right now, research study forms in common use have large text boxes which are not easily integrated with the research study management software, as each text box contains too many different fields of data.  Our design of the forms is novel in that it separates concepts into separate questions, as individual questionnaire items.
 
@@ -20,10 +21,10 @@ The sIRB questionnaires, if adopted, would be replacing paper forms, word proces
 In lieu of ad hoc transfers of PDFs and other document formats via email or online submission, this project utilizes FHIR based standards to facilitate document exchange. A standards enabled process leveraged by software has the potential to significantly decrease the extensive manual tasks that have become associated with using a single IRB system. This use of FHIR standards to meet the need for an efficient exchange of data and documents will improve the operational efficiency. 
 
 ### Coverage
-This Implementation guide covers the suite of seven research study questionnaires for sIRB studies: Determination Letter Questionnaire, Protocol Questionnaire, Consent Form Questionnaire, Recruitment Materials Questionnaire, Adverse Medical Events Questionnaire, Non-Medical Events Questionnaire and Continuing Review Questionnaire. It also includes an Initiate a Study Questionnaire for an optional, but suggested implementation that takes advantage of the SDC Populate functionality. The Initiate a Study Questionnaire is intended to collect data for fields common to many of the forms, such as the Study Title, Study Protocol Number, Principal Investigator (PI) Name, PI Address, PI email, PI phone, sIRB site name, sIRB site address and the name and address for each relying site. The SDC Populate functionality can then use the data captured in the Initiate a Study Questionnaire to populate the corresponding fields in the suite of seven research study questionnaires.
+This Implementation guide covers the suite of seven research study questionnaires for sIRB studies: Determination Letter Questionnaire, Protocol Questionnaire, Consent Form Questionnaire, Recruitment Materials Questionnaire, Adverse Medical Events Questionnaire, Non-Medical Events Questionnaire and Continuing Review Questionnaire. It also includes an Initiate a Study Questionnaire for an optional, but suggested, implementation that takes advantage of the SDC Populate functionality. The Initiate a Study Questionnaire is intended to collect data for fields common to many of the forms, such as the Study Title, Study Protocol Number, Principal Investigator (PI) Name, PI Address, PI email, PI phone, sIRB site name, sIRB site address and the name and address for each relying site. The SDC Populate functionality can then use the data captured in the Initiate a Study Questionnaire to populate the corresponding fields in the suite of seven research study questionnaires.
 
 ### Scope
-The sIRB implementation guide deals with creation and exchange of standardized sIRB forms and form responses using FHIR questionnaire and questionnaire response resources. The questionnaires may have nested structures and embed skip/branching logics to display appropriate questions based on previous answers. Pre population of questionnaire forms and extraction of data elements/resources from questionnaire responses is out of scope for the current version of sIRB implementation guide; these functionalities can be incorporated into your specific implementation by referring to Structured Data Capture (SDC) implementation guide.
+The sIRB implementation guide deals with creation and exchange of standardized sIRB forms and form responses using FHIR questionnaire and questionnaire response resources. The questionnaires may have nested structures and embed skip/branching logics to display appropriate questions based on previous answers. Extraction of data elements/resources from questionnaire responses is out of scope for the current version of sIRB implementation guide. Extraction can be incorporated into your specific implementation by referring to [Structured Data Capture (SDC) implementation guide](http://hl7.org/fhir/uv/sdc/STU3/extraction.html).
 
 ### Assumptions
 The implementation guide assumes that the implementer has or will have a capability to send, receive, render and display FHIR questionnaires and questionnaire responses. Implementers may consider using free software such as National Library of Medicine's (NLM) FHIR Questionnaire rendering tool or incorporate these standards into a tool of their own. Exchange of resources can be achieved by any of the FHIR messaging mechanisms. Please refer to FHIR standard documentation, open source implementations of FHIR specifications, and FHIR Messaging for additional information. 
@@ -38,14 +39,14 @@ Some of the institutions may participate in a sIRB study only once every few yea
 Some of the sites may never implement a FHIR server, instead accessing the forms via web browser using the form viewers and FHIR servers maintained by the lead (sIRB) site. 
 
 
-A simple JavaScript-based website (sIRB on FHIR) was built as part of the project to demonstrate the ease of implementation.  The code is available at https://github.com/kirubel22/sIRB_Site_New and the website can be viewed at https://sirb-on-fhir.dev.cloud.duke.edu/.
+A simple JavaScript-based website (sIRB on FHIR) was built as part of the project to demonstrate the ease of implementation.  The code is available at https://github.com/kirubel22/sIRB_Site_New and the website can be viewed at [https://sirb-on-fhir.dev.cloud.duke.edu/](https://sirb-on-fhir.dev.cloud.duke.edu/).
 
-The Questionnaires were built with the free and open source NLM Form Builder available from https://lhcformbuilder.nlm.nih.gov/
+The Questionnaires were built with the free and open source NLM Form Builder available from [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/).
 
-The Questionnaires and Questionnaire Responses are rendered with the free and open source Lister Hill Center (LHC) Forms software available from http://lhncbc.github.io/lforms/.  The sIRB on FHIR software uses the JavaScript version of the LHC Forms widget.
+The Questionnaires and Questionnaire Responses are rendered with the free and open source Lister Hill Center (LHC) Forms software available from [http://lhncbc.github.io/lforms/](http://lhncbc.github.io/lforms/).  The sIRB on FHIR software uses the JavaScript version of the LHC Forms widget.
 
 
-All code sets are defined within the questionnaire form definitions.  No external valuesets are used. Where concepts in the forms aligned to concepts in existing Code Systems, the existing Code Systems were used to allow for interoperability with resources.  As the forms stabilize, the temporary codes defined in this implementation guide will be submitted to and migrate into other ‘official’ terminologies, such as SNOMED or HL7’s shared terminologies.
+All [code sets](codesystems_descriptions.html) are defined within the questionnaire form definitions.  No external valuesets are used. Where concepts in the forms aligned to concepts in existing Code Systems, the existing Code Systems were used to allow for interoperability with resources.  As the forms stabilize, the temporary codes defined in this implementation guide will be submitted to and migrate into other ‘official’ terminologies, such as SNOMED or HL7’s shared terminologies.
 
 
 As part of the proof of concept, the sIRB on FHIR software creates a ResearchStudy resource in the FHIR server for each research study.  A sample of a ResearchStudy resource created by the sIRB on FHIR software is [included](https://build.fhir.org/ig/HL7/fhir-sirb/ResearchStudy-ResearchStudy2858.html).  In the future, information from this resource can also be used to report study details to ClinicalTrials.gov.
@@ -57,12 +58,9 @@ The use of the ResearchStudy resource is completely optional.  The official reco
 ### Populate
 The intention is that the 7 core forms will all be populatable using the data collected in the Initiate a Study Questionnaire.  The populate functionality will save time in data entry, improve data consistency and reduce typing errors.
 
-At this time, we have the preliminary metadata in the example [Determination Questionnaire with pre-population](https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-POPULATE-sirb-determination-letter-questionnaire.html).  After it is more fully tested for SDC conformance to ensure it works properly, we will include the populate metadata in the remaining 6 questionnaires.
-
 If an institution is not using the populate functionality, then the Initiate a Study Questionnaire can be used to gather data to make a record of the research study in the ResearchStudy resource, to gather data to register the study with ClinicalTrials.gov  or it can be left out of the implementation altogether. 
 
-We rely on SDC for population purposes. We are using extensions from the SDC IG [CI build](https://build.fhir.org/ig/HL7/sdc ).  We utilized unpublished content for the answerExpression extension.  Due to this, there will be an error message in the sIRB IG until the SDC updates their published version.
-![Populate Process Flow](Populate Process Flow.jpg)
+![Populate Process Flow](Populate Process Flow.jpg){:height="600px"}
 
 ### Actors
 1. sIRB Form Repository: A form repository that stores standardized sIRB forms. IRB systems will request form templates from this repository.
@@ -70,7 +68,7 @@ We rely on SDC for population purposes. We are using extensions from the SDC IG 
 3. Relying IRB Application: An IRB software that receives and renders completed and approved forms by the central IRB.
 
 ### Forms
-![sIRB FHIR forms](sirb FHIR forms.jpg)
+![sIRB FHIR forms](sirb FHIR forms.jpg){:width="1200px"}
 
 
 Form (Link to Page) | Link to External Questionnaire Viewer
@@ -87,7 +85,7 @@ Form (Link to Page) | Link to External Questionnaire Viewer
 
 In the workflow outlined below, a Central IRB system requests one of the standardized sIRB questionnaires forms from the repository as a form of a questionnaire resource. The central IRB system receives the questionnaire response resource and renders/displays it to the Principal Investigator-PI (user). The PI enters and submits responses applicable to the selected standardized sIRB form. The submitted responses will be saved as questionnaire response resources on the Central IRB's FHIR server. The Central IRB will serve as a single source of truth for IRB Documents. The relying IRB system will send a RESTful request or implement a subscription resource to get most recent forms from the central IRB's FHIR server.
 
-![sIRB dataflow](sirb-dataflow.jpg)
+![sIRB dataflow](sirb-dataflow.jpg){:width="500px"}
 Number 1, The software, whether our sIRB on FHIR software or the commercial IRB software at the sIRB, requests the official sIRB Questionnaire from the FHIR File Server at the central repository responsible for maintaining the official FHIR Questionnaires.
 Number 2, The FHIR Questionnaire is transmitted to the sIRB via the Internet to the FHIR File server associated with the IRB sofrware.
 Number 3 The IRB software at the sIRB processes the information in the FHIR Questionnaire and creates the Data Collection Form.  This form is then presented to the user.
