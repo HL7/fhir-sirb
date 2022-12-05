@@ -1,9 +1,9 @@
 ### Usage of Codesystems from HL7 CodeSystems Registry in the sIRB Questionnaires
 <br>
-Where possible, the sIRB Questionnaires use the values in the HL7 CodeSystems Registry<a href="#fn-1"><sup>1</sup></a> at <a href="https://terminology.hl7.org/3.0.0/codesystems.html">https://terminology.hl7.org/3.0.0/codesystems.html</a>. For some questions, not all values in a given codesystem were applicable to the sIRB use case and only a subset of the values were included as answer options for those questions.
+Where possible, the [sIRB Questionnaires](artifacts.html#questionnaires) use the values in the HL7 CodeSystems Registry<a href="#fn-1"><sup>1</sup></a> at <a href="https://terminology.hl7.org/3.0.0/codesystems.html">https://terminology.hl7.org/3.0.0/codesystems.html</a>. For some questions, not all values in a given codesystem were applicable to the sIRB use case and only a subset of the values were included as answer options for those questions.
 <br>
 <br>
-The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html) that were used in the sIRB Questionnaires are:
+The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html) that were used in the [sIRB Questionnaires](artifacts.html#questionnaires) are:
 <br>
 <br>
 
@@ -27,7 +27,7 @@ The Codesystems from [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.
 <br>
 ### sIRB-specific Codesystem in the sIRB Questionnaires
 <br>
-In many cases, the values and concepts in the sIRB Questionnaires were not yet captured by an existing HL7 Codesystem or the existing Codesystems did not contain all of the values needed.  In these circumstances, we have created our own codes for the [sIRB Questionnaires](artifacts.html#sirb-questionnaires). We have included these in the siRB IG at [CodeSystem-temporarycodes.html](CodeSystem-temporarycodes.html), which is represented as a codeSystem resource.
+In many cases, the values and concepts in the [sIRB Questionnaires](artifacts.html#questionnaires) were not yet captured by an existing HL7 Codesystem or the existing Codesystems did not contain all of the values needed.  In these circumstances, we have created our own codes for the [sIRB Questionnaires](artifacts.html#questionnaires). We have included these in the siRB IG at [CodeSystem-temporarycodes.html](CodeSystem-temporarycodes.html), which is represented as a codeSystem resource.
 <br>
 <br>
 Because of the low maturity level of the sIRB IG, a temporary code list within the IG was used. As the sIRB Questionnaires mature, the codes within the sIRB Questionnaires will grow in maturity and we foresee that we will work with the HL7 terminology workgroup to have officially registered CodeSystems created and listed in the  [HL7 CodeSystems Registry](https://terminology.hl7.org/3.0.0/codesystems.html).
