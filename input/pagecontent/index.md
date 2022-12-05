@@ -7,8 +7,8 @@ Launching a multi-site clinical research study is frequently a long and involved
 The project is a proof of concept in hopes of moving toward a national standard for the content of the research study forms in widespread use.  As institutions trial these forms, it is expected that the authors will receive considerable feedback on the content of the forms.  
 
 The intent of this project is to use the [Structured Data Capture (SDC)](http://hl7.org/fhir/uv/sdc/STU3/) features of the Questionnaire resource so that the research study forms are standardized for exchange between the sIRB and the relying institutions, with a national standard being established so that all sIRB studies will use the same content with the same level of granularity in their forms.
-![Reviewing and Relying Sites](Cooperative Research Terminology.jpg){:width="90%"}
-
+![Reviewing and Relying Sites](Cooperative Research Terminology.jpg){:width="100%"}
+<br />
 Right now, research study forms in common use have large text boxes which are not easily integrated with the research study management software, as each text box contains too many different fields of data.  Our design of the forms is novel in that it separates concepts into separate questions, as individual questionnaire items.
 
 The end product of the project consists of the QuestionnaireResponses to be exchanged.  The forms are complete documents with a separate existence from any of the current FHIR resources. The form data elements should be considered in their entirety in the context of the complete document.  The data should be maintained in FHIR format for editing and transmission.
@@ -60,23 +60,24 @@ The intention is that the 7 core forms will all be populatable using the data co
 
 If an institution is not using the populate functionality, then the Initiate a Study Questionnaire can be used to gather data to make a record of the research study in the ResearchStudy resource, to gather data to register the study with ClinicalTrials.gov  or it can be left out of the implementation altogether. 
 
-![Populate Process Flow](Populate Process Flow.jpg){:width="97%"}
+![Populate Process Flow](Populate Process Flow.jpg){:width="100%"}
+<br />
 
 ### Actors
 1. sIRB Form Repository: A form repository that stores standardized sIRB forms. IRB systems will request form templates from this repository.
 2. Central IRB Application: An IRB software system that a PI will access to retrieve forms to complete and submit.
 3. Relying IRB Application: An IRB software that receives and renders completed and approved forms by the central IRB.
 
-### Forms
-![sIRB FHIR forms](sirb FHIR forms.jpg){:width="700px"}
+### Forms by Intended Use
+![sIRB FHIR forms](sirb FHIR forms.jpg){:width="100%"}
+<br />
 
 
-
-### List of Forms
+### Suite of Seven Forms for sIRB Studies and the Initiate a Study Form
  Form (Link to Page) | Link to External Questionnaire Viewer 
  --------------|-----------
-[Initiate Study](Questionnaire-sirb-initiate-study-questionnaire-populate.html)| [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-initiate-study-questionnaire-populate.html)
-[Protocol](Questionnaire-sirb-protocol-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=http://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-protocol-questionnaire-populate.html)
+[Initiate Study](Questionnaire-sirb-initiate-study-questionnaire-populate.html)| [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-initiate-study-questionnaire-populate.json)
+[Protocol](Questionnaire-sirb-protocol-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=http://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-protocol-questionnaire-populate.json)
 [Consent](Questionnaire-sirb-consent-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=)
 [Determination Letter](Questionnaire-sirb-determination-letter-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=)
 [Recruitment Materials](Questionnaire-sirb-recruitment-materials-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=)
@@ -88,7 +89,8 @@ If an institution is not using the populate functionality, then the Initiate a S
 
 In the workflow outlined below, a Central IRB system requests one of the standardized sIRB questionnaires forms from the repository as a form of a questionnaire resource. The central IRB system receives the questionnaire response resource and renders/displays it to the Principal Investigator-PI (user). The PI enters and submits responses applicable to the selected standardized sIRB form. The submitted responses will be saved as questionnaire response resources on the Central IRB's FHIR server. The Central IRB will serve as a single source of truth for IRB Documents. The relying IRB system will send a RESTful request or implement a subscription resource to get most recent forms from the central IRB's FHIR server.
 
-![sIRB dataflow](sirb-dataflow.jpg){:width="700px"}
+![sIRB dataflow](sirb-dataflow.jpg){:width="100%"}
+<br />
 Number 1, The software, whether our sIRB on FHIR software or the commercial IRB software at the sIRB, requests the official sIRB Questionnaire from the FHIR File Server at the central repository responsible for maintaining the official FHIR Questionnaires.
 Number 2, The FHIR Questionnaire is transmitted to the sIRB via the Internet to the FHIR File server associated with the IRB sofrware.
 Number 3 The IRB software at the sIRB processes the information in the FHIR Questionnaire and creates the Data Collection Form.  This form is then presented to the user.
