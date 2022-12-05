@@ -8,7 +8,7 @@ The sIRB IG assumes that the implementer is familiar with the [SDC Specification
 
 #### Support and rendering for Questionnaire and QuestionnaireResponse
 
-* To be compliant with this IG, a system SHALL support and render the eight [sIRB Questionnaires](artifacts.html#sirb-questionnaires).
+* To be compliant with this IG, a system SHALL support and render the eight [sIRB Questionnaires](artifacts.html#questionnaires).
 <br>
 <br>
 * A system also SHALL support and render the QuestionnaireResponses.
