@@ -238,10 +238,18 @@
 			{
 				"exampleBoolean" : false,
 				"reference" : {
-					"reference" : "CapabilityStatement/sIRB-CapabilityStatement"
+					"reference" : "CapabilityStatement/sIRB-CapabilityStatementClient"
 				},
-				"name" : "sIRB Capability Statement",
-				"description" : "This resource describes the required and desired behavior of software clients and FHIR servers for use and exchange of the Single Institutional Review Board (sIRB) forms."
+				"name" : "sIRB Client Capability Statement",
+				"description" : "This resource describes the required and desired behavior of software clients for use and exchange of the Single Institutional Review Board (sIRB) forms."
+			},
+			{
+				"exampleBoolean" : false,
+				"reference" : {
+					"reference" : "CapabilityStatement/sIRB-CapabilityStatementServer"
+				},
+				"name" : "sIRB Server Capability Statement",
+				"description" : "This resource describes the required and desired behavior of FHIR servers for use and exchange of the Single Institutional Review Board (sIRB) forms."
 			}
 		],
 		"page" : {
