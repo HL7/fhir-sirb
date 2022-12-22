@@ -51,7 +51,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
+									"valueCode" : "SHOULD"
 								}
 							],
 							"code" : "search-type"
@@ -90,7 +90,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
+									"valueCode" : "MAY"
 								}
 							],
 							"name" : "url",
@@ -101,7 +101,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
+									"valueCode" : "MAY"
 								}
 							],
 							"name" : "version",
@@ -112,7 +112,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
+									"valueCode" : "MAY"
 								}
 							],
 							"name" : "status",
@@ -134,7 +134,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
+									"valueCode" : "SHOULD"
 								}
 							],
 							"name" : "_id",
@@ -150,7 +150,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
+									"valueCode" : "SHOULD"
 								}
 							],
 							"code" : "search-type"
@@ -216,7 +216,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
+									"valueCode" : "SHOULD"
 								}
 							],
 							"name" : "questionnaire",
@@ -227,7 +227,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
+									"valueCode" : "MAY"
 								}
 							],
 							"name" : "author",
@@ -238,7 +238,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
+									"valueCode" : "MAY"
 								}
 							],
 							"name" : "_lastUpdated",
@@ -249,7 +249,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
+									"valueCode" : "SHOULD"
 								}
 							],
 							"name" : "_id",
@@ -282,6 +282,7 @@
 				},
 				{
 					"type" : "ResearchStudy",
+					"documentation" : "If an implementer wishes to optionally use the ResearchStudy resource to transmit or persist data, the R4 base definition of the ResearchStudy resource MAY be used.",
 					"interaction" : [
 						{
 							"extension" : [
@@ -375,6 +376,7 @@
 				},
 				{
 					"type" : "Provenance",
+					"documentation" : "If an implementer wishes to capture information about data creation, update, modification or deletion activities, the Provenance resource MAY be utilized. The Provenance resource can assist with data authenticity and assessing the entities involved with data being stored or transmitted via the system.",
 					"interaction" : [
 						{
 							"extension" : [
