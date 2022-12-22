@@ -77,39 +77,21 @@ If an institution is not using the populate functionality, then the Initiate a S
 <a id="renderedForms"></a>
 
 <br />
-
-
 | Form (Link to Page) | Link to External Questionnaire Viewer |
 | ---------------------------  |  ----------------------------------  |
 | [Initiate Study](Questionnaire-sirb-initiate-study-questionnaire-populate.html)| [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-initiate-study-questionnaire-populate.json)|
-| [Protocol](Questionnaire-sirb-protocol-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=http://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-protocol-questionnaire-populate.json) |
+| [Protocol](Questionnaire-sirb-protocol-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-protocol-questionnaire-populate.json) |
 | [Consent](Questionnaire-sirb-consent-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-consent-questionnaire-populate.json) |
 | [Determination Letter](Questionnaire-sirb-determination-letter-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-determination-letter-questionnaire-populate.json) |
 | [Recruitment Materials](Questionnaire-sirb-recruitment-materials-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-recruitment-materials-questionnaire-populate.json) |
 | [Medical Adverse Events](Questionnaire-sirb-adverse-event-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-adverse-event-questionnaire-populate.json) |
-| [Non Medical Adverse Events](Questionnaire-sirb-nonmedicalevent-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-continuing-review-questionnaire-populate.json) |
-| [Continuing Review](Questionnaire-sirb-continuing-review-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=Questionnaire-sirb-nonmedicalevent-questionnaire-populate.json) |
-
-
-<br />
-<br />
-| Form (Link to Page) | Link to External Questionnaire Viewer |
-| -----------------------  |  ----------------------------------------------  |
-| [Initiate Study](Questionnaire-sirb-initiate-study-questionnaire-populate.html)| [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-initiate-study-questionnaire-populate.json)|
-
-
-
+| [Non Medical Adverse Events](Questionnaire-sirb-nonmedicalevent-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-nonmedicalevent-questionnaire-populate.json) |
+| [Continuing Review](Questionnaire-sirb-continuing-review-questionnaire-populate.html) | [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=Questionnaire-sirb-continuing-review-questionnaire-populate.json) |
 
 <br />
 <br />
-| Form (Link to Page) | Link to External Questionnaire Viewer |
-|-------------------------|------------------------------------------|
-| [Initiate Study](Questionnaire-sirb-initiate-study-questionnaire-populate.html)| [Viewer](https://lhncbc.github.io/questionnaire-viewer/?q=https://build.fhir.org/ig/HL7/fhir-sirb/Questionnaire-sirb-initiate-study-questionnaire-populate.json)|
+Note: The [External Questionnaire Viewer](https://lhncbc.github.io/questionnaire-viewer/) is part of the  [LHC FHIR Tools](https://lhcforms.nlm.nih.gov/)  set of software and services created by National Library of Medicine, Lister Hill National Center for Biomedical Communications (LHNCBC).  For support requests, please open a support request at [https://github.com/lhncbc/lforms/issues](https://github.com/lhncbc/lforms/issues).
 
-<br />
-Note: The [External Questionnaire Viewer]() is part of the  [LHC FHIR Tools] https://lhcforms.nlm.nih.gov/  set of tools and services created by National Library of Medicine, Lister Hill National Center for Biomedical Communications (LHNCBC).  For support requests, please open a support request at https://github.com/lhncbc/lforms/issues.
-
-<br />
 <br />
 ### Workflow Overview
 
