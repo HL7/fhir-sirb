@@ -91,7 +91,8 @@ Some guidance is provided here:
 
 ### Other implementation recommendations
 
-The client software ([REST FHIR Questionnaire Management Software](conformance_and_functionality_expectations.html#clientSoftware))   ([REST FHIR Questionnaire Management Software](conformance/_and/_functionality/_expectations.html#clientSoftware)) will need to perform activities such as:
+The  [REST FHIR Questionnaire Management Software](conformance_and_functionality_expectations.html#clientSoftware)
+(client software) will need to perform activities such as:
 
 * Retrieving Questionnaires from the repository
 
@@ -114,77 +115,65 @@ It is beyond the scope of this IG to provide detailed instructions on how to imp
 <br>
 ### RESTFUL interactions
 
-Some of the [RESTFUL interactions](https://www.hl7.org/fhir/http.html) that implementers may find useful for the exchange of resources are listed here. Please consult the [General Considerations](https://www.hl7.org/fhir/http.html#general) section if there are questions about the meaning of any components in the interaction definitions.
+The [RESTful API page](https://www.hl7.org/fhir/http.html) of the FHIR specification provides detailed directions on usage of RESTful FHIR. Please consult the [General Considerations](https://www.hl7.org/fhir/http.html#general) section if there are questions about the meaning of any components in the interaction definitions.
+<br>
+Some of the http commands that implementers may find useful for the exchange of resources are listed below: 
 
-http commands:
-
+<br>
 * A Questionnaire can be retrieved either by read or search by _id
 ```
 GET [base]/Questionnaire/[id]
 ```
-
     or
-
 ```
 GET [base]/Questionnaire?_id=[id]
 ```
-
+<br>
 * A QuestionnaireResponse can be retrieved either by read or search by _id
-
 ```
 GET [base]/QuestionnaireResponse/[id]
 ```
-
     or
-
 ```
 GET [base]/QuestionnaireResponse?_id=[id]
 ```
-
+<br>
 * A completed form can be sent to the FHIR server using POST:
-
 ```
 POST [base]/QuestionnaireResponse
 ```
-
+<br>
 * If the optional ResearchStudy resource and/or the Provenance resource(s) are part of the implementation, they can be created using POST also:
-
 ```
 POST [base]/ResearchStudy
 ```
-
     and/or
-
 ```
 POST [base]/Provenance
 ```
-
+<br>
 * vread can help the implementer retrieve a specific version of a QuestionnaireResponse
-
 ```
 GET [base]/QuestionnaireResponse/[id]/_history/[vid]
 ```
-
-
-* As discussed at [https://www.hl7.org/fhir/questionnaireresponse.html#scope](https://www.hl7.org/fhir/questionnaireresponse.html#scope), QuestionnaireResponses are often retrieved with the cooresponding Questionnaire in order to display the questions, allow for editing of the answers or to validate answers against the Questionnaire definitions. The Questionnaire can be included as follows:
-
+<br>
+* As discussed at [https://www.hl7.org/fhir/questionnaireresponse.html#scope](https://www.hl7.org/fhir/questionnaireresponse.html#scope), QuestionnaireResponses are often retrieved with the cooresponding Questionnaire in order to display the questions, allow for editing of the answers or to validate answers against the Questionnaire definitions. The Questionnaire can be included when retrieving the QuestionnaireResponses as follows:
 ```
 GET [base]/QuestionnaireResponse?_id=[id]&_include=QuestionnaireResponse:questionnaire
 ```
-
+<br>
 * If the QuestionnaireResponse \_id is unknown, the \_id of the Questionnaire can be used as a search parameter:
-
 ```
 GET [base]/QuestionnaireResponse?questionnaire=[id]&_include=QuestionnaireResponse:questionnaire
 ```
-
-
+<br>
 * The update interaction is used to send an updated/edited QuestionnaireResponse to the FHIR server:
-
 ```
 PUT [base]/QuestionnaireResponse/[id]
 ```
-
-    <br>The sIRB IG allows for the [patch](https://www.hl7.org/fhir/http.html#patch) interaction, if implementers wish to use patch to only update a portion of a resource.
 <br>
-In addition to the search interactions discussed above, the [sIRB Server Capability Statement](CapabilityStatement-sIRB-CapabilityStatementServer.html) and the [sIRB Client Capability Statement] (CapabilityStatement-sIRB-CapabilityStatementClient.html) provide other possible search parameters. In the event that the data from the completed forms will be persisted outside of the FHIR server, many of the search functions listed in the [sIRB Server Capability Statement](CapabilityStatement-sIRB-CapabilityStatementServer.html) and the [sIRB Client Capability Statement] (CapabilityStatement-sIRB-CapabilityStatementClient.html) could foreseeably be handled by another system. Hence, many of the search parameters in the sirb Capability Statements are listed as "MAY" because some implementations will handle data searching in another system.
+    The sIRB IG allows for the [patch](https://www.hl7.org/fhir/http.html#patch) interaction, if implementers wish to use patch to only update a portion of a resource.
+<br>
+<br>
+### Search Parameters interactions
+The [sIRB Server Capability Statement](CapabilityStatement-sIRB-CapabilityStatementServer.html) and the [sIRB Client Capability Statement](CapabilityStatement-sIRB-CapabilityStatementClient.html) identify search parameters relevant to  sIRB implementers. In the event that the data from the completed forms will be persisted outside of the FHIR server, many of the search functions listed in the [sIRB Server Capability Statement](CapabilityStatement-sIRB-CapabilityStatementServer.html) and the [sIRB Client Capability Statement](CapabilityStatement-sIRB-CapabilityStatementClient.html) could foreseeably be handled by another system. Hence, many of the search parameters in the sirb Capability Statements are listed as "MAY" because some implementations will handle data searching in another system.
