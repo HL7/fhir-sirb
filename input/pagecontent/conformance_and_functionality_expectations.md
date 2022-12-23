@@ -8,18 +8,20 @@ In general, the lead principal investigator's institution will host the sIRB FHI
 <a id="clientSoftware"></a>
 **FHIR Questionnaire Management Software (could be the host institution’s research study system, another type of software or the sIRB on FHIR software)**
 The lead principal investigator's institution will also host a website or other sIRB software to render the blank forms and display the completed questionnaire responses for edits, review or saving to pdf. This is the client referenced in the [sIRB Client Capability Statement](CapabilityStatement-sIRB-CapabilityStatementClient.html).  The client REST FHIR Questionnaire Management Software could be the research study system of the lead principal investigator's institution, another type of software or the sIRB on FHIR software).
-<br>
-The single Institutional Review Board (sIRB) is either the ethics review board at the lead principal investigator's institution or a 3rd party ethics review board retained by the lead principal investigator's institution. The sIRB is listed here as relevant for business practices and for workflow processes, although it is not a separate actor because it acting on behalf of the lead principal investigator's institution. The sIRB will need access to the research study system, the sIRB on FHIR software or other sIRB software to review the completed forms.
+
 <br>
 <br>
 **Relying Sites (generally non-hosts)**<br>
 If the relying sites wish to interact with the forms without the requirement of having a FHIR server, then the host institution must provide [client software](#clientSoftware) or a website with the client software for viewing, completing and storing the forms on the host institution's FHIR server. If the relying sites wish to use a FHIR server, then the FHIR server SHOULD have the capabilities defined in the "[Host of the FHIR server (generally the lead principal investigator's institution)](#fhirServer)" section.
 <br>
 <br>
-In the future state, ideally, an organization can be identified to host the official versions of the forms. If an organization is found to host the forms, then the capabilities will be the same as [sIRB Server Capability Statement](CapabilityStatement-sIRB-CapabilityStatementServer.html), but using only the Questionnaire resource.
-<br>
-<br>
+*Notes about actors:*
+1. The single Institutional Review Board (sIRB) is either the ethics review board at the lead principal investigator's 
+institution or a 3rd party ethics review board retained by the lead principal investigator's institution. The sIRB is relevant for business practices and for workflow processes, although it is not a separate actor because it acting on behalf of the lead principal investigator's institution. The sIRB will need access to the [research study system, the sIRB on FHIR software or other sIRB software](#clientSoftware)(client software) to review the completed forms.
 
+2. In the future state, ideally, an organization can be identified to host the official versions of the forms. If an organization agrees to host the forms, then the FHIR server capabilities will be the same as [sIRB Server Capability Statement](CapabilityStatement-sIRB-CapabilityStatementServer.html), but using only the Questionnaire resource.
+<br>
+<br>
 ### Conformance Verbs
 
 The conformance verbs - SHALL, SHOULD, MAY - used in this implementation guide are defined in [FHIR Conformance Language](http://hl7.org/fhir/R4/conformance-rules.html#conflang0).

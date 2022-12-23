@@ -6,9 +6,11 @@ The sIRB IG assumes that the implementer is familiar with the [SDC Specification
 
 ### Questionnaire and QuestionnaireResponse resources
 
-#### Support and rendering for Questionnaire and QuestionnaireResponse
+#### Questionnaire and QuestionnaireResponse Expectations
 
-* To be compliant with this IG, a system SHALL render the eight [sIRB Questionnaires](artifacts.html#questionnaires) and display the completed QuestionnaireResponse for edits, review or saving to pdf.
+* To be compliant with this IG, a system SHALL render the eight [sIRB Questionnaires](artifacts.html#questionnaires) for completion, transmit the completed QuestionnaireResponses between the relying site(s) and the host (lead principal investigator's institution) and submit the completed QuestionnaireResponse for storage at the host(lead principal investigator's institution). 
+
+* To be compliant with this IG, a system SHALL allow editing of the completed QuestionnaireResponse and display the completed QuestionnaireResponse for review or saving to pdf.
 <br>
 <br>
 #### Extensions for the Questionnaire and QuestionnaireResponse
@@ -175,5 +177,5 @@ PUT [base]/QuestionnaireResponse/[id]
     The sIRB IG allows for the [patch](https://www.hl7.org/fhir/http.html#patch) interaction, if implementers wish to use patch to only update a portion of a resource.
 <br>
 <br>
-### Search Parameters interactions
+### Search Parameters
 The [sIRB Server Capability Statement](CapabilityStatement-sIRB-CapabilityStatementServer.html) and the [sIRB Client Capability Statement](CapabilityStatement-sIRB-CapabilityStatementClient.html) identify search parameters relevant to  sIRB implementers. In the event that the data from the completed forms will be persisted outside of the FHIR server, many of the search functions listed in the [sIRB Server Capability Statement](CapabilityStatement-sIRB-CapabilityStatementServer.html) and the [sIRB Client Capability Statement](CapabilityStatement-sIRB-CapabilityStatementClient.html) could foreseeably be handled by another system. Hence, many of the search parameters in the sirb Capability Statements are listed as "MAY" because some implementations will handle data searching in another system.
