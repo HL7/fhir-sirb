@@ -74,7 +74,7 @@ If an institution is not using the populate functionality, then the Initiate a S
 
 
 ### Suite of Seven Forms for sIRB Studies and the Initiate a Study Form
-
+<a id="renderedForms"></a>
 <br />
 
 | Form (Link to Page) | Link to External Questionnaire Viewer |
@@ -91,8 +91,6 @@ If an institution is not using the populate functionality, then the Initiate a S
 <br />
 <br />
 
-<a id="renderedForms"></a>
-<br />
 Note: The [External Questionnaire Viewer](https://lhncbc.github.io/questionnaire-viewer/) is part of the  [LHC FHIR Tools](https://lhcforms.nlm.nih.gov/)  set of software and services created by National Library of Medicine, Lister Hill National Center for Biomedical Communications (LHNCBC).  For support requests, please open a support request at [https://github.com/lhncbc/lforms/issues](https://github.com/lhncbc/lforms/issues).
 
 <br />
