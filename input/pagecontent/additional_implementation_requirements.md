@@ -122,13 +122,9 @@ The [RESTful API page](https://www.hl7.org/fhir/http.html) of the FHIR specifica
 Some of the http commands that implementers may find useful for the exchange of resources are listed below: 
 
 <br>
-* A Questionnaire can be retrieved either by read or search by _id
+* A Questionnaire can be retrieved using search by url
 ```
-GET [base]/Questionnaire/[id]
-```
-    or
-```
-GET [base]/Questionnaire?_id=[id]
+GET [base]/Questionnaire?url=[url]
 ```
 <br>
 * A QuestionnaireResponse can be retrieved either by read or search by _id
@@ -138,6 +134,26 @@ GET [base]/QuestionnaireResponse/[id]
     or
 ```
 GET [base]/QuestionnaireResponse?_id=[id]
+```
+<br>
+* The vread interaction can help the implementer retrieve a specific version of a QuestionnaireResponse. This will support the use case in which a researcher decides to revert back to a previous version of a form when a study's forms have been prepared in multiple iterations before final approval. For instance, a researcher may initially prepare the forms as a solo lead principal investigator then subsequently have interest from a co-investigator. A new version of the forms may be prepared using input from the co-investigator, also listing the co-investigator's contact information throughout the forms. If the prospective co-investigator later decides not to participate in conducting the study, then the original researcher would want to revert back to the original forms instead of editing the latest versions to remove all of the input and references to the co-investigator who will now not be involved in the study.
+```
+GET [base]/QuestionnaireResponse/[id]/_history/[vid]
+```
+<br>
+* As discussed at [https://www.hl7.org/fhir/questionnaireresponse.html#scope](https://www.hl7.org/fhir/questionnaireresponse.html#scope), QuestionnaireResponses are often retrieved with the cooresponding Questionnaire in order to display the questions, allow for editing of the answers or to validate answers against the Questionnaire definitions. The Questionnaire can be included when retrieving the QuestionnaireResponses as follows:
+```
+GET [base]/QuestionnaireResponse?_id=[id]&_include=QuestionnaireResponse:questionnaire
+```
+<br>
+* If the QuestionnaireResponse \_id is unknown, the Questionnaire to which the QuestionnaireResponse applies can be used as a search parameter:
+```
+GET [base]/QuestionnaireResponse?questionnaire=[questionnaire]&_include=QuestionnaireResponse:questionnaire
+```
+<br>
+* A search can return all of the QuestionnaireResponses for a specified Questionnaire limited to a given status:
+```
+GET [base]/QuestionnaireResponse?questionnaire=[questionnaire]&status=[status]&_include=QuestionnaireResponse:questionnaire
 ```
 <br>
 * A completed form can be sent to the FHIR server using POST:
@@ -154,27 +170,13 @@ POST [base]/ResearchStudy
 POST [base]/Provenance
 ```
 <br>
-* vread can help the implementer retrieve a specific version of a QuestionnaireResponse
-```
-GET [base]/QuestionnaireResponse/[id]/_history/[vid]
-```
-<br>
-* As discussed at [https://www.hl7.org/fhir/questionnaireresponse.html#scope](https://www.hl7.org/fhir/questionnaireresponse.html#scope), QuestionnaireResponses are often retrieved with the cooresponding Questionnaire in order to display the questions, allow for editing of the answers or to validate answers against the Questionnaire definitions. The Questionnaire can be included when retrieving the QuestionnaireResponses as follows:
-```
-GET [base]/QuestionnaireResponse?_id=[id]&_include=QuestionnaireResponse:questionnaire
-```
-<br>
-* If the QuestionnaireResponse \_id is unknown, the \_id of the Questionnaire can be used as a search parameter:
-```
-GET [base]/QuestionnaireResponse?questionnaire=[id]&_include=QuestionnaireResponse:questionnaire
-```
-<br>
+
 * The update interaction is used to send an updated/edited QuestionnaireResponse to the FHIR server:
 ```
 PUT [base]/QuestionnaireResponse/[id]
 ```
 <br>
-    The sIRB IG allows for the [patch](https://www.hl7.org/fhir/http.html#patch) interaction, if implementers wish to use patch to only update a portion of a resource.
+    The sIRB IG allows for the [patch](https://www.hl7.org/fhir/http.html#patch) interaction, if implementers wish to use patch to only update a portion of a resource. This was primarily designed to allow partial updates in the event of very large protocol forms with many attachments, which could slow down the update interaction. The use of the patch interaction is entirely optional and is not expected to be widely implemented. If used, the patch interaction uses the content type of application/json-patch+json.
 <br>
 <br>
 ### Search Parameters
