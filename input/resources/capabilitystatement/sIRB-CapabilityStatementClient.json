@@ -35,7 +35,7 @@
 	"kind" : "requirements",
 	"fhirVersion" : "4.0.1",
 	"format" : [ "xml", "json" ],
-	"patchFormat" : [ "application/xml-patch+xml", "application/json-patch+json" ],
+	"patchFormat" : [ "application/json-patch+json" ],
 	"rest" : [
 		{
 			"mode" : "client",
@@ -69,28 +69,18 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
-								}
-							],
-							"code" : "vread"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
 									"valueCode" : "MAY"
 								}
 							],
 							"code" : "history-instance"
 						}
 					],
-					"versioning" : "versioned-update",
 					"searchParam" : [
 						{
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
+									"valueCode" : "SHALL"
 								}
 							],
 							"name" : "url",
@@ -101,7 +91,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
+									"valueCode" : "SHOULD"
 								}
 							],
 							"name" : "version",
@@ -112,7 +102,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
+									"valueCode" : "SHOULD"
 								}
 							],
 							"name" : "status",
@@ -123,7 +113,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
+									"valueCode" : "SHOULD"
 								}
 							],
 							"name" : "_lastUpdated",
@@ -134,7 +124,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHOULD"
+									"valueCode" : "MAY"
 								}
 							],
 							"name" : "_id",
@@ -211,12 +201,14 @@
 						}
 					],
 					"versioning" : "versioned-update",
+					"readHistory" : true,
+					"searchInclude" : [ "QuestionnaireResponse.questionnaire" ],
 					"searchParam" : [
 						{
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHOULD"
+									"valueCode" : "SHALL"
 								}
 							],
 							"name" : "questionnaire",
@@ -227,7 +219,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
+									"valueCode" : "SHALL"
 								}
 							],
 							"name" : "author",
@@ -238,7 +230,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
+									"valueCode" : "SHALL"
 								}
 							],
 							"name" : "_lastUpdated",
@@ -249,7 +241,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHOULD"
+									"valueCode" : "MAY"
 								}
 							],
 							"name" : "_id",
@@ -260,7 +252,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
+									"valueCode" : "SHOULD"
 								}
 							],
 							"name" : "identifier",
@@ -271,7 +263,7 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
+									"valueCode" : "SHALL"
 								}
 							],
 							"name" : "status",
@@ -371,6 +363,39 @@
 							"name" : "_id",
 							"definition" : "http://hl7.org/fhir/SearchParameter/Resource-id",
 							"type" : "token"
+						},
+						{
+							"extension" : [
+								{
+									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+									"valueCode" : "MAY"
+								}
+							],
+							"name" : "title",
+							"definition" : "http://hl7.org/fhir/SearchParameter/ResearchStudy-title",
+							"type" : "string"
+						},
+						{
+							"extension" : [
+								{
+									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+									"valueCode" : "MAY"
+								}
+							],
+							"name" : "keyword",
+							"definition" : "http://hl7.org/fhir/SearchParameter/ResearchStudy-keyword",
+							"type" : "token"
+						},
+						{
+							"extension" : [
+								{
+									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+									"valueCode" : "SHOULD"
+								}
+							],
+							"name" : "protocol",
+							"definition" : "http://hl7.org/fhir/SearchParameter/ResearchStudy-protocol",
+							"type" : "reference"
 						}
 					]
 				},
@@ -450,12 +475,23 @@
 							"extension" : [
 								{
 									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
+									"valueCode" : "SHOULD"
 								}
 							],
 							"name" : "target",
 							"definition" : "http://hl7.org/fhir/SearchParameter/Provenance-target",
 							"type" : "reference"
+						},
+						{
+							"extension" : [
+								{
+									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+									"valueCode" : "SHOULD"
+								}
+							],
+							"name" : "when",
+							"definition" : "http://hl7.org/fhir/SearchParameter/Provenance-when",
+							"type" : "date"
 						}
 					]
 				}
