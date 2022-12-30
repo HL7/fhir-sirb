@@ -1,10 +1,10 @@
 {
 	"resourceType" : "CapabilityStatement",
-	"id" : "sIRB-CapabilityStatementClient",
-	"url" : "http://hl7.org/fhir/us/sirb/CapabilityStatement/sIRB-CapabilityStatementClient",
+	"id" : "sIRB-CapabilityStatementServer",
+	"url" : "http://hl7.org/fhir/us/sirb/CapabilityStatement/sIRB-CapabilityStatementServer",
 	"version" : "1.1.0",
-	"name" : "CapabilityStatementClient_sIRB",
-	"title" : "sIRB Client Capability Statement",
+	"name" : "CapabilityStatementServer_sIRB",
+	"title" : "sIRB Server Capability Statement",
 	"status" : "draft",
 	"date" : "2022-10",
 	"publisher" : "HL7 International - BR&R Work Group",
@@ -31,15 +31,15 @@
 			"text" : "United States of America"
 		}
 	],
-	"description" : "This resource describes the required and desired behavior of software clients for use and exchange of the single Institutional Review Board (sIRB) forms.",
+	"description" : "This resource describes the required and desired behavior of FHIR servers for use and exchange of the single Institutional Review Board (sIRB) forms.",
 	"kind" : "requirements",
 	"fhirVersion" : "4.0.1",
 	"format" : [ "xml", "json" ],
 	"patchFormat" : [ "application/json-patch+json" ],
 	"rest" : [
 		{
-			"mode" : "client",
-			"documentation" : "Requirements for the REST FHIR Questionnaire Management Software (could be the research study system of the lead principal investigator's institution, another type of software or the sIRB on FHIR software).",
+			"mode" : "server",
+			"documentation" : "Requirements for the sIRB FHIR Server that stores the Questionnaires and the QuestionnaireResponses. The FHIR Server is generally, but not always, hosted by the lead principal investigator's institution.",
 			"security" : {
 				"description" : "Review the security recommendations on the FHIR Security page at http://hl7.org/fhir/R4/security.html"
 			},
@@ -73,8 +73,27 @@
 								}
 							],
 							"code" : "history-instance"
+						},
+						{
+							"extension" : [
+								{
+									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+									"valueCode" : "MAY"
+								}
+							],
+							"code" : "create"
+						},
+						{
+							"extension" : [
+								{
+									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+									"valueCode" : "MAY"
+								}
+							],
+							"code" : "update"
 						}
 					],
+					"versioning" : "versioned-update",
 					"searchParam" : [
 						{
 							"extension" : [
