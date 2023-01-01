@@ -1,509 +1,400 @@
 {
-	"resourceType" : "CapabilityStatement",
-	"id" : "sIRB-CapabilityStatementServer",
-	"url" : "http://hl7.org/fhir/us/sirb/CapabilityStatement/sIRB-CapabilityStatementServer",
-	"version" : "1.1.0",
-	"name" : "CapabilityStatementServer_sIRB",
-	"title" : "sIRB Server Capability Statement",
-	"status" : "draft",
-	"date" : "2022-10",
-	"publisher" : "HL7 International - BR&R Work Group",
-	"contact" : [
-		{
-			"name" : "HL7 International - Biomedical Research and Regulation",
-			"telecom" : [
-				{
-					"system" : "url",
-					"value" : "http://www.hl7.org/Special/committees/rcrim"
-				}
-			]
-		}
-	],
-	"jurisdiction" : [
-		{
-			"coding" : [
-				{
-					"system" : "urn:iso:std:iso:3166",
-					"code" : "US",
-					"display" : "United States of America"
-				}
-			],
-			"text" : "United States of America"
-		}
-	],
-	"description" : "This resource describes the required and desired behavior of FHIR servers for use and exchange of the single Institutional Review Board (sIRB) forms.",
-	"kind" : "requirements",
-	"fhirVersion" : "4.0.1",
-	"format" : [ "xml", "json" ],
-	"patchFormat" : [ "application/json-patch+json" ],
-	"rest" : [
-		{
-			"mode" : "server",
-			"documentation" : "Requirements for the sIRB FHIR Server that stores the Questionnaires and the QuestionnaireResponses. The FHIR Server is generally, but not always, hosted by the lead principal investigator's institution.",
-			"security" : {
-				"description" : "Review the security recommendations on the FHIR Security page at http://hl7.org/fhir/R4/security.html"
-			},
-			"resource" : [
-				{
-					"type" : "Questionnaire",
-					"interaction" : [
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHOULD"
-								}
-							],
-							"code" : "search-type"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
-								}
-							],
-							"code" : "read"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "history-instance"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "create"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "update"
-						}
-					],
-					"versioning" : "versioned-update",
-					"searchParam" : [
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
-								}
-							],
-							"name" : "url",
-							"definition" : "http://hl7.org/fhir/SearchParameter/Questionnaire-url",
-							"type" : "uri"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHOULD"
-								}
-							],
-							"name" : "version",
-							"definition" : "http://hl7.org/fhir/SearchParameter/Questionnaire-version",
-							"type" : "token"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHOULD"
-								}
-							],
-							"name" : "status",
-							"definition" : "http://hl7.org/fhir/SearchParameter/Questionnaire-status",
-							"type" : "token"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHOULD"
-								}
-							],
-							"name" : "_lastUpdated",
-							"definition" : "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
-							"type" : "date"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"name" : "_id",
-							"definition" : "http://hl7.org/fhir/SearchParameter/Resource-id",
-							"type" : "token"
-						}
-					]
-				},
-				{
-					"type" : "QuestionnaireResponse",
-					"interaction" : [
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHOULD"
-								}
-							],
-							"code" : "search-type"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
-								}
-							],
-							"code" : "read"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
-								}
-							],
-							"code" : "vread"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "history-instance"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
-								}
-							],
-							"code" : "create"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
-								}
-							],
-							"code" : "update"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "patch"
-						}
-					],
-					"versioning" : "versioned-update",
-					"readHistory" : true,
-					"searchInclude" : [ "QuestionnaireResponse.questionnaire" ],
-					"searchParam" : [
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
-								}
-							],
-							"name" : "questionnaire",
-							"definition" : "http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-questionnaire",
-							"type" : "reference"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
-								}
-							],
-							"name" : "author",
-							"definition" : "http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-author",
-							"type" : "reference"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
-								}
-							],
-							"name" : "_lastUpdated",
-							"definition" : "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
-							"type" : "date"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"name" : "_id",
-							"definition" : "http://hl7.org/fhir/SearchParameter/Resource-id",
-							"type" : "token"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHOULD"
-								}
-							],
-							"name" : "identifier",
-							"definition" : "http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-identifier",
-							"type" : "token"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHALL"
-								}
-							],
-							"name" : "status",
-							"definition" : "http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-status",
-							"type" : "token"
-						}
-					]
-				},
-				{
-					"type" : "ResearchStudy",
-					"documentation" : "If an implementer wishes to optionally use the ResearchStudy resource to transmit or persist data, the R4 base definition of the ResearchStudy resource MAY be used.",
-					"interaction" : [
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "search-type"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "read"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "vread"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "history-instance"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "create"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "update"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "patch"
-						}
-					],
-					"versioning" : "versioned-update",
-					"searchParam" : [
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"name" : "identifier",
-							"definition" : "http://hl7.org/fhir/SearchParameter/ResearchStudy-identifier",
-							"type" : "token"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"name" : "_id",
-							"definition" : "http://hl7.org/fhir/SearchParameter/Resource-id",
-							"type" : "token"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"name" : "title",
-							"definition" : "http://hl7.org/fhir/SearchParameter/ResearchStudy-title",
-							"type" : "string"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"name" : "keyword",
-							"definition" : "http://hl7.org/fhir/SearchParameter/ResearchStudy-keyword",
-							"type" : "token"
-						}
-					]
-				},
-				{
-					"type" : "Provenance",
-					"documentation" : "If an implementer wishes to capture information about data creation, update, modification or deletion activities, the Provenance resource MAY be utilized. The Provenance resource can assist with data authenticity and assessing the entities involved with data being stored or transmitted via the system.",
-					"interaction" : [
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "search-type"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "read"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "vread"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "history-instance"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "create"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"code" : "update"
-						}
-					],
-					"versioning" : "versioned-update",
-					"searchParam" : [
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "MAY"
-								}
-							],
-							"name" : "_id",
-							"definition" : "http://hl7.org/fhir/SearchParameter/Resource-id",
-							"type" : "token"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHOULD"
-								}
-							],
-							"name" : "target",
-							"definition" : "http://hl7.org/fhir/SearchParameter/Provenance-target",
-							"type" : "reference"
-						},
-						{
-							"extension" : [
-								{
-									"url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-									"valueCode" : "SHOULD"
-								}
-							],
-							"name" : "when",
-							"definition" : "http://hl7.org/fhir/SearchParameter/Provenance-when",
-							"type" : "date"
-						}
-					]
-				}
-			]
-		}
-	]
+  "resourceType" : "CapabilityStatement",
+  "id" : "sIRB-CapabilityStatementServer",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <h2>sIRB Server Capability Statement</h2>\n      <p>(Requirements Definition Capability Statement)</p>\n      <p>Canonical URL: http://hl7.org/fhir/us/sirb/CapabilityStatement/sIRB-CapabilityStatementServer Version: 0.1.0 Published: 2022-10 (draft)</p>\n      <p>Published by: <b>HL7 International - BR&amp;R Work Group</b></p>\n      <p>This resource describes the required and desired behavior of FHIR servers for use and exchange of the single Institutional Review Board (sIRB) forms.</p>\n      <h2>General</h2>\n      <div class=\"table-wrapper\">\n        <table class=\"grid\">\n          <tbody>\n            <tr>\n              <th>FHIR Version:</th>\n              <td>4.0.1</td>\n            </tr>\n            <tr>\n              <th>Supported formats:</th>\n              <td>xml, json</td>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n      <h2>REST server behavior</h2>\n      <p>Requirements for the sIRB FHIR Server that stores the Questionnaires and the QuestionnaireResponses. The FHIR Server is generally, but not always, hosted by the lead principal investigator's institution.</p>\n      <p>\n        <b>Security:</b>\n      </p>\n      <p>Review the security recommendations on the FHIR Security page at http://hl7.org/fhir/R4/security.html</p>\n      <h3>Resource summary</h3>\n      <div class=\"table-wrapper\">\n        <table class=\"grid\">\n          <thead>\n            <tr>\n              <th>Resource</th>\n              <th>Search</th>\n              <th>Read</th>\n              <th>Read Version</th>\n              <th>Instance History</th>\n              <th>Resource History</th>\n              <th>Create</th>\n              <th>Update</th>\n              <th>Delete</th>\n              <th>Operations</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <th>Questionnaire</th>\n              <td>SHOULD</td>\n              <td>SHALL</td>\n              <td/>\n              <td>MAY</td>\n              <td/>\n              <td>MAY</td>\n              <td>MAY</td>\n              <td/>\n              <td/>\n            </tr>\n            <tr>\n              <th>QuestionnaireResponse</th>\n              <td>SHOULD</td>\n              <td>SHALL</td>\n              <td>SHALL</td>\n              <td>MAY</td>\n              <td/>\n              <td>SHALL</td>\n              <td>SHALL</td>\n              <td/>\n              <td/>\n            </tr>\n            <tr>\n              <th>ResearchStudy</th>\n              <td>MAY</td>\n              <td>MAY</td>\n              <td>MAY</td>\n              <td>MAY</td>\n              <td/>\n              <td>MAY</td>\n              <td>MAY</td>\n              <td/>\n              <td/>\n            </tr>\n            <tr>\n              <th>Provenance</th>\n              <td>MAY</td>\n              <td>MAY</td>\n              <td>MAY</td>\n              <td>MAY</td>\n              <td/>\n              <td>MAY</td>\n              <td>MAY</td>\n              <td/>\n              <td/>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n      <br/>\n      <br/>\n      <h3>\n        <a href=\"http://hl7.org/fhir/R4/questionnaire.html\">Questionnaire</a>\n      </h3>\n      <h4>Behavior</h4>\n      <p>Versioning support: versioned-update</p>\n      <h4>Interactions</h4>\n      <div class=\"table-wrapper\">\n        <table class=\"list\">\n          <thead>\n            <tr>\n              <th>Name</th>\n              <th>Conformance</th>\n              <th>Description</th>\n            </tr>\n          </thead>\n          <tbody/>\n        </table>\n      </div>\n      <h4>Search</h4>\n      <div class=\"table-wrapper\">\n        <table class=\"list\">\n          <thead>\n            <tr>\n              <th>Parameter</th>\n              <th>Conformance</th>\n              <th>Type</th>\n              <th>Definition &amp; Chaining</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <th>url</th>\n              <td>SHALL</td>\n              <td>uri</td>\n              <td/>\n            </tr>\n            <tr>\n              <th>version</th>\n              <td>SHOULD</td>\n              <td>token</td>\n              <td/>\n            </tr>\n            <tr>\n              <th>status</th>\n              <td>SHOULD</td>\n              <td>token</td>\n              <td/>\n            </tr>\n            <tr>\n              <th>_lastUpdated</th>\n              <td>SHOULD</td>\n              <td>date</td>\n              <td/>\n            </tr>\n            <tr>\n              <th>_id</th>\n              <td>MAY</td>\n              <td>token</td>\n              <td/>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n      <br/>\n      <br/>\n      <h3>\n        <a href=\"http://hl7.org/fhir/R4/questionnaireresponse.html\">QuestionnaireResponse</a>\n      </h3>\n      <h4>Behavior</h4>\n      <p>Versioning support: versioned-update</p>\n      <h4>Interactions</h4>\n      <div class=\"table-wrapper\">\n        <table class=\"list\">\n          <thead>\n            <tr>\n              <th>Name</th>\n              <th>Conformance</th>\n              <th>Description</th>\n            </tr>\n          </thead>\n          <tbody/>\n        </table>\n      </div>\n      <h4>Search</h4>\n      <p>Supported Includes: QuestionnaireResponse.questionnaire</p>\n      <div class=\"table-wrapper\">\n        <table class=\"list\">\n          <thead>\n            <tr>\n              <th>Parameter</th>\n              <th>Conformance</th>\n              <th>Type</th>\n              <th>Definition &amp; Chaining</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <th>questionnaire</th>\n              <td>SHALL</td>\n              <td>reference</td>\n              <td/>\n            </tr>\n            <tr>\n              <th>author</th>\n              <td>SHALL</td>\n              <td>reference</td>\n              <td/>\n            </tr>\n            <tr>\n              <th>_lastUpdated</th>\n              <td>SHALL</td>\n              <td>date</td>\n              <td/>\n            </tr>\n            <tr>\n              <th>_id</th>\n              <td>MAY</td>\n              <td>token</td>\n              <td/>\n            </tr>\n            <tr>\n              <th>identifier</th>\n              <td>SHOULD</td>\n              <td>token</td>\n              <td/>\n            </tr>\n            <tr>\n              <th>status</th>\n              <td>SHALL</td>\n              <td>token</td>\n              <td/>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n      <br/>\n      <br/>\n      <h3>\n        <a href=\"http://hl7.org/fhir/R4/researchstudy.html\">ResearchStudy</a>\n      </h3>\n      <h4>Behavior</h4>\n      <p>Versioning support: versioned-update</p>\n      <h4>Interactions</h4>\n      <div class=\"table-wrapper\">\n        <table class=\"list\">\n          <thead>\n            <tr>\n              <th>Name</th>\n              <th>Conformance</th>\n              <th>Description</th>\n            </tr>\n          </thead>\n          <tbody/>\n        </table>\n      </div>\n      <h4>Search</h4>\n      <div class=\"table-wrapper\">\n        <table class=\"list\">\n          <thead>\n            <tr>\n              <th>Parameter</th>\n              <th>Conformance</th>\n              <th>Type</th>\n              <th>Definition &amp; Chaining</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <th>identifier</th>\n              <td>MAY</td>\n              <td>token</td>\n              <td/>\n            </tr>\n            <tr>\n              <th>_id</th>\n              <td>MAY</td>\n              <td>token</td>\n              <td/>\n            </tr>\n            <tr>\n              <th>title</th>\n              <td>MAY</td>\n              <td>string</td>\n              <td/>\n            </tr>\n            <tr>\n              <th>keyword</th>\n              <td>MAY</td>\n              <td>token</td>\n              <td/>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n      <br/>\n      <br/>\n      <h3>\n        <a href=\"http://hl7.org/fhir/R4/provenance.html\">Provenance</a>\n      </h3>\n      <h4>Behavior</h4>\n      <p>Versioning support: versioned-update</p>\n      <h4>Interactions</h4>\n      <div class=\"table-wrapper\">\n        <table class=\"list\">\n          <thead>\n            <tr>\n              <th>Name</th>\n              <th>Conformance</th>\n              <th>Description</th>\n            </tr>\n          </thead>\n          <tbody/>\n        </table>\n      </div>\n      <h4>Search</h4>\n      <div class=\"table-wrapper\">\n        <table class=\"list\">\n          <thead>\n            <tr>\n              <th>Parameter</th>\n              <th>Conformance</th>\n              <th>Type</th>\n              <th>Definition &amp; Chaining</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <th>_id</th>\n              <td>MAY</td>\n              <td>token</td>\n              <td/>\n            </tr>\n            <tr>\n              <th>target</th>\n              <td>SHOULD</td>\n              <td>reference</td>\n              <td/>\n            </tr>\n            <tr>\n              <th>when</th>\n              <td>SHOULD</td>\n              <td>date</td>\n              <td/>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n    </div>"
+  },
+  "url" : "http://hl7.org/fhir/us/sirb/CapabilityStatement/sIRB-CapabilityStatementServer",
+  "version" : "0.1.0",
+  "name" : "CapabilityStatementServer_sIRB",
+  "title" : "sIRB Server Capability Statement",
+  "status" : "draft",
+  "date" : "2022-10",
+  "publisher" : "HL7 International - BR&R Work Group",
+  "contact" : [{
+    "name" : "HL7 International - Biomedical Research and Regulation",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/rcrim"
+    }]
+  }],
+  "description" : "This resource describes the required and desired behavior of FHIR servers for use and exchange of the single Institutional Review Board (sIRB) forms.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US",
+      "display" : "United States of America"
+    }],
+    "text" : "United States of America"
+  }],
+  "kind" : "requirements",
+  "fhirVersion" : "4.0.1",
+  "format" : ["xml",
+  "json"],
+  "patchFormat" : ["application/json-patch+json"],
+  "rest" : [{
+    "mode" : "server",
+    "documentation" : "Requirements for the sIRB FHIR Server that stores the Questionnaires and the QuestionnaireResponses. The FHIR Server is generally, but not always, hosted by the lead principal investigator's institution.",
+    "security" : {
+      "description" : "Review the security recommendations on the FHIR Security page at http://hl7.org/fhir/R4/security.html"
+    },
+    "resource" : [{
+      "type" : "Questionnaire",
+      "interaction" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "code" : "search-type"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHALL"
+        }],
+        "code" : "read"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "history-instance"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "create"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "update"
+      }],
+      "versioning" : "versioned-update",
+      "searchParam" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHALL"
+        }],
+        "name" : "url",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Questionnaire-url",
+        "type" : "uri"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "name" : "version",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Questionnaire-version",
+        "type" : "token"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "name" : "status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Questionnaire-status",
+        "type" : "token"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "name" : "_lastUpdated",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
+        "type" : "date"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "name" : "_id",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-id",
+        "type" : "token"
+      }]
+    },
+    {
+      "type" : "QuestionnaireResponse",
+      "interaction" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "code" : "search-type"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHALL"
+        }],
+        "code" : "read"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHALL"
+        }],
+        "code" : "vread"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "history-instance"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHALL"
+        }],
+        "code" : "create"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHALL"
+        }],
+        "code" : "update"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "patch"
+      }],
+      "versioning" : "versioned-update",
+      "readHistory" : true,
+      "searchInclude" : ["QuestionnaireResponse.questionnaire"],
+      "searchParam" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHALL"
+        }],
+        "name" : "questionnaire",
+        "definition" : "http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-questionnaire",
+        "type" : "reference"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHALL"
+        }],
+        "name" : "author",
+        "definition" : "http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-author",
+        "type" : "reference"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHALL"
+        }],
+        "name" : "_lastUpdated",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
+        "type" : "date"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "name" : "_id",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-id",
+        "type" : "token"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-identifier",
+        "type" : "token"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHALL"
+        }],
+        "name" : "status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-status",
+        "type" : "token"
+      }]
+    },
+    {
+      "type" : "ResearchStudy",
+      "documentation" : "If an implementer wishes to optionally use the ResearchStudy resource to transmit or persist data, the R4 base definition of the ResearchStudy resource MAY be used.",
+      "interaction" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "search-type"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "read"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "vread"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "history-instance"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "create"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "update"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "patch"
+      }],
+      "versioning" : "versioned-update",
+      "searchParam" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/ResearchStudy-identifier",
+        "type" : "token"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "name" : "_id",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-id",
+        "type" : "token"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "name" : "title",
+        "definition" : "http://hl7.org/fhir/SearchParameter/ResearchStudy-title",
+        "type" : "string"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "name" : "keyword",
+        "definition" : "http://hl7.org/fhir/SearchParameter/ResearchStudy-keyword",
+        "type" : "token"
+      }]
+    },
+    {
+      "type" : "Provenance",
+      "documentation" : "If an implementer wishes to capture information about data creation, update, modification or deletion activities, the Provenance resource MAY be utilized. The Provenance resource can assist with data authenticity and assessing the entities involved with data being stored or transmitted via the system.",
+      "interaction" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "search-type"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "read"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "vread"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "history-instance"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "create"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "code" : "update"
+      }],
+      "versioning" : "versioned-update",
+      "searchParam" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "MAY"
+        }],
+        "name" : "_id",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-id",
+        "type" : "token"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "name" : "target",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Provenance-target",
+        "type" : "reference"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "name" : "when",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Provenance-when",
+        "type" : "date"
+      }]
+    }]
+  }]
 }
