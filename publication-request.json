@@ -1,9 +1,10 @@
 {
 	"package-id" : "hl7.fhir.us.sirb",
-	"version" : "1.0.0",
-	"path" : "https://fhir.org/fhir/us/sirb",
+	"version" : "0.1.0",
+	"path" : "http://fhir.org/fhir/us/sirb",
+	"mode" : "working",
 	"milestone" : false,
-	"status" : "ci-build",
+	"status" : "draft",
 	"sequence" : "Releases",
 	"desc" : "Single Institutional Review Board (sIRB) Implementation Guide",
 	"title" : "Single Institutional Review Board (sIRB) Implementation Guide",
