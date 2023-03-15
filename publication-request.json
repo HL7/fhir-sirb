@@ -1,8 +1,9 @@
 {
 	"package-id" : "hl7.fhir.us.sirb",
 	"version" : "1.0.0",
-	"path" : "http://fhir.org/fhir/us/sirb",
+	"path" : "http://hl7.org/fhir/us/sirb",
 	"mode" : "milestone",
+	"milestone" : true,
 	"status" : "trial-use",
 	"sequence" : "STU 1",
 	"desc" : "Single Institutional Review Board (sIRB) Implementation Guide"
