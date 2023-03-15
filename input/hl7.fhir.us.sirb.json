@@ -1,10 +1,5 @@
 {
 	"id" : "hl7.fhir.us.sirb",
-	"meta" : {
-		"versionId" : "534",
-		"lastUpdated" : "2022-12-31",
-		"source" : "#ArRwZiT2abYzquvM"
-	},
 	"resourceType" : "ImplementationGuide",
 	"status" : "draft",
 	"fhirVersion" : [ "4.0.1" ],
