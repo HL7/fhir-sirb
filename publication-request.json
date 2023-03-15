@@ -1,14 +1,9 @@
 {
 	"package-id" : "hl7.fhir.us.sirb",
-	"version" : "0.1.0",
+	"version" : "1.0.0",
 	"path" : "http://fhir.org/fhir/us/sirb",
-	"mode" : "working",
-	"milestone" : false,
-	"status" : "draft",
-	"sequence" : "Releases",
-	"desc" : "Single Institutional Review Board (sIRB) Implementation Guide",
-	"title" : "Single Institutional Review Board (sIRB) Implementation Guide",
-	"category" : "Research",
-	"ci-build" : "http://build.fhir.org/ig/",
-	"introduction" : "Data standards to move data and documents from clinical research sites to a single ethics review board in support of the \"NIH Policy on the Use of a Single Institutional Review Board for Multi-Site Research\"."
+	"mode" : "milestone",
+	"status" : "trial-use",
+	"sequence" : "STU 1",
+	"desc" : "Single Institutional Review Board (sIRB) Implementation Guide"
 }
