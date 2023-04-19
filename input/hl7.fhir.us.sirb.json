@@ -291,7 +291,7 @@
 			},
 			{
 				"code" : "releaselabel",
-				"value" : "CI Build"
+				"value" : "trial-use"
 			}
 		]
 	}
